@@ -109,6 +109,8 @@
     "trace/baseline/verification/revision_v3/verification.json",
     "trace/baseline/verification/revision_v3/visual_review.json",
     "trace/local_pdf_checks.json",
+    "trace/manuscript_audit.json",
+    "trace/manuscript_audit.md",
     "trace/migration.md",
     "trace/publication.json",
     "trace/publication_check.py",

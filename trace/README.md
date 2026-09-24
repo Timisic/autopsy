@@ -4,9 +4,10 @@
 
 - `writing/`：上一次完整写作交付的修改说明、段落论证地图、来源记录和核验快照。快照中的 `final_en/`、`final_zh/`、`evidence/`、`validation/` 均指当时独立交付包的结构；它们不是当前仓库路径。完整原始 ZIP 已在对话中交付，截图、完整编译日志与重复聚合表未再次复制。
 - `baseline/`：原公开仓库的分析配置、输入说明、分析计划、代码、冻结结果及既往核验。文件内容保持原样，内部路径以旧仓库根目录为参照。需要重跑旧流程时，应检出基线提交；不要把历史验证记录当作新稿验证。
-- `source_cleanup.json`：本次从两种正文源码各移除 46 条段落用途注释的记录。注释的实质信息保留在 `writing/argument_map.md`；可见正文没有改写。
-- `repository_checks.json`：本次整理与编译实际执行的检查。
+- `source_cleanup.json`：首次迁移时从两种正文源码各移除 46 条段落用途注释的记录。注释的实质信息保留在 `writing/argument_map.md`；该次清理没有改写可见正文。
+- `repository_checks.json`、`local_pdf_checks.json`、`source_integrity.json` 和 `publication_check.py`：首次迁移成稿时的检查快照及脚本，针对当时的源码和 PDF；后续编辑不覆盖这些历史记录，也不应将该迁移脚本作为当前稿件的通用检查入口。
 - `publication.json`：当前公开文件清单与迁移后的冻结结果校验值。
+- `manuscript_audit.md` 与 `manuscript_audit.json`：2026-09-24 成稿措辞复核、分支清理及修改后验证。
 
 ## 清理原则
 

@@ -27,6 +27,6 @@ bash build.sh zh    # 仅中文
 
 修改说明、论证地图和核验记录位于 [trace/](trace/README.md)。冻结分析结果、原始分析代码及输入说明归档于 `trace/baseline/`；该目录是历史证据快照，不参与论文编译。旧稿、旧图和完整旧工作树仍可从 Git 历史恢复。
 
-本次整理不改变论文正文、统计结论或待作者确认的声明。当前成稿仍待负责作者审定；伦理及二次使用授权、计分依据、作者声明和与既有发表工作的关系均须由作者核实。公开仓库不包含逐人数据、原始帖子、模型文件、第三方全文或字体文件。
+成稿措辞复核及验证见 [trace/manuscript_audit.md](trace/manuscript_audit.md)；冻结分析证据与论文编辑分别维护。当前成稿仍待负责作者审定；伦理及二次使用授权、计分依据、作者声明和与既有发表工作的关系均须由作者核实。公开仓库不包含逐人数据、原始帖子、模型文件、第三方全文或字体文件。
 
 Debian/Ubuntu 最小环境依赖：`texlive-xetex texlive-latex-extra texlive-lang-chinese texlive-fonts-recommended fonts-liberation`。其中 `texlive-fonts-recommended` 提供超链接所需的字体度量。

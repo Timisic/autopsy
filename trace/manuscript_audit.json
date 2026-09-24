@@ -1,0 +1,254 @@
+{
+  "checked_at_utc": "2026-09-24T15:26:01.579611+00:00",
+  "review_base_commit": "b8d75fcbcd684b3a3e68b9c54b910a7a102fb2ac",
+  "scope": "Bilingual manuscript wording, repository organization, branch equivalence, and rebuilt PDF verification; no model fitting or new source verification.",
+  "branch_cleanup": {
+    "removed_remote_branch": "publish/clean-manuscript-20260924",
+    "identical_tip_before_delete": "b8d75fcbcd684b3a3e68b9c54b910a7a102fb2ac",
+    "remaining_remote_heads": [
+      "b8d75fcbcd684b3a3e68b9c54b910a7a102fb2ac\trefs/heads/main"
+    ],
+    "main_history_rewritten": false
+  },
+  "baseline_files_unchanged": 74,
+  "frozen_results_unchanged": 29,
+  "numeric_tokens_unchanged_in_all_tex_except_title_pages": true,
+  "all_table_data_rows_unchanged": true,
+  "bibliographies_unchanged": true,
+  "bilingual_tables": [
+    {
+      "table": "S1.tex",
+      "numeric_tokens": 221,
+      "equal": true
+    },
+    {
+      "table": "S10.tex",
+      "numeric_tokens": 46,
+      "equal": true
+    },
+    {
+      "table": "S2.tex",
+      "numeric_tokens": 95,
+      "equal": true
+    },
+    {
+      "table": "S3.tex",
+      "numeric_tokens": 114,
+      "equal": true
+    },
+    {
+      "table": "S4.tex",
+      "numeric_tokens": 29,
+      "equal": true
+    },
+    {
+      "table": "S5.tex",
+      "numeric_tokens": 58,
+      "equal": true
+    },
+    {
+      "table": "S6.tex",
+      "numeric_tokens": 184,
+      "equal": true
+    },
+    {
+      "table": "S7.tex",
+      "numeric_tokens": 29,
+      "equal": true
+    },
+    {
+      "table": "S8.tex",
+      "numeric_tokens": 56,
+      "equal": true
+    },
+    {
+      "table": "S9.tex",
+      "numeric_tokens": 47,
+      "equal": true
+    },
+    {
+      "table": "table1.tex",
+      "numeric_tokens": 31,
+      "equal": true
+    },
+    {
+      "table": "table2.tex",
+      "numeric_tokens": 70,
+      "equal": true
+    },
+    {
+      "table": "table3.tex",
+      "numeric_tokens": 45,
+      "equal": true
+    },
+    {
+      "table": "table4.tex",
+      "numeric_tokens": 28,
+      "equal": true
+    }
+  ],
+  "bibliography_and_labels": [
+    {
+      "document": "en/manuscript",
+      "references": 23,
+      "citations_complete": true,
+      "labels_complete": true
+    },
+    {
+      "document": "en/supplement",
+      "references": 3,
+      "citations_complete": true,
+      "labels_complete": true
+    },
+    {
+      "document": "en/title_page",
+      "references": 0,
+      "citations_complete": true,
+      "labels_complete": true
+    },
+    {
+      "document": "zh/manuscript",
+      "references": 23,
+      "citations_complete": true,
+      "labels_complete": true
+    },
+    {
+      "document": "zh/supplement",
+      "references": 3,
+      "citations_complete": true,
+      "labels_complete": true
+    },
+    {
+      "document": "zh/title_page",
+      "references": 0,
+      "citations_complete": true,
+      "labels_complete": true
+    }
+  ],
+  "compiler": "Tectonic 0.16.9",
+  "compile_command": "tectonic --keep-logs --keep-intermediates --outdir .build/<language> <language>/<document>.tex",
+  "build_note": "Local Tectonic build; repository build.sh requires XeLaTeX and was not run here. Liberation Serif 2 fonts were temporarily registered for this login session from ignored .build/fonts; no font files are published.",
+  "pdfs": [
+    {
+      "file": "en/manuscript.pdf",
+      "sha256": "fcbac3fb9f46df7e98f4c0862b431017d5ea2899b4ee2006e76fc843a672ab6d",
+      "pages": 15,
+      "blocking_log_issues": [],
+      "warnings": [
+        "LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <6.43996> not available",
+        "LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.59999> not available",
+        "LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <6.43996> not available",
+        "LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.59999> not available",
+        "LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <6.43996> not available",
+        "LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.59999> not available",
+        "LaTeX Font Warning: Size substitutions with differences"
+      ],
+      "process_language_scan": "passed"
+    },
+    {
+      "file": "en/supplement.pdf",
+      "sha256": "1a6d3f76fbfc9daad727a11ba15a7cee0a05104d4e88a397e2eee6136b915b3f",
+      "pages": 9,
+      "blocking_log_issues": [],
+      "warnings": [
+        "LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <8.5> not available",
+        "LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.25> not available",
+        "LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <8.5> not available",
+        "LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.25> not available",
+        "LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <8.5> not available",
+        "LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.25> not available",
+        "LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.4> not available",
+        "LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.4> not available",
+        "LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.4> not available",
+        "LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.3> not available",
+        "LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.3> not available",
+        "LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.3> not available",
+        "LaTeX Font Warning: Size substitutions with differences"
+      ],
+      "process_language_scan": "passed"
+    },
+    {
+      "file": "en/title_page.pdf",
+      "sha256": "f21ebc3a8bd792c640cf23dcbcb4bc77101c0e0134659e84b0dffd8af4d5ecd9",
+      "pages": 2,
+      "blocking_log_issues": [],
+      "warnings": [],
+      "process_language_scan": "passed"
+    },
+    {
+      "file": "zh/manuscript.pdf",
+      "sha256": "db33e9d90828c89ac86efb5d1ecc23e78d211caaaea555826acf0c4a8881cc8e",
+      "pages": 13,
+      "blocking_log_issues": [],
+      "warnings": [],
+      "process_language_scan": "passed"
+    },
+    {
+      "file": "zh/supplement.pdf",
+      "sha256": "3b6ab3d2d3d3798264ae221116fd90a8e5e541b7c140401b91eb5d690b39bea3",
+      "pages": 9,
+      "blocking_log_issues": [],
+      "warnings": [],
+      "process_language_scan": "passed"
+    },
+    {
+      "file": "zh/title_page.pdf",
+      "sha256": "293637ff5db7827b529885cf545a2886f6484fc507506c6c6c9b4ceadab068d0",
+      "pages": 2,
+      "blocking_log_issues": [],
+      "warnings": [],
+      "process_language_scan": "passed"
+    }
+  ],
+  "visual_review": "All 50 pages rendered and inspected in overview; changed declaration, source-availability, S3/S4 and S10 pages inspected at reading resolution. No clipping, missing glyphs or overlaps observed. English math-font size substitution warnings are recorded above.",
+  "source_sha256": {
+    "en/figures/flow.tex": "0b1032b083975401bc70f0c0f2a4e3f2d2e99756472f8197a557637127248ab0",
+    "en/manuscript.tex": "6464bf1714a2b37f2f0ea73a0047783c78711854cade3300bf97e015316f87e5",
+    "en/preamble.tex": "110b731849ecef590a16454174a6ecea7aded11fde61d7a070bbcad48ff3a551",
+    "en/references.tex": "56af6b36b1e7f51ada9bc94082b28588837d54564e047c0d3161af6775ea5844",
+    "en/references_supplement.tex": "4dca3d0814bdf605f83fde2d35abc15bee0fa04b288f5142b2b51424843aa0d9",
+    "en/supplement.tex": "9a718651066b7cda9580e09ba1aafa52472fd9e7b95309a76fd7def7f23d446c",
+    "en/tables/S1.tex": "5b7f81cc95e55d9641a4c71aabeebacd1a36503cffe94c4be037bf1ce14a2c6e",
+    "en/tables/S10.tex": "4df0e2ac989695a3f1a6cbae46ad0273d30ab2a89ef4fda75cc412aa11c60247",
+    "en/tables/S2.tex": "5a0b5e45d364df20993dfe979f041f159c4ac2f9e3aa02712591afc0714f17d4",
+    "en/tables/S3.tex": "d8036fe37ed586b238696de90557f236c341afd6b21c49bebaecfe50e01ae7a3",
+    "en/tables/S4.tex": "326882f738b5d6cc484103067c50db5fa9caba5a7a7ecd8ffcb3e5230fc6a72e",
+    "en/tables/S5.tex": "2948258298e24ba48b4e5488354aef95e33b61e86461eaa248e2acff5b956487",
+    "en/tables/S6.tex": "53af8e65f30a0cad3a1ee3b913389a6692c2310d8ae9515a18fe53e0714da8d1",
+    "en/tables/S7.tex": "ab41d8cea02ed63da7936ed7ddebe6b6b57089d74b67d26665dd067e08290a52",
+    "en/tables/S8.tex": "cb1bc86d3c851b5de360587f52fa14caa1e4f62abcce312abb0df7c3aa82643f",
+    "en/tables/S9.tex": "e5f8ee4065b088b79c7f71568ad42b180fa74f93f7e2891c165a87aa9fdc6aae",
+    "en/tables/table1.tex": "ad2a6f38c57b9ead1478f9ee3fa155bc34f6c29f2dd96594460c3b061c43b132",
+    "en/tables/table2.tex": "c066672d4285254e8efc0f42ed894d981e14f8df7f7555a358865056d71533a3",
+    "en/tables/table3.tex": "ffdc16dd8c6fd5f38b5de1235055c5d58e425645e33bf4c0270aaf39fdceb57a",
+    "en/tables/table4.tex": "7f220a9a26012d9c81c1a8463b24aa7424c262d7d386132d8e4158c067c9d8fb",
+    "en/title_page.tex": "a4036e3782b9c91b16e820994c1230718ad72207fc4cbaf37c5372b889fb33cf",
+    "zh/figures/flow.tex": "f9077a1db3f689a5d463a4e02b40b4959a80cca0af8bb9d3a90b0be8947951e6",
+    "zh/manuscript.tex": "17df8dbef29d75a15bd62af8d27fbcfb38fff29c4973b534cebefef0b6e0b7e4",
+    "zh/preamble.tex": "901a441fa8bac0557dbfeb1cdb22547e7c221b0b74e4410e42c3ffb021df27f2",
+    "zh/references.tex": "56af6b36b1e7f51ada9bc94082b28588837d54564e047c0d3161af6775ea5844",
+    "zh/references_supplement.tex": "4dca3d0814bdf605f83fde2d35abc15bee0fa04b288f5142b2b51424843aa0d9",
+    "zh/supplement.tex": "ced10b7103eb47b0fef397075411ac716dc36e7fdc20c9fb648f58550bc15785",
+    "zh/tables/S1.tex": "6c4c2dcdc5bc1532a5410f10bf9037d9dfb14b0110fa7696f809446053b0b1ad",
+    "zh/tables/S10.tex": "52751bd5c6ea147adc04c90663f68b89f8d582e26ab083c8771dee3752faea32",
+    "zh/tables/S2.tex": "36900886b0efec83485c8ab31279e3ff6087fc2d8128f92e28cb78d56e50b0a3",
+    "zh/tables/S3.tex": "9eb249ba0a78008c159d51d0cd8327469f4e490d362e837ad64dfe27a3cb854c",
+    "zh/tables/S4.tex": "ff98e21f9c399fa00f2bd4a6fe645b1e624e843588ad00163cb39f3d27b95401",
+    "zh/tables/S5.tex": "a6df0b443de74f3bceec84f6c85642befcbbc04c3c28647074f9b2f5d9eacc78",
+    "zh/tables/S6.tex": "6e99be92c9bd7368b74eb90e87a4ac34d18fc3a5d5188f96c9d64980c1c798d4",
+    "zh/tables/S7.tex": "b681e04c294b93c108a1105ad098a8c8d25f7af92f70edbaa6c23e12853842f5",
+    "zh/tables/S8.tex": "f1fac22238598e1ae0b8ddbb9f033a0ccfb64ea96d5a56d858b76b6c6f193e0c",
+    "zh/tables/S9.tex": "bb2eb96f1b01159db9bd2658491a7ef2df9c4a3e4eb700dc6928da5860e47b85",
+    "zh/tables/table1.tex": "9508252d24e1d09fb31bb9f91a35093bb31dd1aa5ad0d704070b58a38bdc81c3",
+    "zh/tables/table2.tex": "c23d842821babd5cbcc9fe7bbf65b1e8c74e4df314d3398778bc14f8b808a059",
+    "zh/tables/table3.tex": "815410213f6e0b110c8ede5dc154f3b497d88ba23970a28fa891b8411a51185c",
+    "zh/tables/table4.tex": "a3ee01967110266109c34e61de0e860df17a233e7c8ccd2df41cb8cfd4fe5894",
+    "zh/title_page.tex": "f7e8df5203b47ee3981271f77d7c68c2d39fa73784e5d28b61d4400949fa5be4"
+  },
+  "not_performed": [
+    "Model retraining or raw-data replication",
+    "New literature/full-text verification",
+    "Human author approval"
+  ],
+  "historical_checks_preserved": true
+}
