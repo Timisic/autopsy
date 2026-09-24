@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="498.816pt" height="292.32pt" viewBox="0 0 498.816 292.32" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-23T19:40:47.090844</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 292.32 
+L 498.816 292.32 
+L 498.816 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 22.81536 54.795224 
+L 476.00064 54.795224 
+L 476.00064 19.590448 
+L 22.81536 19.590448 
+z
+" clip-path="url(#pf63da203dd)" style="fill: #ffffff; stroke: #b7c0c6; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 22.81536 107.183284 
+L 476.00064 107.183284 
+L 476.00064 71.978507 
+L 22.81536 71.978507 
+z
+" clip-path="url(#pf63da203dd)" style="fill: #ffffff; stroke: #b7c0c6; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 22.81536 177.173731 
+L 234.78912 177.173731 
+L 234.78912 140.711642 
+L 22.81536 140.711642 
+z
+" clip-path="url(#pf63da203dd)" style="fill: #ffffff; stroke: #b7c0c6; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 264.02688 177.173731 
+L 476.00064 177.173731 
+L 476.00064 140.711642 
+L 264.02688 140.711642 
+z
+" clip-path="url(#pf63da203dd)" style="fill: #ffffff; stroke: #b7c0c6; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 22.81536 247.583284 
+L 234.78912 247.583284 
+L 234.78912 196.033433 
+L 22.81536 196.033433 
+z
+" clip-path="url(#pf63da203dd)" style="fill: #ffffff; stroke: #b7c0c6; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 264.02688 247.583284 
+L 476.00064 247.583284 
+L 476.00064 196.033433 
+L 264.02688 196.033433 
+z
+" clip-path="url(#pf63da203dd)" style="fill: #ffffff; stroke: #b7c0c6; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 22.81536 19.590448 
+L 476.00064 19.590448 
+" clip-path="url(#pf63da203dd)" style="fill: none; stroke: #2878a4; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 22.81536 140.711642 
+L 234.78912 140.711642 
+" clip-path="url(#pf63da203dd)" style="fill: none; stroke: #2878a4; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 264.02688 140.711642 
+L 476.00064 140.711642 
+" clip-path="url(#pf63da203dd)" style="fill: none; stroke: #2878a4; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #26323d" x="32.56128" y="36.448366" transform="rotate(-0 32.56128 36.448366)">1,427 supplied records</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 8.15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #63717a" x="32.56128" y="44.418088" transform="rotate(-0 32.56128 44.418088)">1,037 participant IDs  ·  120 supplied text features</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #26323d" x="32.56128" y="88.836426" transform="rotate(-0 32.56128 88.836426)">1,037 participant records retained</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 8.15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #63717a" x="32.56128" y="96.806148" transform="rotate(-0 32.56128 96.806148)">Earliest stored survey per ID; exclude 195 exact copies and 195 later records</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 249.408 55.796839 
+Q 249.408 62.47027 249.408 68.13747 
+" style="fill: none; stroke: #87949d; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 251.208 64.53747 
+L 249.408 68.13747 
+L 247.608 64.53747 
+z
+" style="fill: #87949d; stroke: #87949d; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #63717a" x="249.408" y="121.432836" transform="rotate(-0 249.408 121.432836)">Participant-level random split</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #26323d" x="32.56128" y="157.56956" transform="rotate(-0 32.56128 157.56956)">Development sample</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 8.15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #63717a" x="32.56128" y="166.796596" transform="rotate(-0 32.56128 166.796596)">n = 933 participants  ·  90% allocation</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #26323d" x="273.7728" y="157.56956" transform="rotate(-0 273.7728 157.56956)">Holdout sample</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 8.15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #63717a" x="273.7728" y="166.796596" transform="rotate(-0 273.7728 166.796596)">n = 104 participants  ·  10% allocation</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 153.76578 107.967416 
+Q 141.782211 123.135627 130.422426 137.514284 
+" style="fill: none; stroke: #87949d; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 134.066536 135.805348 
+L 130.422426 137.514284 
+L 131.241743 133.573634 
+z
+" style="fill: #87949d; stroke: #87949d; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 345.05022 107.967416 
+Q 357.033789 123.135627 368.393574 137.514284 
+" style="fill: none; stroke: #87949d; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 367.574257 133.573634 
+L 368.393574 137.514284 
+L 364.749464 135.805348 
+z
+" style="fill: #87949d; stroke: #87949d; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #26323d" x="32.56128" y="212.891351" transform="rotate(-0 32.56128 212.891351)">Five-fold model selection</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 8.15px; font-family: 'DejaVu Sans'; fill: #63717a" transform="translate(32.56128 226.203648)">42 configurations; fold-local scaling</text>
+    <text style="font-size: 8.15px; font-family: 'DejaVu Sans'; fill: #63717a" transform="translate(32.56128 237.206148)">Select by normalized RMSE; lock models</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #26323d" x="273.7728" y="212.891351" transform="rotate(-0 273.7728 212.891351)">Locked final evaluation</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 8.15px; font-family: 'DejaVu Sans'; fill: #63717a" transform="translate(273.7728 226.577402)">Pearson r, RMSE and 95% intervals</text>
+    <text style="font-size: 8.15px; font-family: 'DejaVu Sans'; fill: #63717a" transform="translate(273.7728 237.206148)">Paired comparisons and fixed sensitivities</text>
+   </g>
+   <g id="patch_11">
+    <path d="M 128.558592 178.172481 
+Q 128.558592 185.684348 128.558592 192.189985 
+" style="fill: none; stroke: #87949d; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 130.358592 188.589985 
+L 128.558592 192.189985 
+L 126.758592 188.589985 
+z
+" style="fill: #87949d; stroke: #87949d; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 370.257408 178.172481 
+Q 370.257408 185.684348 370.257408 192.189985 
+" style="fill: none; stroke: #87949d; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 372.057408 188.589985 
+L 370.257408 192.189985 
+L 368.457408 188.589985 
+z
+" style="fill: #87949d; stroke: #87949d; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 237.249989 221.179701 
+Q 248.907807 221.179701 259.559395 221.179701 
+" style="fill: none; stroke: #87949d; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 255.959395 219.379701 
+L 259.559395 221.179701 
+L 255.959395 222.979701 
+z
+" style="fill: #87949d; stroke: #87949d; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #63717a" transform="translate(22.81536 268.249364)">Aggregate features support retrospective prediction; raw posts, word-level counts, odd/even features</text>
+    <text style="font-size: 7.6px; font-family: 'DejaVu Sans'; fill: #63717a" transform="translate(22.81536 278.889364)">and questionnaire items were unavailable.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pf63da203dd">
+   <rect x="5.76" y="5.76" width="487.296" height="280.8"/>
+  </clipPath>
+ </defs>
+</svg>

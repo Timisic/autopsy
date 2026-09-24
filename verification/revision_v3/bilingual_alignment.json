@@ -1,0 +1,1788 @@
+{
+  "abstract_words": 179,
+  "references": 30,
+  "blocks": [
+    {
+      "document": "manuscript",
+      "block": 0,
+      "en": "# Developing a machine learning-based instrument for subjective well-being assessment on Weibo and its psychological significance: An evaluative and interpretive research",
+      "zh": "# 基于机器学习的微博用户主观幸福感评估工具开发及其心理学意义：一项评价性与解释性研究",
+      "english_sha256": "3367758f7272a946f448d9b5873c22d0b25da1a4ce43a68f49c17d85a6826267",
+      "chinese_sha256": "8f25e4cdbbe685b1c383ee044bd7960a046c7eeab514dd8f8d2245daf9ba2132",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 1,
+      "en": "## Abstract",
+      "zh": "## 摘要",
+      "english_sha256": "266c21b810ae65751fa70f388a867e94d180e79fd15c69ed54dae7df1d29166b",
+      "chinese_sha256": "f240e14408fd11cc86d8a90725c6b5510834553793ba464ddd0319c97172dabe",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 2,
+      "en": "Social-media language may provide information about subjective well-being, but predictive association, numerical accuracy, and measurement validity require distinct evidence. We examined negative affect, positive affect, and life satisfaction in a secondary analysis of 1,037 Weibo users represented by 120 psycholinguistic features. Five-fold cross-validation compared eight model families within a fixed search budget; 104 participants were reserved for evaluation. The selected shared random forest produced holdout correlations of 0.247, 0.284, and 0.152, with root mean squared errors of 0.166, 0.165, and 0.202, respectively, in stored score units. Affect correlations remained significant after correction, whereas the life-satisfaction interval included zero. Error reductions over a training-mean baseline were small and did not meet the multiplicity-adjusted criterion; shared learning showed no established advantage over independent forests. A subsequent exploratory search did not improve nested development performance. Attribution rankings identified model-used categories but were accompanied by small, mixed holdout permutation effects. Prespecified sensitivity analyses retained the limited predictive pattern. The findings support modest retrospective language–affect associations while leaving accurate individual assessment, temporal reliability, and transportability unestablished.",
+      "zh": "社交媒体语言可能包含与主观幸福感有关的信息，但预测关联、数值准确性与测量效度需要不同证据。我们对 1,037 名微博用户开展二次分析，使用 120 个心理语言特征估计消极情绪、积极情绪和生活满意度。在固定搜索预算内，采用五折交叉验证比较八类模型，并保留 104 名参与者用于评估。选定的共享随机森林在留出集上的相关分别为 0.247、0.284 和 0.152，均方根误差分别为 0.166、0.165 和 0.202，单位为数据保存的分数单位。两种情绪的相关在校正后仍显著，而生活满意度的区间包含零。相对训练均值基线的误差降幅较小，未达到多重比较校正标准；共享学习相对独立森林也未显示明确优势。随后开展的探索性搜索未改善嵌套开发集表现。归因排序识别出模型使用的类别，但相应的留出集置换效应较小且方向混合。预定敏感性分析仍呈现有限的预测表现。这些结果支持适度的回顾性语言—情绪关联，但尚未确立准确的个体评估、时间信度或可迁移性。",
+      "english_sha256": "afabd70dbe28422d2aa63f73f9cf8141e79acccf74a0e4136053855534390a6a",
+      "chinese_sha256": "a204098f13b1f0c15e99a5a2b0e884c5a9e2b758834b1d71569ce8f18adaac58",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 3,
+      "en": "Keywords: subjective well-being; psycholinguistics; social media; machine learning; multi-output regression; reproducibility",
+      "zh": "关键词：主观幸福感；心理语言学；社交媒体；机器学习；多输出回归；可复现性",
+      "english_sha256": "ef025e98acfbd7c469086b2c37582a7f8ac3a7ca262989be931204094c8c2bd7",
+      "chinese_sha256": "27995a9dffa72e53be837aa8ddc508af4de33985ec46f024ba2f8ad8261946ab",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 4,
+      "en": "Conflict of interest: Authors' declaration pending.",
+      "zh": "利益冲突：待作者提供声明。",
+      "english_sha256": "cfb7d4d89f850a593847ffb39998397c527ff6ecc4028bbfac9b8738c4f4dbea",
+      "chinese_sha256": "4ede38ba4ff4ccbc7c34bbb0eacb96c7593026fce441b76190302dd2bcd06d7f",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 5,
+      "en": "## Introduction",
+      "zh": "## 引言",
+      "english_sha256": "d753efbab681fa4da82470d9a83b1c202de58f92fd498e77a269c1163bc4714b",
+      "chinese_sha256": "ea76c32447b6b5d4348cd98923be71cfa17d592142b8c85206861c66d27854d6",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 6,
+      "en": "Subjective well-being concerns how people experience and evaluate their lives. Its affective and cognitive components are related but distinguishable: positive affect, negative affect, and a global judgment of life satisfaction each capture a different aspect of subjective experience (Diener, 1984). The Positive and Negative Affect Schedule (PANAS) measures positive and negative affect separately, whereas the Satisfaction With Life Scale (SWLS) assesses global cognitive judgments of life satisfaction (Diener et al., 1985; Watson et al., 1988). A language-based approach to well-being assessment should consequently be evaluated for each component rather than assuming that success for one establishes validity for all three.",
+      "zh": "主观幸福感关注人们如何体验和评价自己的生活。其情感成分与认知成分相互关联，但又有所区别：积极情绪、消极情绪和对生活满意度的总体判断分别反映主观体验的不同方面 (Diener, 1984)。积极与消极情绪量表（PANAS）分别测量积极情绪和消极情绪，生活满意度量表（SWLS）则评估对生活满意程度的总体认知判断 (Diener et al., 1985; Watson et al., 1988)。因此，基于语言的幸福感评估应当分别检验各个成分，而不能假定对某一成分的成功预测即可确立对全部三个成分的效度。",
+      "english_sha256": "61222341c53e9f135048aea49e8a7ead660c916e3777f86836614d4b24b9f51c",
+      "chinese_sha256": "eb053a0dd8881d7cc31324bd8fc215ff695ee4fe1d68f12da82e535ec3a328fa",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 7,
+      "en": "This component-level approach also defines the scope of the proposed instrument. Diener et al. (1999) emphasize that well-being components can have distinct correlates, while Ryan and Deci (2001) distinguish hedonic evaluation from eudaimonic concerns such as meaning and functioning. Consequently, predicting the three supplied scores would not by itself establish a comprehensive measure of flourishing, virtue, or psychological functioning. The relevant criterion remains how participants report their affect and evaluate their lives, rather than a normative judgment inferred from the topics they discuss (Diener et al., 2018).",
+      "zh": "这种分维度的思路也界定了拟议工具的测量范围。Diener 等（1999）强调，幸福感各成分可能具有不同的相关因素；Ryan 和 Deci（2001）则区分享乐取向的评价与意义、功能等实现取向的关切。因此，即使能够预测给定的三个分数，也不能据此认定已经全面测量了蓬勃发展、德性或心理功能。相关效标仍是参与者如何报告自己的情绪、评价自己的生活，而非根据其谈论的话题推断一种规范性判断（Diener et al., 2018）。",
+      "english_sha256": "0ccb8bf8fb91833318f9658b2026dc0b4273f3dd8c316d0d41bc4d47b9e3d547",
+      "chinese_sha256": "ff2de8adcda369ff5f675ff37bf7671f38f7f9759e8fc4a5da364a7a8c6f7a1a",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 8,
+      "en": "Social-media language provides a behavioral record that may contain information relevant to these components. Schwartz et al. (2013) demonstrated associations between Facebook language, personality, and demographic characteristics, while Park et al. (2015) evaluated language-based personality scores using convergent, discriminant, informant, external-criterion, and temporal evidence. Eichstaedt et al. (2018) examined a different application, predicting subsequent depression documentation from Facebook language. Together, these studies motivate investigating psychological information in language. They also show that predictive evidence is tied to a particular construct, criterion, population, and temporal design; performance in those settings does not directly establish the validity of subjective well-being scores derived from Weibo.",
+      "zh": "社交媒体语言提供了可能包含上述成分相关信息的行为记录。Schwartz et al. (2013) 发现 Facebook 语言与人格及人口学特征之间存在关联；Park et al. (2015) 则从聚合效度、区分效度、知情者报告、外部效标和时间证据等方面，评估了基于语言的人格分数。Eichstaedt et al. (2018) 考察了另一种应用，即通过 Facebook 语言预测后续医疗记录中的抑郁记录。这些研究共同为考察语言中的心理信息提供了依据。同时，它们也表明，预测证据依赖具体的构念、效标、人群与时间设计；在这些情境中的表现，并不能直接确立从微博语言推导出的主观幸福感分数的效度。",
+      "english_sha256": "52d7fb48e228a5e4a005db97d9d1d7e7bff3d14352c531ed61d1757480fc2252",
+      "chinese_sha256": "bfa38207bbe78b7d159aae2eb5b8f8852d0a2f37bdd7115fe99867557d2cedc2",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 9,
+      "en": "Psycholinguistic dictionaries offer an interpretable representation of this language. Predefined categories connect word use to recognizable psychological domains, while losing some contextual information. Tausczik and Pennebaker (2010) describe how context, irony, and idioms can defeat simple word-category assignments. A comparison of closed- and open-vocabulary methods further suggests that broad category summaries and more specific content patterns can serve complementary purposes (Eichstaedt et al., 2021). For Chinese social-media texts, Zhao et al. (2016) found heterogeneous agreement between simplified Chinese LIWC category scores and human judgments. Detecting words associated with an emotion therefore need not amount to measuring the author's emotional experience. Dictionary-derived predictions require evaluation against participant-level criteria, alongside scrutiny of the language being summarized.",
+      "zh": "心理语言词典提供了一种可解释的语言表征。预定义类别把词语使用与可识别的心理领域相联系，同时也会丢失部分语境信息。Tausczik 和 Pennebaker（2010）说明，语境、反讽和习语可能使简单的词语类别归属产生偏差。封闭词汇与开放词汇方法的比较进一步表明，宽泛类别概括与更具体的内容模式可以承担互补作用（Eichstaedt et al., 2021）。在中文社交媒体文本中，Zhao 等（2016）发现，简体中文 LIWC 类别分数与人工判断的一致程度因类别而异。因此，检出与某种情绪相关的词语，并不等于测量了作者的情绪体验。基于词典的预测既需要对照参与者层面的效标进行评估，也需要检查被概括的语言内容。",
+      "english_sha256": "41c97dc2a142b099c7d904b626c9ea241f47768e0522800e6f3f8323dabe98d1",
+      "chinese_sha256": "a56537b584af74ad7bb2153d6680268306aae17d9474163680f979e423b00e1e",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 10,
+      "en": "The multidimensional structure of subjective well-being raises a further question about how these features should be modeled. Learning related outcomes through a shared representation can supply an inductive bias, as developed in multitask learning (Caruana, 1997). Here, independent regressors allow different linguistic relationships for each component, whereas shared-output trees use common feature-space partitions and return outcome vectors (Kocev et al., 2007). We describe this specifically as multi-output regression: the broader multitask literature contains sharing structures and task definitions beyond this setting (Zhang & Yang, 2022). Outcome correlations motivate the comparison but do not establish that a common partition will generalize better. Model comparison must therefore use participants excluded from fitting and parameter selection (Yarkoni & Westfall, 2017).",
+      "zh": "主观幸福感的多维结构还引出如何建模这些特征的问题。通过共享表征学习相关结局能够提供归纳偏置，这一思路在多任务学习中得到发展（Caruana, 1997）。在本研究中，独立回归器允许每个成分具有不同的语言关系，而共享输出树使用共同的特征空间划分并返回结局向量（Kocev et al., 2007）。我们将其具体称为多输出回归：更广泛的多任务学习文献还涵盖超出这一情境的共享结构和任务定义（Zhang & Yang, 2022）。结局之间的相关性构成比较的动机，却不能证明共同划分能够获得更好的泛化表现。因此，模型比较必须使用未参与拟合和参数选择的参与者（Yarkoni & Westfall, 2017）。",
+      "english_sha256": "dd5e79f2afbd37b4f40d7115c15cf74a25c0881d7ccd6e4b863fdc49e8a2faae",
+      "chinese_sha256": "60f4ebc36f588df57ecc0d686e9ed247650eabfeb7c7dc447e1ffa8950c6aa84",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 11,
+      "en": "The present study examines these questions in a secondary analysis of an existing Weibo dataset. We ask whether aggregated language features predict each well-being component in held-out participants, whether selected shared-output procedures improve on independent procedures within a fixed search budget, and which categories contribute to the selected tree model. These questions distinguish predictive association, improvement in numerical error, and interpretation of the fitted model. Participant-level separation and fold-local preprocessing address evaluation risks from repeated observations and information leakage (Kapoor & Narayanan, 2023), while comparison with a mean baseline and uncertainty estimates help establish the strength of the resulting evidence.",
+      "zh": "本研究通过对既有微博数据集的二次分析考察这些问题。我们关注：聚合语言特征能否预测留出参与者的各个幸福感成分；在固定搜索预算内，选定的共享输出程序能否优于独立程序；以及哪些类别对选定树模型的预测作出了贡献。这些问题区分了预测关联、数值误差改善和对拟合模型的解释。按参与者划分数据并在训练折内拟合预处理，可以应对重复观察和信息泄漏带来的评估风险 (Kapoor & Narayanan, 2023)；与均值基线比较并报告不确定性，则有助于判断所得证据的强度。",
+      "english_sha256": "056bc6715896866e3c90b217ffcdae2436d90b0b6d63087575b1e4cf3c53f14a",
+      "chinese_sha256": "4a52ee9425a7fdd0606c39b04edcf7be9fa80f463d0b4d00d8aa9cf7ab97db3f",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 12,
+      "en": "## Method",
+      "zh": "## 方法",
+      "english_sha256": "571e4ec33e6a6bb2fd6ff4be538256a401de191f0f38b3a124507ef6fa3e0e6b",
+      "chinese_sha256": "9548c90994c8ce60ded231cb58377ddc834c6014240829c88c5a94f79542a6b4",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 13,
+      "en": "### Participants and data provenance",
+      "zh": "### 参与者与数据来源",
+      "english_sha256": "3643b7eed379f7f465707aa368e647a56d9b731dc49425c4bc47c0f89c7ddace",
+      "chinese_sha256": "1c9a301969c95e2c3bf117a7dde93bf8682a7650627b2d131cf02092d2d9d36f",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 14,
+      "en": "The accompanying study documentation describes convenience recruitment through private invitations to approximately 20,000 Weibo users. Consenting participants completed an online questionnaire session, after which their public posts and profiles were retrieved through the Sina Weibo API. The documented eligibility rules excluded people younger than 18 years, users without public accounts or consent, and interrupted questionnaire sessions; completers received a monetary reward. Collection was linked to a parallel project conducted between September 2012 and February 2013, although the exact recruitment window for the present file could not be independently established. These procedures are reported from the collection documentation; the present work used existing data and recruited no new participants.",
+      "zh": "随附研究说明记载，研究通过向约 20,000 名微博用户发送私信邀请进行便利招募。知情同意的参与者完成一次在线问卷，随后研究者通过新浪微博 API 获取其公开帖子和个人资料。说明中的纳入条件排除了未满 18 岁、没有公开账号或未提供同意，以及问卷作答中断的用户；完成者获得了金钱奖励。数据采集与一个于 2012 年九月至 2013 年二月开展的平行项目有关，但无法独立确认本文件对应的确切招募时段。上述程序据数据采集说明报告；本研究使用既有数据，未招募新的参与者。",
+      "english_sha256": "9976b237a346a5256157bad51120449fe89395c29d33f1a2b7f04870d04e8b8d",
+      "chinese_sha256": "e42020c74b636b4f0b9ac87140e5fcad49f53d27a1f3ec756235d4d797bace40",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 15,
+      "en": "The file contained 1,427 rows representing 1,037 distinct IDs. Each of 195 IDs had two distinct observations and an exact copy of one observation, producing 195 duplicate rows. Before model comparison, we removed exact duplicates and retained the observation with the earliest numeric questionnaire timestamp for each participant. There were no ties between distinct records at that timestamp. This yielded 1,037 participants and avoided weighting individuals by repeated observations. Later records were retained for sensitivity analysis. Demographic variables and questionnaire items were unavailable, and recruitment-stage counts could not be reconstructed.",
+      "zh": "原文件包含 1,427 行数据，对应 1,037 个不同的 ID。其中 195 个 ID 各有两条不同的观察记录，并有其中一条记录的完全相同副本，由此形成 195 行重复记录。在模型比较前，我们删除精确重复记录，并为每名参与者保留数值型问卷时间戳最早的观察。不同记录在该最早时间戳上不存在并列。处理后得到 1,037 名参与者，避免了因重复观察而赋予某些个体更高权重。较晚记录保留用于敏感性分析。人口学变量和问卷题目不可用，也无法重建招募各阶段的人数。",
+      "english_sha256": "0606eb2127d50724d7701cac0c7659250cc21e3c5c2d388434720d300c11bae5",
+      "chinese_sha256": "a0fe8aa565c420ac0109a497a1becb1b970515c1321a885d173ccd9277a2903d",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 16,
+      "en": "The original collection documentation reports informed consent, voluntary participation, withdrawal rights, and institutional review board approval. Identifying approval details are retained on the separate title page. The underlying approval and consent documents, authorization for this secondary use, and release permissions require confirmation by the responsible authors.",
+      "zh": "原始采集说明记载了知情同意、自愿参与、退出权利及机构伦理审查批准。可识别机构的批准信息保留在独立标题页中。相关批准和同意文件、此次二次使用的授权，以及数据发布权限，仍需由负责的作者确认。",
+      "english_sha256": "8ae982df2a937ff717b7c58db0bfe6bb4cc87e0e5d4ce5597bc2637298a076ec",
+      "chinese_sha256": "b99d5dc061e04513447dd7c5100af8fd209b7a3fcfac9bfc86012ccf2f5b767c",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 17,
+      "en": "### Measures and language features",
+      "zh": "### 测量与语言特征",
+      "english_sha256": "fef6b4177fd58cfd38e28f6c6c5498c73658455d2f5b828f9e1a24194904503d",
+      "chinese_sha256": "09f235f108670e69aab61e984abb0815461351658079349956644918b23ca90d",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 18,
+      "en": "The data dictionary identifies SWB_nn as negative affect, SWB_pp as positive affect, and SWB_avg as life satisfaction, derived from Chinese adaptations of PANAS and SWLS. The original instruments contain two ten-item affect subscales and a five-item life-satisfaction scale (Diener et al., 1985; Watson et al., 1988). The dictionary names a Chinese SWLS translation source, but the exact administered forms, affect reporting period, and scoring transformation were not independently verified. All three delivered scores ranged from 0–1. We retained these stored units rather than inferring a conversion to questionnaire totals; RMSE therefore has no verified interpretation in original PANAS or SWLS units.",
+      "zh": "数据字典将 SWB_nn 定义为消极情绪，SWB_pp 定义为积极情绪，SWB_avg 定义为生活满意度，来源于 PANAS 和 SWLS 的中文改编版本。原量表包括两个各含十个条目的情绪分量表，以及一个五条目的生活满意度量表 (Diener et al., 1985; Watson et al., 1988)。数据字典注明了一项 SWLS 中文翻译来源，但实际施测版本、情绪报告时间窗和计分变换均未得到独立核实。三个已提供分数的范围均为 0–1。我们保留这些存储单位，而未推测其与问卷总分之间的换算关系；因此，RMSE 尚不能以原始 PANAS 或 SWLS 单位作出经核实的解释。",
+      "english_sha256": "cfa28a5de5fbfef8adfccee290b8d9fafefa7b4a32c5a4a54a76e7370fc77409",
+      "chinese_sha256": "956d9d15735c9a5e1e3ed50042d027f8d37ef8b012855b6dc463af15ab4be7d7",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 19,
+      "en": "Predictors comprised the 120 columns from AGENCY to the final column. According to the collection documentation, these summarize category frequencies in each participant's aggregated posts using simplified Chinese LIWC, moral-foundation, moral-motivation, cultural-value, and basic-mood lexicons. IDs, timestamps, posting volume, questionnaire duration, and other questionnaire scores were excluded from model inputs. The analysis began with the aggregated features, rather than repeating text extraction. Exact dictionary versions and mappings for 13 abbreviated codes were unavailable. The feature ind exceeded one for 34 participants, contrary to a simple proportion interpretation; it was retained in the primary analysis and excluded with the unmapped codes in a planned sensitivity analysis. Predictors and outcomes had no missing or nonfinite values, and no predictor was constant. No statistical outlier was removed.",
+      "zh": "预测变量由 AGENCY 起至最后一列的 120 个字段构成。根据采集说明，这些特征使用简体中文 LIWC、道德基础、道德动机、文化价值和基本情绪词典，汇总了各参与者聚合帖子中的类别频率。ID、时间戳、发帖量、问卷作答时长及其他问卷分数均未作为模型输入。分析从聚合特征开始，未重新进行文本提取。词典的确切版本及 13 个缩写代码的映射关系不可用。34 名参与者的 ind 特征值超过一，与简单比例的解释不符；主分析保留该特征，并在预定敏感性分析中将其与未映射代码一并排除。预测变量和结局均无缺失值或非有限值，也没有常量预测变量。未删除任何统计离群值。",
+      "english_sha256": "bb5f2067d250629f9ac1fa49d221230e53ae23faf29d1c463d31c284c0eff7ef",
+      "chinese_sha256": "663979d570d0f118c9caea03270fdb0ad7ffa73340c626fc843b6a14e1fa7a61",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 20,
+      "en": "The latest-post timestamp exceeded the questionnaire timestamp in 1,027 of 1,037 retained records. Original posts were unavailable, so a text window ending before the questionnaire could not be reconstructed. The analysis consequently estimates retrospective between-participant associations. Word-level frequencies, odd/even-post features, and item responses were also unavailable, precluding word clouds, text split-half reliability, and questionnaire internal consistency.",
+      "zh": "在保留的 1,037 条记录中，有 1,027 条的最新帖子时间戳晚于问卷时间戳。由于原始帖子不可用，无法重建截止于问卷之前的文本时间窗。因此，本分析估计的是回顾性的参与者间关联。词级频率、奇数与偶数帖子特征以及题目作答也不可用，因而无法生成词云、计算文本分半信度或问卷内部一致性。",
+      "english_sha256": "c3b85e10f453c7e45d98fe174430f18ebd95d773f99de7382d772f7e47bbe20e",
+      "chinese_sha256": "ed8cac022fc4da2b2b00990060ae69c486cdc3fe0dfe28a0192cb607d40ad1f4",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 21,
+      "en": "### Model development",
+      "zh": "### 模型开发",
+      "english_sha256": "906c97d71133e01a76948ddcbc46e3d27ffd743340fd8815a9c2c7b77a1825f2",
+      "chinese_sha256": "ad6712ec2bad3ce1acf9cbccc573059f2823b1021d55fb9353db3f1b303e380a",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 22,
+      "en": "An analysis plan was fixed after the structural data audit and before model comparison; it was not publicly preregistered. We randomly allocated participants to a 90% development set (n = 933) and a 10% final holdout (n = 104), using seed 20260923. Five-fold cross-validation within the development set guided parameter selection. The same participant partition was retained for all models and sensitivity analyses (Figure 1).",
+      "zh": "分析计划在完成数据结构审计后、模型比较前固定，但未进行公开预注册。我们使用随机种子 20260923，按参与者随机分配 90% 的数据至开发集（n = 933），其余 10% 留作最终测试集（n = 104）。开发集内的五折交叉验证用于参数选择。所有模型和敏感性分析均沿用同一参与者划分（图 1）。",
+      "english_sha256": "af5531826f607d054c17d2a527860539addfd9a4c4768ab668be5b3a78a9d4fb",
+      "chinese_sha256": "7b5df71919696823cf2f23581a546d144c8c643f65a29911e3040b74e06e9966",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 23,
+      "en": "![Figure 1](../figures/figure1_analysis_flow.png)",
+      "zh": "![图 1](figures/figure1_analysis_flow.png)",
+      "english_sha256": "88254c7381863f9e600cd301c067fbfd0013f2fa1ef055015ca5c09997d65feb",
+      "chinese_sha256": "75003f6d72e92213d9064f5a4e1eb8ee519bf8c87216c8c8336d085134fcf1cc",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 24,
+      "en": "Figure 1. Participant-level analysis workflow. After record reconciliation, 1,037 participants contribute one earliest observation each. Development (n = 933) and holdout (n = 104) IDs do not overlap. Fitted preprocessing is confined to training folds; model selection precedes final evaluation.",
+      "zh": "图 1. 参与者层面的分析流程。记录核对处理后，1,037 名参与者各贡献一条最早观察。开发集（n = 933）与留出测试集（n = 104）的 ID 不重叠。需要拟合的预处理仅在训练折中进行，模型选择先于最终评估。",
+      "english_sha256": "54cd2435a72b186d0707d7000ddb3c11c91ada54e346d349ed22f5d698afc7ab",
+      "chinese_sha256": "7f91090bb686368097acac1f9d23a1380e11d46994117c2eff89a7294c4e1e72",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 25,
+      "en": "A median imputer and min-max input scaler were fitted within each training fold and then applied to its validation fold. The imputer did not alter these complete data. Outcomes were standardized using training-fold means and standard deviations to give the three targets comparable weight in shared-output losses; predictions were transformed back to stored score units. This fold-local procedure avoids fitting preprocessing on validation participants and differs from applying normalization once before cross-validation.",
+      "zh": "中位数插补器和最小—最大输入缩放器均在各训练折内拟合，再应用于相应验证折。由于数据完整，插补器未改变本数据集。结局使用训练折的均值和标准差进行标准化，使三个目标在共享输出损失中具有可比权重；预测值随后转换回存储分数单位。该折内处理避免在验证参与者上拟合预处理，也不同于在交叉验证前仅进行一次归一化。",
+      "english_sha256": "b432747c983e0fb9762c3090c1a28729f1e9516be2540f7e29b305be99ef8a0b",
+      "chinese_sha256": "793b265bff9e427fa2ed64256eb41b762ff2ab0241c84766e439404ed725cd4f",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 26,
+      "en": "We compared eight families: a training-mean baseline, independent ridge regression, independent random forests, independent extra trees, independent histogram gradient boosting, shared-output random forests, shared-output extra trees, and a multitask elastic net. Random forests average randomized trees, while extra trees randomize split thresholds more extensively (Breiman, 2001; Geurts et al., 2006). Shared tree models used common splits for all outcomes; independent models fitted separate regressors. Multitask elastic net provided a shared-sparsity linear alternative.",
+      "zh": "我们比较了八类模型：训练集均值基线、独立岭回归、独立随机森林、独立极端随机树、独立直方图梯度提升、共享输出随机森林、共享输出极端随机树，以及多任务弹性网。随机森林对随机化树的预测进行平均，而极端随机树对划分阈值采用更强的随机化 (Breiman, 2001; Geurts et al., 2006)。共享树模型对所有结局使用共同的划分；独立模型则分别拟合回归器。多任务弹性网提供了另一种共享稀疏结构的线性模型。",
+      "english_sha256": "75220a2631d3ac79519a1cadbe1c42c08ef420113b5e1c7f3eaef82f0362d361",
+      "chinese_sha256": "0871062a7d3df241f6c48718231015daefa6003109a19b1579c12e172874fba8",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 27,
+      "en": "The fixed grid contained 42 configurations and 210 composite fold evaluations, with three regressors in each independent-target fit. Selection minimized the mean cross-validated normalized RMSE: each target's RMSE was divided by its training-fold standard deviation, then averaged across outcomes and folds. Independent families selected parameters separately for each outcome, whereas shared families selected one setting using the macro average. We retained the selected overall model, best independent ensemble, best shared model, and best tree family without consulting holdout performance. The full search grid, implementation checks, and selected settings are reported in the supplement. Optimization ended at the fixed budget, without test-driven retuning.",
+      "zh": "固定参数网格包含 42 种配置和 210 次复合折内评估，每次独立目标拟合包含三个回归器。选择标准是使交叉验证归一化 RMSE 的平均值最小：先将各目标的 RMSE 除以其训练折标准差，再对结局和折求平均。独立模型为各结局分别选择参数，共享模型则依据宏平均选择一组设置。我们在不查看留出测试集表现的情况下，保留了整体选定模型、最佳独立集成模型、最佳共享模型及最佳树模型。完整搜索网格、实现检查和选定设置见补充材料。优化在固定预算耗尽后结束，未根据测试结果重新调参。",
+      "english_sha256": "c00a0e84f7a8b7d3728d549e1a3d4e9876858eb52da0de9152cd04b862915e49",
+      "chinese_sha256": "c2c1f4b65ef56d68807d29a7247ed50322c30014c3f4b1ef03408c10f0ba98fa",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 28,
+      "en": "### Exploratory optimization after the original evaluation",
+      "zh": "### 原始评估后的探索性优化",
+      "english_sha256": "c8a296066559643a780cf7855157cfff58143df6c0876f8617c1b766edc9a9b5",
+      "chinese_sha256": "913dece9c45dd36b05265b5a725c4893b346483c84615a7ff953262a0d7a0c6e",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 29,
+      "en": "After the original holdout results had been inspected, we fixed a separate search of 22 configurations to test stronger regularization, smooth nonlinear regression, and lower-dimensional alternatives. These included the mean and original shared-forest comparators, ridge regression with raw or log-transformed features, support-vector regression, shallow boosting, elastic net, partial least squares, and larger-leaf independent forests. All learned preprocessing remained fold-local. Five outer folds within the original development set each repeated five-fold selection internally; a final five-fold search on all development participants then fixed one candidate for evaluation on the previously seen holdout. Repeating selection inside the outer folds addresses a specific source of selection bias (Cawley & Talbot, 2010). However, this entire extension remains exploratory because earlier development analyses and holdout results were already known. We retained the original primary results and stopped at the fixed budget. The supplement reports the complete configuration grid, outer-fold results, and exploratory comparisons.",
+      "zh": "查看原始留出结果后，我们另行固定了包含 22 个配置的搜索，用以考察更强正则化、平滑非线性回归及低维替代方案。候选包括均值与原共享森林参照、使用原始或对数变换特征的岭回归、支持向量回归、浅层提升、弹性网、偏最小二乘，以及叶节点更大的独立森林。所有需要学习的预处理仍限于各训练折。原开发集内的五个外层折各自重复内层五折选择；随后在全部开发参与者上进行最终五折搜索，冻结一个候选后，才在此前已查看的留出集上评估。在外层折内重新执行模型选择，可以处理一类特定的选择偏差（Cawley & Talbot, 2010）。但由于此前的开发集分析和留出结果已经知晓，整个扩展仍属于探索性分析。我们保留原主分析结果，并在固定预算用尽后停止。补充材料报告完整配置网格、外层折结果和探索性比较。",
+      "english_sha256": "90bb0ccdef9b83b3e8aefa4a12103e76f8c0909f614db7a8b20ffe2ff570b501",
+      "chinese_sha256": "0721570b5a08522a3b847c8d2566340b2bd3b512ab8c08bf2fb49aae7477dd46",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 30,
+      "en": "### Evaluation and uncertainty",
+      "zh": "### 评估与不确定性",
+      "english_sha256": "5bc63a44bb989632af7159de76f2849e442900cb974b77630f667007813004b4",
+      "chinese_sha256": "27af933af0db1474495cb811a148a90216492d87d3e9ca6452e6c0826cbf148f",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 31,
+      "en": "All model families were evaluated on the same holdout after selection. Pearson r quantified linear association, with Fisher-z 95% confidence intervals and two-sided tests. RMSE quantified numerical prediction error in stored units, with percentile 95% intervals from 5,000 participant bootstrap resamples. The three selected-model correlation tests were Holm-adjusted. R-squared and Spearman correlation were also retained. Correlation is undefined for a constant mean prediction; moreover, correlation alone does not demonstrate numerical agreement or sensitivity to within-person change.",
+      "zh": "模型选择完成后，所有模型类别均在同一留出测试集上评估。Pearson r 用于量化线性关联，并报告基于 Fisher-z 的 95% 置信区间和双侧检验。RMSE 用于量化存储分数单位下的数值预测误差，并通过 5,000 次参与者 bootstrap 重抽样获得百分位数法 95% 区间。选定模型的三个相关检验采用 Holm 校正。此外还保留了决定系数和 Spearman 相关。常量均值预测的相关系数无定义；相关本身也不能证明数值一致性或对个体内变化的敏感性。",
+      "english_sha256": "661ddd92dff666285d0bd06612d0974eca7125d39c433a6e1da6bfa704a17130",
+      "chinese_sha256": "a8e6648808ad7df7d0e297bf3a1510f51c75ab04969a439cb043b95838455182",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 32,
+      "en": "Two planned comparisons assessed the selected model against the training mean and the best shared model against the best independent ensemble. We estimated paired RMSE differences with 5,000 participant bootstrap resamples and used 10,000 within-participant prediction swaps to test mean squared-error differences, with a plus-one correction. Holm adjustment covered the six comparison-by-outcome tests. Bootstrap intervals are pointwise, rather than simultaneous across those tests. Inference conditions on the fitted models and this participant split; swap tests additionally assume the relevant prediction exchangeability. Neither procedure includes uncertainty from retraining on another sample or from convenience recruitment.",
+      "zh": "两项预定比较分别检验选定模型与训练均值，以及最佳共享模型与最佳独立集成模型的差异。我们使用 5,000 次参与者 bootstrap 重抽样估计配对 RMSE 差值，并进行 10,000 次参与者内预测值交换，以检验均方误差差异，同时采用加一校正。Holm 校正覆盖两类比较与三个结局形成的六项检验。Bootstrap 区间是逐项区间，而非覆盖这些检验的同时区间。推断以已拟合模型和本次参与者划分为条件；交换检验还依赖相应的预测可交换性假设。这两类程序均未纳入在其他样本上重新训练所产生的不确定性，也未涵盖便利招募带来的不确定性。",
+      "english_sha256": "ed9fc48bcad156eddaa3a1427d7f48b5883fac9858c83488cfee554a983dab04",
+      "chinese_sha256": "8d24e34121d35262d8bd59fc4eb7fe3e6e40fd12784131f3e83d545250e0e991",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 33,
+      "en": "### Sensitivity analyses and model interpretation",
+      "zh": "### 敏感性分析与模型解释",
+      "english_sha256": "bbcca5b6a69b4ab3897bd672374b78e7e85e273df373a1895602e21531755457",
+      "chinese_sha256": "6a9b0ed18cf5fa71b75ee2db04ae6cb97d49c022b10ca8a236a5d4bf13199fc7",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 34,
+      "en": "Three prespecified sensitivities retained the original participant allocation and selected hyperparameters: using the latest distinct record per participant, retaining only IDs observed once, and excluding ind plus the 13 unmapped codes. Models were refitted without retuning. Three repetitions of five-fold development cross-validation further described variability under frozen settings. Because development data had already informed parameter selection, these repetitions were diagnostic rather than independent nested validation.",
+      "zh": "三项预定敏感性分析保留了原参与者分配和选定超参数，分别使用每名参与者最新的不同记录、仅保留出现过一次的 ID，以及排除 ind 和 13 个未映射代码。各模型重新拟合，但不重新调参。另进行了三次重复五折开发集交叉验证，以描述固定设置下的变异。由于开发集已用于参数选择，这些重复分析属于诊断，而不是独立的嵌套验证。",
+      "english_sha256": "4be970f73c50217363bb8a19c5d46679687dd1a6b5695340cf56ee0c5d95f83b",
+      "chinese_sha256": "3b9359e4ad1218782d3f8b5391f0f75b291ca2939af2cddd5e66c9fba1c2bd47",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 35,
+      "en": "We interpreted the best development-selected tree family using tree-path-dependent TreeSHAP on development participants (Lundberg et al., 2020). Contributions were returned to stored outcome units, checked for additive reconstruction, and ranked by mean absolute magnitude. The union of the ten highest-ranked features per outcome was then permuted individually in the holdout, using 20 shuffles per feature. Shuffle variability describes model sensitivity, not a population confidence interval. Attribution and permutation results concern the fitted prediction function and do not identify causal effects of language on well-being (Janzing et al., 2020).",
+      "zh": "我们在开发集参与者上，使用树路径依赖型 TreeSHAP 解释开发阶段选定的最佳树模型 (Lundberg et al., 2020)。贡献值被转换回存储结局单位，核查其能否加和重建预测，并按平均绝对值排序。随后，将每个结局排名前十的特征取并集，在留出测试集中逐个置换，每个特征洗牌 20 次。洗牌变异描述的是模型敏感性，而非总体置信区间。归因和置换结果针对已拟合的预测函数，不能识别语言对幸福感的因果效应 (Janzing et al., 2020)。",
+      "english_sha256": "f525c3cb7c540d5eee5135b8beecfeed6e6ce3d7201c6fb2af7524cf0ebd8c46",
+      "chinese_sha256": "0a56fb84a7b9853616293b2fdbfbf443df692818d9131e27231f7b1701160a02",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 36,
+      "en": "Analyses used Python 3.12.7, scikit-learn 1.9.1, and SHAP 0.52.0. Scripts, participant assignments, predictions, and computational reproduction results are retained in the accompanying analysis package and supplement.",
+      "zh": "分析使用 Python 3.12.7、scikit-learn 1.9.1 和 SHAP 0.52.0。脚本、参与者划分、预测值及计算复现结果均保存在配套分析包和补充材料中。",
+      "english_sha256": "3fe843ef734c245c6450bb101f2302647ab4e9f8c612e5693d50eea807714fb8",
+      "chinese_sha256": "d183e445f5e1687d4c219b5347610467feb7abb853f43a45e2d2f32a2bbc4c6a",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 37,
+      "en": "## Results",
+      "zh": "## 结果",
+      "english_sha256": "003645d0bf6bb6adad9166f3b67dc4cb1c0e9a9407deaeaf7ffc1e23ec4d1ca4",
+      "chinese_sha256": "6aeebef0d26443c1f5faee74c66e35f6f1b33c92a0d18bcf9f47830c04a68ec7",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 38,
+      "en": "### Sample characteristics and model selection",
+      "zh": "### 样本特征与模型选择",
+      "english_sha256": "d96876e57717de9ca1e2ebbef2ffb3f6b9ebe87e42815e42a73da56edd118854",
+      "chinese_sha256": "34c5876ee33a161db66ef814ce855b27597ef805718df0c48c1d0e4fd2b960f3",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 39,
+      "en": "Outcome distributions in the full, development, and holdout samples are presented in Table 1. Negative affect correlated -0.307 with positive affect and -0.408 with life satisfaction; positive affect correlated 0.458 with life satisfaction. These relationships motivated evaluating the components jointly while retaining outcome-specific performance estimates.",
+      "zh": "完整样本、开发集和留出测试集的结局分布见表 1。消极情绪与积极情绪的相关为 -0.307，与生活满意度的相关为 -0.408；积极情绪与生活满意度的相关为 0.458。这些关联为联合评估多个成分提供了动机，同时仍需保留各结局的独立表现估计。",
+      "english_sha256": "569c94b88e0c3a69e5e995b6a46fca0c7c867e469ae4cd37840842b5872e3ac3",
+      "chinese_sha256": "6b7ebcc3f746f33e1ecec0d8a4f86faad71e2eae0a1d2e2169b27a92a35d326c",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 40,
+      "en": "### Table 1 Outcome distributions in the participant datasets",
+      "zh": "### 表 1 参与者数据集中的结局分布",
+      "english_sha256": "d5efe6d7213e7ece9dca48348a11ef531b36cb92d748a6ad9a4441188b0a61f0",
+      "chinese_sha256": "6e84e1194c9e78cc17f403c7ffdcd1fce7ab342276a8f277ed8ac4ff359e4113",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 41,
+      "en": "| Outcome | All, M (SD) | Development, M (SD) | Holdout, M (SD) |\n| --- | --- | --- | --- |\n| Negative affect | 0.367 (0.160) | 0.364 (0.159) | 0.388 (0.169) |\n| Positive affect | 0.543 (0.156) | 0.545 (0.154) | 0.524 (0.169) |\n| Life satisfaction | 0.419 (0.210) | 0.421 (0.211) | 0.401 (0.205) |",
+      "zh": "| 结局 | 全样本，M（SD） | 开发集，M（SD） | 留出集，M（SD） |\n| --- | --- | --- | --- |\n| 消极情绪 | 0.367 (0.160) | 0.364 (0.159) | 0.388 (0.169) |\n| 积极情绪 | 0.543 (0.156) | 0.545 (0.154) | 0.524 (0.169) |\n| 生活满意度 | 0.419 (0.210) | 0.421 (0.211) | 0.401 (0.205) |",
+      "english_sha256": "81360053f2e4400ec00e7bac0e185b7dc1b361838156e28ae9e74c44f2815c17",
+      "chinese_sha256": "b24ec0882a967d938ae5bf497f96b66ec87fa2c4abccbe913b4d06cf8b27bc8e",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 42,
+      "en": "Note. All n = 1,037; development n = 933; holdout n = 104. Scores are delivered CSV units; all primary outcome ranges are 0–1. One earliest observation per participant. SD uses the sample denominator.",
+      "zh": "注. 完整样本 n = 1,037；开发集 n = 933；留出测试集 n = 104。分数采用所提供 CSV 中的单位，主分析三个结局的范围均为 0–1。每名参与者保留一条最早观察。SD 按样本标准差计算。",
+      "english_sha256": "f6409a52c99016ee3c03e517133d2ec45f7fdc1f155b9c550c8a114b5d6f49af",
+      "chinese_sha256": "5fc6e2040237a5bf7a9b14c4c1b10e836ee8ff26c27986df5627fc6036e77593",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 43,
+      "en": "Shared random forest had the lowest development macro normalized RMSE (0.9963), closely followed by independent random forest (0.9965); the mean baseline scored 1.0016. The selected shared forest used 256 trees, a minimum leaf size of 15, and all predictors as split candidates. Full development results and selected settings are provided in the supplement.",
+      "zh": "共享随机森林的开发集宏平均归一化 RMSE 最低（0.9963），独立随机森林紧随其后（0.9965）；训练均值基线为 1.0016。选定的共享森林使用 256 棵树，最小叶节点样本数为 15，每次划分均将全部预测变量作为候选。完整开发集结果和选定设置见补充材料。",
+      "english_sha256": "a6cbadd42e91f0a2b9ce2006aeddd48b1562b326f38e1d5e4bd0e9506b1d1851",
+      "chinese_sha256": "c5c3f4f5f30dfe316c8ac804c2abfc007acdb231b6a95728cb3ad9d80c86c68e",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 44,
+      "en": "### Held-out association and prediction error",
+      "zh": "### 留出测试集关联与预测误差",
+      "english_sha256": "d61fee730412d84a3a1a7cc264656e7678de721dc7e0fc6fe74f1f0cc0e643f2",
+      "chinese_sha256": "83caac7dfc379dddb2096a1c996ba181b700026bacc2126c02f10563103c7038",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 45,
+      "en": "On 104 held-out participants, the selected shared forest's correlations with negative affect, positive affect, and life satisfaction were 0.247, 0.284, and 0.152, respectively (Table 2). The Holm-adjusted tests gave P = 0.023, P = 0.010, and P = 0.124. Thus, the two affect estimates were distinguishable from zero under this correction, whereas the life-satisfaction interval included zero. This pattern is not a test of differences between the outcomes. Figure 2 places these estimates alongside every evaluated model family.",
+      "zh": "在 104 名留出参与者上，选定共享森林与消极情绪、积极情绪及生活满意度的相关依次为 0.247、0.284 和 0.152（表 2）。经 Holm 校正，检验结果依次为 P = 0.023、P = 0.010 和 P = 0.124。因此，在这一校正下，两个情绪估计可与零区分，而生活满意度的区间包含零。这一模式并不是对不同结局之间差异的检验。图 2 将这些估计与所有已评估的模型类别一并呈现。",
+      "english_sha256": "8323af8de666377100b2f7df9fdc0dd5d78f7ddcd675c4abf1a7119ecf564514",
+      "chinese_sha256": "70578d60360fc25b841d1114a0e5408542680ec5421b72c1eec13d1e517e044a",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 46,
+      "en": "### Table 2 Held-out performance of the selected models and baseline",
+      "zh": "### 表 2 选定模型与基线的留出测试集表现",
+      "english_sha256": "55c360cb0f6b2bbdd6a3aa19f6377a97e0acb406764e02a612ca07e3fb3d9097",
+      "chinese_sha256": "08bd0aa75b054f5fba6e4512fc150e591b565db85a11ff1525a459c7b3f0048e",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 47,
+      "en": "| Model | Outcome | Pearson r [95% CI] | p | RMSE [95% CI] |\n| --- | --- | --- | --- | --- |\n| Shared RF | Negative affect | 0.247 [0.057, 0.419] | 0.012 | 0.166 [0.146, 0.186] |\n| Shared RF | Positive affect | 0.284 [0.097, 0.452] | 0.003 | 0.165 [0.143, 0.187] |\n| Shared RF | Life satisfaction | 0.152 [-0.042, 0.335] | 0.124 | 0.202 [0.181, 0.222] |\n| Training mean | Negative affect | Undefined | — | 0.169 [0.150, 0.190] |\n| Training mean | Positive affect | Undefined | — | 0.170 [0.146, 0.192] |\n| Training mean | Life satisfaction | Undefined | — | 0.205 [0.184, 0.225] |\n| Independent RF | Negative affect | 0.230 [0.039, 0.405] | 0.019 | 0.165 [0.144, 0.185] |\n| Independent RF | Positive affect | 0.325 [0.141, 0.487] | < .001 | 0.163 [0.141, 0.186] |\n| Independent RF | Life satisfaction | 0.184 [-0.008, 0.364] | 0.061 | 0.201 [0.180, 0.222] |",
+      "zh": "| 模型 | 结局 | Pearson r［95% CI］ | p | RMSE［95% CI］ |\n| --- | --- | --- | --- | --- |\n| 共享 RF | 消极情绪 | 0.247 [0.057, 0.419] | 0.012 | 0.166 [0.146, 0.186] |\n| 共享 RF | 积极情绪 | 0.284 [0.097, 0.452] | 0.003 | 0.165 [0.143, 0.187] |\n| 共享 RF | 生活满意度 | 0.152 [-0.042, 0.335] | 0.124 | 0.202 [0.181, 0.222] |\n| 训练均值 | 消极情绪 | 无定义 | — | 0.169 [0.150, 0.190] |\n| 训练均值 | 积极情绪 | 无定义 | — | 0.170 [0.146, 0.192] |\n| 训练均值 | 生活满意度 | 无定义 | — | 0.205 [0.184, 0.225] |\n| 独立 RF | 消极情绪 | 0.230 [0.039, 0.405] | 0.019 | 0.165 [0.144, 0.185] |\n| 独立 RF | 积极情绪 | 0.325 [0.141, 0.487] | < .001 | 0.163 [0.141, 0.186] |\n| 独立 RF | 生活满意度 | 0.184 [-0.008, 0.364] | 0.061 | 0.201 [0.180, 0.222] |",
+      "english_sha256": "ec57d85911db36f17a18b437760a99199f952f5ff43544be00abdc8c5dce3cd0",
+      "chinese_sha256": "3532d5769d82dfac75d6118184c0108d18134abe2d999073aa7da39ae05187fa",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 48,
+      "en": "Note. n = 104. RF = random forest. Shared RF was the development-selected overall model; independent RF was the selected independent ensemble. Pearson intervals use Fisher z; p values are unadjusted two-sided tests. The selected model's three correlations are additionally Holm-adjusted in the text. RMSE intervals use 5,000 participant bootstrap resamples; scores retain CSV units. Mean predictions have undefined r. All eight families appear in Supplementary Table S1.",
+      "zh": "注. n = 104。RF 表示随机森林。共享 RF 是开发阶段选定的整体模型，独立 RF 是选定的独立集成模型。Pearson 区间使用 Fisher z；p 值来自未经校正的双侧检验。正文对选定模型的三个相关另作了 Holm 校正。RMSE 区间采用 5,000 次参与者 bootstrap 重抽样；分数保留 CSV 单位。均值预测的 r 无定义。全部八类模型见补充表 S1。",
+      "english_sha256": "38ca0d6df745b6550ca3c88e5106e941ae44139379039faadbefc64b19ddd297",
+      "chinese_sha256": "bf59105c4c38b3d9a8815c2320c2496346efa248584dac62da91cf10def68755",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 49,
+      "en": "![Figure 2](../figures/figure2_model_performance.png)",
+      "zh": "![图 2](figures/figure2_model_performance.png)",
+      "english_sha256": "a2d44e0dbc285e0abe9af26f806fc7c4c26f1d1136b6178c03664531cb46b352",
+      "chinese_sha256": "c25610d6a80b1a8c4c8d7c3a64f1d2c30e726b5cd464fdff24a7e63e3b8ce5b2",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 50,
+      "en": "Figure 2. Held-out predictive performance across eight model families (n = 104). A–C: Pearson r with Fisher-z 95% intervals, using a common correlation scale. D–F: RMSE with 5,000-resample participant-bootstrap 95% intervals in stored score units. The diamond and asterisk mark development-selected shared RF, not statistical significance; the open square and reference line denote the mean baseline, whose correlation is undefined. Families are ordered by development performance. RF = random forest; ET = extra trees; HGB = histogram gradient boosting.",
+      "zh": "图 2. 八类模型的留出测试集预测表现（n = 104）。A–C：Pearson r 及基于 Fisher-z 的 95% 区间，采用共同的相关系数坐标范围。D–F：存储分数单位下的 RMSE，以及基于 5,000 次参与者 bootstrap 重抽样的 95% 区间。菱形和星号标记开发阶段选定的共享 RF，而非统计显著性；空心方块和参考线表示均值基线，其相关系数无定义。模型按开发集表现排序。RF 表示随机森林，ET 表示极端随机树，HGB 表示直方图梯度提升。",
+      "english_sha256": "3fb847a448927b96fcbc37387b25ad30c2b4eb477d0d785574b0cce4645c453e",
+      "chinese_sha256": "a734076aa4f3a60c54f0de7ac0ce355e22430229f4691af6f6fab774dc8214e3",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 51,
+      "en": "The selected model's RMSEs were 0.166, 0.165, and 0.202 in stored score units, with R-squared values of 0.020, 0.040, and 0.015. Predictions were concentrated near central scores despite the broader observed ranges (Figure 3). The mean baseline's RMSEs were 0.169, 0.170, and 0.205, indicating that the observed reductions in numerical error were small.",
+      "zh": "以存储分数单位计，选定模型的 RMSE 依次为 0.166、0.165 和 0.202，决定系数依次为 0.020、0.040 和 0.015。尽管观察值的范围较宽，预测值仍集中在分数中部附近（图 3）。均值基线的 RMSE 依次为 0.169、0.170 和 0.205，表明观察到的数值误差降幅较小。",
+      "english_sha256": "644e50557d0bc5b2874acd40d8743ac600be80ee3f5d15cf4f16aef7a38973c3",
+      "chinese_sha256": "acb80b6407f4bcd36dd2f870362822ec257107bd9ff596f2d1721257d0036538",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 52,
+      "en": "![Figure 3](../figures/figure3_observed_predicted.png)",
+      "zh": "![图 3](figures/figure3_observed_predicted.png)",
+      "english_sha256": "b4a1084b6f87e55877ec3c4efb896c31496ea295615727d315158616b28c33d5",
+      "chinese_sha256": "0b26401066406a15be0e005c859816b82fb6cfeb6d449a43e48cb70c22485120",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 53,
+      "en": "Figure 3. Observed and predicted scores from the development-selected shared random forest. Each point represents one of 104 held-out participants; axes use stored score units and include all predictions. A: negative affect; B: positive affect; C: life satisfaction. The dashed identity line indicates exact agreement, rather than a fitted regression.",
+      "zh": "图 3. 开发阶段选定的共享随机森林所产生的观察分数与预测分数。每个点代表 104 名留出参与者中的一人；两轴采用存储分数单位，并涵盖全部预测值。A：消极情绪；B：积极情绪；C：生活满意度。虚线为表示完全一致的恒等线，而非拟合的回归线。",
+      "english_sha256": "739afb88d7b9ae594f5b15bed6325b77619352a8f1ecc929884107de82e05f9f",
+      "chinese_sha256": "7be6b525b33e19cbcc9fc2816465e168ca3ac9517e38f500cf41b5195884ec10",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 54,
+      "en": "### Comparisons with the baseline and independent models",
+      "zh": "### 与基线及独立模型的比较",
+      "english_sha256": "6c75415c8c3f743b5a0cf81434b1ecaf8057f3454c7d1b807c2d29a36e8d4295",
+      "chinese_sha256": "414224126de72c10e526cf8e8b5a4a1e2e5171addb7e794a7644eeadca3cd2ab",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 55,
+      "en": "Selected-model-minus-baseline RMSE differences were -0.0034, -0.0048, and -0.0024 for negative affect, positive affect, and life satisfaction (Table 3). The pointwise bootstrap intervals for the two affect differences excluded zero. However, none of the paired swap tests met the six-test Holm-adjusted criterion (adjusted P = 0.113, P = 0.101, and P = 1.000). These summaries reflect different uncertainty procedures; multiplicity adjustment does not change the observed error reductions.",
+      "zh": "消极情绪、积极情绪和生活满意度的“选定模型减去基线”RMSE 差值依次为 -0.0034、-0.0048 和 -0.0024（表 3）。两个情绪差值的逐项 bootstrap 区间均不包含零。然而，没有一项配对交换检验达到六项检验经 Holm 校正后的判定标准（校正后 P = 0.113、P = 0.101 和 P = 1.000）。这些统计量反映不同的不确定性处理方式；多重比较校正并未改变观察到的误差降幅。",
+      "english_sha256": "7eff7b43aaa433e68ce261b788a529f4853b994dd39b42eb10d403c1b5bdecc6",
+      "chinese_sha256": "fa57853f9f81e762e40c9bc583fa821c4d72e4c17be00a361dc561026bb4f2cc",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 56,
+      "en": "Shared-minus-independent random-forest RMSE differences were 0.0009, 0.0015, and 0.0011. The shared procedure had slightly higher point-estimate error on each outcome, but every difference interval included zero. This comparison did not establish a shared-learning advantage or equivalence between the procedures. Model selection remained based on development performance.",
+      "zh": "“共享随机森林减去独立随机森林”的 RMSE 差值依次为 0.0009、0.0015 和 0.0011。共享程序在每个结局上的误差点估计均略高，但所有差值区间都包含零。这一比较既未确立共享学习的优势，也未证明两类程序等效。模型选择仍然以开发集表现为依据。",
+      "english_sha256": "623a05522e5e719518867e89ea7dc54721b18d3c674f4296333d9dedd2898718",
+      "chinese_sha256": "2e41da400bb54d613da42e67175a99aa19745e4b000cc04c373a87e9f9729c47",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 57,
+      "en": "### Table 3 Paired differences in held-out prediction error",
+      "zh": "### 表 3 留出预测误差的配对差异",
+      "english_sha256": "e59baf44fc5aa7274554363cb0874688b6f6b93e0c36b4ac2bb1a300eea51b6b",
+      "chinese_sha256": "41b21228a3ed4ea5204a880ec37e0dca5529508bcf972fc3c9e0bd2ee69aae3d",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 58,
+      "en": "| Comparison | Outcome | Delta RMSE | 95% CI | p (swap) | p (Holm) |\n| --- | --- | --- | --- | --- | --- |\n| Selected vs mean | Negative affect | -0.0034 | [-0.006, -0.001] | 0.023 | 0.113 |\n| Selected vs mean | Positive affect | -0.0048 | [-0.008, -0.001] | 0.017 | 0.101 |\n| Selected vs mean | Life satisfaction | -0.0024 | [-0.007, 0.002] | 0.337 | 1.000 |\n| Shared vs independent | Negative affect | 0.0009 | [-0.002, 0.004] | 0.533 | 1.000 |\n| Shared vs independent | Positive affect | 0.0015 | [-0.001, 0.004] | 0.193 | 0.772 |\n| Shared vs independent | Life satisfaction | 0.0011 | [-0.002, 0.004] | 0.502 | 1.000 |",
+      "zh": "| 比较 | 结局 | RMSE 差值 | 95% CI | p（交换） | p（Holm） |\n| --- | --- | --- | --- | --- | --- |\n| 选定模型 vs 均值 | 消极情绪 | -0.0034 | [-0.006, -0.001] | 0.023 | 0.113 |\n| 选定模型 vs 均值 | 积极情绪 | -0.0048 | [-0.008, -0.001] | 0.017 | 0.101 |\n| 选定模型 vs 均值 | 生活满意度 | -0.0024 | [-0.007, 0.002] | 0.337 | 1.000 |\n| 共享 vs 独立 | 消极情绪 | 0.0009 | [-0.002, 0.004] | 0.533 | 1.000 |\n| 共享 vs 独立 | 积极情绪 | 0.0015 | [-0.001, 0.004] | 0.193 | 0.772 |\n| 共享 vs 独立 | 生活满意度 | 0.0011 | [-0.002, 0.004] | 0.502 | 1.000 |",
+      "english_sha256": "599884f1a981c3b918fd2c2148347d8039b5b881586199c021d74a8de015d64c",
+      "chinese_sha256": "edd05b001a245e23385f5fbf5da10e59f20e8d8750073111531113f594e3a9f5",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 59,
+      "en": "Note. n = 104. Differences are first model minus second; negative favors the first. The selected/shared model is shared RF; the independent comparator is independent RF. Pointwise intervals use 5,000 paired participant bootstraps. Tests use 10,000 prediction swaps on mean squared-error differences; Holm adjustment covers all six rows. Inference conditions on fitted models and the participant split.",
+      "zh": "注. n = 104。差值为前一个模型减去后一个模型；负值有利于前者。选定／共享模型为共享 RF，独立比较模型为独立 RF。逐项区间采用 5,000 次配对参与者 bootstrap 重抽样。检验通过 10,000 次预测值交换考察均方误差差异，Holm 校正覆盖全部六行。推断以已拟合模型和参与者划分为条件。",
+      "english_sha256": "e48e19c9549788f08b60227ecfc24cabf085ef380586016cfd44ba3c1b9145da",
+      "chinese_sha256": "f88bb39da1e103fdd180ec2e778966a0bed06e5470fd208fdf2fbdf3dfcaaaa3",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 60,
+      "en": "### Contributions of linguistic categories",
+      "zh": "### 语言类别的贡献",
+      "english_sha256": "0bd3aff7e2a682b781d521994a68f8f58d1111b4cbceff5a373b359fe0af0b82",
+      "chinese_sha256": "2801e743abf18cd637b953602471a86b712666641a74834255a15adbe3fafcce",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 61,
+      "en": "The largest mean absolute training attributions were Sexual (0.0041), C10 (0.0040), C2 (0.0036) for negative affect; Sexual (0.0045), We (0.0039), Family (0.0030) for positive affect; and Family (0.0061), We (0.0056), C10 (0.0052) for life satisfaction (Figure 4). The values quantify the magnitude of contribution to fitted predictions in stored score units. C10 and C2 remain unmapped codes, so they cannot be assigned psychological meanings from these data.",
+      "zh": "消极情绪的平均绝对训练归因值最高的特征为 Sexual（0.0041）、C10（0.0040）和 C2（0.0036）；积极情绪对应为 Sexual（0.0045）、We（0.0039）和 Family（0.0030）；生活满意度对应为 Family（0.0061）、We（0.0056）和 C10（0.0052）（图 4）。这些数值量化了特征对拟合预测的贡献幅度，单位为存储分数单位。C10 和 C2 仍是未映射代码，因而不能依据这些数据赋予其心理学含义。",
+      "english_sha256": "7d38267c7ae5f0ce7867515055e1367b688e1a0cde5257c5634ef84cd5a8a352",
+      "chinese_sha256": "3daef6ea0ed01edbdd36829bf24262b43c6ef9a44503d87b0d637de14260252f",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 62,
+      "en": "![Figure 4](../figures/figure4_feature_attribution.png)",
+      "zh": "![图 4](figures/figure4_feature_attribution.png)",
+      "english_sha256": "b9ef62e1429f5f1231ccca3cbc665491e48a121a6574bdbf1b48fcc3e6abd0ad",
+      "chinese_sha256": "0a69778ecf95414bfbab12b19c07b38f97c23fa53b3c1e2c05ed4e7a42e1e336",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 63,
+      "en": "Figure 4. Ten largest mean absolute training TreeSHAP contributions per outcome for shared RF (n = 933). A: negative affect; B: positive affect; C: life satisfaction. Values use stored outcome units and a tree-path-dependent background. Daggers and hatching identify dictionary codes without verified semantic mappings. Absolute magnitudes indicate contribution size, not direction, statistical significance, or causal effects.",
+      "zh": "图 4. 共享 RF 对各结局的十个最大平均绝对训练 TreeSHAP 贡献（n = 933）。A：消极情绪；B：积极情绪；C：生活满意度。数值采用存储结局单位和树路径依赖的背景定义。† 符号与斜线纹理标识尚未核实语义映射的词典代码。绝对值表示贡献大小，不表示方向、统计显著性或因果效应。",
+      "english_sha256": "78b9b0805e6b5c5a76243fca23998b834a1140d22bf63e7c21cd0d4fbacd40e4",
+      "chinese_sha256": "a6659ca53c6e60487870f30a5050cf8acec27983b9d67a247c0141239d3ebd4d",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 64,
+      "en": "Holdout permutation diagnostics for 14 training-selected features produced small, mixed error changes. Some high-attribution features could be shuffled without a deterioration in error. These results distinguish prominence in the fitted training model from consistent effects on held-out prediction error; full feature-wise changes and shuffle variability are reported in the supplement.",
+      "zh": "对开发阶段选出的 14 个特征进行留出测试集置换诊断后，误差变化较小且方向不一。一些训练归因较高的特征即使被打乱，也未导致误差恶化。这些结果区分了特征在拟合训练模型中的突出程度与其对留出预测误差的一致影响；完整的逐特征误差变化和洗牌变异见补充材料。",
+      "english_sha256": "709745b9ff363784732ee38da1bd1d8e2e766507fd87a7fd7607d9e80f686721",
+      "chinese_sha256": "65cb9291b37996b8a9224c11ef10f48e5c502a7d4296c585ff51069994c3002c",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 65,
+      "en": "### Prespecified sensitivity analyses",
+      "zh": "### 预定敏感性分析",
+      "english_sha256": "7f81df26aabc4e1108ce45a95652d3ee10c10ec54ce343edc0f7f58f92af4ea9",
+      "chinese_sha256": "f6a9c7a1c3b30a538a10d90ba4bb9a195adfc0335e825246d973b25b54a5514e",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 66,
+      "en": "Using the latest records yielded correlations of 0.259, 0.286, and 0.101 for the originally selected model. The singleton-ID analysis retained 85 holdout participants and yielded correlations of 0.303, 0.301, and 0.173. Excluding ind and the unmapped codes yielded correlations of 0.301, 0.268, and 0.125, with RMSEs of 0.165, 0.165, and 0.203. Point estimates varied, while the broad pattern of modest associations and limited numerical prediction remained. These sensitivities address the specified handling choices; they do not establish equivalence across datasets or resolve unmeasured sources of error. Complete intervals and repeated-development-CV diagnostics are provided in the supplement.",
+      "zh": "使用最新记录时，原先选定模型的相关依次为 0.259、0.286 和 0.101。仅保留单次出现 ID 的分析包含 85 名留出参与者，相关依次为 0.303、0.301 和 0.173。排除 ind 和未映射代码后，相关依次为 0.301、0.268 和 0.125，RMSE 为 0.165、0.165 和 0.203。点估计存在变化，但总体上仍呈现关联程度有限、数值预测改善有限的模式。这些敏感性分析针对的是预先指定的数据处理选择；它们既不证明各数据集等效，也不能消除未测量的误差来源。完整区间和开发集重复交叉验证诊断见补充材料。",
+      "english_sha256": "3dd7adf20e64ad2426649bb1f9b27040cae58fa84b90c8f252418c9ea98242e9",
+      "chinese_sha256": "d716a60c7bbe7fd45ae7923237e554380bc792db418ff0f167ff7e22aea07d77",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 67,
+      "en": "### Exploratory optimization",
+      "zh": "### 探索性优化",
+      "english_sha256": "630f0d47cbdb0ba0348886bb2069ae48d4d4cb2c21b864ffd5e660d7e39e61fb",
+      "chinese_sha256": "95e97d70cf8575d9f2f744a5889bfd636fecec7f670d9d43f458bd0a26e8a03c",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 68,
+      "en": "The additional search selected independent forests with a minimum leaf size of 60 and half of the predictors considered at each split. In nested development validation, macro normalized RMSE was 1.0006 for the selected procedure, 1.0001 for the fixed original shared forest, and 1.0007 for the mean baseline. The selected procedure's error was 0.044% higher than the original forest's, failing the predeclared exploratory heuristic of a 1% reduction. On the previously seen holdout, correlations were 0.245, 0.332, and 0.164; RMSEs were 0.1661, 0.1645, and 0.2023. The positive-affect comparison with the mean baseline yielded an exploratory Holm-adjusted P = 0.011, while comparisons with the original shared forest were inconclusive for all outcomes (all adjusted P = 1.000). These reused-holdout comparisons do not establish an independently replicated improvement. Full results appear in Supplementary Tables S3–S6; the original primary estimates are retained.",
+      "zh": "新增搜索选择了独立森林，其最小叶节点样本量为 60，每次划分考虑一半预测特征。在嵌套开发集验证中，选定流程、固定的原共享森林和均值基线的宏平均归一化 RMSE 分别为 1.0006、1.0001 和 1.0007。选定流程的误差比原森林高 0.044%，未达到预先规定的探索性判断标准，即降低 1%。在此前已查看的留出集上，相关分别为 0.245、0.332 和 0.164，RMSE 分别为 0.1661、0.1645 和 0.2023。积极情绪相对均值基线的探索性比较经 Holm 校正后 P = 0.011，而所有结局与原共享森林的比较均未得出明确差异（校正后 P 均为 1.000）。这些重复使用留出集的比较不能确立经独立重复验证的改善。完整结果见补充表 S3–S6；原主分析估计继续保留。",
+      "english_sha256": "ca148f0c3ba865745953c0a7afacd1035c606ec9e7ed9acb91d4263491f033f7",
+      "chinese_sha256": "4aedf2281cac19453b808773c3670ed8d594f8ebe92a06715b41933401d8f5a9",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 69,
+      "en": "## Discussion",
+      "zh": "## 讨论",
+      "english_sha256": "bfb9f15c85bc6a86f945cd94715ba896364e04167edab9c6aad203105f101ee6",
+      "chinese_sha256": "917a24ed2c2e19b06ef3f8e8435eebd6d89bbcedbcbeaec8e6a82760afa9508b",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 70,
+      "en": "### Principal findings",
+      "zh": "### 主要发现",
+      "english_sha256": "f6aa05c87592adf20864279ff04e4254a15b0327aafe427a8d39a0b973ca7998",
+      "chinese_sha256": "d30a0d02869ca41344e7177b11feb8add6aa9b8994fd533cacff93dfe9c5cc81",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 71,
+      "en": "Aggregated Weibo language contained modest information about participants' positive and negative affect, but the evidence for estimating life satisfaction was less conclusive. The selected model explained little variation in held-out scores, and its small reductions in prediction error relative to the training mean were not established after adjustment for the planned comparisons. The selected shared procedure also offered no established advantage over independent forests. These findings distinguish detectable associations with self-reported well-being from sufficiently accurate individual assessment. They do not establish a statistically significant difference in predictability between the three outcomes, because that contrast was not directly tested.",
+      "zh": "聚合微博语言包含一定程度的参与者积极与消极情绪信息，但估计生活满意度的证据尚不充分。选定模型解释的留出分数变异较少，相对于训练均值的小幅误差降低，在对预定比较进行校正后未得到确立。选定的共享程序也未显示出相对于独立森林的已确立优势。这些发现区分了与自报幸福感之间可检测的关联，以及足够准确的个体评估。由于未直接检验三个结局之间的可预测性差异，结果也不能确立这种差异具有统计显著性。",
+      "english_sha256": "078172f3a97a44f1bb5101224902bc6951f70ccf191b8628ac5a4c27cdedeae4",
+      "chinese_sha256": "b2a38a6f5ad4af0bfaf135635d93f69dc3245566238bde42c6883c98600235a6",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 72,
+      "en": "The component-specific findings should be interpreted in light of the distinction between affective experience and cognitive evaluation in subjective well-being (Diener, 1984). PANAS was developed to measure positive and negative affect separately, whereas the SWLS asks respondents to evaluate their lives as a whole (Diener et al., 1985; Watson et al., 1988). One possible explanation for the present pattern is that aggregate language categories represent expressions associated with affect more readily than the standards and judgments underlying life satisfaction. This is an untested explanation, rather than a mechanism demonstrated by the correlations. Differences in criterion measurement, linguistic coverage, or sampling uncertainty could also contribute. The results therefore motivate outcome-specific validation without establishing why the outcomes differed numerically.",
+      "zh": "应结合主观幸福感研究中情感体验与认知评价的区别，解释不同成分的结果 (Diener, 1984)。PANAS 旨在分别测量积极情绪和消极情绪，而 SWLS 要求受访者对整体生活进行评价 (Diener et al., 1985; Watson et al., 1988)。对当前模式的一种可能解释是，相较于生活满意度所依赖的标准与判断，聚合语言类别更容易表征与情绪有关的表达。这是尚未检验的解释，而非相关结果所证明的机制。效标测量、语言覆盖范围或抽样不确定性的差异也可能产生影响。因此，这些结果支持按结局分别开展验证，但尚未说明各结局的数值表现为何不同。",
+      "english_sha256": "1d12e4520fd389121e1a631836bf8ec6546e00261dcd5d814f082c4fcb1ba4d8",
+      "chinese_sha256": "6eb2dd92dca49e7c6433294e952e2f8d76216823660e43ec9badd00abf86a56c",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 73,
+      "en": "### Relation to previous research",
+      "zh": "### 与既有研究的关系",
+      "english_sha256": "72dc733e4620f6013d77f44c3f71f8c992d6dcd1c2d1917f7eb47e8ec0a85710",
+      "chinese_sha256": "dda22a271edd6a6088bcf5bdf48d69fbddc4937a08fa1c3f0a835e06f6758d1c",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 74,
+      "en": "The findings extend the question raised by earlier social-media language research from whether psychological information is present to how much a particular representation preserves. Schwartz et al. (2013) found predictive information in open-vocabulary Facebook features, and Eichstaedt et al. (2021) show how open and closed vocabularies expose different kinds of patterns. Their work motivates a within-sample representation comparison rather than an assumed accuracy gain. Kernel and regularization changes in the exploratory extension still used the same aggregate inputs, so its limited gains do not test whether richer language would help. Kern et al. (2016) also demonstrate that language quantity and aggregation choices matter. Because raw posts and matched word-level coverage were unavailable, we cannot separate inadequate linguistic information from noisy criteria, sampling variation, or model mismatch.",
+      "zh": "这些结果把既有社交媒体语言研究提出的问题，从心理信息是否存在，推进到某种特定表征究竟保留了多少信息。Schwartz 等（2013）发现，开放词汇的 Facebook 特征包含预测信息；Eichstaedt 等（2021）则说明，开放词汇与封闭词汇可以揭示不同类型的模式。这些研究支持在同一样本中比较表征，而不是预先假定准确率一定提高。探索性扩展中的核方法和正则化调整仍使用相同的聚合输入，因此有限的改善并未检验更丰富的语言信息能否提供帮助。Kern 等（2016）还表明，语言数量与聚合方式也会影响分析。由于原始帖子及相应的词级覆盖信息不可得，我们无法区分语言信息不足、效标噪声、抽样波动与模型不匹配的影响。",
+      "english_sha256": "412a78c4154e3d335f43db76e251d0112c91c60035111483f4863285f7b5e41d",
+      "chinese_sha256": "03f8ee31d80b214b068e551029f512d85ce621dd63dbecdc9eb954d1b162368c",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 75,
+      "en": "Previous work also illustrates why prediction against one questionnaire criterion provides only part of an assessment argument. Park et al. (2015) evaluated language-based personality scores using convergent and discriminant relationships, informant reports, external correlates, and repeated language windows. The present evidence is narrower: it concerns held-out estimates of three questionnaire-derived scores and does not establish temporal reliability or convergence beyond those outcomes. Temporal alignment creates a further distinction. Eichstaedt et al. (2018) restricted language to periods preceding the first documentation of depression in medical records. In the present data, latest-post metadata usually extended beyond questionnaire completion, and raw posts were unavailable to impose an earlier cutoff. Thus, the current findings support a retrospective association, while the possibility of prospective well-being monitoring remains untested. This comparison concerns validation design, not equivalence between depression documentation, personality, and subjective well-being.",
+      "zh": "既有研究也说明，针对单一问卷效标的预测只是评估论证的一部分。Park et al. (2015) 通过聚合与区分关系、知情者报告、外部相关指标和重复语言时间窗评估了基于语言的人格分数。本研究的证据范围更窄：它涉及三个问卷衍生分数的留出估计，尚未确立时间信度或超出这些结局的聚合证据。时间匹配还构成另一项差别。Eichstaedt et al. (2018) 将语言限定为医疗记录首次记载抑郁之前的时期。本数据的最新帖子元数据通常晚于问卷完成时间，且缺少原始帖子，无法设置更早的截止点。因此，当前结果支持回顾性关联，而前瞻性幸福感监测的可能性仍未得到检验。这一比较针对的是验证设计，并不意味着抑郁记录、人格和主观幸福感之间具有等价关系。",
+      "english_sha256": "7635fe3fdd0c0c40544c3722d9b26638b37fdf917f9d676c7d3927c53ac16c6d",
+      "chinese_sha256": "523533f787383d6f6d6bb67192c26740a1155f556041b538ee5e7dc59d97d006",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 76,
+      "en": "Other digital-behavior studies clarify why the unit and timing of validation matter. Jaidka et al. (2020) found that regional and socioeconomic language variation complicated dictionary-based estimates of US county well-being. County-level estimates do not provide an expected accuracy for individuals on another platform. Stachl et al. (2020) used multiple smartphone behavior classes and nested validation to predict personality, illustrating a different combination of inputs and criteria. De Choudhury et al. (2013) explicitly aligned Twitter windows to retrospectively reported depression onset or survey dates; that design neither establishes prospective clinical validity nor validates continuous well-being scores. These comparisons identify design choices to test, without treating distinct constructs or sampling units as interchangeable.",
+      "zh": "其他数字行为研究进一步说明了验证单位与时间安排的重要性。Jaidka 等（2020）发现，地区和社会经济层面的语言差异会干扰基于词典的美国县级幸福感估计。县级估计不能为另一平台上的个体预测提供预期准确率。Stachl 等（2020）使用多类智能手机行为和嵌套验证预测人格，展示了另一种输入与效标组合。De Choudhury 等（2013）明确按照回顾性报告的抑郁发作时间或问卷日期定义 Twitter 文本时间窗；这种设计既不等于前瞻性临床验证，也不能验证连续的幸福感分数。这些比较指出了需要检验的设计选择，而不把不同构念或抽样单位视为可以互换。",
+      "english_sha256": "ca298b60ad3c9f2c57b1df760717073168ce8df085e7178127936cb34305a066",
+      "chinese_sha256": "bc352cd49969149da88c86d9dc4a59f2893b694a9334389f342dedd96f3f57e9",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 77,
+      "en": "The comparison of shared and independent forests adds a qualification to the rationale for modeling well-being jointly. Multi-objective trees can use common splits to reduce variation across several targets and return a vector of predictions (Kocev et al., 2007). Such a constraint may be useful when targets have compatible relationships with the predictors, but correlations among the outcomes alone do not establish that compatibility. In this sample, the shared forest's small development advantage did not become an established holdout advantage. The linguistic relationships relevant to each component may overlap only partly, or the available data may be insufficient to distinguish a small benefit from sampling variation. Neither explanation was directly tested. Independent models selected target-specific parameters, whereas the shared model used a common setting, so this is a comparison of selected procedures rather than an isolated manipulation of shared structure. The findings do not establish equivalence, negative transfer, or the inferiority of multitask learning in general.",
+      "zh": "共享森林与独立森林的比较，为联合建模幸福感的依据增加了适用条件。多目标树可以通过共同划分降低多个目标的变异，并返回预测向量 (Kocev et al., 2007)。当各目标与预测变量的关系相容时，这种约束可能有用，但仅凭结局间相关并不能确立这种相容性。在本样本中，共享森林在开发集上的微小优势并未转化为已确立的留出优势。与各成分有关的语言关联可能仅部分重叠，也可能是现有数据不足以将小幅收益与抽样变异区分开来。这两种解释均未被直接检验。独立模型为各目标分别选择参数，而共享模型使用一组共同设置，因此这里比较的是选定的程序，而不是对共享结构进行单独操纵。结果不证明等效、负迁移，也不说明多任务学习总体上较差。",
+      "english_sha256": "26657a353b1eb40bc95d0cf5238b3cbc8541b7e07eba5edc9210d3771c2886d2",
+      "chinese_sha256": "8dfa311fd21afbc14dc662a844c63f569729e24274354c8b5652b2161690f549",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 78,
+      "en": "### Implications for well-being assessment",
+      "zh": "### 对幸福感评估的启示",
+      "english_sha256": "9adb8f4caa0ea4283336dda953e7f946564b5f50de761ecb6f133da827f3fcf0",
+      "chinese_sha256": "804fa0b4420fe8218cc3cd07f943c91820c40d239fb900028ecc984c534bb910",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 79,
+      "en": "The findings distinguish detecting a language–well-being association from establishing an assessment measure. A model can track linear variation among participants while contributing little to accurate score estimation, as illustrated here by nonzero affect correlations alongside predictions concentrated near the mean and small error reductions. A positive rescaling or shift of predictions can leave Pearson correlation unchanged while altering RMSE. These measurement questions sit within the broader distinction between predictive and explanatory goals emphasized by Yarkoni and Westfall (2017). A detectable language–well-being association does not by itself identify a psychological process, validate the underlying questionnaire translation, or establish sensitivity to changes within a person. Evaluation should therefore connect the intended measurement claim to the evidence required for that claim, rather than treating a significant correlation as a general validation result.",
+      "zh": "这些发现区分了检测语言—幸福感关联与建立评估量尺。模型可能捕捉参与者之间的线性变化，却对准确估计分数贡献有限；本研究中非零的情绪相关、集中于均值附近的预测以及较小的误差降幅，体现了这一点。对预测值进行正比例缩放或平移，可以保持 Pearson 相关不变，却改变 RMSE。这些测量问题属于 Yarkoni and Westfall (2017) 所强调的预测目标与解释目标这一更广泛区分的一部分。可检测的语言—幸福感关联本身并不能识别心理过程、验证所用问卷译本，或确立对个体内变化的敏感性。因此，评估应将拟提出的测量主张与其所需证据联系起来，而不应把显著相关视为一般性的验证结论。",
+      "english_sha256": "3e73eb78ee404c7912f1f6c4bdb859847eb5d9e77c71edd079da69b82bfc627d",
+      "chinese_sha256": "aa20e06ba8e41162348f7160c7a5228fceec0c9789c361a0e26e1cf07444ab12",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 80,
+      "en": "The original scales also set a more demanding comparison than correlation alone. Pavot and Diener (1993) distinguish temporal stability from sensitivity to meaningful changes in life satisfaction; both would need to be established anew for language-derived scores. Crawford and Henry (2004) evaluated PANAS psychometrics in a UK adult sample and explicitly considered population differences in factor structure. That evidence cannot certify the Chinese forms or score transformations used here. More broadly, evidence for established self-report measures includes reliability and convergence across methods (Diener et al., 2018). Predicting a questionnaire score supplies one relationship within this validation argument, rather than inheriting the questionnaire's entire evidential foundation. The distinction between empirical prediction and causal explanation also precludes interpreting model accuracy as a demonstrated psychological mechanism (Shmueli, 2010).",
+      "zh": "原量表也提出了比单一相关更严格的比较要求。Pavot 和 Diener（1993）区分生活满意度的时间稳定性与对有意义变化的敏感性；对语言推断分数而言，两者都需要重新建立证据。Crawford 和 Henry（2004）在英国成年人样本中评估 PANAS 的心理测量性质，并明确考虑不同群体的因子结构差异。这些证据不能为本研究使用的中文形式或分数变换提供认证。更广泛地说，成熟自评测量的证据包括信度与跨方法聚合关系（Diener et al., 2018）。预测问卷分数，只是为这一验证论证提供一种关系，而不是继承问卷的全部证据基础。经验预测与因果解释之间的区分，也意味着不能把模型准确性解释为已经证实的心理机制（Shmueli, 2010）。",
+      "english_sha256": "b0e0ef2452d485bcca412db47bf82d599e88c2d57abdbc2fc8af532fc21ce9b9",
+      "chinese_sha256": "f952d9a2ad6f36761db4ab0f48df118ac47d742e738296f82967c0cfd1d23fb0",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 81,
+      "en": "The attribution findings offer candidates for further investigation, but do not establish a psychological account of well-being. Categories labeled Family and We appeared among prominent inputs, alongside Sexual and unmapped codes. Chinese dictionary-validation research shows that detecting words associated with a category is distinct from identifying the contextual psychological meaning of an individual post (Zhao et al., 2016). Moreover, the reported absolute SHAP magnitudes indicate how much a feature contributed to the fitted predictions under the chosen background definition; they do not specify the direction or effect of a real-world intervention (Janzing et al., 2020; Lundberg et al., 2020). The small and mixed holdout permutation changes further limit a substantive interpretation of the ranking. The next step for these features is to verify their vocabulary and contexts and test whether their contribution replicates, rather than infer that discussing a topic improves or worsens well-being.",
+      "zh": "归因结果提供了值得进一步考察的候选特征，但并未确立对幸福感的心理学解释。Family 和 We 等类别与 Sexual 及未映射代码一起，出现在较突出的输入特征中。中文词典验证研究表明，检测到与某个类别相关的词语，并不等同于识别单条帖子的情境性心理含义 (Zhao et al., 2016)。此外，这里报告的绝对 SHAP 幅度，表示特征在所选背景定义下对拟合预测的贡献大小，而不指定真实世界干预的方向或效应 (Janzing et al., 2020; Lundberg et al., 2020)。留出测试集置换引起的误差变化较小且方向不一，也进一步限制了对排序的实质性解释。下一步应核实这些特征的词汇和语境，并检验其贡献能否重复出现，而不是推断谈论某类话题会改善或损害幸福感。",
+      "english_sha256": "bf45a5d3ac884af0d55556a9a7d0e7be7eb5a71a361d72a6a8c7ba35e79ee8a7",
+      "chinese_sha256": "f0cb3490c1b087094dae2844b48886d0fb07efbc3a5db2cd494b53d054e40e4b",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 82,
+      "en": "For practice, these models remain research estimates: a possible role alongside direct assessment would require validation for a defined use, rather than follow automatically from the observed correlations. The errors cannot yet be translated into meaningful differences on the original instruments, and neither individual decision utility nor population-level representativeness was evaluated. Any eventual application would also need to preserve consent, privacy, and people's control over sensitive inferences. These issues were raised explicitly in prior social-media health-prediction research (Eichstaedt et al., 2018), but they require decisions about the actual data and intended use rather than transfer of assurances from another study. Predictive feasibility and permission to deploy are separate questions.",
+      "zh": "在实践层面，这些模型仍属于研究性估计：它们是否能与直接评估配合使用，需要围绕明确用途进行验证，不能从当前相关结果自动推出。现有误差尚不能换算为原量表上具有实际意义的差异，个体决策效用和总体代表性也都未被评估。任何未来应用还需要保障同意、隐私及人们对敏感推断的控制权。既有社交媒体健康预测研究已明确提出这些问题 (Eichstaedt et al., 2018)，但相关决定必须立足实际数据与预期用途，而不能照搬其他研究的保障性陈述。预测是否可行与是否获准部署，是两个不同问题。",
+      "english_sha256": "203ab2db6d6294afc4ce009ba8bcfb5184ca36bb2a359a03c6377a6ca9281e3d",
+      "chinese_sha256": "cb5bb0bc339522635c170b880d69a5496c29d5a8410629d09cf0128978b3940b",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 83,
+      "en": "### Limitations and future research",
+      "zh": "### 局限与未来研究",
+      "english_sha256": "99c013a30089696009cb3b9d41fefaeeb2fbcf70140a611bc573a081c0bcf3d2",
+      "chinese_sha256": "c29923ba1b30aff234ab73175fa5dcc3c144678f4dbf9e6888c597f4e900ce1b",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 84,
+      "en": "Several features of the available data limit conclusions about measurement. The administered questionnaire wording, affect reporting period, and label transformation could not be independently verified. Original instrument descriptions identify the intended constructs but cannot establish the reliability or equivalence of these particular stored scores. Item responses would be needed to evaluate the questionnaire measures, and temporally indexed posts would be needed to reconstruct pre-questionnaire language windows and test odd/even-text consistency. Temporally matched repeated questionnaires and distinct language windows would be needed to determine whether estimates track within-person change. The repeated records in this file do not establish that alignment; the present between-person prediction does not answer that question. These missing inputs constrain the scope of the present results, rather than demonstrating that such validation would fail.",
+      "zh": "现有数据的若干特征限制了测量方面的结论。实际施测题目措辞、情绪报告时间窗及标签变换均未得到独立核实。原始量表说明能够界定预期构念，却不能确立这些特定存储分数的信度或等价性。评估问卷测量需要题目作答；重建问卷前语言时间窗以及检验奇偶文本一致性，需要带有时间索引的帖子。要判断估计是否能追踪个体内变化，还需要在时间上匹配的重复问卷和相互区分的语言时间窗。本文件中的重复记录并未确立这种匹配；本次参与者间预测也无法回答这一问题。这些缺失输入限定了当前结果的范围，而不是证明相关验证必然失败。",
+      "english_sha256": "32e5ec8f2da1aeb84a94e0f9a9bd50202024cbe9363b4602dfdf2fe8fbfbdb33",
+      "chinese_sha256": "f9fc98e827cbdf813bbca44fcbaff2cd9b0eac9be541cdc65e51db2ccf0d85e8",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 85,
+      "en": "Generalization is also unresolved. The analysis used one convenience sample and a holdout of 104 participants, without demographic information for subgroup assessment. Participant-level splitting and fold-specific preprocessing address known routes to evaluation leakage (Kapoor & Narayanan, 2023), but they do not establish transport to another population, period, or platform. Likewise, the record-selection and feature-exclusion sensitivities assess specific analytic choices rather than substitute for external validation. A separately recruited sample should therefore be used to evaluate frozen predictors, with predefined criteria for acceptable error and appropriate coverage of the population in which the scores would be interpreted.",
+      "zh": "泛化能力也仍有待确定。本分析仅使用一个便利样本和包含 104 名参与者的留出测试集，且没有人口学信息可用于亚组评估。按参与者划分数据并在各折内拟合预处理，可以应对已知的评估泄漏途径 (Kapoor & Narayanan, 2023)，但并不能确立模型对其他人群、时期或平台的适用性。同样，记录选择和特征排除敏感性分析考察的是特定分析选择，不能替代外部验证。因此，应在独立招募的样本中评估固定的预测器，预先规定可接受误差的标准，并适当覆盖分数拟用于解释的人群。",
+      "english_sha256": "10b7c53c7517b2fd52b1cbd117e77371c6c05f1296e18a6fdc049b617a3bab07",
+      "chinese_sha256": "d2735a19420f6aafad399e3981544fa9c680c763f9647d4ed3dd9585e23d64d6",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 86,
+      "en": "The exploratory extension reinforces this uncertainty rather than resolving it. Small samples can produce unstable performance estimates, and overlapping cross-validation training sets make naive fold-independence calculations misleading (Varoquaux, 2018). We therefore retain fold-level results without treating their standard deviation as a confidence interval or interpreting a favorable reused-holdout comparison as independent confirmation. No stable development advantage emerged from the additional search. This limits the case for further tuning of the same feature matrix, but does not establish a general accuracy ceiling for social-media well-being prediction.",
+      "zh": "探索性扩展进一步体现了这种不确定性，而未将其消除。小样本可能产生不稳定的性能估计，交叉验证训练集之间的重叠也会使简单假设折间独立的计算产生误导（Varoquaux, 2018）。因此，我们保留逐折结果，不把折间标准差当作置信区间，也不把重复使用的留出集上有利的比较解释为独立确认。新增搜索未呈现稳定的开发集优势。这削弱了继续调整同一特征矩阵模型的理由，但不能据此认定社交媒体幸福感预测普遍存在某个准确率上限。",
+      "english_sha256": "2310c90aaa20e6401e0e4460fd0fb56183a809853cbc8e013d71f51803164531",
+      "chinese_sha256": "a9fe0deba64e70c8e2e5bab9ae3a385514a239d9751d14f0515cef603207b3cb",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 87,
+      "en": "Two focused comparisons would be particularly informative after score definitions, dictionaries, and temporal alignment are resolved. First, comparing fixed categories with contextual or open-vocabulary features under the same participant split would test whether representation limits the estimation of each well-being component. Second, replicating the shared-versus-independent comparison with adequate precision and outcome-specific diagnostics would distinguish a reproducible shared-learning benefit from small, unstable differences. Neither comparison should be judged solely by whether a correlation crosses a significance threshold. The relevant advance would be evidence that the resulting scores improve error, stability, or interpretation for a defined use while remaining anchored to participants' reported experience.",
+      "zh": "在明确分数定义、词典和时间匹配后，两项针对性比较尤其有价值。首先，在相同参与者划分下比较固定类别与语境特征或开放词汇特征，可以检验表征是否限制了各个幸福感成分的估计。其次，以足够精度和针对各结局的诊断重复共享程序与独立程序的比较，可以将可重复的共享学习收益与微小、不稳定的差异区分开来。两项比较均不应仅以相关是否跨越显著性阈值来判断。真正相关的进展，是证明所得分数能针对明确用途改善误差、稳定性或解释，同时继续以参与者报告的体验为依据。",
+      "english_sha256": "5e9e688948ff9b693a26b1375eca289f51d3d3ff8e0f7c97314b88bb2ceace98",
+      "chinese_sha256": "484dd653c189d196cb1b5af5aa14e3a6fd545df7a04dd7478aad49af323c282d",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 88,
+      "en": "## Conclusion",
+      "zh": "## 结论",
+      "english_sha256": "be031d37bb75d96ef08ca9ec5b0e83bb6f91172f60d3c31a78feae8d7dc4a0b0",
+      "chinese_sha256": "555b4b5dcd1fd12067dbf6b2c4e7b2a53ee98f47305719546dbcff760018d392",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 89,
+      "en": "Psycholinguistic features from Weibo showed modest linear associations with affect scores in held-out participants, alongside small observed error reductions over a mean baseline. The life-satisfaction estimate was less conclusive, without a direct test of between-outcome differences. The specified shared-output procedure did not demonstrate an advantage over independent forests. These findings benchmark the available representation and learning procedures; establishing a well-being assessment instrument requires additional evidence on numerical accuracy, reliability, temporal alignment, and generalization.",
+      "zh": "在留出参与者中，微博心理语言特征与情绪分数呈现一定程度的线性关联，相较均值基线的观察误差降幅较小。生活满意度的估计尚不充分，且未直接检验结局之间的差异。指定的共享输出程序未显示出优于独立森林的优势。这些发现为现有表征和学习程序提供了评估基准；要建立幸福感评估工具，还需要关于数值准确性、信度、时间匹配和泛化能力的进一步证据。",
+      "english_sha256": "df1b1074a9e48e0e7853da03354e655b9f9a1bb7848a1fc6b9479717cbbf12da",
+      "chinese_sha256": "4a7114155052aeeeada49ee5acf6a11c47e94461acaddbbefea291cb2d5a7b54",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 90,
+      "en": "## Declarations",
+      "zh": "## 声明",
+      "english_sha256": "bd0612b2e9cb149188c95727bcc3fba86e1c2a0fa59f7269b4c15cfc6e0171eb",
+      "chinese_sha256": "f24cf85d5b1b6a7b766726bf785adc0419c93580d87566e600c7f31147980f00",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 91,
+      "en": "### Data and code availability",
+      "zh": "### 数据与代码可用性",
+      "english_sha256": "c3c806948ba20376b208a2d4d8cdc7331747e74d518ccade640ddeaa055963d7",
+      "chinese_sha256": "b0fa39deb80b0e456337dbc1a95f40d42f2d0464bd80375b30b1fda6bcefd25d",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 92,
+      "en": "The dataset and analysis artifacts are retained in the local research package; no public deposit or persistent identifier has been established. The data custodian, sharing permissions, access conditions, and dataset citation are TO BE COMPLETED BY AUTHORS. A stable participant ID should not be assumed to establish irreversible anonymity.",
+      "zh": "数据集与分析产物保存在本地研究包中，尚未公开存储，也未建立持久标识符。数据保管方、共享权限、访问条件及数据集引用均待作者补充。稳定的参与者 ID 不应被视为已经实现不可逆匿名化。",
+      "english_sha256": "ecd9c74b2515379fe3bb87571bc17bccd6763ca870bfbbf49c8ff7f0d2dd4818",
+      "chinese_sha256": "5f32dfcd1de03db8cfa37532a354c2422b5d3f68ece9da4bc13ab7c20ee22d93",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 93,
+      "en": "### Ethics and author statements",
+      "zh": "### 伦理与作者声明",
+      "english_sha256": "58b81e095f3817b16772ae278fba618ddd14768b92bee968666ec36404d643da",
+      "chinese_sha256": "fb56f43b48d1e3b2dafc21a63068b908c6b9452ef835324de99fafed82d72a20",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 94,
+      "en": "Ethical approval and consent are reported from the original collection documentation and require author confirmation for this secondary analysis. Author identities, contributions, funding, conflicts of interest, and acknowledgments are TO BE COMPLETED BY AUTHORS on the separate title page.",
+      "zh": "伦理批准和知情同意信息据原始采集说明报告，并需由作者确认其对此次二次分析的适用性。作者身份、贡献、经费、利益冲突和致谢均待作者在独立标题页中补充。",
+      "english_sha256": "733bf16f86fe79a3d4c4de59ef0899b0af014b9dc5fe6aa7d4ddff2faaaa5d1e",
+      "chinese_sha256": "1f6dc26d9b5a9df9a899ce856100610cf453f689416238ac8a7076d1e8ba72df",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 95,
+      "en": "### Use of artificial intelligence",
+      "zh": "### 人工智能的使用",
+      "english_sha256": "e5154218b6de604dfb39bb5c977dabb13e5badc92840d78495cec74ae6b3a3f8",
+      "chinese_sha256": "3f2f2a7bc79174fd6eccab5151bc4225c7f4b3b7ecb1986a67706e3433c58de9",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 96,
+      "en": "OpenAI Codex assisted with analysis-code development and execution, literature retrieval and evidence checking, figure preparation, and drafting. The revision also used structured scientific-writing guidance and a question-based consistency review. Automated checks and independent agent reviews do not constitute responsible human-author approval; review of the data provenance, methods, interpretations, references, and declarations remains pending. Tool and skill provenance is documented in the revision record.",
+      "zh": "OpenAI Codex 协助完成了分析代码开发与执行、文献检索和证据核查、图表制作及写作。修订还使用了结构化科学写作指导和基于问题的一致性审查。自动检查及独立代理审查不构成负责的人类作者的认可；对数据来源、方法、解释、参考文献和声明的审核仍待完成。工具与技能来源记录在修订档案中。",
+      "english_sha256": "11bac98b79b175a275519c40fc0c1220cc86873d6292ac495144c019e3942f41",
+      "chinese_sha256": "5a4f449ea05464f02530e876da22e372e4761b1f04c44c20c13778c86424c261",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 97,
+      "en": "## References",
+      "zh": "## 参考文献",
+      "english_sha256": "65b72d86eeeb214ab8ca5fd24cb7cd7773e58084e95b670040df03e21e8c6fa7",
+      "chinese_sha256": "7d5d5b94be87abefe6ae558bd60ddd47af33e272e3c31f600d84ba2daa59320f",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 98,
+      "en": "Breiman, L. (2001). Random forests. *Machine Learning*, *45*(1), 5–32. https://doi.org/10.1023/A:1010933404324",
+      "zh": "Breiman, L. (2001). Random forests. *Machine Learning*, *45*(1), 5–32. https://doi.org/10.1023/A:1010933404324",
+      "english_sha256": "7d758c999a4a7ced3fc9c2119a3c35ea08daae29ff0023d0fd98b404f4c2f45c",
+      "chinese_sha256": "7d758c999a4a7ced3fc9c2119a3c35ea08daae29ff0023d0fd98b404f4c2f45c",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 99,
+      "en": "Caruana, R. (1997). Multitask learning. *Machine Learning*, *28*(1), 41–75. https://doi.org/10.1023/A:1007379606734",
+      "zh": "Caruana, R. (1997). Multitask learning. *Machine Learning*, *28*(1), 41–75. https://doi.org/10.1023/A:1007379606734",
+      "english_sha256": "fda492c04a69bb8cfc2b432087552d356bd4848f4fe43190f220ea1098040130",
+      "chinese_sha256": "fda492c04a69bb8cfc2b432087552d356bd4848f4fe43190f220ea1098040130",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 100,
+      "en": "Cawley, G. C., & Talbot, N. L. C. (2010). On over-fitting in model selection and subsequent selection bias in performance evaluation. *Journal of Machine Learning Research*, *11*(70), 2079–2107. https://jmlr.org/papers/v11/cawley10a.html",
+      "zh": "Cawley, G. C., & Talbot, N. L. C. (2010). On over-fitting in model selection and subsequent selection bias in performance evaluation. *Journal of Machine Learning Research*, *11*(70), 2079–2107. https://jmlr.org/papers/v11/cawley10a.html",
+      "english_sha256": "4ecc58803e8533a440ee4fff48f857581e5a6910bf505433429e0692711c7fed",
+      "chinese_sha256": "4ecc58803e8533a440ee4fff48f857581e5a6910bf505433429e0692711c7fed",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 101,
+      "en": "Crawford, J. R., & Henry, J. D. (2004). The Positive and Negative Affect Schedule (PANAS): Construct validity, measurement properties and normative data in a large non-clinical sample. *British Journal of Clinical Psychology*, *43*(3), 245–265. https://doi.org/10.1348/0144665031752934",
+      "zh": "Crawford, J. R., & Henry, J. D. (2004). The Positive and Negative Affect Schedule (PANAS): Construct validity, measurement properties and normative data in a large non-clinical sample. *British Journal of Clinical Psychology*, *43*(3), 245–265. https://doi.org/10.1348/0144665031752934",
+      "english_sha256": "91d29821933d599c81fec9332cd62bb7c85672dc73abaac072f510f8d6e7667a",
+      "chinese_sha256": "91d29821933d599c81fec9332cd62bb7c85672dc73abaac072f510f8d6e7667a",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 102,
+      "en": "De Choudhury, M., Gamon, M., Counts, S., & Horvitz, E. (2013). Predicting depression via social media. *Proceedings of the International AAAI Conference on Web and Social Media*, *7*(1), 128–137. https://doi.org/10.1609/icwsm.v7i1.14432",
+      "zh": "De Choudhury, M., Gamon, M., Counts, S., & Horvitz, E. (2013). Predicting depression via social media. *Proceedings of the International AAAI Conference on Web and Social Media*, *7*(1), 128–137. https://doi.org/10.1609/icwsm.v7i1.14432",
+      "english_sha256": "c8ab23366f494b5f1ea6c82205eca8eefdbea141c794aaad2214fd8b0872b47d",
+      "chinese_sha256": "c8ab23366f494b5f1ea6c82205eca8eefdbea141c794aaad2214fd8b0872b47d",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 103,
+      "en": "Diener, E. (1984). Subjective well-being. *Psychological Bulletin*, *95*(3), 542–575. https://doi.org/10.1037/0033-2909.95.3.542",
+      "zh": "Diener, E. (1984). Subjective well-being. *Psychological Bulletin*, *95*(3), 542–575. https://doi.org/10.1037/0033-2909.95.3.542",
+      "english_sha256": "2677e2d18681ef4ca6d941daa7e3653a73dde78a0a2f8a12487ced520e9b6478",
+      "chinese_sha256": "2677e2d18681ef4ca6d941daa7e3653a73dde78a0a2f8a12487ced520e9b6478",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 104,
+      "en": "Diener, E., Emmons, R. A., Larsen, R. J., & Griffin, S. (1985). The satisfaction with life scale. *Journal of Personality Assessment*, *49*(1), 71–75. https://doi.org/10.1207/s15327752jpa4901_13",
+      "zh": "Diener, E., Emmons, R. A., Larsen, R. J., & Griffin, S. (1985). The satisfaction with life scale. *Journal of Personality Assessment*, *49*(1), 71–75. https://doi.org/10.1207/s15327752jpa4901_13",
+      "english_sha256": "bb14211e21cba847762685f10f4209716d04b7a054a14011bb36a4f37f470209",
+      "chinese_sha256": "bb14211e21cba847762685f10f4209716d04b7a054a14011bb36a4f37f470209",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 105,
+      "en": "Diener, E., Suh, E. M., Lucas, R. E., & Smith, H. L. (1999). Subjective well-being: Three decades of progress. *Psychological Bulletin*, *125*(2), 276–302. https://doi.org/10.1037/0033-2909.125.2.276",
+      "zh": "Diener, E., Suh, E. M., Lucas, R. E., & Smith, H. L. (1999). Subjective well-being: Three decades of progress. *Psychological Bulletin*, *125*(2), 276–302. https://doi.org/10.1037/0033-2909.125.2.276",
+      "english_sha256": "dab933696e0f8ad98e62e722f153144a411bd35bfbc6d3ab6a8fee3729aaa375",
+      "chinese_sha256": "dab933696e0f8ad98e62e722f153144a411bd35bfbc6d3ab6a8fee3729aaa375",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 106,
+      "en": "Diener, E., Lucas, R. E., & Oishi, S. (2018). Advances and open questions in the science of subjective well-being. *Collabra: Psychology*, *4*(1), 15. https://doi.org/10.1525/collabra.115",
+      "zh": "Diener, E., Lucas, R. E., & Oishi, S. (2018). Advances and open questions in the science of subjective well-being. *Collabra: Psychology*, *4*(1), 15. https://doi.org/10.1525/collabra.115",
+      "english_sha256": "8933a3af4e6086651bc63f33d3b7327d1d1d179fd48ff0b60e91d93edcc36767",
+      "chinese_sha256": "8933a3af4e6086651bc63f33d3b7327d1d1d179fd48ff0b60e91d93edcc36767",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 107,
+      "en": "Eichstaedt, J. C., Smith, R. J., Merchant, R. M., Ungar, L. H., Crutchley, P., Preoţiuc-Pietro, D., Asch, D. A., & Schwartz, H. A. (2018). Facebook language predicts depression in medical records. *Proceedings of the National Academy of Sciences*, *115*(44), 11203–11208. https://doi.org/10.1073/pnas.1802331115",
+      "zh": "Eichstaedt, J. C., Smith, R. J., Merchant, R. M., Ungar, L. H., Crutchley, P., Preoţiuc-Pietro, D., Asch, D. A., & Schwartz, H. A. (2018). Facebook language predicts depression in medical records. *Proceedings of the National Academy of Sciences*, *115*(44), 11203–11208. https://doi.org/10.1073/pnas.1802331115",
+      "english_sha256": "4de73701bb7b22f0c38e9a1cb6ccbfee3f91a80a6e5c50c19d127b315a655c43",
+      "chinese_sha256": "4de73701bb7b22f0c38e9a1cb6ccbfee3f91a80a6e5c50c19d127b315a655c43",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 108,
+      "en": "Eichstaedt, J. C., Kern, M. L., Yaden, D. B., Schwartz, H. A., Giorgi, S., Park, G., Hagan, C. A., Tobolsky, V. A., Smith, L. K., Buffone, A., Iwry, J., Seligman, M. E. P., & Ungar, L. H. (2021). Closed- and open-vocabulary approaches to text analysis: A review, quantitative comparison, and recommendations. *Psychological Methods*, *26*(4), 398–427. https://doi.org/10.1037/met0000349",
+      "zh": "Eichstaedt, J. C., Kern, M. L., Yaden, D. B., Schwartz, H. A., Giorgi, S., Park, G., Hagan, C. A., Tobolsky, V. A., Smith, L. K., Buffone, A., Iwry, J., Seligman, M. E. P., & Ungar, L. H. (2021). Closed- and open-vocabulary approaches to text analysis: A review, quantitative comparison, and recommendations. *Psychological Methods*, *26*(4), 398–427. https://doi.org/10.1037/met0000349",
+      "english_sha256": "34da5868bbeba23c8983e76e7e59c75bd1c449262e0c6763ca78cb7a90a405e9",
+      "chinese_sha256": "34da5868bbeba23c8983e76e7e59c75bd1c449262e0c6763ca78cb7a90a405e9",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 109,
+      "en": "Geurts, P., Ernst, D., & Wehenkel, L. (2006). Extremely randomized trees. *Machine Learning*, *63*(1), 3–42. https://doi.org/10.1007/s10994-006-6226-1",
+      "zh": "Geurts, P., Ernst, D., & Wehenkel, L. (2006). Extremely randomized trees. *Machine Learning*, *63*(1), 3–42. https://doi.org/10.1007/s10994-006-6226-1",
+      "english_sha256": "0cd012e3cd4b0470456b408b36221386f3f937a20056aa7b6f3608cd90f13b88",
+      "chinese_sha256": "0cd012e3cd4b0470456b408b36221386f3f937a20056aa7b6f3608cd90f13b88",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 110,
+      "en": "Jaidka, K., Giorgi, S., Schwartz, H. A., Kern, M. L., Ungar, L. H., & Eichstaedt, J. C. (2020). Estimating geographic subjective well-being from Twitter: A comparison of dictionary and data-driven language methods. *Proceedings of the National Academy of Sciences*, *117*(19), 10165–10171. https://doi.org/10.1073/pnas.1906364117",
+      "zh": "Jaidka, K., Giorgi, S., Schwartz, H. A., Kern, M. L., Ungar, L. H., & Eichstaedt, J. C. (2020). Estimating geographic subjective well-being from Twitter: A comparison of dictionary and data-driven language methods. *Proceedings of the National Academy of Sciences*, *117*(19), 10165–10171. https://doi.org/10.1073/pnas.1906364117",
+      "english_sha256": "38fb949d61b74d763d292648d3a2789ff354983ef3b9922f46cfe8223ca2761b",
+      "chinese_sha256": "38fb949d61b74d763d292648d3a2789ff354983ef3b9922f46cfe8223ca2761b",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 111,
+      "en": "Janzing, D., Minorics, L., & Blöbaum, P. (2020). Feature relevance quantification in explainable AI: A causal problem. In S. Chiappa & R. Calandra (Eds.), *Proceedings of the Twenty Third International Conference on Artificial Intelligence and Statistics* (Vol. 108, pp. 2907–2916). PMLR. https://proceedings.mlr.press/v108/janzing20a.html",
+      "zh": "Janzing, D., Minorics, L., & Blöbaum, P. (2020). Feature relevance quantification in explainable AI: A causal problem. In S. Chiappa & R. Calandra (Eds.), *Proceedings of the Twenty Third International Conference on Artificial Intelligence and Statistics* (Vol. 108, pp. 2907–2916). PMLR. https://proceedings.mlr.press/v108/janzing20a.html",
+      "english_sha256": "e6047f02810297ec6397575371013ec29c8253a25b65289030f9948ce0b8e4b7",
+      "chinese_sha256": "e6047f02810297ec6397575371013ec29c8253a25b65289030f9948ce0b8e4b7",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 112,
+      "en": "Kapoor, S., & Narayanan, A. (2023). Leakage and the reproducibility crisis in machine-learning-based science. *Patterns*, *4*(9), 100804. https://doi.org/10.1016/j.patter.2023.100804",
+      "zh": "Kapoor, S., & Narayanan, A. (2023). Leakage and the reproducibility crisis in machine-learning-based science. *Patterns*, *4*(9), 100804. https://doi.org/10.1016/j.patter.2023.100804",
+      "english_sha256": "228c1e3fb79be9e08eecb54d228425813cb7fb752e949ad829b75a3145cdc1b9",
+      "chinese_sha256": "228c1e3fb79be9e08eecb54d228425813cb7fb752e949ad829b75a3145cdc1b9",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 113,
+      "en": "Kern, M. L., Park, G., Eichstaedt, J. C., Schwartz, H. A., Sap, M., Smith, L. K., & Ungar, L. H. (2016). Gaining insights from social media language: Methodologies and challenges. *Psychological Methods*, *21*(4), 507–525. https://doi.org/10.1037/met0000091",
+      "zh": "Kern, M. L., Park, G., Eichstaedt, J. C., Schwartz, H. A., Sap, M., Smith, L. K., & Ungar, L. H. (2016). Gaining insights from social media language: Methodologies and challenges. *Psychological Methods*, *21*(4), 507–525. https://doi.org/10.1037/met0000091",
+      "english_sha256": "38fdc9a789688bcb7932b5a5fee2f79c982d2fd94281fee43eb72aff8eef151d",
+      "chinese_sha256": "38fdc9a789688bcb7932b5a5fee2f79c982d2fd94281fee43eb72aff8eef151d",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 114,
+      "en": "Kocev, D., Vens, C., Struyf, J., & Džeroski, S. (2007). Ensembles of multi-objective decision trees. In J. N. Kok, J. Koronacki, R. López de Mántaras, S. Matwin, D. Mladenič, & A. Skowron (Eds.), *Machine Learning: ECML 2007* (Vol. 4701, pp. 624–631). Springer Berlin Heidelberg. https://doi.org/10.1007/978-3-540-74958-5_61",
+      "zh": "Kocev, D., Vens, C., Struyf, J., & Džeroski, S. (2007). Ensembles of multi-objective decision trees. In J. N. Kok, J. Koronacki, R. López de Mántaras, S. Matwin, D. Mladenič, & A. Skowron (Eds.), *Machine Learning: ECML 2007* (Vol. 4701, pp. 624–631). Springer Berlin Heidelberg. https://doi.org/10.1007/978-3-540-74958-5_61",
+      "english_sha256": "f1818e83f5de8127e921f2041b05ff9c2c3b06d49e93409b7e0ec4877d976112",
+      "chinese_sha256": "f1818e83f5de8127e921f2041b05ff9c2c3b06d49e93409b7e0ec4877d976112",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 115,
+      "en": "Lundberg, S. M., Erion, G., Chen, H., DeGrave, A., Prutkin, J. M., Nair, B., Katz, R., Himmelfarb, J., Bansal, N., & Lee, S.-I. (2020). From local explanations to global understanding with explainable AI for trees. *Nature Machine Intelligence*, *2*(1), 56–67. https://doi.org/10.1038/s42256-019-0138-9",
+      "zh": "Lundberg, S. M., Erion, G., Chen, H., DeGrave, A., Prutkin, J. M., Nair, B., Katz, R., Himmelfarb, J., Bansal, N., & Lee, S.-I. (2020). From local explanations to global understanding with explainable AI for trees. *Nature Machine Intelligence*, *2*(1), 56–67. https://doi.org/10.1038/s42256-019-0138-9",
+      "english_sha256": "752afd47db1450993a79a62a5811db3b68dbafa7b988314316738e0c2699bb32",
+      "chinese_sha256": "752afd47db1450993a79a62a5811db3b68dbafa7b988314316738e0c2699bb32",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 116,
+      "en": "Park, G., Schwartz, H. A., Eichstaedt, J. C., Kern, M. L., Kosinski, M., Stillwell, D. J., Ungar, L. H., & Seligman, M. E. P. (2015). Automatic personality assessment through social media language. *Journal of Personality and Social Psychology*, *108*(6), 934–952. https://doi.org/10.1037/pspp0000020",
+      "zh": "Park, G., Schwartz, H. A., Eichstaedt, J. C., Kern, M. L., Kosinski, M., Stillwell, D. J., Ungar, L. H., & Seligman, M. E. P. (2015). Automatic personality assessment through social media language. *Journal of Personality and Social Psychology*, *108*(6), 934–952. https://doi.org/10.1037/pspp0000020",
+      "english_sha256": "479ad88b181d85f4cadad9a240676e642a07f407b1fc0fe4eb3b3ff68b3de209",
+      "chinese_sha256": "479ad88b181d85f4cadad9a240676e642a07f407b1fc0fe4eb3b3ff68b3de209",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 117,
+      "en": "Pavot, W., & Diener, E. (1993). Review of the Satisfaction With Life Scale. *Psychological Assessment*, *5*(2), 164–172. https://doi.org/10.1037/1040-3590.5.2.164",
+      "zh": "Pavot, W., & Diener, E. (1993). Review of the Satisfaction With Life Scale. *Psychological Assessment*, *5*(2), 164–172. https://doi.org/10.1037/1040-3590.5.2.164",
+      "english_sha256": "fa9b7fd65b4a890041da68057e30389c318c5bc59a4cc374df25767b7d335ccc",
+      "chinese_sha256": "fa9b7fd65b4a890041da68057e30389c318c5bc59a4cc374df25767b7d335ccc",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 118,
+      "en": "Ryan, R. M., & Deci, E. L. (2001). On happiness and human potentials: A review of research on hedonic and eudaimonic well-being. *Annual Review of Psychology*, *52*(1), 141–166. https://doi.org/10.1146/annurev.psych.52.1.141",
+      "zh": "Ryan, R. M., & Deci, E. L. (2001). On happiness and human potentials: A review of research on hedonic and eudaimonic well-being. *Annual Review of Psychology*, *52*(1), 141–166. https://doi.org/10.1146/annurev.psych.52.1.141",
+      "english_sha256": "c87a843331b42d8a39678158eefc3e7532e2b93c576e5b65e4c85d6f1f983ad5",
+      "chinese_sha256": "c87a843331b42d8a39678158eefc3e7532e2b93c576e5b65e4c85d6f1f983ad5",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 119,
+      "en": "Schwartz, H. A., Eichstaedt, J. C., Kern, M. L., Dziurzynski, L., Ramones, S. M., Agrawal, M., Shah, A., Kosinski, M., Stillwell, D., Seligman, M. E. P., & Ungar, L. H. (2013). Personality, gender, and age in the language of social media: The open-vocabulary approach. *PLoS ONE*, *8*(9), e73791. https://doi.org/10.1371/journal.pone.0073791",
+      "zh": "Schwartz, H. A., Eichstaedt, J. C., Kern, M. L., Dziurzynski, L., Ramones, S. M., Agrawal, M., Shah, A., Kosinski, M., Stillwell, D., Seligman, M. E. P., & Ungar, L. H. (2013). Personality, gender, and age in the language of social media: The open-vocabulary approach. *PLoS ONE*, *8*(9), e73791. https://doi.org/10.1371/journal.pone.0073791",
+      "english_sha256": "195fd0755ef3bfffea621940c1eab2629158a096be6662dfad831f45e0ca3eb9",
+      "chinese_sha256": "195fd0755ef3bfffea621940c1eab2629158a096be6662dfad831f45e0ca3eb9",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 120,
+      "en": "Shmueli, G. (2010). To explain or to predict? *Statistical Science*, *25*(3), 289–310. https://doi.org/10.1214/10-STS330",
+      "zh": "Shmueli, G. (2010). To explain or to predict? *Statistical Science*, *25*(3), 289–310. https://doi.org/10.1214/10-STS330",
+      "english_sha256": "05d98db2e7253625af618d862ea03fe92cb4ca652030fa2884044ef464ea42b7",
+      "chinese_sha256": "05d98db2e7253625af618d862ea03fe92cb4ca652030fa2884044ef464ea42b7",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 121,
+      "en": "Stachl, C., Au, Q., Schoedel, R., Gosling, S. D., Harari, G. M., Buschek, D., Völkel, S. T., Schuwerk, T., Oldemeier, M., Ullmann, T., Hussmann, H., Bischl, B., & Bühner, M. (2020). Predicting personality from patterns of behavior collected with smartphones. *Proceedings of the National Academy of Sciences*, *117*(30), 17680–17687. https://doi.org/10.1073/pnas.1920484117",
+      "zh": "Stachl, C., Au, Q., Schoedel, R., Gosling, S. D., Harari, G. M., Buschek, D., Völkel, S. T., Schuwerk, T., Oldemeier, M., Ullmann, T., Hussmann, H., Bischl, B., & Bühner, M. (2020). Predicting personality from patterns of behavior collected with smartphones. *Proceedings of the National Academy of Sciences*, *117*(30), 17680–17687. https://doi.org/10.1073/pnas.1920484117",
+      "english_sha256": "f76dec8cef9fae9b7c4521f2b7e8e8580dd6a0bd31a1428612365669d9759892",
+      "chinese_sha256": "f76dec8cef9fae9b7c4521f2b7e8e8580dd6a0bd31a1428612365669d9759892",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 122,
+      "en": "Tausczik, Y. R., & Pennebaker, J. W. (2010). The psychological meaning of words: LIWC and computerized text analysis methods. *Journal of Language and Social Psychology*, *29*(1), 24–54. https://doi.org/10.1177/0261927X09351676",
+      "zh": "Tausczik, Y. R., & Pennebaker, J. W. (2010). The psychological meaning of words: LIWC and computerized text analysis methods. *Journal of Language and Social Psychology*, *29*(1), 24–54. https://doi.org/10.1177/0261927X09351676",
+      "english_sha256": "54accb8c70c829f0b701a81b1c39f901a6894bb61c60177a06ef7982a18650d4",
+      "chinese_sha256": "54accb8c70c829f0b701a81b1c39f901a6894bb61c60177a06ef7982a18650d4",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 123,
+      "en": "Varoquaux, G. (2018). Cross-validation failure: Small sample sizes lead to large error bars. *NeuroImage*, *180*, 68–77. https://doi.org/10.1016/j.neuroimage.2017.06.061",
+      "zh": "Varoquaux, G. (2018). Cross-validation failure: Small sample sizes lead to large error bars. *NeuroImage*, *180*, 68–77. https://doi.org/10.1016/j.neuroimage.2017.06.061",
+      "english_sha256": "3a0c9a56b4bfb637c062983caf8e74a10c0eb94e4e63d6c21652fc836930443c",
+      "chinese_sha256": "3a0c9a56b4bfb637c062983caf8e74a10c0eb94e4e63d6c21652fc836930443c",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 124,
+      "en": "Watson, D., Clark, L. A., & Tellegen, A. (1988). Development and validation of brief measures of positive and negative affect: The PANAS scales. *Journal of Personality and Social Psychology*, *54*(6), 1063–1070. https://doi.org/10.1037/0022-3514.54.6.1063",
+      "zh": "Watson, D., Clark, L. A., & Tellegen, A. (1988). Development and validation of brief measures of positive and negative affect: The PANAS scales. *Journal of Personality and Social Psychology*, *54*(6), 1063–1070. https://doi.org/10.1037/0022-3514.54.6.1063",
+      "english_sha256": "96432e566dd1d6a49fd2cad75567da2121674728cd3e8860e0b93dd8bdc367be",
+      "chinese_sha256": "96432e566dd1d6a49fd2cad75567da2121674728cd3e8860e0b93dd8bdc367be",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 125,
+      "en": "Yarkoni, T., & Westfall, J. (2017). Choosing prediction over explanation in psychology: Lessons from machine learning. *Perspectives on Psychological Science*, *12*(6), 1100–1122. https://doi.org/10.1177/1745691617693393",
+      "zh": "Yarkoni, T., & Westfall, J. (2017). Choosing prediction over explanation in psychology: Lessons from machine learning. *Perspectives on Psychological Science*, *12*(6), 1100–1122. https://doi.org/10.1177/1745691617693393",
+      "english_sha256": "74616178c88b80d8bc1b101bd2038d2425d919d9af21d25b60416cf7d2b11050",
+      "chinese_sha256": "74616178c88b80d8bc1b101bd2038d2425d919d9af21d25b60416cf7d2b11050",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 126,
+      "en": "Zhang, Y., & Yang, Q. (2022). A survey on multi-task learning. *IEEE Transactions on Knowledge and Data Engineering*, *34*(12), 5586–5609. https://doi.org/10.1109/TKDE.2021.3070203",
+      "zh": "Zhang, Y., & Yang, Q. (2022). A survey on multi-task learning. *IEEE Transactions on Knowledge and Data Engineering*, *34*(12), 5586–5609. https://doi.org/10.1109/TKDE.2021.3070203",
+      "english_sha256": "55701c11d52be2840d4d06da07b41c2d4e548e3821aa65ec29c8c86712035def",
+      "chinese_sha256": "55701c11d52be2840d4d06da07b41c2d4e548e3821aa65ec29c8c86712035def",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "manuscript",
+      "block": 127,
+      "en": "Zhao, N., Jiao, D., Bai, S., & Zhu, T. (2016). Evaluating the validity of simplified Chinese version of LIWC in detecting psychological expressions in short texts on social network services. *PLOS ONE*, *11*(6), e0157947. https://doi.org/10.1371/journal.pone.0157947",
+      "zh": "Zhao, N., Jiao, D., Bai, S., & Zhu, T. (2016). Evaluating the validity of simplified Chinese version of LIWC in detecting psychological expressions in short texts on social network services. *PLOS ONE*, *11*(6), e0157947. https://doi.org/10.1371/journal.pone.0157947",
+      "english_sha256": "e6ae07c5b13cee2687c2e9f7141cfdea29810deff85371fbfca5705a80d7de98",
+      "chinese_sha256": "e6ae07c5b13cee2687c2e9f7141cfdea29810deff85371fbfca5705a80d7de98",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 0,
+      "en": "# Supplementary methods and results",
+      "zh": "# 补充方法与结果",
+      "english_sha256": "0d3164d382b62d88e361053531425bc79747b3d538e441e2e972c46e0314c3de",
+      "chinese_sha256": "0072ef54a67138036c0eba7fd299042c6aa8c1b22b76e8e40e2f4b381fb79040",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 1,
+      "en": "## Analysis provenance and missing inputs",
+      "zh": "## 分析来源与缺失输入",
+      "english_sha256": "74794a7e7e6d6a0014466c42f95c25d1b2e7b02c4908aa1e11a0441f5fd985f4",
+      "chinese_sha256": "aedac53fe9b5800654f678b1188158c57f3e4238c96b01fd376b23e76cc4efe9",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 2,
+      "en": "This supplement accompanies the participant-level Weibo reanalysis. The original supplied study is known to have been published, but its article, abstract and results were not retrieved or used. Data collection details are attributed to the supplied Method. Original inputs and hashes, row-level inclusion decisions, all parameter candidates, warnings and failed runs, fitted models, predictions, resampling code, figures, and source documents are retained in the package.",
+      "zh": "本补充材料配套于参与者层面的微博数据再分析。已知所提供的原研究已经发表，但本次未检索或使用其论文正文、摘要和结果。数据采集细节均据随附方法说明报告。原始输入及其校验值、逐行纳入决定、全部参数候选、警告和失败运行、拟合模型、预测值、重抽样代码、图表及源文档均保存在研究包中。",
+      "english_sha256": "98f30ee35c8bcfe93147d9ccef037711fce1b7930aaa1f9f8fa306cbeb14ba57",
+      "chinese_sha256": "a6b1d20fcd6d2e2b92ddcde5cbb9b8bb759219bea01edb05561adbbc5a92d880",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 3,
+      "en": "The questionnaire transformation cannot be identified from decimal values alone. Original PANAS/SWLS unit conversions, item reliability, odd/even-text reliability, word clouds, demographic validity and temporal cutoff reconstruction were not performed. Metadata indicate text extending beyond questionnaire completion for 1,027 primary participants, so these results cannot establish prospective prediction. An ind value above one occurred for 34 participants, and 13 feature codes lack mappings. No post hoc distribution-based cleaning was applied.",
+      "zh": "仅凭小数值无法确定问卷变换。未开展原始 PANAS／SWLS 单位换算、条目信度、奇偶文本信度、词云、人口学效度或时间截止点重建。元数据表明，1,027 名主分析参与者的文本覆盖范围延伸至问卷完成之后，因此这些结果不能确立前瞻性预测。34 名参与者的 ind 值超过一，另有 13 个特征代码缺少映射。未根据分布开展事后清洗。",
+      "english_sha256": "2f9af6f5c40e80d1392ca7ce434a5ef528d714a9eca926f7d44ee21e1c1e6aa8",
+      "chinese_sha256": "f1cfc3c3b5b630b060ff951fd25c75df40ec756144b4ad1488ca4a9192f201d6",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 4,
+      "en": "## Exact model selections and search records",
+      "zh": "## 具体模型设置与搜索记录",
+      "english_sha256": "169a430c5cb0a9087be6ce7ea4d39a9d6cc81c958189bac6776fbdb617c14bfc",
+      "chinese_sha256": "9636288d2a766f8fba449b7c1262b7c9a223eacc8e0a7c5ea3513ce09c76d25e",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 5,
+      "en": "The development-only grid had 42 configurations and 210 composite fold fits. Independent outcomes selected separate parameters; shared models selected one setting. All fitted transforms used only each fold's training rows. Candidate checkpoints preserve scores, warnings, status, and OOF arrays with a separate explicit UID row-order file. The initial vector-scaling preflight and corrected scalar-scaling final implementation are both retained. The correction was triggered by a synthetic numeric consistency check before holdout evaluation, with no change in grid or participant split.",
+      "zh": "仅在开发集上使用的参数网格包含 42 种配置和 210 次复合折内拟合。独立结局分别选择参数，共享模型选择一组设置。所有拟合变换都仅使用相应折的训练行。候选检查点保留了分数、警告、状态和折外（OOF）数组，并另存明确的 UID 行序文件。最初采用向量缩放的预检实现，以及修正后的标量缩放最终实现均被保留。修正由留出评估前的合成数值一致性检查触发，参数网格和参与者划分没有变化。",
+      "english_sha256": "5cdf2e3a743d27cf30dd749300f739f62d16d808900030a8005ff5b4f9328094",
+      "chinese_sha256": "035979cc27e48b62760b76e80968c56bac5dcd759252b648373cba2adef57c75",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 6,
+      "en": "| Family | Selected parameters | CV normalized RMSE |\n| --- | --- | --- |\n| Training mean | {} | 1.0016 |\n| Ridge | [{\"alpha\": 1000.0}, {\"alpha\": 10.0}, {\"alpha\": 10.0}] | 0.9969 |\n| Independent RF | [{\"max_features\": 1.0, \"min_samples_leaf\": 15}, {\"max_features\": 0.5, \"min_samples_leaf\": 15}, {\"max_features\": 1.0, \"min_samples_leaf\": 15}] | 0.9965 |\n| Independent ET | [{\"max_features\": 0.5, \"min_samples_leaf\": 15}, {\"max_features\": 1.0, \"min_samples_leaf\": 15}, {\"max_features\": 1.0, \"min_samples_leaf\": 15}] | 0.9968 |\n| Independent HGB | [{\"l2_regularization\": 10.0, \"max_leaf_nodes\": 15}, {\"l2_regularization\": 1.0, \"max_leaf_nodes\": 31}, {\"l2_regularization\": 10.0, \"max_leaf_nodes\": 31}] | 1.0226 |\n| Shared RF | {\"max_features\": 1.0, \"min_samples_leaf\": 15} | 0.9963 |\n| Shared ET | {\"max_features\": 0.5, \"min_samples_leaf\": 15} | 0.9977 |\n| Multitask elastic net | {\"alpha\": 0.01, \"l1_ratio\": 0.8} | 0.9972 |",
+      "zh": "| 模型类别 | 选定参数 | CV 归一化 RMSE |\n| --- | --- | --- |\n| 训练均值 | {} | 1.0016 |\n| 岭回归 | [{\"alpha\": 1000.0}, {\"alpha\": 10.0}, {\"alpha\": 10.0}] | 0.9969 |\n| 独立 RF | [{\"max_features\": 1.0, \"min_samples_leaf\": 15}, {\"max_features\": 0.5, \"min_samples_leaf\": 15}, {\"max_features\": 1.0, \"min_samples_leaf\": 15}] | 0.9965 |\n| 独立 ET | [{\"max_features\": 0.5, \"min_samples_leaf\": 15}, {\"max_features\": 1.0, \"min_samples_leaf\": 15}, {\"max_features\": 1.0, \"min_samples_leaf\": 15}] | 0.9968 |\n| 独立 HGB | [{\"l2_regularization\": 10.0, \"max_leaf_nodes\": 15}, {\"l2_regularization\": 1.0, \"max_leaf_nodes\": 31}, {\"l2_regularization\": 10.0, \"max_leaf_nodes\": 31}] | 1.0226 |\n| 共享 RF | {\"max_features\": 1.0, \"min_samples_leaf\": 15} | 0.9963 |\n| 共享 ET | {\"max_features\": 0.5, \"min_samples_leaf\": 15} | 0.9977 |\n| 多任务弹性网 | {\"alpha\": 0.01, \"l1_ratio\": 0.8} | 0.9972 |",
+      "english_sha256": "29c76c55c1175280c893b76bb6c14f8468005003b2204ac800915032672519bb",
+      "chinese_sha256": "d61a5e53a9ced854edd510d8f99c34cee123633d7ac3d6e9339c42fa98c8b8f2",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 7,
+      "en": "Note. All forests use 256 trees. RF uses bootstrapped trees; ET uses its default full training sample. HGB uses max_iter = 150, learning_rate = .05, min_samples_leaf = 20, early_stopping = False. Elastic net uses max_iter = 10000 and tol = 1e-5. Ridge/independent ensemble parameters are listed in the order negative affect, positive affect, life satisfaction. Exact installed-library defaults are preserved in fitted models and environment/requirements.lock.txt.",
+      "zh": "注. 所有森林均使用 256 棵树。RF 对树使用 bootstrap 抽样；ET 默认使用完整训练样本。HGB 设置为 max_iter = 150、learning_rate = .05、min_samples_leaf = 20、early_stopping = False。弹性网设置为 max_iter = 10000、tol = 1e-5。岭回归和独立集成模型的参数依次对应消极情绪、积极情绪和生活满意度。实际安装库的确切默认设置保存在拟合模型及 environment/requirements.lock.txt 中。",
+      "english_sha256": "813f1d1f771a878d4e029339b87aa9ebf890f1114930db3a5cf2144ed7f87fe6",
+      "chinese_sha256": "1d2b97a6cd62cd26a7f240c07b8cff80c718b0cf89cac60c3a40231b6af663bc",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 8,
+      "en": "## Repeated development cross-validation",
+      "zh": "## 开发集重复交叉验证",
+      "english_sha256": "c4962f70715c34599f2fc26ab5139d30be176671ee8fd9a567b934eed9574217",
+      "chinese_sha256": "01c9f6265b77fa03c1ebb43c90044b5bba4c072f9820f8b10a68682896ce9721",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 9,
+      "en": "Three shuffled five-fold repetitions with seeds 20261023, 20261024 and 20261025 refitted the frozen selected configurations. Hyperparameters were not retuned. Fold variability is descriptive, not a confidence interval for unbiased performance; the same development sample had contributed to parameter selection.",
+      "zh": "使用随机种子 20261023、20261024 和 20261025，进行了三次打乱顺序的五折重复，重新拟合已固定的选定配置。超参数未重新调节。折间变异属于描述性结果，不是无偏性能的置信区间，因为同一开发样本此前已参与参数选择。",
+      "english_sha256": "83dfc5eb728e17cbe2213250d2988b5086d566301ca4c4a25ffabd3d685d3ebe",
+      "chinese_sha256": "ee299d8af779588e92984ebc061f66d315d808f680603ea1d118827c03a4ba8f",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 10,
+      "en": "| Model | Outcome | Mean normalized RMSE | Across-fold SD |\n| --- | --- | --- | --- |\n| Shared RF | Negative affect | 0.9993 | 0.0627 |\n| Shared RF | Positive affect | 0.9995 | 0.0523 |\n| Shared RF | Life satisfaction | 0.9923 | 0.0578 |\n| Independent RF | Negative affect | 1.0034 | 0.0647 |\n| Independent RF | Positive affect | 1.0003 | 0.0548 |\n| Independent RF | Life satisfaction | 0.9899 | 0.0615 |\n| Training mean | Negative affect | 1.0005 | 0.0647 |\n| Training mean | Positive affect | 1.0011 | 0.0568 |\n| Training mean | Life satisfaction | 1.0007 | 0.0570 |",
+      "zh": "| 模型 | 结局 | 平均归一化 RMSE | 折间 SD |\n| --- | --- | --- | --- |\n| 共享 RF | 消极情绪 | 0.9993 | 0.0627 |\n| 共享 RF | 积极情绪 | 0.9995 | 0.0523 |\n| 共享 RF | 生活满意度 | 0.9923 | 0.0578 |\n| 独立 RF | 消极情绪 | 1.0034 | 0.0647 |\n| 独立 RF | 积极情绪 | 1.0003 | 0.0548 |\n| 独立 RF | 生活满意度 | 0.9899 | 0.0615 |\n| 训练均值 | 消极情绪 | 1.0005 | 0.0647 |\n| 训练均值 | 积极情绪 | 1.0011 | 0.0568 |\n| 训练均值 | 生活满意度 | 1.0007 | 0.0570 |",
+      "english_sha256": "f54f4363baf1dec6898ac99cda7afe155a97b5e59b905876c307f06270b59307",
+      "chinese_sha256": "b6533a9cf43ecc230f21528d65a665bb4a5a68717fafa128b94ca35845f61f17",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 11,
+      "en": "## Complete holdout performance",
+      "zh": "## 完整留出测试集表现",
+      "english_sha256": "24ff011988859c1152b7160e585353bd895e820276f12c2139d2db5436e8f66a",
+      "chinese_sha256": "106991315be6aeca2070058ca11d94ee96905ee36246e6b7ac0f5d5acab80f4e",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 12,
+      "en": "All families used the same 104 participants, independent of model selection. Pearson P values below are unadjusted and descriptive for nonprimary families. The primary winner's three outcome P values are Holm-adjusted in the main Results. Correlations for constant predictions are undefined. CSV-unit RMSE intervals condition on fitted models and the selected training/holdout partition.",
+      "zh": "所有模型均使用同一批 104 名参与者，这些参与者未参与模型选择。下表中的 Pearson P 值未经校正；对非主要模型而言，这些结果属于描述性信息。主要选定模型的三个结局 P 值已在正文结果中进行 Holm 校正。常量预测的相关系数无定义。采用 CSV 单位的 RMSE 区间以拟合模型及选定的训练／留出划分为条件。",
+      "english_sha256": "b479285f85f1a7ee1d001204e27404d0a7f3a0c74486d0c76a2ab062765cdbb1",
+      "chinese_sha256": "e890d63653131eeac41104a85f196c735dc774c49afab0cbbd79015ec5dc70ab",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 13,
+      "en": "### Table S1 All model families on the primary holdout",
+      "zh": "### 表 S1 各模型在主分析留出测试集上的表现",
+      "english_sha256": "cbe7bd8e8e5c32224da9d84e9be845b18796bd6b6df8ffc602527e79fad17a87",
+      "chinese_sha256": "e20e938572a0ce4f52505a992be8632662fd06dd0bc99cd78d2d538c7e904335",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 14,
+      "en": "| Model | Outcome | Pearson r [95% CI] | p | RMSE [95% CI] |\n| --- | --- | --- | --- | --- |\n| Training mean | Negative affect | Undefined | — | 0.169 [0.150, 0.190] |\n| Training mean | Positive affect | Undefined | — | 0.170 [0.146, 0.192] |\n| Training mean | Life satisfaction | Undefined | — | 0.205 [0.184, 0.225] |\n| Ridge | Negative affect | 0.274 [0.086, 0.443] | 0.005 | 0.169 [0.148, 0.189] |\n| Ridge | Positive affect | 0.330 [0.147, 0.492] | < .001 | 0.163 [0.140, 0.186] |\n| Ridge | Life satisfaction | 0.166 [-0.027, 0.348] | 0.092 | 0.202 [0.181, 0.222] |\n| Independent RF | Negative affect | 0.230 [0.039, 0.405] | 0.019 | 0.165 [0.144, 0.185] |\n| Independent RF | Positive affect | 0.325 [0.141, 0.487] | < .001 | 0.163 [0.141, 0.186] |\n| Independent RF | Life satisfaction | 0.184 [-0.008, 0.364] | 0.061 | 0.201 [0.180, 0.222] |\n| Independent ET | Negative affect | 0.276 [0.088, 0.445] | 0.005 | 0.165 [0.145, 0.186] |\n| Independent ET | Positive affect | 0.275 [0.087, 0.444] | 0.005 | 0.165 [0.142, 0.187] |\n| Independent ET | Life satisfaction | 0.225 [0.033, 0.400] | 0.022 | 0.200 [0.179, 0.220] |\n| Independent HGB | Negative affect | 0.075 [-0.119, 0.264] | 0.447 | 0.172 [0.150, 0.194] |\n| Independent HGB | Positive affect | 0.219 [0.028, 0.395] | 0.025 | 0.167 [0.146, 0.187] |\n| Independent HGB | Life satisfaction | 0.190 [-0.003, 0.369] | 0.054 | 0.204 [0.180, 0.227] |\n| Shared RF | Negative affect | 0.247 [0.057, 0.419] | 0.012 | 0.166 [0.146, 0.186] |\n| Shared RF | Positive affect | 0.284 [0.097, 0.452] | 0.003 | 0.165 [0.143, 0.187] |\n| Shared RF | Life satisfaction | 0.152 [-0.042, 0.335] | 0.124 | 0.202 [0.181, 0.222] |\n| Shared ET | Negative affect | 0.312 [0.127, 0.476] | 0.001 | 0.166 [0.145, 0.186] |\n| Shared ET | Positive affect | 0.306 [0.120, 0.471] | 0.002 | 0.166 [0.142, 0.188] |\n| Shared ET | Life satisfaction | 0.227 [0.036, 0.402] | 0.021 | 0.201 [0.180, 0.222] |\n| Multitask elastic net | Negative affect | 0.331 [0.148, 0.493] | < .001 | 0.166 [0.146, 0.186] |\n| Multitask elastic net | Positive affect | 0.402 [0.227, 0.552] | < .001 | 0.165 [0.143, 0.187] |\n| Multitask elastic net | Life satisfaction | 0.168 [-0.025, 0.350] | 0.087 | 0.202 [0.182, 0.223] |",
+      "zh": "| 模型 | 结局 | Pearson r［95% CI］ | p | RMSE［95% CI］ |\n| --- | --- | --- | --- | --- |\n| 训练均值 | 消极情绪 | 无定义 | — | 0.169 [0.150, 0.190] |\n| 训练均值 | 积极情绪 | 无定义 | — | 0.170 [0.146, 0.192] |\n| 训练均值 | 生活满意度 | 无定义 | — | 0.205 [0.184, 0.225] |\n| 岭回归 | 消极情绪 | 0.274 [0.086, 0.443] | 0.005 | 0.169 [0.148, 0.189] |\n| 岭回归 | 积极情绪 | 0.330 [0.147, 0.492] | < .001 | 0.163 [0.140, 0.186] |\n| 岭回归 | 生活满意度 | 0.166 [-0.027, 0.348] | 0.092 | 0.202 [0.181, 0.222] |\n| 独立 RF | 消极情绪 | 0.230 [0.039, 0.405] | 0.019 | 0.165 [0.144, 0.185] |\n| 独立 RF | 积极情绪 | 0.325 [0.141, 0.487] | < .001 | 0.163 [0.141, 0.186] |\n| 独立 RF | 生活满意度 | 0.184 [-0.008, 0.364] | 0.061 | 0.201 [0.180, 0.222] |\n| 独立 ET | 消极情绪 | 0.276 [0.088, 0.445] | 0.005 | 0.165 [0.145, 0.186] |\n| 独立 ET | 积极情绪 | 0.275 [0.087, 0.444] | 0.005 | 0.165 [0.142, 0.187] |\n| 独立 ET | 生活满意度 | 0.225 [0.033, 0.400] | 0.022 | 0.200 [0.179, 0.220] |\n| 独立 HGB | 消极情绪 | 0.075 [-0.119, 0.264] | 0.447 | 0.172 [0.150, 0.194] |\n| 独立 HGB | 积极情绪 | 0.219 [0.028, 0.395] | 0.025 | 0.167 [0.146, 0.187] |\n| 独立 HGB | 生活满意度 | 0.190 [-0.003, 0.369] | 0.054 | 0.204 [0.180, 0.227] |\n| 共享 RF | 消极情绪 | 0.247 [0.057, 0.419] | 0.012 | 0.166 [0.146, 0.186] |\n| 共享 RF | 积极情绪 | 0.284 [0.097, 0.452] | 0.003 | 0.165 [0.143, 0.187] |\n| 共享 RF | 生活满意度 | 0.152 [-0.042, 0.335] | 0.124 | 0.202 [0.181, 0.222] |\n| 共享 ET | 消极情绪 | 0.312 [0.127, 0.476] | 0.001 | 0.166 [0.145, 0.186] |\n| 共享 ET | 积极情绪 | 0.306 [0.120, 0.471] | 0.002 | 0.166 [0.142, 0.188] |\n| 共享 ET | 生活满意度 | 0.227 [0.036, 0.402] | 0.021 | 0.201 [0.180, 0.222] |\n| 多任务弹性网 | 消极情绪 | 0.331 [0.148, 0.493] | < .001 | 0.166 [0.146, 0.186] |\n| 多任务弹性网 | 积极情绪 | 0.402 [0.227, 0.552] | < .001 | 0.165 [0.143, 0.187] |\n| 多任务弹性网 | 生活满意度 | 0.168 [-0.025, 0.350] | 0.087 | 0.202 [0.182, 0.223] |",
+      "english_sha256": "961e9586cab5168d3416c9cafe50466646bbb0932bac6e9cb78c8758900d7bbc",
+      "chinese_sha256": "e42e3441a464e7d5181f3d83f76f3e6eb9861291652c981bb73eb5e6c3823489",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 15,
+      "en": "## Frozen-parameter sensitivity analyses",
+      "zh": "## 固定参数敏感性分析",
+      "english_sha256": "5e39b62b987ea3b56fa96e7de6a59db0617471a217a8208a82734e609c8c180d",
+      "chinese_sha256": "30d168469e47b765b5ec6e2ed0ed77cbd08ff8e08847cc7c0e93bb3047212dcd",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 16,
+      "en": "The latest-record analysis retains the same 1,037 participants and partitions, using the numerically latest questionnaire time. The singleton-ID analysis excludes all repeated IDs, reducing sample size. Restricted-feature analysis retains participants but omits ind and A, B, C1–C10, D, leaving 106 predictors. Every sensitivity refits the original chosen hyperparameters for each family without retuning. All family-by-scenario results, including R-squared and Spearman correlation, are retained in tables/tableS2_sensitivity.csv. The table below emphasizes the original winner; it does not select a new winner from sensitivity performance.",
+      "zh": "最新记录分析保留同样的 1,037 名参与者及其划分，使用数值上最新的问卷时间。单次 ID 分析排除所有重复 ID，因此样本量减小。受限特征分析保留参与者，但去除 ind 和 A、B、C1–C10、D，剩余 106 项预测变量。每项敏感性分析均重新拟合各模型原先选定的超参数，不重新调参。全部模型与情境组合的结果，包括决定系数和 Spearman 相关，保存在 tables/tableS2_sensitivity.csv。下表重点呈现原先选定的模型，并未根据敏感性结果重新选出模型。",
+      "english_sha256": "f12ef5c5dc4c1571f61f62c09eafd8abd3b1536d696e27d70b47d3e8d4990fa3",
+      "chinese_sha256": "619c7a6fb4ac5d99b385876cdae8e2768a0d78220f9f3c708fb74e4f57e70cde",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 17,
+      "en": "### Table S2 Original winner across prespecified datasets",
+      "zh": "### 表 S2 原选定模型在预定数据集上的表现",
+      "english_sha256": "48591dd5506963b8cda0b714895d10c189703870c9e83b9fc163850fd80b1fa1",
+      "chinese_sha256": "b2dc76da7151ca0ad7fdedd25e0e670c8ff7af4179e0b16b512d6ea9368c1cd7",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 18,
+      "en": "| Dataset | Outcome | Test n | r | RMSE [95% CI] | R-squared |\n| --- | --- | --- | --- | --- | --- |\n| primary | Negative affect | 104 | 0.247 | 0.166 [0.146, 0.186] | 0.020 |\n| primary | Positive affect | 104 | 0.284 | 0.165 [0.143, 0.187] | 0.040 |\n| primary | Life satisfaction | 104 | 0.152 | 0.202 [0.181, 0.222] | 0.015 |\n| latest record | Negative affect | 104 | 0.259 | 0.174 [0.154, 0.194] | 0.024 |\n| latest record | Positive affect | 104 | 0.286 | 0.163 [0.144, 0.182] | 0.048 |\n| latest record | Life satisfaction | 104 | 0.101 | 0.207 [0.185, 0.228] | 0.008 |\n| singleton uids | Negative affect | 85 | 0.303 | 0.171 [0.147, 0.195] | 0.025 |\n| singleton uids | Positive affect | 85 | 0.301 | 0.161 [0.138, 0.184] | 0.055 |\n| singleton uids | Life satisfaction | 85 | 0.173 | 0.207 [0.185, 0.229] | 0.027 |\n| restricted features | Negative affect | 104 | 0.301 | 0.165 [0.146, 0.185] | 0.031 |\n| restricted features | Positive affect | 104 | 0.268 | 0.165 [0.142, 0.188] | 0.035 |\n| restricted features | Life satisfaction | 104 | 0.125 | 0.203 [0.182, 0.223] | 0.008 |",
+      "zh": "| 数据集 | 结局 | 测试集 n | r | RMSE［95% CI］ | 决定系数 |\n| --- | --- | --- | --- | --- | --- |\n| 主分析 | 消极情绪 | 104 | 0.247 | 0.166 [0.146, 0.186] | 0.020 |\n| 主分析 | 积极情绪 | 104 | 0.284 | 0.165 [0.143, 0.187] | 0.040 |\n| 主分析 | 生活满意度 | 104 | 0.152 | 0.202 [0.181, 0.222] | 0.015 |\n| 最新记录 | 消极情绪 | 104 | 0.259 | 0.174 [0.154, 0.194] | 0.024 |\n| 最新记录 | 积极情绪 | 104 | 0.286 | 0.163 [0.144, 0.182] | 0.048 |\n| 最新记录 | 生活满意度 | 104 | 0.101 | 0.207 [0.185, 0.228] | 0.008 |\n| 单次 ID | 消极情绪 | 85 | 0.303 | 0.171 [0.147, 0.195] | 0.025 |\n| 单次 ID | 积极情绪 | 85 | 0.301 | 0.161 [0.138, 0.184] | 0.055 |\n| 单次 ID | 生活满意度 | 85 | 0.173 | 0.207 [0.185, 0.229] | 0.027 |\n| 受限特征 | 消极情绪 | 104 | 0.301 | 0.165 [0.146, 0.185] | 0.031 |\n| 受限特征 | 积极情绪 | 104 | 0.268 | 0.165 [0.142, 0.188] | 0.035 |\n| 受限特征 | 生活满意度 | 104 | 0.125 | 0.203 [0.182, 0.223] | 0.008 |",
+      "english_sha256": "849a971bc4c53683fd20ce1cbada8e96f786ba4514ee8837807653ed70db784d",
+      "chinese_sha256": "da6af0a2cb7cb6f2bda5dcac9b0935e16bdfaea88e15ebcf6f8baae2527d4313",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 19,
+      "en": "## Attribution and permutation diagnostics",
+      "zh": "## 归因与置换诊断",
+      "english_sha256": "9ab90decc154c6b7b15fa5f7dcb02ee30588bb61c5fb3ee82c33e2dd13dec43d",
+      "chinese_sha256": "5ef5c25beedb960c5b7b9000883457ad7c8a5d27cce4eb2d8738db0a2ca96a96",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 20,
+      "en": "TreeSHAP used Shared RF fitted on 933 participants. The largest error in reconstructing training predictions from expected value plus feature attributions was 2.22e-16 CSV units. The union of the ten highest-ranked training features for each target contained 14 distinct features. These features were permuted one at a time on the 104 holdout participants with 20 shuffles each. Mean delta RMSE and shuffle SD measure conditional model sensitivity. Their uncertainty is not a population confidence interval, and correlated categories may substitute for each other. Full signed contributions, expected values, input values and participant keys are retained in results/primary/interpretation/training_shap_values.npz.",
+      "zh": "TreeSHAP 使用在 933 名参与者上拟合的共享 RF。用期望值加上特征归因重建训练预测时，最大误差为 2.22e-16 个 CSV 单位。各目标训练重要性前十的特征取并集后，共得到 14 个不同特征。在 104 名留出参与者中逐一置换这些特征，每个特征洗牌 20 次。平均 RMSE 差值及洗牌 SD 衡量的是条件性的模型敏感性，其不确定性不是总体置信区间，相关类别还可能相互替代。完整的带符号贡献、期望值、输入值和参与者标识保存在 results/primary/interpretation/training_shap_values.npz。",
+      "english_sha256": "644eb9bd14b3714b6f7b91b1fd80ef04e8443c9f5957a4547b1b0fbf16aec425",
+      "chinese_sha256": "f2955577ad6dceb154fb97c7d8aa4fa7baee755957c73e4b941dafe330a2fc18",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 21,
+      "en": "| Outcome | Training-selected feature | Mean delta RMSE | Shuffle SD |\n| --- | --- | --- | --- |\n| Negative affect | Sexual | 0.00008 | 0.00052 |\n| Negative affect | C10 | 0.00032 | 0.00050 |\n| Negative affect | C2 | 0.00025 | 0.00044 |\n| Negative affect | D | 0.00007 | 0.00038 |\n| Negative affect | Angery | 0.00011 | 0.00029 |\n| Positive affect | Sexual | 0.00000 | 0.00054 |\n| Positive affect | We | 0.00023 | 0.00041 |\n| Positive affect | Family | -0.00008 | 0.00034 |\n| Positive affect | D | 0.00022 | 0.00030 |\n| Positive affect | Angery | 0.00023 | 0.00030 |\n| Life satisfaction | Family | 0.00103 | 0.00069 |\n| Life satisfaction | We | -0.00093 | 0.00074 |\n| Life satisfaction | C10 | 0.00006 | 0.00063 |\n| Life satisfaction | Sexual | -0.00017 | 0.00066 |\n| Life satisfaction | D | 0.00093 | 0.00058 |",
+      "zh": "| 结局 | 训练阶段选定特征 | 平均 RMSE 差值 | 洗牌 SD |\n| --- | --- | --- | --- |\n| 消极情绪 | Sexual | 0.00008 | 0.00052 |\n| 消极情绪 | C10 | 0.00032 | 0.00050 |\n| 消极情绪 | C2 | 0.00025 | 0.00044 |\n| 消极情绪 | D | 0.00007 | 0.00038 |\n| 消极情绪 | Angery | 0.00011 | 0.00029 |\n| 积极情绪 | Sexual | 0.00000 | 0.00054 |\n| 积极情绪 | We | 0.00023 | 0.00041 |\n| 积极情绪 | Family | -0.00008 | 0.00034 |\n| 积极情绪 | D | 0.00022 | 0.00030 |\n| 积极情绪 | Angery | 0.00023 | 0.00030 |\n| 生活满意度 | Family | 0.00103 | 0.00069 |\n| 生活满意度 | We | -0.00093 | 0.00074 |\n| 生活满意度 | C10 | 0.00006 | 0.00063 |\n| 生活满意度 | Sexual | -0.00017 | 0.00066 |\n| 生活满意度 | D | 0.00093 | 0.00058 |",
+      "english_sha256": "78dd2796f9b0b5702d079ded3d3d22fe55375717c82f79ce05277fc1329f2f33",
+      "chinese_sha256": "69046223a51721227d8d7bfe960bfe2afb776b54edc382c123297d0b2d306b62",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 22,
+      "en": "## Independent computational reproduction",
+      "zh": "## 独立计算复现",
+      "english_sha256": "5584ec50a4079e6feb1159a68b358940a42bb3efc6ff269ba58600613652964a",
+      "chinese_sha256": "1f9e92cbfb04906211dbf9b207465cc3c0d7344d67e2700c6e5fbf360e5859f9",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 23,
+      "en": "The final analysis was rerun from data.csv in a separate output directory using the locked environment. Participant manifests, CV row order, selected parameters, CV fold scores, primary predictions and reported primary metrics agreed within 1e-12. Maximum absolute primary prediction difference was 0.0e+00. This is computational reproducibility on the same input and environment, not an independent sample replication. The JSON verification report lists exact checks and any intentionally omitted nonprimary scenarios. Repeated development CV was retained from the original final run and was not necessary to repeat for the primary prediction equivalence check.",
+      "zh": "最终分析在锁定环境下，由 data.csv 在独立输出目录中重新运行。参与者清单、CV 行序、选定参数、CV 折分数、主分析预测值及已报告的主分析指标，均在 1e-12 的容差内一致。主分析预测值的最大绝对差为 0.0e+00。这是在相同输入和环境下的计算可复现性，而不是独立样本重复研究。JSON 核验报告列出了确切检查项，以及任何有意未重复的非主要情境。固定配置的开发集重复交叉验证保留自原最终运行；验证主分析预测等价性无需再次执行该诊断。",
+      "english_sha256": "cbcd95bb7e2f10d1d204599d499d05155482b3ad4c482dfd778e570958968908",
+      "chinese_sha256": "92545a3d9cd0b99a055d78867d14badbc9a4262ced86af5c2c3bea082c7b865c",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 24,
+      "en": "## Data and document verification",
+      "zh": "## 数据与文档核验",
+      "english_sha256": "a538ff2deeb3b8efbccaefc19fa0e8ebfd7fa2e5f42c4a8893f56bb7eddae0fb",
+      "chinese_sha256": "4ad960ddbac33b08a2bf936f5251774190b5333887ce193ac9b47caa2cfceb0f",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 25,
+      "en": "The final main-paper bibliography contains 30 scholarly works, all published before 1 August 2024. All are stored in Zotero collection S2S9AGIR with readable full-text attachments and recorded source locations. The 16 additions were imported and read back through Zotero MCP; all imported local files matched retained source SHA-256 values. The collection contains 31 source attachments in total, including the prior Lundberg text/preprint pair. Diener et al. (2018) is retained as a text-only NCBI author-manuscript RTF; inline citation callouts and figure graphics are incomplete. The scanned Diener et al. (1999) source has local OCR for passage checks. Version distinctions and limitations are explicit in the evidence library. The target published study was not sought, acquired, used, or cited. Journal rules were checked against official sources on 23 September 2026. Author-controlled declarations and responsible human review remain pending.",
+      "zh": "终稿参考文献包含 30 项学术文献，均发表于 2024 年 8 月 1 日之前。全部保存在 Zotero 集合 S2S9AGIR，具有可读全文附件及记录在案的原文位置。新增 16 篇均通过 Zotero MCP 入库并回读；所有导入的本地文件 SHA-256 均与保留的来源文件一致。集合共有 31 个来源附件，包括此前 Lundberg 文本与预印本这一组附件。Diener 等（2018）以 NCBI 作者稿纯文本 RTF 保存，其中行内引文标记和图形并不完整。Diener 等（1999）的扫描原文配有本地 OCR，用于核对段落。证据库明确标注版本差异与限制。未检索、获取、使用或引用目标研究的已发表原文。期刊规则依据 2026 年 9 月 23 日核查的官方来源。作者控制的声明和负责任的人类审核仍待完成。",
+      "english_sha256": "9bdec167f0ec27377bb3406f461d614d41f21560da36651c298dcad39d8b4976",
+      "chinese_sha256": "f8768d2ea4725562baf17ea10c92f383b558620c27425d3bc8057a101c3a6ebf",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 26,
+      "en": "## Exploratory optimization after the primary analysis",
+      "zh": "## 主分析后的探索性优化",
+      "english_sha256": "35c5c3680492f053ea154f6efebb5784185ac7241de9ddc2c30c3d356f13c99a",
+      "chinese_sha256": "20db8e7242ad521a1551ce06730ef3fc5aae51d3f19d3e81feb1cb745be0d65d",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 27,
+      "en": "The 22-configuration search was fixed after the original holdout had been inspected. It used the same 933 development participants and 104 holdout participants. Five outer development folds each performed five-fold inner selection, followed by a five-fold search on all development data: 132 candidate-by-search records and 660 composite fold evaluations. All completed without failures or captured warnings. Scalar-target estimators were fitted independently unless the candidate explicitly shared outputs. Ridge, support-vector regression, elastic net and the shallow boosting alternatives tested different smoothness/regularization assumptions; PLS tested low-dimensional covariation. Every fitted imputer, scaler and target transformation used only the relevant training fold. Fixed log1p transformation was applied only to nonnegative input features. This was an exploratory extension, not a newly independent confirmation set.",
+      "zh": "包含 22 个配置的搜索是在查看原始留出集之后固定的。它仍使用相同的 933 名开发参与者和 104 名留出参与者。五个开发集外层折各自执行内层五折选择，之后在全部开发数据上进行五折搜索，共形成 132 条候选配置与搜索组合记录及 660 次复合折评估。所有评估均完成，未出现失败或捕获到的警告。除明确共享输出的候选外，标量结局估计器分别拟合。岭回归、支持向量回归、弹性网与浅层提升考察不同的平滑或正则化假设；PLS 考察低维协变结构。所有需要拟合的插补器、缩放器及结局变换仅使用对应训练折。固定的 log1p 变换仅应用于非负输入特征。这是探索性扩展，并非新获得的独立确认数据集。",
+      "english_sha256": "b8ea2c2fef1f8df8282ac977ebe606a9541f753b7fcea212112a8fb90a547162",
+      "chinese_sha256": "0c34bf7d6cafe661750f1d0bd269e592f78cd9050cab7524780ea3e2d20649e1",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 28,
+      "en": "Outer folds selected the original shared forest once, elastic net with alpha 0.1 and L1 ratio 0.5 twice, and independent forests with leaf size 60 twice. Variation in these choices is retained as a diagnostic. Table S3 gives unweighted means and descriptive SDs across the five outer folds; these SDs are not standard errors or confidence intervals, and overlapping training sets are not treated as independent replicates.",
+      "zh": "外层折中，原共享森林被选择一次，alpha 为 0.1、L1 比例为 0.5 的弹性网被选择两次，叶节点样本量为 60 的独立森林被选择两次。这些选择差异作为诊断信息保留。表 S3 给出五个外层折的未加权均值及描述性 SD；这些 SD 不是标准误或置信区间，训练集重叠的各折也不视为独立重复。",
+      "english_sha256": "0024d3fed9f2b615e26d5fc4f299fef72ccf46f8546a4908087104288250b440",
+      "chinese_sha256": "d86536f5a638e2dbc18f291ed2989c7fa8468502d832f29a4e008772fa59e6e4",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 29,
+      "en": "### Table S3 Nested development validation",
+      "zh": "### 表 S3 嵌套开发集验证",
+      "english_sha256": "93cdf98913563a8d38525ddd416680d53cb1d79d74ce987e248bb0d126ae8827",
+      "chinese_sha256": "a04a2f65200d3504d0e79d35b9cf2593d8af56e0fca2e8637bd2f6901603f08f",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 30,
+      "en": "| Procedure | Outcome | Mean normalized RMSE | Fold SD |\n| --- | --- | --- | --- |\n| Selected procedure | Negative affect | 1.0044 | 0.0481 |\n| Selected procedure | Positive affect | 0.9997 | 0.0822 |\n| Selected procedure | Life satisfaction | 0.9976 | 0.0572 |\n| Original shared RF | Negative affect | 1.0027 | 0.0473 |\n| Original shared RF | Positive affect | 0.9986 | 0.0857 |\n| Original shared RF | Life satisfaction | 0.9991 | 0.0578 |\n| Mean baseline | Negative affect | 1.0020 | 0.0463 |\n| Mean baseline | Positive affect | 1.0002 | 0.0836 |\n| Mean baseline | Life satisfaction | 1.0001 | 0.0605 |",
+      "zh": "| 流程 | 结局 | 平均归一化 RMSE | 折间 SD |\n| --- | --- | --- | --- |\n| 选定流程 | 消极情绪 | 1.0044 | 0.0481 |\n| 选定流程 | 积极情绪 | 0.9997 | 0.0822 |\n| 选定流程 | 生活满意度 | 0.9976 | 0.0572 |\n| 原共享 RF | 消极情绪 | 1.0027 | 0.0473 |\n| 原共享 RF | 积极情绪 | 0.9986 | 0.0857 |\n| 原共享 RF | 生活满意度 | 0.9991 | 0.0578 |\n| 均值基线 | 消极情绪 | 1.0020 | 0.0463 |\n| 均值基线 | 积极情绪 | 1.0002 | 0.0836 |\n| 均值基线 | 生活满意度 | 1.0001 | 0.0605 |",
+      "english_sha256": "af8ad7fdfce1c7215376b61b30d461204d0012e2a66245df87dafdd348d02784",
+      "chinese_sha256": "db8cfe38e55837d4731db549b3e5c4909d749c10eaa0cea50a60e69196a56f5a",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 31,
+      "en": "Note. Five outer development folds; all 933 development participants receive one outer-fold prediction per procedure. Fold scores divide outcome RMSE by that outer training fold's outcome SD. The selected procedure repeats candidate selection inside each outer training set. The other two comparators use fixed settings.",
+      "zh": "注。开发集外层五折；全部 933 名开发参与者在每种流程下各获得一次外层折预测。折分数以结局 RMSE 除以相应外层训练折的结局 SD。选定流程在每个外层训练集内重新选择候选，另外两个参照使用固定设置。",
+      "english_sha256": "42dbf04acdb5b3e9f1748e45edc794f655a40b772355cdcd622bdcc9fe970284",
+      "chinese_sha256": "a7a0722cd154a9a67a32846b9b402d59d7f8fac1d4e02e96d66faecdb2d0b4c7",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 32,
+      "en": "### Table S4 Complete exploratory configuration search",
+      "zh": "### 表 S4 完整探索性配置搜索",
+      "english_sha256": "762aaf1153b14b4f39b2373d388e7ca3f06cd9344d77e51b9594bc2db23b3a09",
+      "chinese_sha256": "7bf593908afe9b7f8e751a211f152a2b1adf8401f909f54a2caff31d10b970d4",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 33,
+      "en": "| Candidate | Parameters | Development CV score |\n| --- | --- | --- |\n| mean | Fixed comparator | 1.0007 |\n| original_rf | Fixed comparator | 1.0001 |\n| ridge_raw_10 | {\"log\": false, \"alpha\": 10} | 1.0703 |\n| ridge_raw_100 | {\"log\": false, \"alpha\": 100} | 1.0298 |\n| ridge_raw_1000 | {\"log\": false, \"alpha\": 1000} | 1.0013 |\n| ridge_log_10 | {\"log\": true, \"alpha\": 10} | 1.0709 |\n| ridge_log_100 | {\"log\": true, \"alpha\": 100} | 1.0301 |\n| ridge_log_1000 | {\"log\": true, \"alpha\": 1000} | 1.0013 |\n| svr_0.1 | {\"C\": 0.1} | 1.0040 |\n| svr_1 | {\"C\": 1} | 1.0215 |\n| svr_10 | {\"C\": 10} | 1.1019 |\n| hgb_10 | {\"l2\": 10} | 1.0139 |\n| hgb_100 | {\"l2\": 100} | 1.0013 |\n| en_0.01_0.1 | {\"alpha\": 0.01, \"l1\": 0.1} | 1.0654 |\n| en_0.01_0.5 | {\"alpha\": 0.01, \"l1\": 0.5} | 1.0446 |\n| en_0.1_0.1 | {\"alpha\": 0.1, \"l1\": 0.1} | 1.0173 |\n| en_0.1_0.5 | {\"alpha\": 0.1, \"l1\": 0.5} | 0.9984 |\n| pls_2 | {\"components\": 2} | 1.0056 |\n| pls_5 | {\"components\": 5} | 1.0271 |\n| pls_10 | {\"components\": 10} | 1.0460 |\n| rf_30 | {\"leaf\": 30} | 0.9979 |\n| rf_60 | {\"leaf\": 60} | 0.9969 |",
+      "zh": "| 候选 | 参数 | 开发集 CV 分数 |\n| --- | --- | --- |\n| mean | 固定参照 | 1.0007 |\n| original_rf | 固定参照 | 1.0001 |\n| ridge_raw_10 | {\"log\": false, \"alpha\": 10} | 1.0703 |\n| ridge_raw_100 | {\"log\": false, \"alpha\": 100} | 1.0298 |\n| ridge_raw_1000 | {\"log\": false, \"alpha\": 1000} | 1.0013 |\n| ridge_log_10 | {\"log\": true, \"alpha\": 10} | 1.0709 |\n| ridge_log_100 | {\"log\": true, \"alpha\": 100} | 1.0301 |\n| ridge_log_1000 | {\"log\": true, \"alpha\": 1000} | 1.0013 |\n| svr_0.1 | {\"C\": 0.1} | 1.0040 |\n| svr_1 | {\"C\": 1} | 1.0215 |\n| svr_10 | {\"C\": 10} | 1.1019 |\n| hgb_10 | {\"l2\": 10} | 1.0139 |\n| hgb_100 | {\"l2\": 100} | 1.0013 |\n| en_0.01_0.1 | {\"alpha\": 0.01, \"l1\": 0.1} | 1.0654 |\n| en_0.01_0.5 | {\"alpha\": 0.01, \"l1\": 0.5} | 1.0446 |\n| en_0.1_0.1 | {\"alpha\": 0.1, \"l1\": 0.1} | 1.0173 |\n| en_0.1_0.5 | {\"alpha\": 0.1, \"l1\": 0.5} | 0.9984 |\n| pls_2 | {\"components\": 2} | 1.0056 |\n| pls_5 | {\"components\": 5} | 1.0271 |\n| pls_10 | {\"components\": 10} | 1.0460 |\n| rf_30 | {\"leaf\": 30} | 0.9979 |\n| rf_60 | {\"leaf\": 60} | 0.9969 |",
+      "english_sha256": "f1c53271633533ee2065bf2cfa83ca1bfa88aa3ad8777e32caba2b719003eeae",
+      "chinese_sha256": "dade9bfc54fd67892996aeff01fe2cbfebcf9e4b288a3bd3ceac2edd32f36fa4",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 34,
+      "en": "Note. All configurations use the same five full-development folds. Scores are macro normalized RMSE, averaged equally across folds and outcomes. Lower is better. RF models have 256 trees; the original shared RF retains minimum leaf size 15 and all features. The new independent RF models use half of the features per split. SVR uses an RBF kernel, gamma = scale, and epsilon = 0.1. HGB uses 7 leaves, 100 iterations, learning rate 0.05, and no early stopping. Elastic net uses 10,000 maximum iterations and tolerance 0.000001. PLS uses fold-local internal scaling. These scores select the final candidate and are not unbiased performance estimates of the search.",
+      "zh": "注。所有配置使用相同的全开发集五折。分数为在各折和各结局间等权平均的宏平均归一化 RMSE，越低越好。RF 均有 256 棵树；原共享 RF 保留最小叶节点样本量 15 和全部特征。新增独立 RF 每次划分使用一半特征。SVR 使用 RBF 核，gamma = scale，epsilon = 0.1。HGB 使用 7 个叶节点、100 次迭代、0.05 的学习率且不早停。弹性网最多迭代 10,000 次，容差为 0.000001。PLS 使用折内拟合的内部缩放。这些分数用于选择最终候选，不是对整个搜索流程性能的无偏估计。",
+      "english_sha256": "654801a669474d70952521944a94a77974d2da83d70559c71317164fb14c5f5d",
+      "chinese_sha256": "dc4d54d87c6ea7a018f5441cd3f0ba520c259b09dac17bf2b28be00f65e43126",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 35,
+      "en": "### Table S5 Exploratory selected model on the previously seen holdout",
+      "zh": "### 表 S5 探索性选定模型在此前已查看留出集上的表现",
+      "english_sha256": "ff80f37d26f20a26f3af7be62beca8dfc7da20f2d26a09588d29ff5706cfc19a",
+      "chinese_sha256": "e35b94a6e36574824a13176268886416e926273cd914d27e3f8026d809747350",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 36,
+      "en": "| Outcome | Pearson r [95% CI] | RMSE [95% CI] | R-squared |\n| --- | --- | --- | --- |\n| Negative affect | 0.245 [0.055, 0.417] | 0.1661 [0.1461, 0.1871] | 0.0200 |\n| Positive affect | 0.332 [0.149, 0.493] | 0.1645 [0.1415, 0.1886] | 0.0447 |\n| Life satisfaction | 0.164 [-0.029, 0.346] | 0.2023 [0.1821, 0.2223] | 0.0155 |",
+      "zh": "| 结局 | Pearson r［95% CI］ | RMSE［95% CI］ | 决定系数 |\n| --- | --- | --- | --- |\n| 消极情绪 | 0.245 [0.055, 0.417] | 0.1661 [0.1461, 0.1871] | 0.0200 |\n| 积极情绪 | 0.332 [0.149, 0.493] | 0.1645 [0.1415, 0.1886] | 0.0447 |\n| 生活满意度 | 0.164 [-0.029, 0.346] | 0.2023 [0.1821, 0.2223] | 0.0155 |",
+      "english_sha256": "b91f8646c46cfcce01be2e00fce87df3309d1230af1ab9cd82699418bb7296eb",
+      "chinese_sha256": "7ccf7f23bbed1ca3b84e96584520c311c3e07ea65e15cc0833e4ee19cec7eb4a",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 37,
+      "en": "Note. n = 104; independent random forests, leaf size 60, 256 trees, half of the features per split. Pearson intervals use Fisher z; RMSE intervals use 5,000 participant bootstraps. Units remain stored CSV units. The holdout had already informed earlier interpretation, so these are exploratory conditional intervals, not independent validation of the revised research process.",
+      "zh": "注。n = 104；独立随机森林，叶节点样本量 60、256 棵树，每次划分使用一半特征。Pearson 区间采用 Fisher z，RMSE 区间使用 5,000 次参与者自助抽样。单位仍为 CSV 保存单位。此前对结果的解释已经参考过该留出集，因此这些是探索性的条件区间，不是对修订后研究过程的独立验证。",
+      "english_sha256": "5de37942e8ec6378ca1bacadfbfd12372ca100fd9f1a41bdb33054bc570b4530",
+      "chinese_sha256": "21b409e11d9c9836b32c1cca461d73b01f50ffeab93726ff815724a275efae41",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 38,
+      "en": "### Table S6 Exploratory paired error comparisons",
+      "zh": "### 表 S6 探索性配对误差比较",
+      "english_sha256": "b18e4d616069944cf51626c7a769f972d13356a0cab49759525332f526e263ca",
+      "chinese_sha256": "cf369da34d3d1abeae80861ff387f7490dce27cb793d47537d362d98e9ba3be8",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 39,
+      "en": "| Comparison | Outcome | Delta RMSE | 95% CI | p (Holm) |\n| --- | --- | --- | --- | --- |\n| New vs mean | Negative affect | -0.00341 | [-0.00670, -0.00038] | 0.168 |\n| New vs mean | Positive affect | -0.00516 | [-0.00819, -0.00215] | 0.011 |\n| New vs mean | Life satisfaction | -0.00252 | [-0.00643, 0.00137] | 0.817 |\n| New vs original RF | Negative affect | -0.00002 | [-0.00225, 0.00223] | 1.000 |\n| New vs original RF | Positive affect | -0.00040 | [-0.00254, 0.00161] | 1.000 |\n| New vs original RF | Life satisfaction | -0.00009 | [-0.00291, 0.00266] | 1.000 |",
+      "zh": "| 比较 | 结局 | RMSE 差值 | 95% CI | p（Holm） |\n| --- | --- | --- | --- | --- |\n| 新模型 vs 均值 | 消极情绪 | -0.00341 | [-0.00670, -0.00038] | 0.168 |\n| 新模型 vs 均值 | 积极情绪 | -0.00516 | [-0.00819, -0.00215] | 0.011 |\n| 新模型 vs 均值 | 生活满意度 | -0.00252 | [-0.00643, 0.00137] | 0.817 |\n| 新模型 vs 原 RF | 消极情绪 | -0.00002 | [-0.00225, 0.00223] | 1.000 |\n| 新模型 vs 原 RF | 积极情绪 | -0.00040 | [-0.00254, 0.00161] | 1.000 |\n| 新模型 vs 原 RF | 生活满意度 | -0.00009 | [-0.00291, 0.00266] | 1.000 |",
+      "english_sha256": "4e2966db737afb5330c795018815583650c8ca0957cdf7e3f4767870668858e7",
+      "chinese_sha256": "2333e918507680a97ed2cec6fda1611f092cc2241947cbb9f0b1615ce70a8fca",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 40,
+      "en": "Note. n = 104. Differences are the new selected model minus its comparator. Negative values favor the new model. Intervals use 5,000 paired participant bootstraps; P values use 10,000 prediction swaps followed by Holm adjustment over these six exploratory comparisons. All intervals for differences from the original forest include zero. The positive-affect mean-baseline comparison meets this within-extension adjustment, but does not resolve the exploratory status or absence of nested development improvement. Raw files retain the original comparison-function labels; model_a and model_b identify the actual procedures. A separate refit from raw data reproduced all revised predictions exactly (maximum absolute difference 0).",
+      "zh": "注。n = 104。差值为新选定模型减去相应参照，负值有利于新模型。区间使用 5,000 次配对参与者自助抽样；P 值使用 10,000 次预测交换，并对本扩展中的六项探索性比较作 Holm 校正。与原森林之差的所有区间均包含零。积极情绪与均值基线的比较达到本扩展内部的校正标准，但这不能消除探索性质，也不能改变嵌套开发集未见改善的结果。原始文件保留复用比较函数的标签；model_a 和 model_b 指明实际流程。另行从原始数据重新拟合后，全部修订模型预测完全复现（最大绝对差为 0）。",
+      "english_sha256": "ea1040f033bedc6929b43cd78a9b37a7bebaeaae64837d8b440032d77df5aa87",
+      "chinese_sha256": "6c2f76d40e17bdd21bd7fea1dcf3e288318a00144e4b346d458e63f25d4d7e6b",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 41,
+      "en": "## Supplementary figures",
+      "zh": "## 补充图",
+      "english_sha256": "db6339ac90ccc7e773aced84fe8579985c464ab21096fda4f4e851eadde22b22",
+      "chinese_sha256": "80c23cf409ac08e93d5c481f2b00defaef27f7ba1041b20cf913136c55aa5e67",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 42,
+      "en": "Figure S1. Primary score distributions for 1,037 participants using their earliest retained record. These are stored CSV score units; no inverse scaling is assumed. Bin widths are .05 and counts are participant counts.",
+      "zh": "图 S1. 1,037 名参与者最早保留记录中的主分析分数分布。使用 CSV 中存储的分数单位，未假定任何逆变换。组距为 .05，计数单位为参与者人数。",
+      "english_sha256": "77f693f7e11624dbae7cd4684d075e489c6d9529058f5369e66574ce2a6f60ed",
+      "chinese_sha256": "61b50e1c6b5866a1ce417c2849d7347516f1757fedb79845f44717ff67f0b323",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 43,
+      "en": "![Figure S1](../figures/figureS1_target_distributions.png)",
+      "zh": "![图 S1](figures/figureS1_target_distributions.png)",
+      "english_sha256": "0921975cbc80b7e1aa340d4074a64df96a4403d602d86d8d779ddc8e1648e9be",
+      "chinese_sha256": "868b1c0580256f54ed41540805e4986f6b4b6bb3d83567fe5ef3fb96e57eb557",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 44,
+      "en": "Figure S2. Original development-selected winner across the primary and three prespecified sensitivity datasets. Points are RMSE and bars are conditional 95% participant-bootstrap intervals in CSV units. Holdout sample sizes are provided in Table S2. Models are refitted with frozen primary parameters; the plot is not a new model-selection analysis.",
+      "zh": "图 S2. 原开发阶段选定模型在主分析数据集及三项预定敏感性数据集上的表现。点表示 RMSE，误差线表示 CSV 单位下的条件性 95% 参与者 bootstrap 区间。留出样本量见表 S2。模型使用固定的主分析参数重新拟合；该图不构成新的模型选择分析。",
+      "english_sha256": "f8d337476236797b03c647e8e6bdb29378d1a27a9b6cdf05080d969b3a53e21d",
+      "chinese_sha256": "649649bba5fcd0cd8eb76f7a2238dfc5c5321e9065ba98f9ff60612d283bb201",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "supplement",
+      "block": 45,
+      "en": "![Figure S2](../figures/figureS2_sensitivity.png)",
+      "zh": "![图 S2](figures/figureS2_sensitivity.png)",
+      "english_sha256": "8807869eb65a0c6f4e9a570a9a4327a0f385780414fe7c0ae604e0b4baa024e3",
+      "chinese_sha256": "c14a70615694575a23684410d239a207f5357a8cced9796b359cc3a3a5006635",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "title_page",
+      "block": 0,
+      "en": "# Developing a machine learning-based instrument for subjective well-being assessment on Weibo and its psychological significance: An evaluative and interpretive research",
+      "zh": "# 基于机器学习的微博用户主观幸福感评估工具开发及其心理学意义：一项评价性与解释性研究",
+      "english_sha256": "3367758f7272a946f448d9b5873c22d0b25da1a4ce43a68f49c17d85a6826267",
+      "chinese_sha256": "8f25e4cdbbe685b1c383ee044bd7960a046c7eeab514dd8f8d2245daf9ba2132",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "title_page",
+      "block": 1,
+      "en": "Article format: Research article prepared against Applied Psychology: Health and Well-Being Original Paper guidance. This is an independent computational reanalysis of a supplied dataset, not a newly recruited study or a claim of eligibility to republish an existing study.",
+      "zh": "文章类型：参照 Applied Psychology: Health and Well-Being 的原创研究论文指南编写的研究论文。本稿是对所提供数据集开展的独立计算再分析，不是新招募样本的研究，也不意味着现有研究已具备再次发表的资格。",
+      "english_sha256": "2f03e6b3afed64e5e3c410557ac469db3dff792da8c234bfb058a9cd13da6003",
+      "chinese_sha256": "12531baa3fb9e36a7c73925d6fab77638a9a3293867c7099ba80a9ba787581f1",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "title_page",
+      "block": 2,
+      "en": "## Authors and affiliations",
+      "zh": "## 作者与所属机构",
+      "english_sha256": "4afcb6505ecd275ff1de8871e9818e1a6d4e26e6a5de5ac76e401ddc194f58b7",
+      "chinese_sha256": "513da7c109df204043a5c0db2559e55c4546bf5f26e0a2b7a737df5d3d782b7f",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "title_page",
+      "block": 3,
+      "en": "TO BE COMPLETED BY AUTHORS: author names, institutional affiliations, ORCID identifiers, correspondence address, email, author order, and confirmation that every listed author approves the final manuscript and accepts responsibility for the work. No author or affiliation has been inferred from the data-collection description.",
+      "zh": "待作者补充：作者姓名、所属机构、ORCID 标识、通信地址、电子邮箱、作者顺序，以及每位署名作者认可最终稿并承担责任的确认。未根据数据采集说明推测任何作者或机构归属。",
+      "english_sha256": "608a3122608dcde9ad289b84b8ef27fe217476c77f8e52214f99be3b157bab88",
+      "chinese_sha256": "6b70c5f69998f056328ecbf170a4cc8a18115f35d943247383eef5d59b9543ac",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "title_page",
+      "block": 4,
+      "en": "## Study provenance and publication status",
+      "zh": "## 研究来源与发表状态",
+      "english_sha256": "9779fccb32e06d01aeeef885d1fcda483bd66d4f8d57ce07834b20363004478f",
+      "chinese_sha256": "a073bb0b4b921d34627437c08ed02b5c371af6dd418dc3ff7074d6649d787149",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "title_page",
+      "block": 5,
+      "en": "The supplied working title was “Developing a machine learning-based instrument for subjective well-being assessment on Weibo and its psychological significance: An evaluative and interpretive research.” The manuscript uses the supplied working title. The scope and limitations of the instrument evaluation are described in the manuscript. The supplied Title and Method remain preserved in main_context.md.",
+      "zh": "所提供的工作题名为“Developing a machine learning-based instrument for subjective well-being assessment on Weibo and its psychological significance: An evaluative and interpretive research”。本稿采用该工作题名。工具评价的范围与局限在正文中说明。原始题名和方法仍保存在 main_context.md。",
+      "english_sha256": "e7321c90de74458acdd9c32dd047943df8dba8f66a41ea16edc2edda1f60808c",
+      "chinese_sha256": "7c5af7de60e20bc40baca1cacd4481b3ac1a4e996498f89690baf9d38052d387",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "title_page",
+      "block": 6,
+      "en": "The task explicitly states that the underlying study has already been published. Its published text, abstract, and results were not sought or used. Before any submission, the responsible authors must resolve the relationship to the existing publication, attribution of reused design information, originality or secondary-analysis eligibility, relevant permissions, and any necessary overlap disclosure. No journal submission has been attempted or authorized by this document.",
+      "zh": "任务说明明确指出，基础研究已经发表。本次未检索或使用其已发表的正文、摘要和结果。在任何投稿之前，负责的作者必须明确与既有论文的关系、所复用研究设计信息的归属、原创性或二次分析的发表资格、相关许可，以及必要的内容重叠披露。本文件并未尝试或授权任何期刊投稿。",
+      "english_sha256": "2782b016061ac21ce80ca8451a4827d2d300df0534b6abb8c056a16e0b3881fe",
+      "chinese_sha256": "037b8b59ffb90af7059b0479c98c8127c7489fbddf3ac58fdb3623f728bb59d1",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "title_page",
+      "block": 7,
+      "en": "## Ethics approval and informed consent",
+      "zh": "## 伦理批准与知情同意",
+      "english_sha256": "0aae22d43b8f9450191c7fce4db2f49228fee6ff771c8d9aa29372f30ad89189",
+      "chinese_sha256": "83146e94adc6177dd55363d8005b5c1c0cbd6a626925018ca85a4e9487654b09",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "title_page",
+      "block": 8,
+      "en": "According to the supplied collection description, the original research was approved by the Institutional Review Board of the Institute of Psychology, Chinese Academy of Sciences, under code H15009. The supplied description states that participants gave informed consent, took part voluntarily, could withdraw, and received a monetary reward for completion. It also describes anonymization and privacy protections.",
+      "zh": "根据所提供的数据采集说明，原研究获得中国科学院心理研究所机构伦理审查委员会批准，批准编号为 H15009。说明记载，参与者提供知情同意、自愿参与、可以退出，且完成问卷后获得金钱奖励。说明中还记载了匿名化和隐私保护措施。",
+      "english_sha256": "bccc4af0bf6dd9b6ccab0090501de19d90eab846c076818c5c48fff2835f4132",
+      "chinese_sha256": "50113fe4ebb955c4482824fab90e53575de98dd791e43822a603b84432059d30",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "title_page",
+      "block": 9,
+      "en": "These statements are attributed to the supplied source. The approval document, recruitment text, exact consent language, compensation amount, anonymization procedure, and authorization for the present secondary analysis were not independently verified. TO BE COMPLETED BY AUTHORS: verify the original approval and consent, identify any secondary-use approval or exemption if required, and confirm that the retained data and proposed sharing respect the applicable consent. Stable UID values remain in the local computational package, so irreversible anonymity must not be presumed.",
+      "zh": "上述陈述均归属于所提供的来源。批准文件、招募文本、确切的同意措辞、报酬金额、匿名化程序和本次二次分析授权，均未得到独立核实。待作者补充：核实原始批准和同意，说明此次二次使用是否需要批准或豁免，并确认保留的数据及拟议共享符合适用的同意范围。本地计算包仍包含稳定的 UID 值，因此不能假定数据已不可逆地匿名化。",
+      "english_sha256": "03c559b9ff5bedc5bd88b3a1108e1fe73d8b76ed56d6d744241ba7a8fd187f20",
+      "chinese_sha256": "95cf5826a8f06a666796860b5ba8834f895eeba7643c3bd1838341c67137e866",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "title_page",
+      "block": 10,
+      "en": "## Author contributions",
+      "zh": "## 作者贡献",
+      "english_sha256": "a09f30c8786d926e9e14d664bcccf366702c86fb8301ff17b45379a17b6b7436",
+      "chinese_sha256": "53462b492a8122a85c79de3ab54adf9fc992a72f09c84adafd527b75f70be1ff",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "title_page",
+      "block": 11,
+      "en": "TO BE COMPLETED BY AUTHORS: identify contributions to the original data collection, data curation, conceptualization, methodology, software review, validation, interpretation, manuscript preparation, supervision, and final approval. Automated work must not be represented as an already completed human contribution or approval.",
+      "zh": "待作者补充：明确原始数据采集、数据整理、研究构思、方法设计、软件审查、验证、解释、稿件准备、指导及最终批准方面的贡献。不得将自动化工作表述为已经完成的人类贡献或人类批准。",
+      "english_sha256": "1dddb24e8da3e6965ce4855f06641f71718280fe6c28781e94b171498945c7f7",
+      "chinese_sha256": "b2609d1d3968c0eb849029dad4fc3bd1d50fd30527d6654d4fe48a2babaf8910",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "title_page",
+      "block": 12,
+      "en": "## Funding",
+      "zh": "## 经费支持",
+      "english_sha256": "6e6ec215e9724eafb47fb2f0653ce6f3b7fda878c538cfe946a3852a166c0e15",
+      "chinese_sha256": "a84ca4bcc7c5dde67be9eccd375e9ddb6f5f09ae73c65d03a2d29fb84672ba08",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "title_page",
+      "block": 13,
+      "en": "TO BE COMPLETED BY AUTHORS: disclose all funding sources, grant identifiers, and funder roles in the original collection and this secondary analysis, or confirm an accurate statement of no funding. No-funding status cannot be inferred from missing information.",
+      "zh": "待作者补充：披露原始采集及本次二次分析的全部经费来源、项目编号和资助方角色，或确认准确的无经费声明。不能根据资料缺失推断没有经费支持。",
+      "english_sha256": "ca40f198a91f1df8c4e962863c6975be05aa0b326e14a80da881f518f6581265",
+      "chinese_sha256": "28688816817968402186cf3d279458feae4d598a50209ef9e70063149865a0a7",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "title_page",
+      "block": 14,
+      "en": "## Conflicts of interest",
+      "zh": "## 利益冲突",
+      "english_sha256": "5133e9a5cab8109ed1ccbeaf4d18ad4d4d1298f26cb0d79611839c58bab50f8f",
+      "chinese_sha256": "02eea61ff851405742075f4d7380685e985202b69bc5b5fbab4d0596c76ada9f",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "title_page",
+      "block": 15,
+      "en": "TO BE COMPLETED BY AUTHORS: provide declarations for every author and any relevant financial or nonfinancial relationships. The absence of conflicts has not been established.",
+      "zh": "待作者补充：提供每位作者的声明，以及任何相关的财务或非财务关系。尚未确认不存在利益冲突。",
+      "english_sha256": "ed196411c4f54654ebf96131f1b3f271ef117517838658ef6c33b0a371f792f3",
+      "chinese_sha256": "0ae8cd244b037c0da6f18cb3f8295e01a923c7b7c3d105b9d29463c5279a258c",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "title_page",
+      "block": 16,
+      "en": "## Data and code availability",
+      "zh": "## 数据与代码可用性",
+      "english_sha256": "0fa995df9a9df0f1d4081ead324afb2ee6ec891f42c64cdbac4800fec4dd1402",
+      "chinese_sha256": "0244af6dc02a50f8fa0478c7509cfc50ab481053cea00e823c93aadefd929fd4",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "title_page",
+      "block": 17,
+      "en": "The original supplied CSV, analysis scripts, environment lock, retained model runs, predictions, tables, figures, and manuscript sources are included in the local research package. No data have been publicly deposited or assigned a persistent identifier. TO BE COMPLETED BY AUTHORS: name the authorized data custodian, define access restrictions and permissions, confirm what may be released, identify an appropriate repository, and add a persistent dataset/code citation when available. This paragraph does not promise access on behalf of the original data owner.",
+      "zh": "所提供的原始 CSV、分析脚本、环境锁定文件、保留的模型运行、预测值、表格、图形和稿件源文件均包含在本地研究包中。尚未公开存储任何数据，也未分配持久标识符。待作者补充：明确获授权的数据保管方，界定访问限制与权限，确认可发布内容，选择合适的存储库，并在可用时添加数据和代码的持久引用。本段不代表原始数据所有者承诺提供访问。",
+      "english_sha256": "8f0683983a2d2272da4b968c54e4171b86b7f43507fa3e539d67a8eca0212719",
+      "chinese_sha256": "3ec309f2b7714e505092c221633a71254f629ccfad3b0205d7621f5684279585",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "title_page",
+      "block": 18,
+      "en": "## Use of artificial intelligence",
+      "zh": "## 人工智能的使用",
+      "english_sha256": "a5d4d334ad5e051283fb4a0fc4035ba40a58a53e1f6d615f6198693c1261a682",
+      "chinese_sha256": "2bcf7f7880a8e791725f9c83b6aa74a0e64f4f436bf235a3eeb9badc7c947a64",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "title_page",
+      "block": 19,
+      "en": "An OpenAI Codex assistant was used for data auditing, protocol drafting, analysis-code development and execution, literature retrieval and evidence checking, Zotero ingestion, figure generation, and manuscript drafting. Additional computational review passes inspected code, source claims, and rendered documents. Automated checks do not constitute responsible human-author review. TO BE COMPLETED BY AUTHORS: inspect and approve the methods, outputs, references, interpretation, provenance, and declarations, and identify the tool/version information required by the journal's disclosure form. No AI tool is listed as an author.",
+      "zh": "OpenAI Codex 助手用于数据审计、分析计划起草、分析代码开发与执行、文献检索及证据核查、Zotero 入库、图表生成和稿件写作。额外的计算审查检查了代码、来源论断和渲染文档。自动检查不构成负责的人类作者的审核。待作者补充：检查并批准方法、输出、参考文献、解释、来源和声明，并明确期刊披露表所要求的工具与版本信息。未将任何 AI 工具列为作者。",
+      "english_sha256": "ed568ba2d22d839ccd44fb9e0a4cf4351ecb2062a5dbf1056f5e316dc8c9d339",
+      "chinese_sha256": "b733ebe7ed0e595b815f635a7e81eef76d087c8e80d686dd4fc8c0c54651210d",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "title_page",
+      "block": 20,
+      "en": "## Acknowledgments",
+      "zh": "## 致谢",
+      "english_sha256": "37aeb2c1bb8671c318353cacc1a3129c53a55aa5fe89a60ffe6c8626aaf5b47a",
+      "chinese_sha256": "a3eb6ab07d5f08b961320f540d89800e3a24d41e1ef82c8f58fc46d930766f09",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "title_page",
+      "block": 21,
+      "en": "TO BE COMPLETED BY AUTHORS: identify contributors who do not meet authorship requirements and obtain any required consent to be named. No acknowledgment of an individual has been fabricated.",
+      "zh": "待作者补充：列明不符合署名要求的贡献者，并取得被提名所需的同意。未虚构对任何个人的致谢。",
+      "english_sha256": "47edb9315c626c66436f8b67322eaf7b58bd46cf14614773cc8ec61f21f5b548",
+      "chinese_sha256": "7fd8d5748f839d8343f2a3a1669ab80ef2511a74ac52dbc9e9b052e5fad5525e",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "title_page",
+      "block": 22,
+      "en": "## Submission preparation status",
+      "zh": "## 投稿准备状态",
+      "english_sha256": "a30c6ec82749e3f08f176a7f2c1a0091bbc935791b3aac63ae76041f9e8bae3f",
+      "chinese_sha256": "6b484b81745f9d7981ba4c08aff297ac47bd6c46d928444c63669e0d31ffce4e",
+      "numeric_tokens_identical": true
+    },
+    {
+      "document": "title_page",
+      "block": 23,
+      "en": "The computational reanalysis and manuscript can be inspected and reproduced locally. The document remains a research draft until missing author-controlled declarations, source-data authorization, original-publication relationship, and human accountability are resolved. Unavailable original posts, questionnaire items, verified score transformation, dictionary provenance, and demographic fields constrain the scientific claims even after declarations are completed.",
+      "zh": "计算再分析和稿件可以在本地检查与复现。在补齐作者负责的声明、源数据授权、与既有论文的关系及人类责任确认之前，本文件仍为研究稿。即使这些声明补齐，缺少原始帖子、问卷条目、经核实的分数变换、词典来源和人口学字段，仍会限制科学主张的范围。",
+      "english_sha256": "5ac33906469e4cd1e7b0cde735ec1c23292baf125f423018dc04303fdbbcb203",
+      "chinese_sha256": "ab2fb6043644277c5b4dc7b62f2b9133b4556c27217853e17926442e8fdf6f5e",
+      "numeric_tokens_identical": true
+    }
+  ]
+}

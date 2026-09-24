@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "arithmetic_scalar_checks": 2529,
+  "max_absolute_numeric_difference": 2.220446049250313e-16,
+  "protected_files_unchanged": 390,
+  "candidate_search_records": 132,
+  "composite_cv_fits": 660,
+  "participant_overlap": 0,
+  "refit_prediction_max_difference": 0.0,
+  "references": 30,
+  "verified_source_attachments": 31,
+  "all_sources_before": "2024-08-01",
+  "bilingual_blocks": 198,
+  "original_main_tables_identical": true,
+  "scope": "Independent arithmetic recomputation by a separate script, not an independent agent or human review; no new model search."
+}

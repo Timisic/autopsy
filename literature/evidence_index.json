@@ -1,0 +1,1274 @@
+{
+  "publication_cutoff_exclusive": "2024-08-01",
+  "records": [
+    {
+      "citation_id": "breiman2001",
+      "title": "Random Forests",
+      "display_title": "Random forests",
+      "year": 2001,
+      "authors": [
+        {
+          "given": "Leo",
+          "family": "Breiman"
+        }
+      ],
+      "doi": "10.1023/A:1010933404324",
+      "url": "https://doi.org/10.1023/A:1010933404324",
+      "source_url": "https://link.springer.com/content/pdf/10.1023/A:1010933404324.pdf",
+      "apa_reference": "Breiman, L. (2001). Random forests. *Machine Learning*, *45*(1), 5–32. https://doi.org/10.1023/A:1010933404324",
+      "fulltext_version": "Version of record, Springer/Kluwer PDF.",
+      "claim_locations": [
+        {
+          "claim": "Random forests combine randomized trees; regression predictions average numerical tree predictions.",
+          "location": "Published pp. 25–26 (PDF pp. 21–22), Section 11, Random forests for regression."
+        },
+        {
+          "claim": "Regression forests combine bagging and randomized feature selection.",
+          "location": "Published p. 27 (PDF p. 23), Section 12, first paragraph."
+        }
+      ],
+      "applicability_boundary": "General algorithmic source. The regression experiments include variants differing from current library defaults; the paper does not establish this study's superiority or infer causal mechanisms.",
+      "zotero_parent_key": "ZV4BWN33",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "caruana1997",
+      "title": "Multitask Learning",
+      "display_title": "Multitask learning",
+      "year": 1997,
+      "authors": [
+        {
+          "given": "Rich",
+          "family": "Caruana"
+        }
+      ],
+      "doi": "10.1023/A:1007379606734",
+      "url": "https://doi.org/10.1023/a:1007379606734",
+      "source_url": "https://www.cs.cornell.edu/~caruana/mlj97.pdf",
+      "apa_reference": "Caruana, R. (1997). Multitask learning. *Machine Learning*, *28*(1), 41–75. https://doi.org/10.1023/A:1007379606734",
+      "fulltext_version": "Complete 35-page author manuscript from Cornell; some author-name glyphs are corrupted in text extraction, while title, body and figures remain present.",
+      "claim_locations": [
+        {
+          "title": "Multitask learning",
+          "location": "Author PDF p. 3, Sections 1.3-1.4; p. 11, controls with unrelated tasks",
+          "claim": "Related-task training signals can supply an inductive bias through shared representations.",
+          "boundary": "The paper's demonstrations do not imply that correlated SWB targets will benefit from a shared tree partition.",
+          "version": "Complete 35-page author manuscript from Cornell; some author-name glyphs are corrupted in text extraction, while title, body and figures remain present."
+        }
+      ],
+      "zotero_parent_key": "RFMKVC8T",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "cawley2010",
+      "title": "On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation",
+      "display_title": "On over-fitting in model selection and subsequent selection bias in performance evaluation",
+      "year": 2010,
+      "authors": [
+        {
+          "given": "Gavin C.",
+          "family": "Cawley"
+        },
+        {
+          "given": "Nicola L. C.",
+          "family": "Talbot"
+        }
+      ],
+      "doi": "",
+      "url": "https://jmlr.org/papers/v11/cawley10a.html",
+      "source_url": "https://jmlr.org/papers/volume11/cawley10a/cawley10a.pdf",
+      "apa_reference": "Cawley, G. C., & Talbot, N. L. C. (2010). On over-fitting in model selection and subsequent selection bias in performance evaluation. *Journal of Machine Learning Research*, *11*(70), 2079–2107. https://jmlr.org/papers/v11/cawley10a.html",
+      "fulltext_version": "Original JMLR open-access PDF, 2010, volume 11, article 70, pp. 2079-2107.",
+      "claim_locations": [
+        {
+          "title": "On over-fitting in model selection and subsequent selection bias in performance evaluation",
+          "location": "PDF p. 2 (journal p. 2080), Introduction; performance evaluation discussion",
+          "claim": "Tuning can overfit a finite-sample selection criterion; model selection must be repeated inside evaluation splits.",
+          "boundary": "Nested CV addresses selection within the specified candidate set, not all prior researcher choices or external transportability.",
+          "version": "Original JMLR open-access PDF, 2010, volume 11, article 70, pp. 2079-2107."
+        }
+      ],
+      "zotero_parent_key": "GIKBIK6A",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "crawford2004",
+      "title": "The Positive and Negative Affect Schedule (PANAS): Construct validity, measurement properties and normative data in a large non‐clinical sample",
+      "display_title": "The Positive and Negative Affect Schedule (PANAS): Construct validity, measurement properties and normative data in a large non-clinical sample",
+      "year": 2004,
+      "authors": [
+        {
+          "given": "John R.",
+          "family": "Crawford"
+        },
+        {
+          "given": "Julie D.",
+          "family": "Henry"
+        }
+      ],
+      "doi": "10.1348/0144665031752934",
+      "url": "https://doi.org/10.1348/0144665031752934",
+      "source_url": "https://homepages.abdn.ac.uk/j.crawford/pages/dept/pdfs/PREprints/Crawford_BJCP_PANAS.pdf",
+      "apa_reference": "Crawford, J. R., & Henry, J. D. (2004). The Positive and Negative Affect Schedule (PANAS): Construct validity, measurement properties and normative data in a large non-clinical sample. *British Journal of Clinical Psychology*, *43*(3), 245–265. https://doi.org/10.1348/0144665031752934",
+      "fulltext_version": "Prepublication author manuscript from the University of Aberdeen, corresponding to the 2004 published paper.",
+      "claim_locations": [
+        {
+          "title": "The Positive and Negative Affect Schedule (PANAS): Construct validity, measurement properties and normative data in a large non-clinical sample",
+          "location": "Author manuscript p. 29, Conclusions and Future Research",
+          "claim": "Psychometric evaluation of PANAS includes factor structure, reliability and population-specific norms; invariance should be examined rather than assumed.",
+          "boundary": "UK adult evidence does not verify Chinese translation, time frame, factor structure or norms in the supplied sample.",
+          "version": "Prepublication author manuscript from the University of Aberdeen, corresponding to the 2004 published paper."
+        }
+      ],
+      "zotero_parent_key": "385ZXGPN",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "dechoudhury2013",
+      "title": "Predicting Depression via Social Media",
+      "display_title": "Predicting depression via social media",
+      "year": 2013,
+      "authors": [
+        {
+          "given": "Munmun",
+          "family": "De Choudhury"
+        },
+        {
+          "given": "Michael",
+          "family": "Gamon"
+        },
+        {
+          "given": "Scott",
+          "family": "Counts"
+        },
+        {
+          "given": "Eric",
+          "family": "Horvitz"
+        }
+      ],
+      "doi": "10.1609/icwsm.v7i1.14432",
+      "url": "https://doi.org/10.1609/icwsm.v7i1.14432",
+      "source_url": "https://erichorvitz.com/depression_social_media_icwsm_2013.pdf",
+      "apa_reference": "De Choudhury, M., Gamon, M., Counts, S., & Horvitz, E. (2013). Predicting depression via social media. *Proceedings of the International AAAI Conference on Web and Social Media*, *7*(1), 128–137. https://doi.org/10.1609/icwsm.v7i1.14432",
+      "fulltext_version": "ICWSM 2013 paper hosted by coauthor Eric Horvitz. Crossref's 2021 date is later digital registration, not the original conference year.",
+      "claim_locations": [
+        {
+          "title": "Predicting depression via social media",
+          "location": "PDF p. 4, cohort and one-year language-window definition",
+          "claim": "This study explicitly defined language windows relative to retrospectively reported depression onset or the survey date.",
+          "boundary": "Retrospective self-reported onset is not prospective clinical validation; depression classification is not continuous SWB estimation.",
+          "version": "ICWSM 2013 paper hosted by coauthor Eric Horvitz. Crossref's 2021 date is later digital registration, not the original conference year."
+        }
+      ],
+      "zotero_parent_key": "3WASKAG3",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "diener1984",
+      "title": "Subjective well-being.",
+      "display_title": "Subjective well-being",
+      "year": 1984,
+      "authors": [
+        {
+          "given": "Ed",
+          "family": "Diener"
+        }
+      ],
+      "doi": "10.1037/0033-2909.95.3.542",
+      "url": "https://doi.org/10.1037/0033-2909.95.3.542",
+      "source_url": "https://labs.psychology.illinois.edu/~ediener/Documents/Diener_1984.pdf",
+      "apa_reference": "Diener, E. (1984). Subjective well-being. *Psychological Bulletin*, *95*(3), 542–575. https://doi.org/10.1037/0033-2909.95.3.542",
+      "fulltext_version": "Published article, author-hosted scanned PDF; OCR derivative retained",
+      "claim_locations": [
+        {
+          "claim": "Subjective well-being concerns cognitive judgments and affective reactions to one's life and is grounded in the individual's experience.",
+          "location": "pp. 542–544, opening discussion and Definitions of Subjective Well-Being (PDF pp. 1–3).",
+          "boundary": "Conceptual synthesis; does not validate language prediction, a Chinese adaptation, or the supplied labels."
+        }
+      ],
+      "applicability_boundary": "See the specific boundary attached to each claim.",
+      "zotero_parent_key": "2RMI8774",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "diener1985",
+      "title": "The Satisfaction With Life Scale",
+      "display_title": "The satisfaction with life scale",
+      "year": 1985,
+      "authors": [
+        {
+          "given": "Ed",
+          "family": "Diener"
+        },
+        {
+          "given": "Robert A.",
+          "family": "Emmons"
+        },
+        {
+          "given": "Randy J.",
+          "family": "Larsen"
+        },
+        {
+          "given": "Sharon",
+          "family": "Griffin"
+        }
+      ],
+      "doi": "10.1207/s15327752jpa4901_13",
+      "url": "https://doi.org/10.1207/s15327752jpa4901_13",
+      "source_url": "https://labs.psychology.illinois.edu/~ediener/Documents/Diener-Emmons-Larsen-Griffin_1985.pdf",
+      "apa_reference": "Diener, E., Emmons, R. A., Larsen, R. J., & Griffin, S. (1985). The satisfaction with life scale. *Journal of Personality Assessment*, *49*(1), 71–75. https://doi.org/10.1207/s15327752jpa4901_13",
+      "fulltext_version": "Published article, author-hosted scanned PDF; OCR derivative retained",
+      "claim_locations": [
+        {
+          "claim": "The five-item SWLS was developed to measure global cognitive judgments of life satisfaction separately from positive and negative affect.",
+          "location": "pp. 71–72, introduction and Study 1 (PDF pp. 1–2).",
+          "boundary": "Original English instrument; does not establish which translated items or transformations generated this CSV."
+        },
+        {
+          "claim": "Original SWLS items use seven response levels and the summed score ranges from 5 to 35.",
+          "location": "p. 72, Study 1 Results and Table 1 (PDF p. 2).",
+          "boundary": "Applies to the original scale only; do not reverse-transform the supplied values without evidence."
+        }
+      ],
+      "applicability_boundary": "See the specific boundary attached to each claim.",
+      "zotero_parent_key": "958X7R7R",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "diener1999",
+      "title": "Subjective well-being: Three decades of progress.",
+      "display_title": "Subjective well-being: Three decades of progress",
+      "year": 1999,
+      "authors": [
+        {
+          "given": "Ed",
+          "family": "Diener"
+        },
+        {
+          "given": "Eunkook M.",
+          "family": "Suh"
+        },
+        {
+          "given": "Richard E.",
+          "family": "Lucas"
+        },
+        {
+          "given": "Heidi L.",
+          "family": "Smith"
+        }
+      ],
+      "doi": "10.1037/0033-2909.125.2.276",
+      "url": "https://doi.org/10.1037/0033-2909.125.2.276",
+      "source_url": "https://labs.psychology.illinois.edu/~ediener/Documents/Diener-Suh-Lucas-Smith_1999.pdf",
+      "apa_reference": "Diener, E., Suh, E. M., Lucas, R. E., & Smith, H. L. (1999). Subjective well-being: Three decades of progress. *Psychological Bulletin*, *125*(2), 276–302. https://doi.org/10.1037/0033-2909.125.2.276",
+      "fulltext_version": "Scanned version of record from the author's university directory; all 27 pages OCRed locally for reading. Original scan retained.",
+      "claim_locations": [
+        {
+          "title": "Subjective well-being: Three decades of progress",
+          "location": "PDF p. 2 (journal p. 277), The Components of Subjective Well-Being",
+          "claim": "Affective experiences and cognitive life evaluations are separable components that may have different correlates.",
+          "boundary": "A conceptual review does not identify the scoring transformation or reliability of this dataset.",
+          "version": "Scanned version of record from the author's university directory; all 27 pages OCRed locally for reading. Original scan retained."
+        }
+      ],
+      "zotero_parent_key": "HWK796XU",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "diener2018",
+      "title": "Advances and Open Questions in the Science of Subjective Well-Being",
+      "display_title": "Advances and open questions in the science of subjective well-being",
+      "year": 2018,
+      "authors": [
+        {
+          "given": "Ed",
+          "family": "Diener"
+        },
+        {
+          "given": "Richard E.",
+          "family": "Lucas"
+        },
+        {
+          "given": "Shigehiro",
+          "family": "Oishi"
+        }
+      ],
+      "doi": "10.1525/collabra.115",
+      "url": "https://doi.org/10.1525/collabra.115",
+      "source_url": "https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_xml/PMC6329388/unicode",
+      "apa_reference": "Diener, E., Lucas, R. E., & Oishi, S. (2018). Advances and open questions in the science of subjective well-being. *Collabra: Psychology*, *4*(1), 15. https://doi.org/10.1525/collabra.115",
+      "fulltext_version": "NCBI PMC6329388 author-manuscript body extracted via BioC into RTF. Passage identifiers retained. Inline citation callouts and figure graphics are incomplete; this is not the published PDF.",
+      "claim_locations": [
+        {
+          "title": "Advances and open questions in the science of subjective well-being",
+          "location": "NCBI BioC passages 6, 8, 10, 12; introduction and measurement discussion",
+          "claim": "SWB judgments concern the person's own appraisal; validation involves reliability and convergent evidence, and SWB is narrower than well-being broadly construed.",
+          "boundary": "Does not validate the administered Chinese questionnaires or demonstrate within-person sensitivity here.",
+          "version": "NCBI PMC6329388 author-manuscript body extracted via BioC into RTF. Passage identifiers retained. Inline citation callouts and figure graphics are incomplete; this is not the published PDF."
+        }
+      ],
+      "zotero_parent_key": "KCR7RV4F",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "eichstaedt2018",
+      "title": "Facebook language predicts depression in medical records",
+      "display_title": "Facebook language predicts depression in medical records",
+      "year": 2018,
+      "authors": [
+        {
+          "given": "Johannes C.",
+          "family": "Eichstaedt"
+        },
+        {
+          "given": "Robert J.",
+          "family": "Smith"
+        },
+        {
+          "given": "Raina M.",
+          "family": "Merchant"
+        },
+        {
+          "given": "Lyle H.",
+          "family": "Ungar"
+        },
+        {
+          "given": "Patrick",
+          "family": "Crutchley"
+        },
+        {
+          "given": "Daniel",
+          "family": "Preoţiuc-Pietro"
+        },
+        {
+          "given": "David A.",
+          "family": "Asch"
+        },
+        {
+          "given": "H. Andrew",
+          "family": "Schwartz"
+        }
+      ],
+      "doi": "10.1073/pnas.1802331115",
+      "url": "https://doi.org/10.1073/pnas.1802331115",
+      "source_url": "https://jeichstaedt.com/s/PNASdepression.pdf",
+      "apa_reference": "Eichstaedt, J. C., Smith, R. J., Merchant, R. M., Ungar, L. H., Crutchley, P., Preoţiuc-Pietro, D., Asch, D. A., & Schwartz, H. A. (2018). Facebook language predicts depression in medical records. *Proceedings of the National Academy of Sciences*, *115*(44), 11203–11208. https://doi.org/10.1073/pnas.1802331115",
+      "fulltext_version": "Published PNAS article, author-hosted six-page PDF",
+      "claim_locations": [
+        {
+          "claim": "Facebook language was used to predict subsequent documentation of depression in medical records using out-of-sample cross-validation.",
+          "location": "Prediction of Depression and Figure 1, PDF pp. 1–2; Prediction Models, PDF p. 5.",
+          "boundary": "Depression documentation, not subjective well-being or a clinical diagnosis made by the model; population, criteria, platform, and metric differ."
+        },
+        {
+          "claim": "Social-media inference raises questions about consent, privacy, ownership, and autonomy.",
+          "location": "Discussion, PDF p. 4, paragraph on technologies and patient privacy.",
+          "boundary": "An ethical discussion, not verification of the supplied study's IRB approval or a legal assessment."
+        }
+      ],
+      "applicability_boundary": "See the specific boundary attached to each claim.",
+      "zotero_parent_key": "NM86N4FW",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "eichstaedt2021",
+      "title": "Closed- and open-vocabulary approaches to text analysis: A review, quantitative comparison, and recommendations.",
+      "display_title": "Closed- and open-vocabulary approaches to text analysis: A review, quantitative comparison, and recommendations",
+      "year": 2021,
+      "authors": [
+        {
+          "given": "Johannes C.",
+          "family": "Eichstaedt"
+        },
+        {
+          "given": "Margaret L.",
+          "family": "Kern"
+        },
+        {
+          "given": "David B.",
+          "family": "Yaden"
+        },
+        {
+          "given": "H. A.",
+          "family": "Schwartz"
+        },
+        {
+          "given": "Salvatore",
+          "family": "Giorgi"
+        },
+        {
+          "given": "Gregory",
+          "family": "Park"
+        },
+        {
+          "given": "Courtney A.",
+          "family": "Hagan"
+        },
+        {
+          "given": "Victoria A.",
+          "family": "Tobolsky"
+        },
+        {
+          "given": "Laura K.",
+          "family": "Smith"
+        },
+        {
+          "given": "Anneke",
+          "family": "Buffone"
+        },
+        {
+          "given": "Jonathan",
+          "family": "Iwry"
+        },
+        {
+          "given": "Martin E. P.",
+          "family": "Seligman"
+        },
+        {
+          "given": "Lyle H.",
+          "family": "Ungar"
+        }
+      ],
+      "doi": "10.1037/met0000349",
+      "url": "https://doi.org/10.1037/met0000349",
+      "source_url": "https://salvatoregiorgi.com/publications/eichstaedt2020closed.pdf",
+      "apa_reference": "Eichstaedt, J. C., Kern, M. L., Yaden, D. B., Schwartz, H. A., Giorgi, S., Park, G., Hagan, C. A., Tobolsky, V. A., Smith, L. K., Buffone, A., Iwry, J., Seligman, M. E. P., & Ungar, L. H. (2021). Closed- and open-vocabulary approaches to text analysis: A review, quantitative comparison, and recommendations. *Psychological Methods*, *26*(4), 398–427. https://doi.org/10.1037/met0000349",
+      "fulltext_version": "Published PDF hosted by coauthor Salvatore Giorgi.",
+      "claim_locations": [
+        {
+          "title": "Closed- and open-vocabulary approaches to text analysis: A review, quantitative comparison, and recommendations",
+          "location": "PDF pp. 2, 6, 19 (journal pp. 399, 403, 416); comparative recommendations",
+          "claim": "Closed- and open-vocabulary methods can be complementary: category summaries and more specific contextual/content patterns answer different questions.",
+          "boundary": "The reviewed Facebook personality/demographic comparisons do not establish a performance gain on this Weibo dataset.",
+          "version": "Published PDF hosted by coauthor Salvatore Giorgi."
+        }
+      ],
+      "zotero_parent_key": "FRISGZUU",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "geurts2006",
+      "title": "Extremely randomized trees",
+      "display_title": "Extremely randomized trees",
+      "year": 2006,
+      "authors": [
+        {
+          "given": "Pierre",
+          "family": "Geurts"
+        },
+        {
+          "given": "Damien",
+          "family": "Ernst"
+        },
+        {
+          "given": "Louis",
+          "family": "Wehenkel"
+        }
+      ],
+      "doi": "10.1007/s10994-006-6226-1",
+      "url": "https://doi.org/10.1007/s10994-006-6226-1",
+      "source_url": "https://people.montefiore.uliege.be/ernst/uploads/news/id63/extremely-randomized-trees.pdf",
+      "apa_reference": "Geurts, P., Ernst, D., & Wehenkel, L. (2006). Extremely randomized trees. *Machine Learning*, *63*(1), 3–42. https://doi.org/10.1007/s10994-006-6226-1",
+      "fulltext_version": "Author-hosted Springer article proof (40 pages).",
+      "claim_locations": [
+        {
+          "claim": "Extra-Trees randomly chooses cut-points and candidate attributes, using the entire learning sample by default and averaging tree predictions for regression.",
+          "location": "PDF pp. 3–4, Section 2.1 and Table 1; equivalent journal pp. 5–6."
+        }
+      ],
+      "applicability_boundary": "Supports the Extra-Trees algorithm, not a guaranteed advantage or a native multiple-output implementation. Do not infer shared-output fitting solely from this citation.",
+      "zotero_parent_key": "ZV8FGCE4",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "jaidka2020",
+      "title": "Estimating geographic subjective well-being from Twitter: A comparison of dictionary and data-driven language methods",
+      "display_title": "Estimating geographic subjective well-being from Twitter: A comparison of dictionary and data-driven language methods",
+      "year": 2020,
+      "authors": [
+        {
+          "given": "Kokil",
+          "family": "Jaidka"
+        },
+        {
+          "given": "Salvatore",
+          "family": "Giorgi"
+        },
+        {
+          "given": "H. Andrew",
+          "family": "Schwartz"
+        },
+        {
+          "given": "Margaret L.",
+          "family": "Kern"
+        },
+        {
+          "given": "Lyle H.",
+          "family": "Ungar"
+        },
+        {
+          "given": "Johannes C.",
+          "family": "Eichstaedt"
+        }
+      ],
+      "doi": "10.1073/pnas.1906364117",
+      "url": "https://doi.org/10.1073/pnas.1906364117",
+      "source_url": "https://salvatoregiorgi.com/publications/jaidka2020estimating.pdf",
+      "apa_reference": "Jaidka, K., Giorgi, S., Schwartz, H. A., Kern, M. L., Ungar, L. H., & Eichstaedt, J. C. (2020). Estimating geographic subjective well-being from Twitter: A comparison of dictionary and data-driven language methods. *Proceedings of the National Academy of Sciences*, *117*(19), 10165–10171. https://doi.org/10.1073/pnas.1906364117",
+      "fulltext_version": "Early published PNAS PDF with 7 pages, hosted by a coauthor.",
+      "claim_locations": [
+        {
+          "title": "Estimating geographic subjective well-being from Twitter: A comparison of dictionary and data-driven language methods",
+          "location": "PDF pp. 4-5, Mapping False Positive Emotion Words and Discussion",
+          "claim": "Regional and socioeconomic language differences can complicate dictionary-based county well-being estimates; supervised alternatives performed more robustly in that setting.",
+          "boundary": "US county-level Twitter estimates do not establish individual-level validity, causal mechanisms, or an expected effect size for Weibo.",
+          "version": "Early published PNAS PDF with 7 pages, hosted by a coauthor."
+        }
+      ],
+      "zotero_parent_key": "7IM52KP4",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "janzing2020",
+      "title": "Feature relevance quantification in explainable AI: A causal problem",
+      "display_title": "Feature relevance quantification in explainable AI: A causal problem",
+      "year": 2020,
+      "authors": [
+        {
+          "given": "Dominik",
+          "family": "Janzing"
+        },
+        {
+          "given": "Lenon",
+          "family": "Minorics"
+        },
+        {
+          "given": "Patrick",
+          "family": "Blöbaum"
+        }
+      ],
+      "doi": null,
+      "url": "https://proceedings.mlr.press/v108/janzing20a.html",
+      "source_url": "https://proceedings.mlr.press/v108/janzing20a/janzing20a.pdf",
+      "apa_reference": "Janzing, D., Minorics, L., & Blöbaum, P. (2020). Feature relevance quantification in explainable AI: A causal problem. In S. Chiappa & R. Calandra (Eds.), *Proceedings of the Twenty Third International Conference on Artificial Intelligence and Statistics* (Vol. 108, pp. 2907–2916). PMLR. https://proceedings.mlr.press/v108/janzing20a.html",
+      "fulltext_version": "Publisher open-access proceedings PDF.",
+      "claim_locations": [
+        {
+          "claim": "Attribution depends on how removed features are averaged over; conditioning and marginal/interventional expectations answer different questions.",
+          "location": "PDF pp. 3–5, Section 3, Feature relevance with respect to a distribution; Example 1 and Figure 2."
+        },
+        {
+          "claim": "An intervention on an algorithm input is distinct from changing the corresponding real-world variable.",
+          "location": "PDF p. 4, right column paragraph starting To assess the impact; p. 5, first paragraph and Figure 2."
+        }
+      ],
+      "applicability_boundary": "The authors advocate a particular attribution target. Cite as a conceptual distinction, not proof that every conditional SHAP approach is invalid or that model attributions estimate psychological causal effects.",
+      "zotero_parent_key": "M2K9RENI",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "kapoor2023",
+      "title": "Leakage and the reproducibility crisis in machine-learning-based science",
+      "display_title": "Leakage and the reproducibility crisis in machine-learning-based science",
+      "year": 2023,
+      "authors": [
+        {
+          "given": "Sayash",
+          "family": "Kapoor"
+        },
+        {
+          "given": "Arvind",
+          "family": "Narayanan"
+        }
+      ],
+      "doi": "10.1016/j.patter.2023.100804",
+      "url": "https://doi.org/10.1016/j.patter.2023.100804",
+      "source_url": "https://par.nsf.gov/servlets/purl/10513990",
+      "apa_reference": "Kapoor, S., & Narayanan, A. (2023). Leakage and the reproducibility crisis in machine-learning-based science. *Patterns*, *4*(9), 100804. https://doi.org/10.1016/j.patter.2023.100804",
+      "fulltext_version": "Published open-access article and supplementary material, official NSF Public Access Repository PDF.",
+      "claim_locations": [
+        {
+          "claim": "Preprocessing, imputation and feature selection using held-out data can leak information; duplicate or dependent observations across partitions can invalidate evaluation.",
+          "location": "Printed p. 4 (PDF p. 5), Toward a solution: A taxonomy of data leakage, L1.2, L1.3, L1.4 and L3.2."
+        },
+        {
+          "claim": "Performance claims must match the population and distribution represented by the evaluation sample.",
+          "location": "Printed pp. 4–5 (PDF pp. 5–6), L3 and L3.3."
+        }
+      ],
+      "applicability_boundary": "Cross-domain review and case study; it identifies evaluation failure modes, not proof that any specific defect occurred in this dataset.",
+      "zotero_parent_key": "3UBMKWXR",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "kern2016",
+      "title": "Gaining insights from social media language: Methodologies and challenges.",
+      "display_title": "Gaining insights from social media language: Methodologies and challenges",
+      "year": 2016,
+      "authors": [
+        {
+          "given": "Margaret L.",
+          "family": "Kern"
+        },
+        {
+          "given": "Gregory",
+          "family": "Park"
+        },
+        {
+          "given": "Johannes C.",
+          "family": "Eichstaedt"
+        },
+        {
+          "given": "H. Andrew",
+          "family": "Schwartz"
+        },
+        {
+          "given": "Maarten",
+          "family": "Sap"
+        },
+        {
+          "given": "Laura K.",
+          "family": "Smith"
+        },
+        {
+          "given": "Lyle H.",
+          "family": "Ungar"
+        }
+      ],
+      "doi": "10.1037/met0000091",
+      "url": "https://doi.org/10.1037/met0000091",
+      "source_url": "https://www.peggykern.org/uploads/5/6/6/7/56678211/kern_2016_-_gaining_insights_from_social_media_language-_methodologies_and_challenges.pdf",
+      "apa_reference": "Kern, M. L., Park, G., Eichstaedt, J. C., Schwartz, H. A., Sap, M., Smith, L. K., & Ungar, L. H. (2016). Gaining insights from social media language: Methodologies and challenges. *Psychological Methods*, *21*(4), 507–525. https://doi.org/10.1037/met0000091",
+      "fulltext_version": "Published PDF hosted by the first author.",
+      "claim_locations": [
+        {
+          "title": "Gaining insights from social media language: Methodologies and challenges",
+          "location": "PDF p. 3 (journal p. 509), aggregation and word-count discussion",
+          "claim": "The amount of language per person and the sampling unit influence language-based assessment; sparse language can reduce model accuracy.",
+          "boundary": "Its empirical word-count thresholds for age/personality are not validated thresholds for these Weibo outcomes.",
+          "version": "Published PDF hosted by the first author."
+        }
+      ],
+      "zotero_parent_key": "PVTGG36C",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "kocev2007",
+      "title": "Ensembles of Multi-Objective Decision Trees",
+      "display_title": "Ensembles of multi-objective decision trees",
+      "year": 2007,
+      "authors": [
+        {
+          "given": "Dragi",
+          "family": "Kocev"
+        },
+        {
+          "given": "Celine",
+          "family": "Vens"
+        },
+        {
+          "given": "Jan",
+          "family": "Struyf"
+        },
+        {
+          "given": "Sašo",
+          "family": "Džeroski"
+        }
+      ],
+      "doi": "10.1007/978-3-540-74958-5_61",
+      "url": "https://doi.org/10.1007/978-3-540-74958-5_61",
+      "source_url": "https://kt.ijs.si/DragiKocev/old-web/bibliography/resources/trash/ECML2007EnsemblesOfMODTs.pdf",
+      "apa_reference": "Kocev, D., Vens, C., Struyf, J., & Džeroski, S. (2007). Ensembles of multi-objective decision trees. In J. N. Kok, J. Koronacki, R. López de Mántaras, S. Matwin, D. Mladenič, & A. Skowron (Eds.), *Machine Learning: ECML 2007* (Vol. 4701, pp. 624–631). Springer Berlin Heidelberg. https://doi.org/10.1007/978-3-540-74958-5_61",
+      "fulltext_version": "Author-hosted complete conference manuscript (8 pages), corresponding to published pp. 624–631.",
+      "claim_locations": [
+        {
+          "claim": "A joint tree predicts multiple targets with common splits; multivariate regression splitting can minimize summed target variances and terminal nodes return a vector of means.",
+          "location": "PDF pp. 3–4, Section 3, Multi-Objective Decision Trees and Table 1."
+        },
+        {
+          "claim": "Joint ensembles and a separate ensemble for each target are distinct comparison conditions.",
+          "location": "PDF pp. 1–2, Introduction; pp. 4–7, Experimental Evaluation and Conclusions."
+        }
+      ],
+      "applicability_boundary": "Empirical demonstrations are mainly ecological datasets and use Clus. The shared-split principle motivates this comparison but does not guarantee a benefit in these participants or establish equivalence to an unavailable custom model.",
+      "zotero_parent_key": "WTQZWZFA",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "lundberg2020",
+      "title": "From local explanations to global understanding with explainable AI for trees",
+      "display_title": "From local explanations to global understanding with explainable AI for trees",
+      "year": 2020,
+      "authors": [
+        {
+          "given": "Scott M.",
+          "family": "Lundberg"
+        },
+        {
+          "given": "Gabriel",
+          "family": "Erion"
+        },
+        {
+          "given": "Hugh",
+          "family": "Chen"
+        },
+        {
+          "given": "Alex",
+          "family": "DeGrave"
+        },
+        {
+          "given": "Jordan M.",
+          "family": "Prutkin"
+        },
+        {
+          "given": "Bala",
+          "family": "Nair"
+        },
+        {
+          "given": "Ronit",
+          "family": "Katz"
+        },
+        {
+          "given": "Jonathan",
+          "family": "Himmelfarb"
+        },
+        {
+          "given": "Nisha",
+          "family": "Bansal"
+        },
+        {
+          "given": "Su-In",
+          "family": "Lee"
+        }
+      ],
+      "doi": "10.1038/s42256-019-0138-9",
+      "url": "https://doi.org/10.1038/s42256-019-0138-9",
+      "source_url": "https://www.ncbi.nlm.nih.gov/research/bionlp/RESTful/pmcoa.cgi/BioC_xml/PMC7326367/unicode",
+      "apa_reference": "Lundberg, S. M., Erion, G., Chen, H., DeGrave, A., Prutkin, J. M., Nair, B., Katz, R., Himmelfarb, J., Bansal, N., & Lee, S.-I. (2020). From local explanations to global understanding with explainable AI for trees. *Nature Machine Intelligence*, *2*(1), 56–67. https://doi.org/10.1038/s42256-019-0138-9",
+      "fulltext_version": "Final-paper author manuscript from official NCBI BioC fulltext (PMC7326367), converted to standalone HTML/Markdown; 2019 preprint PDF retained separately.",
+      "claim_locations": [
+        {
+          "claim": "TreeExplainer exploits tree structure to compute Shapley attributions efficiently; local explanations can be summarized to characterize model predictions.",
+          "location": "Local explanations for trees, BioC passages 23–24 (offsets 12073, 13157); Local explanations as building blocks for global insights, passages 33–34 (offsets 16810, 17323)."
+        },
+        {
+          "claim": "Interventional and path-dependent Tree SHAP use different background expectations; path coverage provides an approximation to interventional expectations.",
+          "location": "Methods, Tree SHAP algorithms, passages 65–67 (offsets 33660–34781), and interventional feature perturbation, passages 75–78 (offsets 40612–41784)."
+        }
+      ],
+      "applicability_boundary": "Attributions describe the fitted model under a stated background/perturbation definition. They do not establish real-world causal effects of changing language or well-being. Exactness is relative to the chosen value function.",
+      "zotero_parent_key": "4NWR7ZUW",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "park2015",
+      "title": "Automatic personality assessment through social media language.",
+      "display_title": "Automatic personality assessment through social media language",
+      "year": 2015,
+      "authors": [
+        {
+          "given": "Gregory",
+          "family": "Park"
+        },
+        {
+          "given": "H. Andrew",
+          "family": "Schwartz"
+        },
+        {
+          "given": "Johannes C.",
+          "family": "Eichstaedt"
+        },
+        {
+          "given": "Margaret L.",
+          "family": "Kern"
+        },
+        {
+          "given": "Michal",
+          "family": "Kosinski"
+        },
+        {
+          "given": "David J.",
+          "family": "Stillwell"
+        },
+        {
+          "given": "Lyle H.",
+          "family": "Ungar"
+        },
+        {
+          "given": "Martin E. P.",
+          "family": "Seligman"
+        }
+      ],
+      "doi": "10.1037/pspp0000020",
+      "url": "https://doi.org/10.1037/pspp0000020",
+      "source_url": "https://gregpark.io/assets/pdfs/automatic_personality_assessment_through_social_media_language.pdf",
+      "apa_reference": "Park, G., Schwartz, H. A., Eichstaedt, J. C., Kern, M. L., Kosinski, M., Stillwell, D. J., Ungar, L. H., & Seligman, M. E. P. (2015). Automatic personality assessment through social media language. *Journal of Personality and Social Psychology*, *108*(6), 934–952. https://doi.org/10.1037/pspp0000020",
+      "fulltext_version": "Author-hosted Online First 2014 PDF; cite final 2015 JPSP bibliographic record",
+      "claim_locations": [
+        {
+          "claim": "Language-based personality assessment was evaluated against a separate Facebook sample with convergent, discriminant, informant, external-criterion, and temporal evidence.",
+          "location": "Online-first manuscript pp. 4–9, especially Table 1 and Test–Retest Stability (PDF pp. 5–10).",
+          "boundary": "Personality construct and English Facebook data; provides a validation framework rather than evidence that the present SWB predictor is a validated instrument."
+        },
+        {
+          "claim": "Models built within Facebook status-language context require validation before use in other language contexts.",
+          "location": "Limitations and Future Directions, manuscript p. 12 (PDF p. 13).",
+          "boundary": "Does not quantify transportability to contemporary Chinese social media."
+        }
+      ],
+      "applicability_boundary": "See the specific boundary attached to each claim.",
+      "zotero_parent_key": "92GH8238",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "pavot1993",
+      "title": "Review of the Satisfaction With Life Scale.",
+      "display_title": "Review of the Satisfaction With Life Scale",
+      "year": 1993,
+      "authors": [
+        {
+          "given": "William",
+          "family": "Pavot"
+        },
+        {
+          "given": "Ed",
+          "family": "Diener"
+        }
+      ],
+      "doi": "10.1037/1040-3590.5.2.164",
+      "url": "https://doi.org/10.1037/1040-3590.5.2.164",
+      "source_url": "https://labs.psychology.illinois.edu/~ediener/Documents/Pavot-Diener_1993.pdf",
+      "apa_reference": "Pavot, W., & Diener, E. (1993). Review of the Satisfaction With Life Scale. *Psychological Assessment*, *5*(2), 164–172. https://doi.org/10.1037/1040-3590.5.2.164",
+      "fulltext_version": "Version of record from the author's university directory.",
+      "claim_locations": [
+        {
+          "title": "Review of the Satisfaction With Life Scale",
+          "location": "PDF p. 6 (journal p. 169), Temporal Stability and Sensitivity",
+          "claim": "Temporal stability and sensitivity to genuine life changes are separate assessment requirements for life-satisfaction measures.",
+          "boundary": "Evidence about the SWLS cannot be assigned automatically to language-derived estimates of SWLS scores.",
+          "version": "Version of record from the author's university directory."
+        }
+      ],
+      "zotero_parent_key": "EVNZJD4E",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "ryan2001",
+      "title": "On Happiness and Human Potentials: A Review of Research on Hedonic and Eudaimonic Well-Being",
+      "display_title": "On happiness and human potentials: A review of research on hedonic and eudaimonic well-being",
+      "year": 2001,
+      "authors": [
+        {
+          "given": "Richard M.",
+          "family": "Ryan"
+        },
+        {
+          "given": "Edward L.",
+          "family": "Deci"
+        }
+      ],
+      "doi": "10.1146/annurev.psych.52.1.141",
+      "url": "https://doi.org/10.1146/annurev.psych.52.1.141",
+      "source_url": "https://selfdeterminationtheory.org/wp-content/uploads/2021/05/2001_RyanDeci_Happiness.pdf",
+      "apa_reference": "Ryan, R. M., & Deci, E. L. (2001). On happiness and human potentials: A review of research on hedonic and eudaimonic well-being. *Annual Review of Psychology*, *52*(1), 141–166. https://doi.org/10.1146/annurev.psych.52.1.141",
+      "fulltext_version": "Published review PDF hosted by the authors' Self-Determination Theory resource.",
+      "claim_locations": [
+        {
+          "title": "On happiness and human potentials: A review of research on hedonic and eudaimonic well-being",
+          "location": "PDF p. 3 (journal p. 143), opening conceptual distinction",
+          "claim": "Hedonic and eudaimonic traditions address overlapping but distinct conceptions of well-being.",
+          "boundary": "The supplied affect and life-satisfaction labels do not comprehensively measure meaning, virtue, or human functioning.",
+          "version": "Published review PDF hosted by the authors' Self-Determination Theory resource."
+        }
+      ],
+      "zotero_parent_key": "36RRFFAS",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "schwartz2013",
+      "title": "Personality, Gender, and Age in the Language of Social Media: The Open-Vocabulary Approach",
+      "display_title": "Personality, gender, and age in the language of social media: The open-vocabulary approach",
+      "year": 2013,
+      "authors": [
+        {
+          "given": "H. Andrew",
+          "family": "Schwartz"
+        },
+        {
+          "given": "Johannes C.",
+          "family": "Eichstaedt"
+        },
+        {
+          "given": "Margaret L.",
+          "family": "Kern"
+        },
+        {
+          "given": "Lukasz",
+          "family": "Dziurzynski"
+        },
+        {
+          "given": "Stephanie M.",
+          "family": "Ramones"
+        },
+        {
+          "given": "Megha",
+          "family": "Agrawal"
+        },
+        {
+          "given": "Achal",
+          "family": "Shah"
+        },
+        {
+          "given": "Michal",
+          "family": "Kosinski"
+        },
+        {
+          "given": "David",
+          "family": "Stillwell"
+        },
+        {
+          "given": "Martin E. P.",
+          "family": "Seligman"
+        },
+        {
+          "given": "Lyle H.",
+          "family": "Ungar"
+        }
+      ],
+      "doi": "10.1371/journal.pone.0073791",
+      "url": "https://doi.org/10.1371/journal.pone.0073791",
+      "source_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0073791&type=printable",
+      "apa_reference": "Schwartz, H. A., Eichstaedt, J. C., Kern, M. L., Dziurzynski, L., Ramones, S. M., Agrawal, M., Shah, A., Kosinski, M., Stillwell, D., Seligman, M. E. P., & Ungar, L. H. (2013). Personality, gender, and age in the language of social media: The open-vocabulary approach. *PLoS ONE*, *8*(9), e73791. https://doi.org/10.1371/journal.pone.0073791",
+      "fulltext_version": "Published open-access PLOS ONE article",
+      "claim_locations": [
+        {
+          "claim": "Social-media language varied with personality, age, and gender in a large Facebook sample; open-vocabulary features and fixed dictionaries capture different sets of cues.",
+          "location": "Methods pp. 3–5, prediction comparison Table 2 and Discussion p. 13.",
+          "boundary": "English Facebook personality/demographics, not Chinese Weibo SWB; neither performance nor linguistic associations transfer automatically."
+        },
+        {
+          "claim": "A priori dictionaries can aid comparison and targeted hypotheses, while sampling and context constrain language associations.",
+          "location": "Discussion pp. 13–14.",
+          "boundary": "Supports a rationale for interpretable categories, not comprehensive coverage or causal interpretation."
+        }
+      ],
+      "applicability_boundary": "See the specific boundary attached to each claim.",
+      "zotero_parent_key": "I5W7GHPR",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "shmueli2010",
+      "title": "To Explain or to Predict?",
+      "display_title": "To explain or to predict?",
+      "year": 2010,
+      "authors": [
+        {
+          "given": "Galit",
+          "family": "Shmueli"
+        }
+      ],
+      "doi": "10.1214/10-STS330",
+      "url": "https://doi.org/10.1214/10-sts330",
+      "source_url": "https://arxiv.org/pdf/1101.0891",
+      "apa_reference": "Shmueli, G. (2010). To explain or to predict? *Statistical Science*, *25*(3), 289–310. https://doi.org/10.1214/10-STS330",
+      "fulltext_version": "2011 arXiv v1 reprint of the 2010 Statistical Science article; identifies journal volume and pp. 289-310.",
+      "claim_locations": [
+        {
+          "title": "To explain or to predict?",
+          "location": "PDF p. 2, Sections 1.1 and 1.2",
+          "claim": "Explanatory and predictive modeling have distinct goals throughout study design and analysis.",
+          "boundary": "Successful prediction and descriptive feature attribution do not demonstrate causal psychological explanations.",
+          "version": "2011 arXiv v1 reprint of the 2010 Statistical Science article; identifies journal volume and pp. 289-310."
+        }
+      ],
+      "zotero_parent_key": "RQNJ9N3E",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "stachl2020",
+      "title": "Predicting personality from patterns of behavior collected with smartphones",
+      "display_title": "Predicting personality from patterns of behavior collected with smartphones",
+      "year": 2020,
+      "authors": [
+        {
+          "given": "Clemens",
+          "family": "Stachl"
+        },
+        {
+          "given": "Quay",
+          "family": "Au"
+        },
+        {
+          "given": "Ramona",
+          "family": "Schoedel"
+        },
+        {
+          "given": "Samuel D.",
+          "family": "Gosling"
+        },
+        {
+          "given": "Gabriella M.",
+          "family": "Harari"
+        },
+        {
+          "given": "Daniel",
+          "family": "Buschek"
+        },
+        {
+          "given": "Sarah Theres",
+          "family": "Völkel"
+        },
+        {
+          "given": "Tobias",
+          "family": "Schuwerk"
+        },
+        {
+          "given": "Michelle",
+          "family": "Oldemeier"
+        },
+        {
+          "given": "Theresa",
+          "family": "Ullmann"
+        },
+        {
+          "given": "Heinrich",
+          "family": "Hussmann"
+        },
+        {
+          "given": "Bernd",
+          "family": "Bischl"
+        },
+        {
+          "given": "Markus",
+          "family": "Bühner"
+        }
+      ],
+      "doi": "10.1073/pnas.1920484117",
+      "url": "https://doi.org/10.1073/pnas.1920484117",
+      "source_url": "https://www.mmi.ifi.lmu.de/pubdb/publications/pub/stachl2020pnas/stachl2020pnas.pdf",
+      "apa_reference": "Stachl, C., Au, Q., Schoedel, R., Gosling, S. D., Harari, G. M., Buschek, D., Völkel, S. T., Schuwerk, T., Oldemeier, M., Ullmann, T., Hussmann, H., Bischl, B., & Bühner, M. (2020). Predicting personality from patterns of behavior collected with smartphones. *Proceedings of the National Academy of Sciences*, *117*(30), 17680–17687. https://doi.org/10.1073/pnas.1920484117",
+      "fulltext_version": "Published PNAS PDF hosted by the authors' university.",
+      "claim_locations": [
+        {
+          "title": "Predicting personality from patterns of behavior collected with smartphones",
+          "location": "PDF p. 2, study rationale; p. 3, Figure 1; methods",
+          "claim": "Digital-behavior personality prediction used multiple behavioral classes and nested cross-validation with continuous-outcome metrics.",
+          "boundary": "Smartphone behavior and personality are distinct inputs and constructs; reported performance is not a benchmark for these three well-being labels.",
+          "version": "Published PNAS PDF hosted by the authors' university."
+        }
+      ],
+      "zotero_parent_key": "8V826FPR",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "tausczik2010",
+      "title": "The Psychological Meaning of Words: LIWC and Computerized Text Analysis Methods",
+      "display_title": "The psychological meaning of words: LIWC and computerized text analysis methods",
+      "year": 2010,
+      "authors": [
+        {
+          "given": "Yla R.",
+          "family": "Tausczik"
+        },
+        {
+          "given": "James W.",
+          "family": "Pennebaker"
+        }
+      ],
+      "doi": "10.1177/0261927X09351676",
+      "url": "https://doi.org/10.1177/0261927x09351676",
+      "source_url": "https://www.cs.cmu.edu/~ylataus/files/TausczikPennebaker2010.pdf",
+      "apa_reference": "Tausczik, Y. R., & Pennebaker, J. W. (2010). The psychological meaning of words: LIWC and computerized text analysis methods. *Journal of Language and Social Psychology*, *29*(1), 24–54. https://doi.org/10.1177/0261927X09351676",
+      "fulltext_version": "2010 issue PDF from the author's university site; first online December 2009.",
+      "claim_locations": [
+        {
+          "title": "The psychological meaning of words: LIWC and computerized text analysis methods",
+          "location": "PDF p. 7 (journal p. 30), discussion of computerized language measures",
+          "claim": "Dictionary word counts can miss context, irony, sarcasm and idiomatic meanings.",
+          "boundary": "These documented representation limitations are possible explanations, not measured causes of the present errors.",
+          "version": "2010 issue PDF from the author's university site; first online December 2009."
+        }
+      ],
+      "zotero_parent_key": "PAAP43QJ",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "varoquaux2018",
+      "title": "Cross-validation failure: Small sample sizes lead to large error bars",
+      "display_title": "Cross-validation failure: Small sample sizes lead to large error bars",
+      "year": 2018,
+      "authors": [
+        {
+          "given": "Gaël",
+          "family": "Varoquaux"
+        }
+      ],
+      "doi": "10.1016/j.neuroimage.2017.06.061",
+      "url": "https://doi.org/10.1016/j.neuroimage.2017.06.061",
+      "source_url": "https://arxiv.org/pdf/1706.07581",
+      "apa_reference": "Varoquaux, G. (2018). Cross-validation failure: Small sample sizes lead to large error bars. *NeuroImage*, *180*, 68–77. https://doi.org/10.1016/j.neuroimage.2017.06.061",
+      "fulltext_version": "2017 arXiv v1 author manuscript corresponding to the 2018 NeuroImage paper.",
+      "claim_locations": [
+        {
+          "title": "Cross-validation failure: Small sample sizes lead to large error bars",
+          "location": "2017 arXiv manuscript p. 3, error bars and vibration effects; Appendix D",
+          "claim": "Finite samples yield substantial uncertainty and correlated CV folds invalidate naive independence-based precision estimates.",
+          "boundary": "The article concerns neuroimaging; its numeric error-bar estimates are not transferred to this sample. Outer-fold variation here is descriptive.",
+          "version": "2017 arXiv v1 author manuscript corresponding to the 2018 NeuroImage paper."
+        }
+      ],
+      "zotero_parent_key": "F6T8HPHT",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "watson1988",
+      "title": "Development and validation of brief measures of positive and negative affect: The PANAS scales.",
+      "display_title": "Development and validation of brief measures of positive and negative affect: The PANAS scales",
+      "year": 1988,
+      "authors": [
+        {
+          "given": "David",
+          "family": "Watson"
+        },
+        {
+          "given": "Lee Anna",
+          "family": "Clark"
+        },
+        {
+          "given": "Auke",
+          "family": "Tellegen"
+        }
+      ],
+      "doi": "10.1037/0022-3514.54.6.1063",
+      "url": "https://doi.org/10.1037/0022-3514.54.6.1063",
+      "source_url": "https://scienceofbehaviorchange.org/wp-content/uploads/2019/10/PANAS.Watson.1988.pdf",
+      "apa_reference": "Watson, D., Clark, L. A., & Tellegen, A. (1988). Development and validation of brief measures of positive and negative affect: The PANAS scales. *Journal of Personality and Social Psychology*, *54*(6), 1063–1070. https://doi.org/10.1037/0022-3514.54.6.1063",
+      "fulltext_version": "Published article PDF hosted by the Science of Behavior Change research resource",
+      "claim_locations": [
+        {
+          "claim": "The PANAS comprises separate 10-item positive- and negative-affect scales, and the original response format has five levels.",
+          "location": "pp. 1064–1065, Development and validation sections; p. 1070 Appendix (PDF pp. 2–3, 8).",
+          "boundary": "Original English development mainly in university samples; neither a validation of this Chinese adaptation nor evidence of reliability in the current dataset."
+        },
+        {
+          "claim": "PANAS permits several reporting time frames, and temporal stability varies with the time frame.",
+          "location": "p. 1065, Test-retest reliability; p. 1070 Appendix (PDF pp. 3, 8).",
+          "boundary": "The actual time instructions used in the supplied study are not available."
+        }
+      ],
+      "applicability_boundary": "See the specific boundary attached to each claim.",
+      "zotero_parent_key": "MTMHU4NW",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "yarkoni2017",
+      "title": "Choosing Prediction Over Explanation in Psychology: Lessons From Machine Learning",
+      "display_title": "Choosing prediction over explanation in psychology: Lessons from machine learning",
+      "year": 2017,
+      "authors": [
+        {
+          "given": "Tal",
+          "family": "Yarkoni"
+        },
+        {
+          "given": "Jacob",
+          "family": "Westfall"
+        }
+      ],
+      "doi": "10.1177/1745691617693393",
+      "url": "https://doi.org/10.1177/1745691617693393",
+      "source_url": "https://talyarkoni.org/pdf/Yarkoni_PPS_2017.pdf",
+      "apa_reference": "Yarkoni, T., & Westfall, J. (2017). Choosing prediction over explanation in psychology: Lessons from machine learning. *Perspectives on Psychological Science*, *12*(6), 1100–1122. https://doi.org/10.1177/1745691617693393",
+      "fulltext_version": "Author-hosted publisher-formatted early online PDF; page numbers 1–23, final journal pagination 1100–1122.",
+      "claim_locations": [
+        {
+          "claim": "Predictive performance should be evaluated on observations withheld from model fitting; cross-validation can guide model selection.",
+          "location": "PDF pp. 11–13, Cross-Validation; Cross-validated model selection."
+        },
+        {
+          "claim": "A final held-out set should remain uninspected until analytical choices are complete.",
+          "location": "PDF pp. 12–13, last paragraph of Cross-validated model selection."
+        }
+      ],
+      "applicability_boundary": "Conceptual methods article. Does not establish predictive accuracy for this dataset, guarantee causality, or justify choosing a model by test-set performance.",
+      "zotero_parent_key": "RUSZM4BP",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "zhang2022",
+      "title": "A Survey on Multi-Task Learning",
+      "display_title": "A survey on multi-task learning",
+      "year": 2022,
+      "authors": [
+        {
+          "given": "Yu",
+          "family": "Zhang"
+        },
+        {
+          "given": "Qiang",
+          "family": "Yang"
+        }
+      ],
+      "doi": "10.1109/TKDE.2021.3070203",
+      "url": "https://doi.org/10.1109/tkde.2021.3070203",
+      "source_url": "https://arxiv.org/pdf/1707.08114",
+      "apa_reference": "Zhang, Y., & Yang, Q. (2022). A survey on multi-task learning. *IEEE Transactions on Knowledge and Data Engineering*, *34*(12), 5586–5609. https://doi.org/10.1109/TKDE.2021.3070203",
+      "fulltext_version": "2021 arXiv v3 author manuscript corresponding to the 2022 IEEE TKDE journal article; no post-cutoff revision used.",
+      "claim_locations": [
+        {
+          "title": "A survey on multi-task learning",
+          "location": "2021 arXiv v3 pp. 1-2, Introduction and Figure 1; Definition 1",
+          "claim": "Multitask learning covers multiple sharing structures; multi-output regression is a related, more specific setting that should be identified precisely.",
+          "boundary": "A comparison of shared-output forests and independently tuned regressors is not a test of every multitask-learning architecture.",
+          "version": "2021 arXiv v3 author manuscript corresponding to the 2022 IEEE TKDE journal article; no post-cutoff revision used."
+        }
+      ],
+      "zotero_parent_key": "QJSVKGUQ",
+      "zotero_verification_status": "read_back_verified"
+    },
+    {
+      "citation_id": "zhao2016",
+      "title": "Evaluating the Validity of Simplified Chinese Version of LIWC in Detecting Psychological Expressions in Short Texts on Social Network Services",
+      "display_title": "Evaluating the validity of simplified Chinese version of LIWC in detecting psychological expressions in short texts on social network services",
+      "year": 2016,
+      "authors": [
+        {
+          "given": "Nan",
+          "family": "Zhao"
+        },
+        {
+          "given": "Dongdong",
+          "family": "Jiao"
+        },
+        {
+          "given": "Shuotian",
+          "family": "Bai"
+        },
+        {
+          "given": "Tingshao",
+          "family": "Zhu"
+        }
+      ],
+      "doi": "10.1371/journal.pone.0157947",
+      "url": "https://doi.org/10.1371/journal.pone.0157947",
+      "source_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0157947&type=printable",
+      "apa_reference": "Zhao, N., Jiao, D., Bai, S., & Zhu, T. (2016). Evaluating the validity of simplified Chinese version of LIWC in detecting psychological expressions in short texts on social network services. *PLOS ONE*, *11*(6), e0157947. https://doi.org/10.1371/journal.pone.0157947",
+      "fulltext_version": "Published open-access PLOS ONE article",
+      "claim_locations": [
+        {
+          "claim": "SCLIWC category scores showed varying agreement with human ratings of Chinese web texts, including aggregated Weibo statuses.",
+          "location": "Study 1, Tables 2–3, pp. 6–8; General Discussion, p. 10.",
+          "boundary": "Expression detection differs from direct measurement of a user's psychological state; category validity is heterogeneous."
+        },
+        {
+          "claim": "Dictionary presence can over-identify psychological meaning in individual short posts because context is ignored.",
+          "location": "The validity of SCLIWC for identification of the psychological meaning of a Weibo status, pp. 11–12; Conclusion p. 12.",
+          "boundary": "Small samples and limited demographic information; the paper cautions against broad generalization."
+        }
+      ],
+      "applicability_boundary": "See the specific boundary attached to each claim.",
+      "zotero_parent_key": "Z9BCMQ6E",
+      "zotero_verification_status": "read_back_verified"
+    }
+  ]
+}

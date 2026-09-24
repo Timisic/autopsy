@@ -1,0 +1,127 @@
+{
+  "specs": [
+    {
+      "id": "mean",
+      "kind": "mean"
+    },
+    {
+      "id": "original_rf",
+      "kind": "original_rf"
+    },
+    {
+      "id": "ridge_raw_10",
+      "kind": "ridge",
+      "log": false,
+      "alpha": 10
+    },
+    {
+      "id": "ridge_raw_100",
+      "kind": "ridge",
+      "log": false,
+      "alpha": 100
+    },
+    {
+      "id": "ridge_raw_1000",
+      "kind": "ridge",
+      "log": false,
+      "alpha": 1000
+    },
+    {
+      "id": "ridge_log_10",
+      "kind": "ridge",
+      "log": true,
+      "alpha": 10
+    },
+    {
+      "id": "ridge_log_100",
+      "kind": "ridge",
+      "log": true,
+      "alpha": 100
+    },
+    {
+      "id": "ridge_log_1000",
+      "kind": "ridge",
+      "log": true,
+      "alpha": 1000
+    },
+    {
+      "id": "svr_0.1",
+      "kind": "svr",
+      "C": 0.1
+    },
+    {
+      "id": "svr_1",
+      "kind": "svr",
+      "C": 1
+    },
+    {
+      "id": "svr_10",
+      "kind": "svr",
+      "C": 10
+    },
+    {
+      "id": "hgb_10",
+      "kind": "hgb",
+      "l2": 10
+    },
+    {
+      "id": "hgb_100",
+      "kind": "hgb",
+      "l2": 100
+    },
+    {
+      "id": "en_0.01_0.1",
+      "kind": "en",
+      "alpha": 0.01,
+      "l1": 0.1
+    },
+    {
+      "id": "en_0.01_0.5",
+      "kind": "en",
+      "alpha": 0.01,
+      "l1": 0.5
+    },
+    {
+      "id": "en_0.1_0.1",
+      "kind": "en",
+      "alpha": 0.1,
+      "l1": 0.1
+    },
+    {
+      "id": "en_0.1_0.5",
+      "kind": "en",
+      "alpha": 0.1,
+      "l1": 0.5
+    },
+    {
+      "id": "pls_2",
+      "kind": "pls",
+      "components": 2
+    },
+    {
+      "id": "pls_5",
+      "kind": "pls",
+      "components": 5
+    },
+    {
+      "id": "pls_10",
+      "kind": "pls",
+      "components": 10
+    },
+    {
+      "id": "rf_30",
+      "kind": "rf",
+      "leaf": 30
+    },
+    {
+      "id": "rf_60",
+      "kind": "rf",
+      "leaf": 60
+    }
+  ],
+  "protocol_sha256": "563f1295e42567c952f7c54acb042b9a38f481ccb2d9a7031023558d77d3f165",
+  "script_sha256": "c15a01bd90d336f6d6aa3006719af818fa09fa6e3a0a01fab0e32b91d192f865",
+  "input_sha256": "c3565732297b972932a3b64ed20b95070a8de5b5269366ad78f699d3e24b2388",
+  "seed": 20260924,
+  "status": "locked-before-new-candidates"
+}

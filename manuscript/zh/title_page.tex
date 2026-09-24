@@ -1,0 +1,97 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in,headheight=14pt,headsep=18pt]{geometry}
+\usepackage{fontspec}
+\usepackage[UTF8,scheme=plain,fontset=fandol]{ctex}
+\setmainfont{texgyretermes}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic]
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc}
+\usepackage{amsmath,amssymb}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{needspace}
+\usepackage{flafter}
+\usepackage{placeins}
+\usepackage{xurl}
+\usepackage[unicode,hidelinks,breaklinks]{hyperref}
+\urlstyle{same}
+\hypersetup{pdfauthor={},pdftitle={基于机器学习的微博用户主观幸福感评估工具开发及其心理学意义：一项评价性与解释性研究},pdfsubject={Journal-style computational reanalysis draft}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{3pt plus 1pt}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\titleformat{\section}{\normalfont\large\bfseries}{}{0pt}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{}{0pt}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries\itshape}{}{0pt}{}
+\titlespacing*{\section}{0pt}{13pt}{5pt}
+\titlespacing*{\subsection}{0pt}{10pt}{3pt}
+\titlespacing*{\subsubsection}{0pt}{8pt}{3pt}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\pandocbounded}[1]{#1}
+\newcommand{\APAref}{\par\noindent\hangindent=0.5in\hangafter=1\relax}
+\setlength{\LTpre}{4pt}
+\setlength{\LTpost}{4pt}
+\setlength{\tabcolsep}{4pt}
+\setlength{\textfloatsep}{12pt plus 2pt minus 2pt}
+\setlength{\intextsep}{10pt plus 2pt minus 2pt}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.75}
+\renewcommand{\textfraction}{0.12}
+\renewcommand{\floatpagefraction}{0.72}
+\setstretch{1.30}
+\widowpenalty=10000
+\clubpenalty=10000
+\begin{document}
+\begin{center}\fontsize{16}{20}\selectfont\bfseries 基于机器学习的微博用户主观幸福感评估工具开发及其心理学意义：一项评价性与解释性研究\end{center}
+文章类型：参照 Applied Psychology: Health and Well-Being 的原创研究论文指南编写的研究论文。本稿是对所提供数据集开展的独立计算再分析，不是新招募样本的研究，也不意味着现有研究已具备再次发表的资格。
+
+\section{作者与所属机构}\label{ux4f5cux8005ux4e0eux6240ux5c5eux673aux6784}
+
+待作者补充：作者姓名、所属机构、ORCID 标识、通信地址、电子邮箱、作者顺序，以及每位署名作者认可最终稿并承担责任的确认。未根据数据采集说明推测任何作者或机构归属。
+
+\section{研究来源与发表状态}\label{ux7814ux7a76ux6765ux6e90ux4e0eux53d1ux8868ux72b6ux6001}
+
+所提供的工作题名为``Developing a machine learning-based instrument for subjective well-being assessment on Weibo and its psychological significance: An evaluative and interpretive research''。本稿采用该工作题名。工具评价的范围与局限在正文中说明。原始题名和方法仍保存在 main\_\allowbreak{}context.md。
+
+任务说明明确指出，基础研究已经发表。本次未检索或使用其已发表的正文、摘要和结果。在任何投稿之前，负责的作者必须明确与既有论文的关系、所复用研究设计信息的归属、原创性或二次分析的发表资格、相关许可，以及必要的内容重叠披露。本文件并未尝试或授权任何期刊投稿。
+
+\section{伦理批准与知情同意}\label{ux4f26ux7406ux6279ux51c6ux4e0eux77e5ux60c5ux540cux610f}
+
+根据所提供的数据采集说明，原研究获得中国科学院心理研究所机构伦理审查委员会批准，批准编号为 H15009。说明记载，参与者提供知情同意、自愿参与、可以退出，且完成问卷后获得金钱奖励。说明中还记载了匿名化和隐私保护措施。
+
+上述陈述均归属于所提供的来源。批准文件、招募文本、确切的同意措辞、报酬金额、匿名化程序和本次二次分析授权，均未得到独立核实。待作者补充：核实原始批准和同意，说明此次二次使用是否需要批准或豁免，并确认保留的数据及拟议共享符合适用的同意范围。本地计算包仍包含稳定的 UID 值，因此不能假定数据已不可逆地匿名化。
+
+\section{作者贡献}\label{ux4f5cux8005ux8d21ux732e}
+
+待作者补充：明确原始数据采集、数据整理、研究构思、方法设计、软件审查、验证、解释、稿件准备、指导及最终批准方面的贡献。不得将自动化工作表述为已经完成的人类贡献或人类批准。
+
+\section{经费支持}\label{ux7ecfux8d39ux652fux6301}
+
+待作者补充：披露原始采集及本次二次分析的全部经费来源、项目编号和资助方角色，或确认准确的无经费声明。不能根据资料缺失推断没有经费支持。
+
+\section{利益冲突}\label{ux5229ux76caux51b2ux7a81}
+
+待作者补充：提供每位作者的声明，以及任何相关的财务或非财务关系。尚未确认不存在利益冲突。
+
+\section{数据与代码可用性}\label{ux6570ux636eux4e0eux4ee3ux7801ux53efux7528ux6027}
+
+所提供的原始 CSV、分析脚本、环境锁定文件、保留的模型运行、预测值、表格、图形和稿件源文件均包含在本地研究包中。尚未公开存储任何数据，也未分配持久标识符。待作者补充：明确获授权的数据保管方，界定访问限制与权限，确认可发布内容，选择合适的存储库，并在可用时添加数据和代码的持久引用。本段不代表原始数据所有者承诺提供访问。
+
+\section{人工智能的使用}\label{ux4ebaux5de5ux667aux80fdux7684ux4f7fux7528}
+
+OpenAI Codex 助手用于数据审计、分析计划起草、分析代码开发与执行、文献检索及证据核查、Zotero 入库、图表生成和稿件写作。额外的计算审查检查了代码、来源论断和渲染文档。自动检查不构成负责的人类作者的审核。待作者补充：检查并批准方法、输出、参考文献、解释、来源和声明，并明确期刊披露表所要求的工具与版本信息。未将任何 AI 工具列为作者。
+
+\section{致谢}\label{ux81f4ux8c22}
+
+待作者补充：列明不符合署名要求的贡献者，并取得被提名所需的同意。未虚构对任何个人的致谢。
+
+\section{投稿准备状态}\label{ux6295ux7a3fux51c6ux5907ux72b6ux6001}
+
+计算再分析和稿件可以在本地检查与复现。在补齐作者负责的声明、源数据授权、与既有论文的关系及人类责任确认之前，本文件仍为研究稿。即使这些声明补齐，缺少原始帖子、问卷条目、经核实的分数变换、词典来源和人口学字段，仍会限制科学主张的范围。
+
+\end{document}

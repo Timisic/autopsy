@@ -1,0 +1,8 @@
+{
+  "input_sha256": "c3565732297b972932a3b64ed20b95070a8de5b5269366ad78f699d3e24b2388",
+  "script_sha256": "c15a01bd90d336f6d6aa3006719af818fa09fa6e3a0a01fab0e32b91d192f865",
+  "predictions_sha256": "4966b51c6045d11e41a16b14ae130295000ff3c79a29d20d8e58ccbcf21d1ccc",
+  "exploratory": true,
+  "holdout_n": 104,
+  "development_n": 933
+}

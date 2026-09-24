@@ -1,0 +1,48 @@
+{
+  "reviewed": "2026-09-24",
+  "status": "pass",
+  "review_method": "All 51 page renders visually inspected in contact sheets; full-size checks for final English reference pages and dense exploratory results tables in both languages. After metadata correction, 47 page images stayed byte-identical; all 4 changed pages were reviewed again. Automated every-page bounds/font/log and full-paragraph text checks also pass.",
+  "findings": "No clipped or overlapping text, missing glyphs, detached main displays or blank pages observed. Supplementary long tables repeat headers across pages. Titles and author-controlled placeholders preserved; no running headers.",
+  "documents": {
+    "en": {
+      "manuscript": {
+        "pdf_sha256": "6689f0aa194bdd37fd5c1e4b2ea955e7f4febebe278749a80dc1b1981114899a",
+        "source_sha256": "e5962dd03e82b4f5594e8353f14eb2270bcb0687f667dd8066f8bd868c62c543",
+        "tex_sha256": "8f7286ee61fb7a238305784a5dc1816087c441b9cc374f9397023f7951009108",
+        "pages": 17
+      },
+      "supplement": {
+        "pdf_sha256": "15b052137a6636943578971fbb73d4dbd3234248a10e6702e35a50e92002c625",
+        "source_sha256": "46ad9bca89ee372bc500c50ecb113785126749e1cb6892025448f7386e6eb4d2",
+        "tex_sha256": "6ce85f424e9eaf9e8bb36676b32486699d26ce6d7c892f99c43e91a0b404a83f",
+        "pages": 7
+      },
+      "title_page": {
+        "pdf_sha256": "6afe8894b72bfcf0c8d38f33715a1dd1e6158593443866b0c7fd4e16019eb275",
+        "source_sha256": "681cfb4d2817f996f847b16b0c8d260e744286a34e3dfa736a31cb927bcfd642",
+        "tex_sha256": "2517d76319711850312882cff69dfee1fd0354361e70285af811c402b248f072",
+        "pages": 3
+      }
+    },
+    "zh": {
+      "manuscript": {
+        "pdf_sha256": "82487a18fac907630bfb06240ae46de083984375b0c7fad135abdcb8fe6e1ce6",
+        "source_sha256": "2627c6891a767113344fd1f108eb9a9d6a6996ba568d7c18ac97eadf981320e2",
+        "tex_sha256": "6afe1134fb5b9fb7f7ef876700c2c5ed8a001db2fd57d0edb97ec613fe1ff166",
+        "pages": 15
+      },
+      "supplement": {
+        "pdf_sha256": "a5eb69e3e33cd4a8d7cbab494046424c49d8bc327953cde93b2e5fbb568bf08b",
+        "source_sha256": "79b55fdca78ab3d16c3ab0799c20c7f7bc37046f96b1b20048af5141517ab2f7",
+        "tex_sha256": "d959b42705ae133a287782e1ff8cc7e75bfd471fed695a19a014fed9b5a0653f",
+        "pages": 7
+      },
+      "title_page": {
+        "pdf_sha256": "c7eb15f0c06d41d26cdefab6a265a1ec69a6e0f7ee01dbcedbdc8e708af56a3d",
+        "source_sha256": "c386f5a93890f9f2091690a4ac9797f4e7c0a73c3418dae5e716cf66505afeba",
+        "tex_sha256": "9fa522294439cd2d97e559f33328ecafd6116f5fc9b916335dbb98c80f6eb4d4",
+        "pages": 2
+      }
+    }
+  }
+}

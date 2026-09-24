@@ -1,0 +1,56 @@
+[
+  {
+    "language": "en",
+    "document": "manuscript",
+    "standalone_compile": true,
+    "pdf_text_identical": true,
+    "source_tex_sha256": "8f7286ee61fb7a238305784a5dc1816087c441b9cc374f9397023f7951009108",
+    "delivery_pdf_sha256": "6689f0aa194bdd37fd5c1e4b2ea955e7f4febebe278749a80dc1b1981114899a",
+    "rebuilt_pdf_sha256": "4b3e04fbc3646d7e0f15217d79808607ed9c32325376d3e9d1adbf808af2b435"
+  },
+  {
+    "language": "en",
+    "document": "supplement",
+    "standalone_compile": true,
+    "pdf_text_identical": true,
+    "source_tex_sha256": "6ce85f424e9eaf9e8bb36676b32486699d26ce6d7c892f99c43e91a0b404a83f",
+    "delivery_pdf_sha256": "15b052137a6636943578971fbb73d4dbd3234248a10e6702e35a50e92002c625",
+    "rebuilt_pdf_sha256": "cad7291b08c39cbdd6d651749f8e53dcde7d62bccfd8052facb461b81d079859"
+  },
+  {
+    "language": "en",
+    "document": "title_page",
+    "standalone_compile": true,
+    "pdf_text_identical": true,
+    "source_tex_sha256": "2517d76319711850312882cff69dfee1fd0354361e70285af811c402b248f072",
+    "delivery_pdf_sha256": "6afe8894b72bfcf0c8d38f33715a1dd1e6158593443866b0c7fd4e16019eb275",
+    "rebuilt_pdf_sha256": "7b5b662728a11f88aff19dff1bb8d3ed757ce0e00a4a88d9602cd3c5353c73cd"
+  },
+  {
+    "language": "zh",
+    "document": "manuscript",
+    "standalone_compile": true,
+    "pdf_text_identical": true,
+    "source_tex_sha256": "6afe1134fb5b9fb7f7ef876700c2c5ed8a001db2fd57d0edb97ec613fe1ff166",
+    "delivery_pdf_sha256": "82487a18fac907630bfb06240ae46de083984375b0c7fad135abdcb8fe6e1ce6",
+    "rebuilt_pdf_sha256": "d0734a298abca31a8578bc5d6321938800e4754f8537c7f4eebd7a39006f88e8"
+  },
+  {
+    "language": "zh",
+    "document": "supplement",
+    "standalone_compile": true,
+    "pdf_text_identical": true,
+    "source_tex_sha256": "d959b42705ae133a287782e1ff8cc7e75bfd471fed695a19a014fed9b5a0653f",
+    "delivery_pdf_sha256": "a5eb69e3e33cd4a8d7cbab494046424c49d8bc327953cde93b2e5fbb568bf08b",
+    "rebuilt_pdf_sha256": "04574af105da2cfd1e883a75b1218f0973e96ed162e2fbc67e5c409538cc9cb9"
+  },
+  {
+    "language": "zh",
+    "document": "title_page",
+    "standalone_compile": true,
+    "pdf_text_identical": true,
+    "source_tex_sha256": "9fa522294439cd2d97e559f33328ecafd6116f5fc9b916335dbb98c80f6eb4d4",
+    "delivery_pdf_sha256": "c7eb15f0c06d41d26cdefab6a265a1ec69a6e0f7ee01dbcedbdc8e708af56a3d",
+    "rebuilt_pdf_sha256": "06c0204ff179ffde7593c16baa04849952300656af8493801066b1cc73f7f5c9"
+  }
+]

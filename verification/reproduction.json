@@ -1,0 +1,329 @@
+{
+  "reference": "results/primary",
+  "candidate": "results/reproduction",
+  "checks": {
+    "partition.csv": true,
+    "cv_row_order.csv": true,
+    "row_manifest.csv": true,
+    "cleaned_primary.csv": true,
+    "cleaned_latest.csv": true,
+    "selection_winner": true,
+    "selection_best_shared": true,
+    "selection_best_independent_ensemble": true,
+    "selection_best_tree": true,
+    "selection_models": true,
+    "selection_input_sha256": true,
+    "selection_script_sha256": true,
+    "selection_protocol_sha256": true,
+    "selection_config_sha256": true,
+    "cv_scores_equal": true,
+    "cv_score_keys_equal": true,
+    "oof_joint_et_0": true,
+    "oof_joint_et_1": true,
+    "oof_joint_et_2": true,
+    "oof_joint_et_3": true,
+    "oof_joint_et_4": true,
+    "oof_joint_et_5": true,
+    "oof_joint_et_selected": true,
+    "oof_joint_rf_0": true,
+    "oof_joint_rf_1": true,
+    "oof_joint_rf_2": true,
+    "oof_joint_rf_3": true,
+    "oof_joint_rf_4": true,
+    "oof_joint_rf_5": true,
+    "oof_joint_rf_selected": true,
+    "oof_mean_0": true,
+    "oof_mean_selected": true,
+    "oof_multitask_en_0": true,
+    "oof_multitask_en_1": true,
+    "oof_multitask_en_2": true,
+    "oof_multitask_en_3": true,
+    "oof_multitask_en_4": true,
+    "oof_multitask_en_5": true,
+    "oof_multitask_en_selected": true,
+    "oof_ridge_0": true,
+    "oof_ridge_1": true,
+    "oof_ridge_2": true,
+    "oof_ridge_3": true,
+    "oof_ridge_4": true,
+    "oof_ridge_selected": true,
+    "oof_single_et_0": true,
+    "oof_single_et_1": true,
+    "oof_single_et_2": true,
+    "oof_single_et_3": true,
+    "oof_single_et_4": true,
+    "oof_single_et_5": true,
+    "oof_single_et_selected": true,
+    "oof_single_hgb_0": true,
+    "oof_single_hgb_1": true,
+    "oof_single_hgb_2": true,
+    "oof_single_hgb_3": true,
+    "oof_single_hgb_4": true,
+    "oof_single_hgb_5": true,
+    "oof_single_hgb_selected": true,
+    "oof_single_rf_0": true,
+    "oof_single_rf_1": true,
+    "oof_single_rf_2": true,
+    "oof_single_rf_3": true,
+    "oof_single_rf_4": true,
+    "oof_single_rf_5": true,
+    "oof_single_rf_selected": true,
+    "all_primary_families_reproduced": true,
+    "metric_n": true,
+    "metric_pearson_r": true,
+    "metric_pearson_ci_low": true,
+    "metric_pearson_ci_high": true,
+    "metric_pearson_p": true,
+    "metric_rmse": true,
+    "metric_rmse_ci_low": true,
+    "metric_rmse_ci_high": true,
+    "metric_r_squared": true,
+    "metric_spearman_r": true,
+    "metric_winner_pearson_holm_p": true,
+    "paired_comparisons_match": true
+  },
+  "max_primary_prediction_difference": 0.0,
+  "max_oof_difference": 0.0,
+  "prediction_checks": [
+    {
+      "file": "latest_record_joint_et.csv",
+      "n": 104,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "latest_record_joint_rf.csv",
+      "n": 104,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "latest_record_mean.csv",
+      "n": 104,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "latest_record_multitask_en.csv",
+      "n": 104,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "latest_record_ridge.csv",
+      "n": 104,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "latest_record_single_et.csv",
+      "n": 104,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "latest_record_single_hgb.csv",
+      "n": 104,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "latest_record_single_rf.csv",
+      "n": 104,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "primary_joint_et.csv",
+      "n": 104,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "primary_joint_rf.csv",
+      "n": 104,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "primary_mean.csv",
+      "n": 104,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "primary_multitask_en.csv",
+      "n": 104,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "primary_ridge.csv",
+      "n": 104,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "primary_single_et.csv",
+      "n": 104,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "primary_single_hgb.csv",
+      "n": 104,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "primary_single_rf.csv",
+      "n": 104,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "restricted_features_joint_et.csv",
+      "n": 104,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "restricted_features_joint_rf.csv",
+      "n": 104,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "restricted_features_mean.csv",
+      "n": 104,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "restricted_features_multitask_en.csv",
+      "n": 104,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "restricted_features_ridge.csv",
+      "n": 104,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "restricted_features_single_et.csv",
+      "n": 104,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "restricted_features_single_hgb.csv",
+      "n": 104,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "restricted_features_single_rf.csv",
+      "n": 104,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "singleton_uids_joint_et.csv",
+      "n": 85,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "singleton_uids_joint_rf.csv",
+      "n": 85,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "singleton_uids_mean.csv",
+      "n": 85,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "singleton_uids_multitask_en.csv",
+      "n": 85,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "singleton_uids_ridge.csv",
+      "n": 85,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "singleton_uids_single_et.csv",
+      "n": 85,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "singleton_uids_single_hgb.csv",
+      "n": 85,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    },
+    {
+      "file": "singleton_uids_single_rf.csv",
+      "n": 85,
+      "keys_equal": true,
+      "max_abs_prediction_difference": 0.0,
+      "pass": true
+    }
+  ],
+  "metric_max_differences": {
+    "n": 0.0,
+    "pearson_r": 0.0,
+    "pearson_ci_low": 0.0,
+    "pearson_ci_high": 0.0,
+    "pearson_p": 0.0,
+    "rmse": 0.0,
+    "rmse_ci_low": 0.0,
+    "rmse_ci_high": 0.0,
+    "r_squared": 0.0,
+    "spearman_r": 0.0,
+    "winner_pearson_holm_p": 0.0
+  },
+  "scope": "All shared scenario outputs compared. Missing non-primary scenarios are explicitly listed.",
+  "missing_prediction_files": [],
+  "passed": true
+}

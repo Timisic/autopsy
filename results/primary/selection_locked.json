@@ -1,0 +1,129 @@
+{
+  "winner": "joint_rf",
+  "best_shared": "joint_rf",
+  "best_independent_ensemble": "single_rf",
+  "best_tree": "joint_rf",
+  "models": {
+    "mean": {
+      "mode": "joint",
+      "candidate_id": 0,
+      "params": {}
+    },
+    "ridge": {
+      "mode": "independent",
+      "candidate_ids": [
+        4,
+        2,
+        2
+      ],
+      "params": [
+        {
+          "alpha": 1000.0
+        },
+        {
+          "alpha": 10.0
+        },
+        {
+          "alpha": 10.0
+        }
+      ]
+    },
+    "single_rf": {
+      "mode": "independent",
+      "candidate_ids": [
+        5,
+        2,
+        5
+      ],
+      "params": [
+        {
+          "max_features": 1.0,
+          "min_samples_leaf": 15
+        },
+        {
+          "max_features": 0.5,
+          "min_samples_leaf": 15
+        },
+        {
+          "max_features": 1.0,
+          "min_samples_leaf": 15
+        }
+      ]
+    },
+    "single_et": {
+      "mode": "independent",
+      "candidate_ids": [
+        2,
+        5,
+        5
+      ],
+      "params": [
+        {
+          "max_features": 0.5,
+          "min_samples_leaf": 15
+        },
+        {
+          "max_features": 1.0,
+          "min_samples_leaf": 15
+        },
+        {
+          "max_features": 1.0,
+          "min_samples_leaf": 15
+        }
+      ]
+    },
+    "single_hgb": {
+      "mode": "independent",
+      "candidate_ids": [
+        4,
+        3,
+        5
+      ],
+      "params": [
+        {
+          "l2_regularization": 10.0,
+          "max_leaf_nodes": 15
+        },
+        {
+          "l2_regularization": 1.0,
+          "max_leaf_nodes": 31
+        },
+        {
+          "l2_regularization": 10.0,
+          "max_leaf_nodes": 31
+        }
+      ]
+    },
+    "joint_rf": {
+      "mode": "joint",
+      "candidate_id": 5,
+      "params": {
+        "max_features": 1.0,
+        "min_samples_leaf": 15
+      }
+    },
+    "joint_et": {
+      "mode": "joint",
+      "candidate_id": 2,
+      "params": {
+        "max_features": 0.5,
+        "min_samples_leaf": 15
+      }
+    },
+    "multitask_en": {
+      "mode": "joint",
+      "candidate_id": 3,
+      "params": {
+        "alpha": 0.01,
+        "l1_ratio": 0.8
+      }
+    }
+  },
+  "selection_basis": "Training-only 5-fold CV; holdout not evaluated before this file is saved.",
+  "protocol_sha256": "a955cef21bf6686d0c0133dfca0ea24c9c96842f7845073944b49bab8d9b6487",
+  "config_sha256": "da24b9d064a35bf2c6ac780bcdc59a5888720a7d11c3735c276ca497d3d835ee",
+  "input_sha256": "c3565732297b972932a3b64ed20b95070a8de5b5269366ad78f699d3e24b2388",
+  "script_sha256": "f19d6e20852253fc91a156b7d698e11844a8fd66e38931fb5eca1f88ca3943d7",
+  "partition_sha256": "bdfa5d6132b2142e1585e14befcc9737e9cb413354a4058602828fa6b079b722",
+  "cv_row_order_sha256": "62b2071bb80fd3a1d55579acefc023c262dfb475b277c59f89a6481251593c14"
+}

@@ -1,0 +1,400 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in,headheight=14pt,headsep=18pt]{geometry}
+\usepackage{fontspec}
+\setmainfont{texgyretermes}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic]
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc}
+\usepackage{amsmath,amssymb}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{needspace}
+\usepackage{flafter}
+\usepackage{placeins}
+\usepackage{xurl}
+\usepackage[unicode,hidelinks,breaklinks]{hyperref}
+\urlstyle{same}
+\hypersetup{pdfauthor={},pdftitle={Developing a machine learning-based instrument for subjective well-being assessment on Weibo and its psychological significance: An evaluative and interpretive research},pdfsubject={Journal-style computational reanalysis draft}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{3pt plus 1pt}
+\setlength{\emergencystretch}{3em}
+\setcounter{secnumdepth}{0}
+\titleformat{\section}{\normalfont\large\bfseries}{}{0pt}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{}{0pt}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries\itshape}{}{0pt}{}
+\titlespacing*{\section}{0pt}{13pt}{5pt}
+\titlespacing*{\subsection}{0pt}{10pt}{3pt}
+\titlespacing*{\subsubsection}{0pt}{8pt}{3pt}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\pandocbounded}[1]{#1}
+\newcommand{\APAref}{\par\noindent\hangindent=0.5in\hangafter=1\relax}
+\setlength{\LTpre}{4pt}
+\setlength{\LTpost}{4pt}
+\setlength{\tabcolsep}{4pt}
+\setlength{\textfloatsep}{12pt plus 2pt minus 2pt}
+\setlength{\intextsep}{10pt plus 2pt minus 2pt}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.75}
+\renewcommand{\textfraction}{0.12}
+\renewcommand{\floatpagefraction}{0.72}
+\setstretch{1.20}
+\widowpenalty=10000
+\clubpenalty=10000
+\begin{document}
+\begin{center}\fontsize{16}{20}\selectfont\bfseries Developing a machine learning-based instrument for subjective well-being assessment on Weibo and its psychological significance: An evaluative and interpretive research\end{center}
+\section{Abstract}\label{abstract}
+
+Social-media language may provide information about subjective well-being, but predictive association, numerical accuracy, and measurement validity require distinct evidence. We examined negative affect, positive affect, and life satisfaction in a secondary analysis of 1,037 Weibo users represented by 120 psycholinguistic features. Five-fold cross-validation compared eight model families within a fixed search budget; 104 participants were reserved for evaluation. The selected shared random forest produced holdout correlations of 0.247, 0.284, and 0.152, with root mean squared errors of 0.166, 0.165, and 0.202, respectively, in stored score units. Affect correlations remained significant after correction, whereas the life-satisfaction interval included zero. Error reductions over a training-mean baseline were small and did not meet the multiplicity-adjusted criterion; shared learning showed no established advantage over independent forests. A subsequent exploratory search did not improve nested development performance. Attribution rankings identified model-used categories but were accompanied by small, mixed holdout permutation effects. Prespecified sensitivity analyses retained the limited predictive pattern. The findings support modest retrospective language--affect associations while leaving accurate individual assessment, temporal reliability, and transportability unestablished.
+
+Keywords: subjective well-being; psycholinguistics; social media; machine learning; multi-output regression; reproducibility
+
+Conflict of interest: Authors\textquotesingle{} declaration pending.
+
+\section{Introduction}\label{introduction}
+
+Subjective well-being concerns how people experience and evaluate their lives. Its affective and cognitive components are related but distinguishable: positive affect, negative affect, and a global judgment of life satisfaction each capture a different aspect of subjective experience (Diener, 1984). The Positive and Negative Affect Schedule (PANAS) measures positive and negative affect separately, whereas the Satisfaction With Life Scale (SWLS) assesses global cognitive judgments of life satisfaction (Diener et al., 1985; Watson et al., 1988). A language-based approach to well-being assessment should consequently be evaluated for each component rather than assuming that success for one establishes validity for all three.
+
+This component-level approach also defines the scope of the proposed instrument. Diener et al. (1999) emphasize that well-being components can have distinct correlates, while Ryan and Deci (2001) distinguish hedonic evaluation from eudaimonic concerns such as meaning and functioning. Consequently, predicting the three supplied scores would not by itself establish a comprehensive measure of flourishing, virtue, or psychological functioning. The relevant criterion remains how participants report their affect and evaluate their lives, rather than a normative judgment inferred from the topics they discuss (Diener et al., 2018).
+
+Social-media language provides a behavioral record that may contain information relevant to these components. Schwartz et al. (2013) demonstrated associations between Facebook language, personality, and demographic characteristics, while Park et al. (2015) evaluated language-based personality scores using convergent, discriminant, informant, external-criterion, and temporal evidence. Eichstaedt et al. (2018) examined a different application, predicting subsequent depression documentation from Facebook language. Together, these studies motivate investigating psychological information in language. They also show that predictive evidence is tied to a particular construct, criterion, population, and temporal design; performance in those settings does not directly establish the validity of subjective well-being scores derived from Weibo.
+
+Psycholinguistic dictionaries offer an interpretable representation of this language. Predefined categories connect word use to recognizable psychological domains, while losing some contextual information. Tausczik and Pennebaker (2010) describe how context, irony, and idioms can defeat simple word-category assignments. A comparison of closed- and open-vocabulary methods further suggests that broad category summaries and more specific content patterns can serve complementary purposes (Eichstaedt et al., 2021). For Chinese social-media texts, Zhao et al. (2016) found heterogeneous agreement between simplified Chinese LIWC category scores and human judgments. Detecting words associated with an emotion therefore need not amount to measuring the author\textquotesingle s emotional experience. Dictionary-derived predictions require evaluation against participant-level criteria, alongside scrutiny of the language being summarized.
+
+The multidimensional structure of subjective well-being raises a further question about how these features should be modeled. Learning related outcomes through a shared representation can supply an inductive bias, as developed in multitask learning (Caruana, 1997). Here, independent regressors allow different linguistic relationships for each component, whereas shared-output trees use common feature-space partitions and return outcome vectors (Kocev et al., 2007). We describe this specifically as multi-output regression: the broader multitask literature contains sharing structures and task definitions beyond this setting (Zhang \& Yang, 2022). Outcome correlations motivate the comparison but do not establish that a common partition will generalize better. Model comparison must therefore use participants excluded from fitting and parameter selection (Yarkoni \& Westfall, 2017).
+
+The present study examines these questions in a secondary analysis of an existing Weibo dataset. We ask whether aggregated language features predict each well-being component in held-out participants, whether selected shared-output procedures improve on independent procedures within a fixed search budget, and which categories contribute to the selected tree model. These questions distinguish predictive association, improvement in numerical error, and interpretation of the fitted model. Participant-level separation and fold-local preprocessing address evaluation risks from repeated observations and information leakage (Kapoor \& Narayanan, 2023), while comparison with a mean baseline and uncertainty estimates help establish the strength of the resulting evidence.
+
+\section{Method}\label{method}
+
+\subsection{Participants and data provenance}\label{participants-and-data-provenance}
+
+The accompanying study documentation describes convenience recruitment through private invitations to approximately 20,000 Weibo users. Consenting participants completed an online questionnaire session, after which their public posts and profiles were retrieved through the Sina Weibo API. The documented eligibility rules excluded people younger than 18 years, users without public accounts or consent, and interrupted questionnaire sessions; completers received a monetary reward. Collection was linked to a parallel project conducted between September 2012 and February 2013, although the exact recruitment window for the present file could not be independently established. These procedures are reported from the collection documentation; the present work used existing data and recruited no new participants.
+
+The file contained 1,427 rows representing 1,037 distinct IDs. Each of 195 IDs had two distinct observations and an exact copy of one observation, producing 195 duplicate rows. Before model comparison, we removed exact duplicates and retained the observation with the earliest numeric questionnaire timestamp for each participant. There were no ties between distinct records at that timestamp. This yielded 1,037 participants and avoided weighting individuals by repeated observations. Later records were retained for sensitivity analysis. Demographic variables and questionnaire items were unavailable, and recruitment-stage counts could not be reconstructed.
+
+The original collection documentation reports informed consent, voluntary participation, withdrawal rights, and institutional review board approval. Identifying approval details are retained on the separate title page. The underlying approval and consent documents, authorization for this secondary use, and release permissions require confirmation by the responsible authors.
+
+\subsection{Measures and language features}\label{measures-and-language-features}
+
+The data dictionary identifies SWB\_\allowbreak{}nn as negative affect, SWB\_\allowbreak{}pp as positive affect, and SWB\_\allowbreak{}avg as life satisfaction, derived from Chinese adaptations of PANAS and SWLS. The original instruments contain two ten-item affect subscales and a five-item life-satisfaction scale (Diener et al., 1985; Watson et al., 1988). The dictionary names a Chinese SWLS translation source, but the exact administered forms, affect reporting period, and scoring transformation were not independently verified. All three delivered scores ranged from 0--1. We retained these stored units rather than inferring a conversion to questionnaire totals; RMSE therefore has no verified interpretation in original PANAS or SWLS units.
+
+Predictors comprised the 120 columns from AGENCY to the final column. According to the collection documentation, these summarize category frequencies in each participant\textquotesingle s aggregated posts using simplified Chinese LIWC, moral-foundation, moral-motivation, cultural-value, and basic-mood lexicons. IDs, timestamps, posting volume, questionnaire duration, and other questionnaire scores were excluded from model inputs. The analysis began with the aggregated features, rather than repeating text extraction. Exact dictionary versions and mappings for 13 abbreviated codes were unavailable. The feature ind exceeded one for 34 participants, contrary to a simple proportion interpretation; it was retained in the primary analysis and excluded with the unmapped codes in a planned sensitivity analysis. Predictors and outcomes had no missing or nonfinite values, and no predictor was constant. No statistical outlier was removed.
+
+The latest-post timestamp exceeded the questionnaire timestamp in 1,027 of 1,037 retained records. Original posts were unavailable, so a text window ending before the questionnaire could not be reconstructed. The analysis consequently estimates retrospective between-participant associations. Word-level frequencies, odd/even-post features, and item responses were also unavailable, precluding word clouds, text split-half reliability, and questionnaire internal consistency.
+
+\subsection{Model development}\label{model-development}
+
+An analysis plan was fixed after the structural data audit and before model comparison; it was not publicly preregistered. We randomly allocated participants to a 90\% development set (n = 933) and a 10\% final holdout (n = 104), using seed 20260923. Five-fold cross-validation within the development set guided parameter selection. The same participant partition was retained for all models and sensitivity analyses (Figure 1).
+
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth,height=0.58\textheight,keepaspectratio]{figures/figure1_analysis_flow.pdf}
+\par\vspace{5pt}{\raggedright\singlespacing\fontsize{10}{12}\selectfont\noindent Figure 1. Participant-level analysis workflow. After record reconciliation, 1,037 participants contribute one earliest observation each. Development (n = 933) and holdout (n = 104) IDs do not overlap. Fitted preprocessing is confined to training folds; model selection precedes final evaluation.\par}
+\end{figure}
+
+\FloatBarrier
+
+A median imputer and min-max input scaler were fitted within each training fold and then applied to its validation fold. The imputer did not alter these complete data. Outcomes were standardized using training-fold means and standard deviations to give the three targets comparable weight in shared-output losses; predictions were transformed back to stored score units. This fold-local procedure avoids fitting preprocessing on validation participants and differs from applying normalization once before cross-validation.
+
+We compared eight families: a training-mean baseline, independent ridge regression, independent random forests, independent extra trees, independent histogram gradient boosting, shared-output random forests, shared-output extra trees, and a multitask elastic net. Random forests average randomized trees, while extra trees randomize split thresholds more extensively (Breiman, 2001; Geurts et al., 2006). Shared tree models used common splits for all outcomes; independent models fitted separate regressors. Multitask elastic net provided a shared-sparsity linear alternative.
+
+The fixed grid contained 42 configurations and 210 composite fold evaluations, with three regressors in each independent-target fit. Selection minimized the mean cross-validated normalized RMSE: each target\textquotesingle s RMSE was divided by its training-fold standard deviation, then averaged across outcomes and folds. Independent families selected parameters separately for each outcome, whereas shared families selected one setting using the macro average. We retained the selected overall model, best independent ensemble, best shared model, and best tree family without consulting holdout performance. The full search grid, implementation checks, and selected settings are reported in the supplement. Optimization ended at the fixed budget, without test-driven retuning.
+
+\subsection{Exploratory optimization after the original evaluation}\label{exploratory-optimization-after-the-original-evaluation}
+
+After the original holdout results had been inspected, we fixed a separate search of 22 configurations to test stronger regularization, smooth nonlinear regression, and lower-dimensional alternatives. These included the mean and original shared-forest comparators, ridge regression with raw or log-transformed features, support-vector regression, shallow boosting, elastic net, partial least squares, and larger-leaf independent forests. All learned preprocessing remained fold-local. Five outer folds within the original development set each repeated five-fold selection internally; a final five-fold search on all development participants then fixed one candidate for evaluation on the previously seen holdout. Repeating selection inside the outer folds addresses a specific source of selection bias (Cawley \& Talbot, 2010). However, this entire extension remains exploratory because earlier development analyses and holdout results were already known. We retained the original primary results and stopped at the fixed budget. The supplement reports the complete configuration grid, outer-fold results, and exploratory comparisons.
+
+\subsection{Evaluation and uncertainty}\label{evaluation-and-uncertainty}
+
+All model families were evaluated on the same holdout after selection. Pearson r quantified linear association, with Fisher-z 95\% confidence intervals and two-sided tests. RMSE quantified numerical prediction error in stored units, with percentile 95\% intervals from 5,000 participant bootstrap resamples. The three selected-model correlation tests were Holm-adjusted. R-squared and Spearman correlation were also retained. Correlation is undefined for a constant mean prediction; moreover, correlation alone does not demonstrate numerical agreement or sensitivity to within-person change.
+
+Two planned comparisons assessed the selected model against the training mean and the best shared model against the best independent ensemble. We estimated paired RMSE differences with 5,000 participant bootstrap resamples and used 10,000 within-participant prediction swaps to test mean squared-error differences, with a plus-one correction. Holm adjustment covered the six comparison-by-outcome tests. Bootstrap intervals are pointwise, rather than simultaneous across those tests. Inference conditions on the fitted models and this participant split; swap tests additionally assume the relevant prediction exchangeability. Neither procedure includes uncertainty from retraining on another sample or from convenience recruitment.
+
+\subsection{Sensitivity analyses and model interpretation}\label{sensitivity-analyses-and-model-interpretation}
+
+Three prespecified sensitivities retained the original participant allocation and selected hyperparameters: using the latest distinct record per participant, retaining only IDs observed once, and excluding ind plus the 13 unmapped codes. Models were refitted without retuning. Three repetitions of five-fold development cross-validation further described variability under frozen settings. Because development data had already informed parameter selection, these repetitions were diagnostic rather than independent nested validation.
+
+We interpreted the best development-selected tree family using tree-path-dependent TreeSHAP on development participants (Lundberg et al., 2020). Contributions were returned to stored outcome units, checked for additive reconstruction, and ranked by mean absolute magnitude. The union of the ten highest-ranked features per outcome was then permuted individually in the holdout, using 20 shuffles per feature. Shuffle variability describes model sensitivity, not a population confidence interval. Attribution and permutation results concern the fitted prediction function and do not identify causal effects of language on well-being (Janzing et al., 2020).
+
+Analyses used Python 3.12.7, scikit-learn 1.9.1, and SHAP 0.52.0. Scripts, participant assignments, predictions, and computational reproduction results are retained in the accompanying analysis package and supplement.
+
+\FloatBarrier
+
+\section{Results}\label{results}
+
+\subsection{Sample characteristics and model selection}\label{sample-characteristics-and-model-selection}
+
+Outcome distributions in the full, development, and holdout samples are presented in Table 1. Negative affect correlated \mbox{-0.307} with positive affect and \mbox{-0.408} with life satisfaction; positive affect correlated 0.458 with life satisfaction. These relationships motivated evaluating the components jointly while retaining outcome-specific performance estimates.
+
+\par\medskip\noindent\begin{minipage}{\linewidth}\singlespacing\fontsize{10}{12}\selectfont\setlength{\parindent}{0pt}
+{\bfseries Table 1 Outcome distributions in the participant datasets}\par\vspace{5pt}
+\begin{tabular}{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Outcome
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+All, M (SD)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Development, M (SD)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Holdout, M (SD)
+\end{minipage} \\
+\midrule\noalign{}
+Negative affect & 0.367 (0.160) & 0.364 (0.159) & 0.388 (0.169) \\
+Positive affect & 0.543 (0.156) & 0.545 (0.154) & 0.524 (0.169) \\
+Life satisfaction & 0.419 (0.210) & 0.421 (0.211) & 0.401 (0.205) \\
+\bottomrule
+\end{tabular}
+\par\vspace{4pt}Note. All n = 1,037; development n = 933; holdout n = 104. Scores are delivered CSV units; all primary outcome ranges are 0--1. One earliest observation per participant. SD uses the sample denominator.
+\end{minipage}\par\medskip
+
+Shared random forest had the lowest development macro normalized RMSE (0.9963), closely followed by independent random forest (0.9965); the mean baseline scored 1.0016. The selected shared forest used 256 trees, a minimum leaf size of 15, and all predictors as split candidates. Full development results and selected settings are provided in the supplement.
+
+\subsection{Held-out association and prediction error}\label{held-out-association-and-prediction-error}
+
+On 104 held-out participants, the selected shared forest\textquotesingle s correlations with negative affect, positive affect, and life satisfaction were 0.247, 0.284, and 0.152, respectively (Table 2). The Holm-adjusted tests gave P = 0.023, P = 0.010, and P = 0.124. Thus, the two affect estimates were distinguishable from zero under this correction, whereas the life-satisfaction interval included zero. This pattern is not a test of differences between the outcomes. Figure 2 places these estimates alongside every evaluated model family.
+
+\par\medskip\noindent\begin{minipage}{\linewidth}\singlespacing\fontsize{10}{12}\selectfont\setlength{\parindent}{0pt}
+{\bfseries Table 2 Held-out performance of the selected models and baseline}\par\vspace{5pt}
+\begin{tabular}{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1700}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1900}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2900}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Model
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Outcome
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Pearson r {[}95\% CI{]}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+p
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+RMSE {[}95\% CI{]}
+\end{minipage} \\
+\midrule\noalign{}
+Shared RF & Negative affect & 0.247 {[}0.057, 0.419{]} & 0.012 & 0.166 {[}0.146, 0.186{]} \\
+Shared RF & Positive affect & 0.284 {[}0.097, 0.452{]} & 0.003 & 0.165 {[}0.143, 0.187{]} \\
+Shared RF & Life satisfaction & 0.152 {[}\mbox{-0.042}, 0.335{]} & 0.124 & 0.202 {[}0.181, 0.222{]} \\
+Training mean & Negative affect & Undefined & --- & 0.169 {[}0.150, 0.190{]} \\
+Training mean & Positive affect & Undefined & --- & 0.170 {[}0.146, 0.192{]} \\
+Training mean & Life satisfaction & Undefined & --- & 0.205 {[}0.184, 0.225{]} \\
+Independent RF & Negative affect & 0.230 {[}0.039, 0.405{]} & 0.019 & 0.165 {[}0.144, 0.185{]} \\
+Independent RF & Positive affect & 0.325 {[}0.141, 0.487{]} & \textless{} .001 & 0.163 {[}0.141, 0.186{]} \\
+Independent RF & Life satisfaction & 0.184 {[}\mbox{-0.008}, 0.364{]} & 0.061 & 0.201 {[}0.180, 0.222{]} \\
+\bottomrule
+\end{tabular}
+\par\vspace{4pt}Note. n = 104. RF = random forest. Shared RF was the development-selected overall model; independent RF was the selected independent ensemble. Pearson intervals use Fisher z; p values are unadjusted two-sided tests. The selected model\textquotesingle s three correlations are additionally Holm-adjusted in the text. RMSE intervals use 5,000 participant bootstrap resamples; scores retain CSV units. Mean predictions have undefined r. All eight families appear in Supplementary Table S1.
+\end{minipage}\par\medskip
+
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth,height=0.58\textheight,keepaspectratio]{figures/figure2_model_performance.pdf}
+\par\vspace{5pt}{\raggedright\singlespacing\fontsize{10}{12}\selectfont\noindent Figure 2. Held-out predictive performance across eight model families (n = 104). A--C: Pearson r with Fisher-z 95\% intervals, using a common correlation scale. D--F: RMSE with 5,000-resample participant-bootstrap 95\% intervals in stored score units. The diamond and asterisk mark development-selected shared RF, not statistical significance; the open square and reference line denote the mean baseline, whose correlation is undefined. Families are ordered by development performance. RF = random forest; ET = extra trees; HGB = histogram gradient boosting.\par}
+\end{figure}
+
+\FloatBarrier
+
+The selected model\textquotesingle s RMSEs were 0.166, 0.165, and 0.202 in stored score units, with R-squared values of 0.020, 0.040, and 0.015. Predictions were concentrated near central scores despite the broader observed ranges (Figure 3). The mean baseline\textquotesingle s RMSEs were 0.169, 0.170, and 0.205, indicating that the observed reductions in numerical error were small.
+
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth,height=0.58\textheight,keepaspectratio]{figures/figure3_observed_predicted.pdf}
+\par\vspace{5pt}{\raggedright\singlespacing\fontsize{10}{12}\selectfont\noindent Figure 3. Observed and predicted scores from the development-selected shared random forest. Each point represents one of 104 held-out participants; axes use stored score units and include all predictions. A: negative affect; B: positive affect; C: life satisfaction. The dashed identity line indicates exact agreement, rather than a fitted regression.\par}
+\end{figure}
+
+\FloatBarrier
+
+\subsection{Comparisons with the baseline and independent models}\label{comparisons-with-the-baseline-and-independent-models}
+
+Selected-model-minus-baseline RMSE differences were \mbox{-0.0034}, \mbox{-0.0048}, and \mbox{-0.0024} for negative affect, positive affect, and life satisfaction (Table 3). The pointwise bootstrap intervals for the two affect differences excluded zero. However, none of the paired swap tests met the six-test Holm-adjusted criterion (adjusted P = 0.113, P = 0.101, and P = 1.000). These summaries reflect different uncertainty procedures; multiplicity adjustment does not change the observed error reductions.
+
+Shared-minus-independent random-forest RMSE differences were 0.0009, 0.0015, and 0.0011. The shared procedure had slightly higher point-estimate error on each outcome, but every difference interval included zero. This comparison did not establish a shared-learning advantage or equivalence between the procedures. Model selection remained based on development performance.
+
+\par\medskip\noindent\begin{minipage}{\linewidth}\singlespacing\fontsize{10}{12}\selectfont\setlength{\parindent}{0pt}
+{\bfseries Table 3 Paired differences in held-out prediction error}\par\vspace{5pt}
+\begin{tabular}{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2200}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1900}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1300}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2200}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1200}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1200}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Comparison
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Outcome
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Delta RMSE
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+95\% CI
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+p (swap)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+p (Holm)
+\end{minipage} \\
+\midrule\noalign{}
+Selected vs mean & Negative affect & \mbox{-0.0034} & {[}\mbox{-0.006}, \mbox{-0.001}{]} & 0.023 & 0.113 \\
+Selected vs mean & Positive affect & \mbox{-0.0048} & {[}\mbox{-0.008}, \mbox{-0.001}{]} & 0.017 & 0.101 \\
+Selected vs mean & Life satisfaction & \mbox{-0.0024} & {[}\mbox{-0.007}, 0.002{]} & 0.337 & 1.000 \\
+Shared vs independent & Negative affect & 0.0009 & {[}\mbox{-0.002}, 0.004{]} & 0.533 & 1.000 \\
+Shared vs independent & Positive affect & 0.0015 & {[}\mbox{-0.001}, 0.004{]} & 0.193 & 0.772 \\
+Shared vs independent & Life satisfaction & 0.0011 & {[}\mbox{-0.002}, 0.004{]} & 0.502 & 1.000 \\
+\bottomrule
+\end{tabular}
+\par\vspace{4pt}Note. n = 104. Differences are first model minus second; negative favors the first. The selected/shared model is shared RF; the independent comparator is independent RF. Pointwise intervals use 5,000 paired participant bootstraps. Tests use 10,000 prediction swaps on mean squared-error differences; Holm adjustment covers all six rows. Inference conditions on fitted models and the participant split.
+\end{minipage}\par\medskip
+
+\subsection{Contributions of linguistic categories}\label{contributions-of-linguistic-categories}
+
+The largest mean absolute training attributions were Sexual (0.0041), C10 (0.0040), C2 (0.0036) for negative affect; Sexual (0.0045), We (0.0039), Family (0.0030) for positive affect; and Family (0.0061), We (0.0056), C10 (0.0052) for life satisfaction (Figure 4). The values quantify the magnitude of contribution to fitted predictions in stored score units. C10 and C2 remain unmapped codes, so they cannot be assigned psychological meanings from these data.
+
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth,height=0.58\textheight,keepaspectratio]{figures/figure4_feature_attribution.pdf}
+\par\vspace{5pt}{\raggedright\singlespacing\fontsize{10}{12}\selectfont\noindent Figure 4. Ten largest mean absolute training TreeSHAP contributions per outcome for shared RF (n = 933). A: negative affect; B: positive affect; C: life satisfaction. Values use stored outcome units and a tree-path-dependent background. Daggers and hatching identify dictionary codes without verified semantic mappings. Absolute magnitudes indicate contribution size, not direction, statistical significance, or causal effects.\par}
+\end{figure}
+
+\FloatBarrier
+
+Holdout permutation diagnostics for 14 training-selected features produced small, mixed error changes. Some high-attribution features could be shuffled without a deterioration in error. These results distinguish prominence in the fitted training model from consistent effects on held-out prediction error; full feature-wise changes and shuffle variability are reported in the supplement.
+
+\subsection{Prespecified sensitivity analyses}\label{prespecified-sensitivity-analyses}
+
+Using the latest records yielded correlations of 0.259, 0.286, and 0.101 for the originally selected model. The singleton-ID analysis retained 85 holdout participants and yielded correlations of 0.303, 0.301, and 0.173. Excluding ind and the unmapped codes yielded correlations of 0.301, 0.268, and 0.125, with RMSEs of 0.165, 0.165, and 0.203. Point estimates varied, while the broad pattern of modest associations and limited numerical prediction remained. These sensitivities address the specified handling choices; they do not establish equivalence across datasets or resolve unmeasured sources of error. Complete intervals and repeated-development-CV diagnostics are provided in the supplement.
+
+\subsection{Exploratory optimization}\label{exploratory-optimization}
+
+The additional search selected independent forests with a minimum leaf size of 60 and half of the predictors considered at each split. In nested development validation, macro normalized RMSE was 1.0006 for the selected procedure, 1.0001 for the fixed original shared forest, and 1.0007 for the mean baseline. The selected procedure\textquotesingle s error was 0.044\% higher than the original forest\textquotesingle s, failing the predeclared exploratory heuristic of a 1\% reduction. On the previously seen holdout, correlations were 0.245, 0.332, and 0.164; RMSEs were 0.1661, 0.1645, and 0.2023. The positive-affect comparison with the mean baseline yielded an exploratory Holm-adjusted P = 0.011, while comparisons with the original shared forest were inconclusive for all outcomes (all adjusted P = 1.000). These reused-holdout comparisons do not establish an independently replicated improvement. Full results appear in Supplementary Tables S3--S6; the original primary estimates are retained.
+
+\FloatBarrier
+
+\section{Discussion}\label{discussion}
+
+\subsection{Principal findings}\label{principal-findings}
+
+Aggregated Weibo language contained modest information about participants\textquotesingle{} positive and negative affect, but the evidence for estimating life satisfaction was less conclusive. The selected model explained little variation in held-out scores, and its small reductions in prediction error relative to the training mean were not established after adjustment for the planned comparisons. The selected shared procedure also offered no established advantage over independent forests. These findings distinguish detectable associations with self-reported well-being from sufficiently accurate individual assessment. They do not establish a statistically significant difference in predictability between the three outcomes, because that contrast was not directly tested.
+
+The component-specific findings should be interpreted in light of the distinction between affective experience and cognitive evaluation in subjective well-being (Diener, 1984). PANAS was developed to measure positive and negative affect separately, whereas the SWLS asks respondents to evaluate their lives as a whole (Diener et al., 1985; Watson et al., 1988). One possible explanation for the present pattern is that aggregate language categories represent expressions associated with affect more readily than the standards and judgments underlying life satisfaction. This is an untested explanation, rather than a mechanism demonstrated by the correlations. Differences in criterion measurement, linguistic coverage, or sampling uncertainty could also contribute. The results therefore motivate outcome-specific validation without establishing why the outcomes differed numerically.
+
+\subsection{Relation to previous research}\label{relation-to-previous-research}
+
+The findings extend the question raised by earlier social-media language research from whether psychological information is present to how much a particular representation preserves. Schwartz et al. (2013) found predictive information in open-vocabulary Facebook features, and Eichstaedt et al. (2021) show how open and closed vocabularies expose different kinds of patterns. Their work motivates a within-sample representation comparison rather than an assumed accuracy gain. Kernel and regularization changes in the exploratory extension still used the same aggregate inputs, so its limited gains do not test whether richer language would help. Kern et al. (2016) also demonstrate that language quantity and aggregation choices matter. Because raw posts and matched word-level coverage were unavailable, we cannot separate inadequate linguistic information from noisy criteria, sampling variation, or model mismatch.
+
+Previous work also illustrates why prediction against one questionnaire criterion provides only part of an assessment argument. Park et al. (2015) evaluated language-based personality scores using convergent and discriminant relationships, informant reports, external correlates, and repeated language windows. The present evidence is narrower: it concerns held-out estimates of three questionnaire-derived scores and does not establish temporal reliability or convergence beyond those outcomes. Temporal alignment creates a further distinction. Eichstaedt et al. (2018) restricted language to periods preceding the first documentation of depression in medical records. In the present data, latest-post metadata usually extended beyond questionnaire completion, and raw posts were unavailable to impose an earlier cutoff. Thus, the current findings support a retrospective association, while the possibility of prospective well-being monitoring remains untested. This comparison concerns validation design, not equivalence between depression documentation, personality, and subjective well-being.
+
+Other digital-behavior studies clarify why the unit and timing of validation matter. Jaidka et al. (2020) found that regional and socioeconomic language variation complicated dictionary-based estimates of US county well-being. County-level estimates do not provide an expected accuracy for individuals on another platform. Stachl et al. (2020) used multiple smartphone behavior classes and nested validation to predict personality, illustrating a different combination of inputs and criteria. De Choudhury et al. (2013) explicitly aligned Twitter windows to retrospectively reported depression onset or survey dates; that design neither establishes prospective clinical validity nor validates continuous well-being scores. These comparisons identify design choices to test, without treating distinct constructs or sampling units as interchangeable.
+
+The comparison of shared and independent forests adds a qualification to the rationale for modeling well-being jointly. Multi-objective trees can use common splits to reduce variation across several targets and return a vector of predictions (Kocev et al., 2007). Such a constraint may be useful when targets have compatible relationships with the predictors, but correlations among the outcomes alone do not establish that compatibility. In this sample, the shared forest\textquotesingle s small development advantage did not become an established holdout advantage. The linguistic relationships relevant to each component may overlap only partly, or the available data may be insufficient to distinguish a small benefit from sampling variation. Neither explanation was directly tested. Independent models selected target-specific parameters, whereas the shared model used a common setting, so this is a comparison of selected procedures rather than an isolated manipulation of shared structure. The findings do not establish equivalence, negative transfer, or the inferiority of multitask learning in general.
+
+\subsection{Implications for well-being assessment}\label{implications-for-well-being-assessment}
+
+The findings distinguish detecting a language--well-being association from establishing an assessment measure. A model can track linear variation among participants while contributing little to accurate score estimation, as illustrated here by nonzero affect correlations alongside predictions concentrated near the mean and small error reductions. A positive rescaling or shift of predictions can leave Pearson correlation unchanged while altering RMSE. These measurement questions sit within the broader distinction between predictive and explanatory goals emphasized by Yarkoni and Westfall (2017). A detectable language--well-being association does not by itself identify a psychological process, validate the underlying questionnaire translation, or establish sensitivity to changes within a person. Evaluation should therefore connect the intended measurement claim to the evidence required for that claim, rather than treating a significant correlation as a general validation result.
+
+The original scales also set a more demanding comparison than correlation alone. Pavot and Diener (1993) distinguish temporal stability from sensitivity to meaningful changes in life satisfaction; both would need to be established anew for language-derived scores. Crawford and Henry (2004) evaluated PANAS psychometrics in a UK adult sample and explicitly considered population differences in factor structure. That evidence cannot certify the Chinese forms or score transformations used here. More broadly, evidence for established self-report measures includes reliability and convergence across methods (Diener et al., 2018). Predicting a questionnaire score supplies one relationship within this validation argument, rather than inheriting the questionnaire\textquotesingle s entire evidential foundation. The distinction between empirical prediction and causal explanation also precludes interpreting model accuracy as a demonstrated psychological mechanism (Shmueli, 2010).
+
+The attribution findings offer candidates for further investigation, but do not establish a psychological account of well-being. Categories labeled Family and We appeared among prominent inputs, alongside Sexual and unmapped codes. Chinese dictionary-validation research shows that detecting words associated with a category is distinct from identifying the contextual psychological meaning of an individual post (Zhao et al., 2016). Moreover, the reported absolute SHAP magnitudes indicate how much a feature contributed to the fitted predictions under the chosen background definition; they do not specify the direction or effect of a real-world intervention (Janzing et al., 2020; Lundberg et al., 2020). The small and mixed holdout permutation changes further limit a substantive interpretation of the ranking. The next step for these features is to verify their vocabulary and contexts and test whether their contribution replicates, rather than infer that discussing a topic improves or worsens well-being.
+
+For practice, these models remain research estimates: a possible role alongside direct assessment would require validation for a defined use, rather than follow automatically from the observed correlations. The errors cannot yet be translated into meaningful differences on the original instruments, and neither individual decision utility nor population-level representativeness was evaluated. Any eventual application would also need to preserve consent, privacy, and people\textquotesingle s control over sensitive inferences. These issues were raised explicitly in prior social-media health-prediction research (Eichstaedt et al., 2018), but they require decisions about the actual data and intended use rather than transfer of assurances from another study. Predictive feasibility and permission to deploy are separate questions.
+
+\subsection{Limitations and future research}\label{limitations-and-future-research}
+
+Several features of the available data limit conclusions about measurement. The administered questionnaire wording, affect reporting period, and label transformation could not be independently verified. Original instrument descriptions identify the intended constructs but cannot establish the reliability or equivalence of these particular stored scores. Item responses would be needed to evaluate the questionnaire measures, and temporally indexed posts would be needed to reconstruct pre-questionnaire language windows and test odd/even-text consistency. Temporally matched repeated questionnaires and distinct language windows would be needed to determine whether estimates track within-person change. The repeated records in this file do not establish that alignment; the present between-person prediction does not answer that question. These missing inputs constrain the scope of the present results, rather than demonstrating that such validation would fail.
+
+Generalization is also unresolved. The analysis used one convenience sample and a holdout of 104 participants, without demographic information for subgroup assessment. Participant-level splitting and fold-specific preprocessing address known routes to evaluation leakage (Kapoor \& Narayanan, 2023), but they do not establish transport to another population, period, or platform. Likewise, the record-selection and feature-exclusion sensitivities assess specific analytic choices rather than substitute for external validation. A separately recruited sample should therefore be used to evaluate frozen predictors, with predefined criteria for acceptable error and appropriate coverage of the population in which the scores would be interpreted.
+
+The exploratory extension reinforces this uncertainty rather than resolving it. Small samples can produce unstable performance estimates, and overlapping cross-validation training sets make naive fold-independence calculations misleading (Varoquaux, 2018). We therefore retain fold-level results without treating their standard deviation as a confidence interval or interpreting a favorable reused-holdout comparison as independent confirmation. No stable development advantage emerged from the additional search. This limits the case for further tuning of the same feature matrix, but does not establish a general accuracy ceiling for social-media well-being prediction.
+
+Two focused comparisons would be particularly informative after score definitions, dictionaries, and temporal alignment are resolved. First, comparing fixed categories with contextual or open-vocabulary features under the same participant split would test whether representation limits the estimation of each well-being component. Second, replicating the shared-versus-independent comparison with adequate precision and outcome-specific diagnostics would distinguish a reproducible shared-learning benefit from small, unstable differences. Neither comparison should be judged solely by whether a correlation crosses a significance threshold. The relevant advance would be evidence that the resulting scores improve error, stability, or interpretation for a defined use while remaining anchored to participants\textquotesingle{} reported experience.
+
+\section{Conclusion}\label{conclusion}
+
+Psycholinguistic features from Weibo showed modest linear associations with affect scores in held-out participants, alongside small observed error reductions over a mean baseline. The life-satisfaction estimate was less conclusive, without a direct test of between-outcome differences. The specified shared-output procedure did not demonstrate an advantage over independent forests. These findings benchmark the available representation and learning procedures; establishing a well-being assessment instrument requires additional evidence on numerical accuracy, reliability, temporal alignment, and generalization.
+
+\section{Declarations}\label{declarations}
+
+\subsection{Data and code availability}\label{data-and-code-availability}
+
+The dataset and analysis artifacts are retained in the local research package; no public deposit or persistent identifier has been established. The data custodian, sharing permissions, access conditions, and dataset citation are TO BE COMPLETED BY AUTHORS. A stable participant ID should not be assumed to establish irreversible anonymity.
+
+\subsection{Ethics and author statements}\label{ethics-and-author-statements}
+
+Ethical approval and consent are reported from the original collection documentation and require author confirmation for this secondary analysis. Author identities, contributions, funding, conflicts of interest, and acknowledgments are TO BE COMPLETED BY AUTHORS on the separate title page.
+
+\subsection{Use of artificial intelligence}\label{use-of-artificial-intelligence}
+
+OpenAI Codex assisted with analysis-code development and execution, literature retrieval and evidence checking, figure preparation, and drafting. The revision also used structured scientific-writing guidance and a question-based consistency review. Automated checks and independent agent reviews do not constitute responsible human-author approval; review of the data provenance, methods, interpretations, references, and declarations remains pending. Tool and skill provenance is documented in the revision record.
+
+\FloatBarrier
+
+\section{References}\label{references}
+
+\APAref Breiman, L. (2001). Random forests. \emph{Machine Learning}, \emph{45}(1), 5--32. \url{https://doi.org/10.1023/A:1010933404324}
+
+\APAref Caruana, R. (1997). Multitask learning. \emph{Machine Learning}, \emph{28}(1), 41--75. \url{https://doi.org/10.1023/A:1007379606734}
+
+\APAref Cawley, G. C., \& Talbot, N. L. C. (2010). On over-fitting in model selection and subsequent selection bias in performance evaluation. \emph{Journal of Machine Learning Research}, \emph{11}(70), 2079--2107. \url{https://jmlr.org/papers/v11/cawley10a.html}
+
+\APAref Crawford, J. R., \& Henry, J. D. (2004). The Positive and Negative Affect Schedule (PANAS): Construct validity, measurement properties and normative data in a large non-clinical sample. \emph{British Journal of Clinical Psychology}, \emph{43}(3), 245--265. \url{https://doi.org/10.1348/0144665031752934}
+
+\APAref De Choudhury, M., Gamon, M., Counts, S., \& Horvitz, E. (2013). Predicting depression via social media. \emph{Proceedings of the International AAAI Conference on Web and Social Media}, \emph{7}(1), 128--137. \url{https://doi.org/10.1609/icwsm.v7i1.14432}
+
+\APAref Diener, E. (1984). Subjective well-being. \emph{Psychological Bulletin}, \emph{95}(3), 542--575. \url{https://doi.org/10.1037/0033-2909.95.3.542}
+
+\APAref Diener, E., Emmons, R. A., Larsen, R. J., \& Griffin, S. (1985). The satisfaction with life scale. \emph{Journal of Personality Assessment}, \emph{49}(1), 71--75. \url{https://doi.org/10.1207/s15327752jpa4901_13}
+
+\APAref Diener, E., Suh, E. M., Lucas, R. E., \& Smith, H. L. (1999). Subjective well-being: Three decades of progress. \emph{Psychological Bulletin}, \emph{125}(2), 276--302. \url{https://doi.org/10.1037/0033-2909.125.2.276}
+
+\APAref Diener, E., Lucas, R. E., \& Oishi, S. (2018). Advances and open questions in the science of subjective well-being. \emph{Collabra: Psychology}, \emph{4}(1), 15. \url{https://doi.org/10.1525/collabra.115}
+
+\APAref Eichstaedt, J. C., Smith, R. J., Merchant, R. M., Ungar, L. H., Crutchley, P., Preoţiuc-Pietro, D., Asch, D. A., \& Schwartz, H. A. (2018). Facebook language predicts depression in medical records. \emph{Proceedings of the National Academy of Sciences}, \emph{115}(44), 11203--11208. \url{https://doi.org/10.1073/pnas.1802331115}
+
+\APAref Eichstaedt, J. C., Kern, M. L., Yaden, D. B., Schwartz, H. A., Giorgi, S., Park, G., Hagan, C. A., Tobolsky, V. A., Smith, L. K., Buffone, A., Iwry, J., Seligman, M. E. P., \& Ungar, L. H. (2021). Closed- and open-vocabulary approaches to text analysis: A review, quantitative comparison, and recommendations. \emph{Psychological Methods}, \emph{26}(4), 398--427. \url{https://doi.org/10.1037/met0000349}
+
+\APAref Geurts, P., Ernst, D., \& Wehenkel, L. (2006). Extremely randomized trees. \emph{Machine Learning}, \emph{63}(1), 3--42. \url{https://doi.org/10.1007/s10994-006-6226-1}
+
+\APAref Jaidka, K., Giorgi, S., Schwartz, H. A., Kern, M. L., Ungar, L. H., \& Eichstaedt, J. C. (2020). Estimating geographic subjective well-being from Twitter: A comparison of dictionary and data-driven language methods. \emph{Proceedings of the National Academy of Sciences}, \emph{117}(19), 10165--10171. \url{https://doi.org/10.1073/pnas.1906364117}
+
+\APAref Janzing, D., Minorics, L., \& Blöbaum, P. (2020). Feature relevance quantification in explainable AI: A causal problem. In S. Chiappa \& R. Calandra (Eds.), \emph{Proceedings of the Twenty Third International Conference on Artificial Intelligence and Statistics} (Vol. 108, pp. 2907--2916). PMLR. \url{https://proceedings.mlr.press/v108/janzing20a.html}
+
+\APAref Kapoor, S., \& Narayanan, A. (2023). Leakage and the reproducibility crisis in machine-learning-based science. \emph{Patterns}, \emph{4}(9), 100804. \url{https://doi.org/10.1016/j.patter.2023.100804}
+
+\APAref Kern, M. L., Park, G., Eichstaedt, J. C., Schwartz, H. A., Sap, M., Smith, L. K., \& Ungar, L. H. (2016). Gaining insights from social media language: Methodologies and challenges. \emph{Psychological Methods}, \emph{21}(4), 507--525. \url{https://doi.org/10.1037/met0000091}
+
+\APAref Kocev, D., Vens, C., Struyf, J., \& Džeroski, S. (2007). Ensembles of multi-objective decision trees. In J. N. Kok, J. Koronacki, R. López de Mántaras, S. Matwin, D. Mladenič, \& A. Skowron (Eds.), \emph{Machine Learning: ECML 2007} (Vol. 4701, pp. 624--631). Springer Berlin Heidelberg. \url{https://doi.org/10.1007/978-3-540-74958-5_61}
+
+\APAref Lundberg, S. M., Erion, G., Chen, H., DeGrave, A., Prutkin, J. M., Nair, B., Katz, R., Himmelfarb, J., Bansal, N., \& Lee, S.-I. (2020). From local explanations to global understanding with explainable AI for trees. \emph{Nature Machine Intelligence}, \emph{2}(1), 56--67. \url{https://doi.org/10.1038/s42256-019-0138-9}
+
+\APAref Park, G., Schwartz, H. A., Eichstaedt, J. C., Kern, M. L., Kosinski, M., Stillwell, D. J., Ungar, L. H., \& Seligman, M. E. P. (2015). Automatic personality assessment through social media language. \emph{Journal of Personality and Social Psychology}, \emph{108}(6), 934--952. \url{https://doi.org/10.1037/pspp0000020}
+
+\APAref Pavot, W., \& Diener, E. (1993). Review of the Satisfaction With Life Scale. \emph{Psychological Assessment}, \emph{5}(2), 164--172. \url{https://doi.org/10.1037/1040-3590.5.2.164}
+
+\APAref Ryan, R. M., \& Deci, E. L. (2001). On happiness and human potentials: A review of research on hedonic and eudaimonic well-being. \emph{Annual Review of Psychology}, \emph{52}(1), 141--166. \url{https://doi.org/10.1146/annurev.psych.52.1.141}
+
+\APAref Schwartz, H. A., Eichstaedt, J. C., Kern, M. L., Dziurzynski, L., Ramones, S. M., Agrawal, M., Shah, A., Kosinski, M., Stillwell, D., Seligman, M. E. P., \& Ungar, L. H. (2013). Personality, gender, and age in the language of social media: The open-vocabulary approach. \emph{PLoS ONE}, \emph{8}(9), e73791. \url{https://doi.org/10.1371/journal.pone.0073791}
+
+\APAref Shmueli, G. (2010). To explain or to predict? \emph{Statistical Science}, \emph{25}(3), 289--310. \url{https://doi.org/10.1214/10-STS330}
+
+\APAref Stachl, C., Au, Q., Schoedel, R., Gosling, S. D., Harari, G. M., Buschek, D., Völkel, S. T., Schuwerk, T., Oldemeier, M., Ullmann, T., Hussmann, H., Bischl, B., \& Bühner, M. (2020). Predicting personality from patterns of behavior collected with smartphones. \emph{Proceedings of the National Academy of Sciences}, \emph{117}(30), 17680--17687. \url{https://doi.org/10.1073/pnas.1920484117}
+
+\APAref Tausczik, Y. R., \& Pennebaker, J. W. (2010). The psychological meaning of words: LIWC and computerized text analysis methods. \emph{Journal of Language and Social Psychology}, \emph{29}(1), 24--54. \url{https://doi.org/10.1177/0261927X09351676}
+
+\APAref Varoquaux, G. (2018). Cross-validation failure: Small sample sizes lead to large error bars. \emph{NeuroImage}, \emph{180}, 68--77. \url{https://doi.org/10.1016/j.neuroimage.2017.06.061}
+
+\APAref Watson, D., Clark, L. A., \& Tellegen, A. (1988). Development and validation of brief measures of positive and negative affect: The PANAS scales. \emph{Journal of Personality and Social Psychology}, \emph{54}(6), 1063--1070. \url{https://doi.org/10.1037/0022-3514.54.6.1063}
+
+\APAref Yarkoni, T., \& Westfall, J. (2017). Choosing prediction over explanation in psychology: Lessons from machine learning. \emph{Perspectives on Psychological Science}, \emph{12}(6), 1100--1122. \url{https://doi.org/10.1177/1745691617693393}
+
+\APAref Zhang, Y., \& Yang, Q. (2022). A survey on multi-task learning. \emph{IEEE Transactions on Knowledge and Data Engineering}, \emph{34}(12), 5586--5609. \url{https://doi.org/10.1109/TKDE.2021.3070203}
+
+\APAref Zhao, N., Jiao, D., Bai, S., \& Zhu, T. (2016). Evaluating the validity of simplified Chinese version of LIWC in detecting psychological expressions in short texts on social network services. \emph{PLOS ONE}, \emph{11}(6), e0157947. \url{https://doi.org/10.1371/journal.pone.0157947}
+
+\end{document}

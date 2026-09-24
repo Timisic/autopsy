@@ -1,0 +1,36 @@
+{
+  "en": {
+    "manuscript": {
+      "pages": 17,
+      "paragraphs_checked": 121,
+      "missing": []
+    },
+    "supplement": {
+      "pages": 7,
+      "paragraphs_checked": 35,
+      "missing": []
+    },
+    "title_page": {
+      "pages": 3,
+      "paragraphs_checked": 24,
+      "missing": []
+    }
+  },
+  "zh": {
+    "manuscript": {
+      "pages": 15,
+      "paragraphs_checked": 121,
+      "missing": []
+    },
+    "supplement": {
+      "pages": 7,
+      "paragraphs_checked": 35,
+      "missing": []
+    },
+    "title_page": {
+      "pages": 2,
+      "paragraphs_checked": 24,
+      "missing": []
+    }
+  }
+}

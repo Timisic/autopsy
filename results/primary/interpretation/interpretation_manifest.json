@@ -1,0 +1,26 @@
+{
+  "family": "joint_rf",
+  "training_n": 933,
+  "test_n": 104,
+  "top_features": [
+    "We",
+    "SheHe",
+    "Family",
+    "Sexual",
+    "tFuture",
+    "Period",
+    "C2",
+    "C10",
+    "D",
+    "Angery",
+    "tNow",
+    "Hate",
+    "HarmVirtue",
+    "Quote"
+  ],
+  "selection": "Union of top 10 mean absolute training SHAP per target",
+  "shap_version": "0.52.0",
+  "perturbation": "tree_path_dependent",
+  "max_additivity_error": 2.220446049250313e-16,
+  "units": "stored CSV target units"
+}

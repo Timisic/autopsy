@@ -1,0 +1,23 @@
+{
+  "seed": 20260923,
+  "versions": {
+    "python": "3.12.7 (main, Oct  1 2024, 02:05:46) [Clang 16.0.0 (clang-1600.0.26.3)]",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "sklearn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "platform": "macOS-26.5-arm64-arm-64bit",
+  "input_sha256": "c3565732297b972932a3b64ed20b95070a8de5b5269366ad78f699d3e24b2388",
+  "script_sha256": "f19d6e20852253fc91a156b7d698e11844a8fd66e38931fb5eca1f88ca3943d7",
+  "protocol_sha256": "a955cef21bf6686d0c0133dfca0ea24c9c96842f7845073944b49bab8d9b6487",
+  "config_sha256": "da24b9d064a35bf2c6ac780bcdc59a5888720a7d11c3735c276ca497d3d835ee",
+  "command": [
+    "scripts/analyze.py",
+    "--phase",
+    "evaluate"
+  ],
+  "runtime_seconds": 126.9387047290802,
+  "test_evaluation_after_selection": true
+}

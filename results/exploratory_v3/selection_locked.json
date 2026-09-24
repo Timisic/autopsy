@@ -1,0 +1,19 @@
+{
+  "winner": {
+    "id": "rf_60",
+    "kind": "rf",
+    "leaf": 60
+  },
+  "cv_score": 0.9968722745925931,
+  "nested_summary": {
+    "mean": 1.0007300981343936,
+    "original_rf": 1.000139761569139,
+    "selected": 1.0005804534463538,
+    "relative_improvement_vs_original": -0.0004406302940336282
+  },
+  "exploratory": true,
+  "test_previously_seen": true,
+  "input_sha256": "c3565732297b972932a3b64ed20b95070a8de5b5269366ad78f699d3e24b2388",
+  "script_sha256": "c15a01bd90d336f6d6aa3006719af818fa09fa6e3a0a01fab0e32b91d192f865",
+  "protocol_sha256": "563f1295e42567c952f7c54acb042b9a38f481ccb2d9a7031023558d77d3f165"
+}
