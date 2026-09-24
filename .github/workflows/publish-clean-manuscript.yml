@@ -16,18 +16,24 @@ jobs:
       - name: Install compilation tools
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends texlive-xetex texlive-latex-extra texlive-lang-chinese fonts-liberation fonts-liberation2 poppler-utils
+          sudo apt-get install -y --no-install-recommends texlive-xetex texlive-latex-extra texlive-lang-chinese texlive-fonts-recommended fonts-liberation fonts-liberation2 poppler-utils
       - name: Assemble the clean publication tree
         run: python3 .delivery/install.py
       - name: Compile all six documents
         run: bash build.sh
       - name: Verify and record the publication
-        run: python3 .delivery/check_publish.py
-      - name: Commit the verified publication
-        run: |
-          rm -rf .delivery
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A
-          git commit -m 'Publish clean bilingual LaTeX and PDF manuscripts; archive research trace'
-          git push origin HEAD:publish/clean-manuscript-20260924
+        run: python3 .delivery/check_publish.py || { cat trace/repository_checks.json; exit 1; }
+      - name: Verify staged bytes and commit publication
+        run: python3 .delivery/publish.py
+      - name: Save diagnostics on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: publication-diagnostics
+          retention-days: 3
+          include-hidden-files: true
+          path: |
+            .build/**/*.log
+            en/*.pdf
+            zh/*.pdf
+            trace/repository_checks.json

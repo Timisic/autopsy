@@ -59,8 +59,13 @@ build.chmod(0o755)
 readme = ROOT / 'README.md'
 text = readme.read_text()
 assert '用 XeLaTeX 连续编译所需主文件两遍' in text
-readme.write_text(text.replace('用 XeLaTeX 连续编译所需主文件两遍', '用 XeLaTeX 连续编译所需主文件三遍，直至交叉引用稳定'))
+text = text.replace('用 XeLaTeX 连续编译所需主文件两遍', '用 XeLaTeX 连续编译所需主文件三遍，直至交叉引用稳定')
+text += '\nDebian/Ubuntu 最小环境依赖：`texlive-xetex texlive-latex-extra texlive-lang-chinese texlive-fonts-recommended fonts-liberation`。其中 `texlive-fonts-recommended` 提供超链接所需的字体度量。\n'
+readme.write_text(text)
+# Preserve historical byte streams, including CRLF, when Git stages the trace.
+(ROOT / 'trace/.gitattributes').write_text('baseline/** -text\n')
 expected_files = {m.name: hashlib.sha256((ROOT / m.name).read_bytes()).hexdigest() for m in members}
+expected_files['trace/.gitattributes'] = hashlib.sha256((ROOT / 'trace/.gitattributes').read_bytes()).hexdigest()
 (DELIVERY / 'expected_files.json').write_text(json.dumps(expected_files, indent=2) + '\n')
 (DELIVERY / 'archived_files.json').write_text(json.dumps(archived, indent=2) + '\n')
 (ROOT / 'trace' / 'local_pdf_checks.json').write_text(json.dumps(manifest['local_pdf_checks'], indent=2) + '\n')

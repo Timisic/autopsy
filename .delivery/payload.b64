@@ -1,4 +1,5 @@
 {
+  "publication_attempt": 2,
   "parts": ["part00.bin", "part01.bin", "part02.bin", "part03.bin", "part04.bin", "part05.bin", "part06.bin", "part07.bin", "part08.bin"],
   "sha256": "6e2dbaa58aa13f62a17905b634c06b4347845ef73704f1d57092dc6c941c6356",
   "local_pdf_checks": [
