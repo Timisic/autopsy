@@ -1,0 +1,11 @@
+\begin{tikzpicture}[font=\small,box/.style={draw=black!60,fill=black!2,rounded corners=2pt,align=center,inner sep=7pt},arr/.style={-{Latex[length=2mm]},thick}]
+\node[box,text width=10.4cm] (raw) at (0,0) {\textbf{1,427 supplied rows}\\1,037 participant IDs};
+\node[box,text width=10.4cm] (dedup) at (0,-1.65) {\textbf{1,232 distinct observations}\\195 exact duplicate rows removed};
+\node[box,text width=10.4cm] (one) at (0,-3.30) {\textbf{1,037 participant records}\\One numerically earliest questionnaire record per ID};
+\node[box,text width=4.65cm] (dev) at (-3,-5.55) {\textbf{Development: 933}\\Fold-local preprocessing\\Five-fold model selection\\Freeze settings};
+\node[box,text width=4.65cm] (test) at (3,-5.55) {\textbf{Holdout: 104}\\Same participants across models\\Correlation and prediction error\\Paired comparisons};
+\draw[arr] (raw) -- (dedup);
+\draw[arr] (dedup) -- (one);
+\draw[arr] (one.south) -- ++(0,-.35) -| (dev.north);
+\draw[arr] (one.south) -- ++(0,-.35) -| (test.north);
+\end{tikzpicture}

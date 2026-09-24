@@ -1,0 +1,21 @@
+\begingroup\singlespacing\fontsize{8.8}{10.82}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.1\linewidth}>{\raggedright\arraybackslash}p{0.25\linewidth}>{\raggedright\arraybackslash}p{0.1\linewidth}>{\raggedright\arraybackslash}p{0.27\linewidth}>{\raggedright\arraybackslash}p{0.08\linewidth}>{\raggedright\arraybackslash}p{0.08\linewidth}@{}}
+\caption{探索性所选模型在此前已查看留出集上的表现}\label{tab:S9}\\
+\toprule
+结局 & $r$ [95\% CI] & $p$ & RMSE [95\% CI] & $R^2$ & $\rho$ \\
+\midrule
+\endfirsthead
+\multicolumn{6}{l}{表 \thetable{} （续）}\\
+\toprule
+结局 & $r$ [95\% CI] & $p$ & RMSE [95\% CI] & $R^2$ & $\rho$ \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+NA & 0.245\newline [0.055, 0.417] & 0.012 & 0.1661\newline [0.1461, 0.1871] & 0.020 & 0.229 \\
+PA & 0.332\newline [0.149, 0.493] & $<0.001$ & 0.1645\newline [0.1415, 0.1886] & 0.045 & 0.339 \\
+LS & 0.164\newline [$-0.029$, 0.346] & 0.095 & 0.2023\newline [0.1821, 0.2223] & 0.016 & 0.138 \\
+\end{longtable}
+\tabnote{NA 为消极情绪，PA 为积极情绪，LS 为生活满意度。$n=104$。独立 RF：256 棵树，最小叶节点样本数 60，特征比例 0.5。$p$ 为未经校正的 Pearson 检验，$\rho$ 为 Spearman 相关。RMSE 保留存储单位。该留出集已在主分析中查看，这些是探索性估计，不是独立重复验证。}
+\endgroup

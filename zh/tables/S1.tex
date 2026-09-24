@@ -1,0 +1,42 @@
+\begingroup\singlespacing\fontsize{8.5}{10.46}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.18\linewidth}>{\raggedright\arraybackslash}p{0.075\linewidth}>{\raggedright\arraybackslash}p{0.21\linewidth}>{\raggedright\arraybackslash}p{0.075\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.075\linewidth}>{\raggedright\arraybackslash}p{0.06\linewidth}@{}}
+\caption{全部主分析模型家族的留出表现}\label{tab:S1}\\
+\toprule
+模型 & 结局 & $r$ [95\% CI] & $p$ & RMSE [95\% CI] & $R^2$ & $\rho$ \\
+\midrule
+\endfirsthead
+\multicolumn{7}{l}{表 \thetable{} （续）}\\
+\toprule
+模型 & 结局 & $r$ [95\% CI] & $p$ & RMSE [95\% CI] & $R^2$ & $\rho$ \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+共享 RF & NA & 0.247\newline [0.057, 0.419] & 0.012 & 0.166\newline [0.146, 0.186] & 0.020 & 0.275 \\
+共享 RF & PA & 0.284\newline [0.097, 0.452] & 0.003 & 0.165\newline [0.143, 0.187] & 0.040 & 0.251 \\
+共享 RF & LS & 0.152\newline [$-0.042$, 0.335] & 0.124 & 0.202\newline [0.181, 0.222] & 0.015 & 0.167 \\
+独立 RF & NA & 0.230\newline [0.039, 0.405] & 0.019 & 0.165\newline [0.144, 0.185] & 0.031 & 0.224 \\
+独立 RF & PA & 0.325\newline [0.141, 0.487] & $<0.001$ & 0.163\newline [0.141, 0.186] & 0.057 & 0.315 \\
+独立 RF & LS & 0.184\newline [$-0.008$, 0.364] & 0.061 & 0.201\newline [0.180, 0.222] & 0.025 & 0.166 \\
+独立 ET & NA & 0.276\newline [0.088, 0.445] & 0.005 & 0.165\newline [0.145, 0.186] & 0.028 & 0.267 \\
+独立 ET & PA & 0.275\newline [0.087, 0.444] & 0.005 & 0.165\newline [0.142, 0.187] & 0.037 & 0.274 \\
+独立 ET & LS & 0.225\newline [0.033, 0.400] & 0.022 & 0.200\newline [0.179, 0.220] & 0.034 & 0.161 \\
+岭回归 & NA & 0.274\newline [0.086, 0.443] & 0.005 & 0.169\newline [0.148, 0.189] & $-0.012$ & 0.235 \\
+岭回归 & PA & 0.330\newline [0.147, 0.492] & $<0.001$ & 0.163\newline [0.140, 0.186] & 0.061 & 0.395 \\
+岭回归 & LS & 0.166\newline [$-0.027$, 0.348] & 0.092 & 0.202\newline [0.181, 0.222] & 0.021 & 0.161 \\
+多任务 EN & NA & 0.331\newline [0.148, 0.493] & $<0.001$ & 0.166\newline [0.146, 0.186] & 0.024 & 0.344 \\
+多任务 EN & PA & 0.402\newline [0.227, 0.552] & $<0.001$ & 0.165\newline [0.143, 0.187] & 0.038 & 0.408 \\
+多任务 EN & LS & 0.168\newline [$-0.025$, 0.350] & 0.087 & 0.202\newline [0.182, 0.223] & 0.014 & 0.205 \\
+共享 ET & NA & 0.312\newline [0.127, 0.476] & 0.001 & 0.166\newline [0.145, 0.186] & 0.024 & 0.307 \\
+共享 ET & PA & 0.306\newline [0.120, 0.471] & 0.002 & 0.166\newline [0.142, 0.188] & 0.033 & 0.302 \\
+共享 ET & LS & 0.227\newline [0.036, 0.402] & 0.021 & 0.201\newline [0.180, 0.222] & 0.026 & 0.182 \\
+训练均值 & NA & 未定义 & --- & 0.169\newline [0.150, 0.190] & $-0.021$ & --- \\
+训练均值 & PA & 未定义 & --- & 0.170\newline [0.146, 0.192] & $-0.016$ & --- \\
+训练均值 & LS & 未定义 & --- & 0.205\newline [0.184, 0.225] & $-0.009$ & --- \\
+独立 HGB & NA & 0.075\newline [$-0.119$, 0.264] & 0.447 & 0.172\newline [0.150, 0.194] & $-0.056$ & 0.066 \\
+独立 HGB & PA & 0.219\newline [0.028, 0.395] & 0.025 & 0.167\newline [0.146, 0.187] & 0.018 & 0.151 \\
+独立 HGB & LS & 0.190\newline [$-0.003$, 0.369] & 0.054 & 0.204\newline [0.180, 0.227] & 0.001 & 0.199 \\
+\end{longtable}
+\tabnote{NA 为消极情绪，PA 为积极情绪，LS 为生活满意度。RF 为随机森林，ET 为极端随机树，EN 为弹性网，HGB 为直方图梯度提升。每行 $n=104$。$p$ 为未经校正的 Pearson 双侧检验，$\rho$ 为 Spearman 相关。仅所选共享 RF 的三个相关构成三检验 Holm 校正范围。模型按开发集得分排序，不按留出相关排序。RMSE 为存储单位。分别报告 Fisher-$z$ 区间和 5,000 次 bootstrap 区间。}
+\endgroup

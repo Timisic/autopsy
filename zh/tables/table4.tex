@@ -1,0 +1,23 @@
+\begin{table}[!htbp]
+\centering
+\begingroup\singlespacing\fontsize{9.2}{11.32}\selectfont
+\setlength{\tabcolsep}{3pt}
+\caption{各结局平均绝对 TreeSHAP 贡献最高的三个特征}\label{tab:shap}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.16\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.32\linewidth}>{\raggedright\arraybackslash}p{0.28\linewidth}@{}}
+\toprule
+结局 & 排名 & 特征 & 平均绝对 SHAP \\
+\midrule
+NA & 1 & Sexual & 0.0041 \\
+NA & 2 & C10$^{\dagger}$ & 0.0040 \\
+NA & 3 & C2$^{\dagger}$ & 0.0036 \\
+PA & 1 & Sexual & 0.0045 \\
+PA & 2 & We & 0.0039 \\
+PA & 3 & Family & 0.0030 \\
+LS & 1 & Family & 0.0061 \\
+LS & 2 & We & 0.0056 \\
+LS & 3 & C10$^{\dagger}$ & 0.0052 \\
+\bottomrule
+\end{tabular}
+\tabnote{NA 为消极情绪，PA 为积极情绪，LS 为生活满意度。共享 RF，开发集 $n=933$。数值使用存储结局单位及树路径依赖背景。$\dagger$ 表示语义映射尚未核实。幅度不表示方向、统计显著性或因果效应。}
+\endgroup
+\end{table}

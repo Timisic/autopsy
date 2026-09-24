@@ -1,0 +1,80 @@
+\input{preamble.tex}
+\hypersetup{pdftitle={Supplementary material: Weibo subjective well-being prediction}}
+\renewcommand{\thetable}{S\arabic{table}}
+\begin{document}
+\msTitle{Supplementary material}
+\begin{center}Psycholinguistic prediction of negative affect, positive affect, and life satisfaction on Weibo\end{center}
+\section{Scope and analysis chronology}
+The primary analysis estimates retrospective between-participant prediction of three stored questionnaire-derived outcomes. The supplied 1,427 rows represented 1,037 participants. Removing 195 exact duplicates left 1,232 distinct observations; selecting the numerically earliest questionnaire record per participant produced the 1,037-record primary sample. A single shuffled split assigned 933 participants to development and 104 to the holdout. All three requested outcomes and the supplied 120-feature representation were retained, with the input and participant-handling rules fixed before model comparison.
+
+Primary model-selection rules, the two planned comparison types, record and feature sensitivities, and the development-only rule for selecting interpretation features were specified before inspection of the primary holdout performance. The separate exploratory extension was planned after that inspection. Its nested development evaluation repeats candidate selection within outer folds, but does not erase the effect of earlier information on the decision to conduct the extension. These two stages retain separate results throughout this supplement.
+
+\section{Primary model development and evaluation}
+\subsection{Outcome units and selection score}
+NA, PA, and LS denote negative affect, positive affect, and life satisfaction. Although the retained outcomes range from 0 to 1, the transformation from administered questionnaire responses is unverified. All final RMSEs and feature attributions use the supplied stored units. Fold-local target standardization is an internal modeling operation, not an inferred reconstruction of the administered scoring rule.
+
+For fold $k$ and outcome $j$, let $s_{jk}$ be the population standard deviation of that outcome in the fold's training participants. Selection used
+\[
+Q=\frac{1}{5}\sum_{k=1}^{5}\frac{1}{3}\sum_{j=1}^{3}
+\frac{\operatorname{RMSE}_{jk}}{s_{jk}}.
+\]
+Independent families selected each outcome's hyperparameters from its own mean normalized error, after which the assembled family was compared on the macro score. Shared families selected a common setting. Ties followed the listed candidate order. These development scores guide selection and are not unbiased estimates of a procedure that has already been tuned on the same folds.
+
+Each fold fitted median imputation, min--max input scaling, and target standardization using only its training participants. No feature selection, outcome-based record selection, value clipping, or outlier deletion was used in the primary analysis. The full primary holdout comparison is provided in Table~\ref{tab:S1}; the grid and locked parameters are provided in Table~\ref{tab:S2}.
+
+\clearpage
+\input{tables/S1.tex}
+\input{tables/S2.tex}
+
+\subsection{Fixed-model uncertainty and comparison direction}
+RMSE is the square root of the mean squared difference between prediction and observation. $R^2=1-\sum_i(y_i-\hat y_i)^2/\sum_i(y_i-\bar y_{\mathrm{holdout}})^2$ uses the holdout mean in its denominator. It is not obtained by simply squaring the reported correlation. The training-mean baseline can consequently have negative $R^2$, and its constant predictions have undefined correlation.
+
+The primary selected-model Pearson tests form a three-test Holm family. The paired prediction-error tests form a separate six-test family: selected model versus training mean and best shared procedure versus best independent ensemble, each for three outcomes. Every paired difference is first model minus second model. Pointwise RMSE-difference intervals use 5,000 paired participant resamples. Within-participant prediction swaps use 10,000 randomizations of the MSE-difference statistic and the plus-one correction. No interval is advertised as a simultaneous interval, and no nonsignificant test is interpreted as evidence of equivalence. Resampling fixes the learned models and partition; it does not repeat the complete model-development process.
+
+\section{Planned handling sensitivities}
+The latest-record sensitivity retained the numerically last distinct observation for each participant. The singleton sensitivity retained participants with only one observation and therefore reduced the holdout to 85 participants. The feature sensitivity removed \texttt{ind} and the 13 unmapped codes, retaining 106 predictors. All retained participants kept their original development/holdout assignment, and model parameters remained those selected in the primary analysis. Table~\ref{tab:S3} reports the selected shared forest in all three sensitivities alongside the primary result. Full all-family sensitivity outputs remain available in the source repository; no new choice among these alternatives was used to replace the primary analysis.
+
+\input{tables/S3.tex}
+
+Three repetitions of five-fold development CV used seeds 20261023, 20261024, and 20261025 with frozen primary configurations. Table~\ref{tab:S4} preserves the reported precision of the baseline supplementary summaries. Because these participants had informed parameter selection, the repetition assesses behavior under different folds rather than supplying an independently selected validation estimate.
+
+\input{tables/S4.tex}
+
+\section{Attribution and perturbation diagnostics}
+TreeSHAP used the explicitly specified tree-path-dependent background on the development participants. Local contributions were summarized as the mean absolute contribution for each feature and outcome, in stored units \citep{lundberg2020}. The ten highest-ranked features per outcome (Table~\ref{tab:S5}) formed a union of 14 features. No interpretation-feature selection used holdout error.
+
+\input{tables/S5.tex}
+
+Each selected feature was shuffled independently across the 104 holdout participants 20 times. Table~\ref{tab:S6} reports the mean, SD, minimum, and maximum RMSE change across those shuffles. Negative change means the fitted model's error decreased after that perturbation; it is not evidence that increasing the feature would improve well-being. Correlated or overlapping categories may substitute for each other, while perturbation may alter their usual combinations. These diagnostics concern a fitted input--output mapping. A change to that mapping's inputs is distinct from an intervention on a person's experiences or behavior \citep{janzing2020}.
+
+\input{tables/S6.tex}
+
+\section{Exploratory optimization after primary holdout inspection}
+\subsection{Fixed 22-configuration extension}
+The extension retained the original 933 development and 104 holdout participants, the earliest-record rule, and all 120 primary features. It compared the mean and original shared RF references; ridge regression with alpha 10, 100, or 1000 on raw or log1p-transformed features; radial-basis support-vector regression with $C=0.1$, 1, or 10 and epsilon 0.1; shallow histogram boosting with 7 leaves, 100 iterations, learning rate 0.05, and L2 10 or 100; independent elastic net with alpha 0.01 or 0.1 and L1 mixing ratio 0.1 or 0.5; partial least squares with 2, 5, or 10 components; and independent forests with minimum leaf size 30 or 60, 256 trees, and a feature fraction of 0.5.
+
+Median imputation and any input scaling or log transform occurred within training folds. Outcomes were standardized within fitting for all non-PLS models; PLS used its own training-only scaling. One candidate was selected jointly across outcomes using macro normalized RMSE, unlike the primary independent-family procedure that allowed outcome-specific parameter choices. The finite grid, tie rule, and stopping rule were fixed before any new configuration was run. The specified 1\% improvement heuristic refers to outer-fold normalized error, not clinical usefulness or statistical significance.
+
+\subsection{Nested development evaluation and final candidate}
+Five outer folds each ran five inner folds, using inner seed 20260924 plus the outer-fold index. In each outer training sample, the 22-candidate selection was repeated and its selected candidate evaluated on that outer validation sample. The original shared RF and mean references were evaluated on the same outer observations. Nesting selection in this manner addresses overfitting of the selection criterion for the specified candidate set \citep{cawley2010}. Table~\ref{tab:S7} gives outcome-level outer-fold means and SDs; these SDs summarize the five folds and are not sampling confidence intervals.
+
+\input{tables/S7.tex}
+
+The macro outer-fold scores were 1.0007301 for the mean, 1.0001398 for the original shared forest, and 1.0005805 for the selected procedure. Relative improvement, defined as $(Q_{\mathrm{original}}-Q_{\mathrm{selected}})/Q_{\mathrm{original}}$, was $-0.00044063$: the selected procedure had approximately 0.044\% higher error. The 1\% improvement heuristic was therefore not met. The full-development five-fold search selected an independent forest with leaf size 60 (Table~\ref{tab:S8}); its tuning score is distinct from the nested performance of the selection procedure.
+
+\input{tables/S8.tex}
+
+\subsection{Previously seen holdout}
+Only the final selected candidate was evaluated in the extension on the previously inspected holdout. Table~\ref{tab:S9} retains its correlations, errors, and intervals. Table~\ref{tab:S10} compares it with the training mean and original shared forest. An exploratory positive-affect comparison with the mean yielded Holm-adjusted $p=0.011$, while every comparison with the original shared forest had adjusted $p=1.000$. These tests remain descriptive post-selection evidence on a reused evaluation sample.
+
+\input{tables/S9.tex}
+\input{tables/S10.tex}
+\FloatBarrier
+
+\section{Source availability and unresolved measurement inputs}
+The publicly available project provides analysis code, configuration files, frozen aggregate outputs, and evidence notes. It does not include participant-level source records, original posts, individual predictions, or fitted model objects. These restricted inputs would be required to rerun the complete analysis from participant data. The independent writing package contains the aggregate sources used to typeset the present tables and figure, together with their provenance and checks. Table generation and bilingual typesetting are distinct from replication of model fitting.
+
+Unverified score transformation, administered item wording and reporting period, dictionary versions and code mappings, and exact collection timing remain unresolved. Demographic subgroup validation, raw-text re-extraction, odd/even-text reliability, and item-level reliability could not be performed from the available aggregates. Recorded timestamps indicate that language features may include post-questionnaire text; participant separation alone does not create prospective ordering. These restrictions define the scope of the primary and exploratory estimates alike.
+
+\input{references_supplement.tex}
+\end{document}

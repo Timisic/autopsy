@@ -1,0 +1,40 @@
+\begingroup\singlespacing\fontsize{9.2}{11.32}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.29\linewidth}>{\raggedright\arraybackslash}p{0.36\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}@{}}
+\caption{Exploratory 22-configuration search on all development participants}\label{tab:S8}\\
+\toprule
+Candidate & Setting & CV normalized RMSE \\
+\midrule
+\endfirsthead
+\multicolumn{3}{l}{Table \thetable{} (continued)}\\
+\toprule
+Candidate & Setting & CV normalized RMSE \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Mean & Reference & 1.0007 \\
+Original shared RF & Reference & 1.0001 \\
+Ridge, raw & alpha=10 & 1.0703 \\
+Ridge, raw & alpha=100 & 1.0298 \\
+Ridge, raw & alpha=1000 & 1.0013 \\
+Ridge, log1p & alpha=10 & 1.0709 \\
+Ridge, log1p & alpha=100 & 1.0301 \\
+Ridge, log1p & alpha=1000 & 1.0013 \\
+RBF SVR & C=0.1 & 1.0040 \\
+RBF SVR & C=1 & 1.0215 \\
+RBF SVR & C=10 & 1.1019 \\
+Shallow HGB & L2=10 & 1.0139 \\
+Shallow HGB & L2=100 & 1.0013 \\
+Elastic net & alpha=0.01; L1=0.1 & 1.0654 \\
+Elastic net & alpha=0.01; L1=0.5 & 1.0446 \\
+Elastic net & alpha=0.1; L1=0.1 & 1.0173 \\
+Elastic net & alpha=0.1; L1=0.5 & 0.9984 \\
+PLS & components=2 & 1.0056 \\
+PLS & components=5 & 1.0271 \\
+PLS & components=10 & 1.0460 \\
+Independent RF & leaf=30 & 0.9979 \\
+Independent RF & leaf=60 & 0.9969 \\
+\end{longtable}
+\tabnote{Development $n=933$, five-fold selection. One candidate is chosen across all outcomes; these tuning scores are not independent performance estimates. RF leaf=60 was selected. Raw denotes untransformed inputs before fold-local scaling; log1p denotes a fold-local transformation. L1 is the elastic-net mixing ratio. Main-text nested estimates concern the selected procedure, not simply this winning configuration.}
+\endgroup

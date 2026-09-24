@@ -1,0 +1,42 @@
+\begingroup\singlespacing\fontsize{8.5}{10.46}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.18\linewidth}>{\raggedright\arraybackslash}p{0.075\linewidth}>{\raggedright\arraybackslash}p{0.21\linewidth}>{\raggedright\arraybackslash}p{0.075\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.075\linewidth}>{\raggedright\arraybackslash}p{0.06\linewidth}@{}}
+\caption{All primary model families on the holdout}\label{tab:S1}\\
+\toprule
+Model & Outcome & $r$ [95\% CI] & $p$ & RMSE [95\% CI] & $R^2$ & $\rho$ \\
+\midrule
+\endfirsthead
+\multicolumn{7}{l}{Table \thetable{} (continued)}\\
+\toprule
+Model & Outcome & $r$ [95\% CI] & $p$ & RMSE [95\% CI] & $R^2$ & $\rho$ \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Shared RF & NA & 0.247\newline [0.057, 0.419] & 0.012 & 0.166\newline [0.146, 0.186] & 0.020 & 0.275 \\
+Shared RF & PA & 0.284\newline [0.097, 0.452] & 0.003 & 0.165\newline [0.143, 0.187] & 0.040 & 0.251 \\
+Shared RF & LS & 0.152\newline [$-0.042$, 0.335] & 0.124 & 0.202\newline [0.181, 0.222] & 0.015 & 0.167 \\
+Independent RF & NA & 0.230\newline [0.039, 0.405] & 0.019 & 0.165\newline [0.144, 0.185] & 0.031 & 0.224 \\
+Independent RF & PA & 0.325\newline [0.141, 0.487] & $<0.001$ & 0.163\newline [0.141, 0.186] & 0.057 & 0.315 \\
+Independent RF & LS & 0.184\newline [$-0.008$, 0.364] & 0.061 & 0.201\newline [0.180, 0.222] & 0.025 & 0.166 \\
+Independent ET & NA & 0.276\newline [0.088, 0.445] & 0.005 & 0.165\newline [0.145, 0.186] & 0.028 & 0.267 \\
+Independent ET & PA & 0.275\newline [0.087, 0.444] & 0.005 & 0.165\newline [0.142, 0.187] & 0.037 & 0.274 \\
+Independent ET & LS & 0.225\newline [0.033, 0.400] & 0.022 & 0.200\newline [0.179, 0.220] & 0.034 & 0.161 \\
+Ridge & NA & 0.274\newline [0.086, 0.443] & 0.005 & 0.169\newline [0.148, 0.189] & $-0.012$ & 0.235 \\
+Ridge & PA & 0.330\newline [0.147, 0.492] & $<0.001$ & 0.163\newline [0.140, 0.186] & 0.061 & 0.395 \\
+Ridge & LS & 0.166\newline [$-0.027$, 0.348] & 0.092 & 0.202\newline [0.181, 0.222] & 0.021 & 0.161 \\
+Multitask EN & NA & 0.331\newline [0.148, 0.493] & $<0.001$ & 0.166\newline [0.146, 0.186] & 0.024 & 0.344 \\
+Multitask EN & PA & 0.402\newline [0.227, 0.552] & $<0.001$ & 0.165\newline [0.143, 0.187] & 0.038 & 0.408 \\
+Multitask EN & LS & 0.168\newline [$-0.025$, 0.350] & 0.087 & 0.202\newline [0.182, 0.223] & 0.014 & 0.205 \\
+Shared ET & NA & 0.312\newline [0.127, 0.476] & 0.001 & 0.166\newline [0.145, 0.186] & 0.024 & 0.307 \\
+Shared ET & PA & 0.306\newline [0.120, 0.471] & 0.002 & 0.166\newline [0.142, 0.188] & 0.033 & 0.302 \\
+Shared ET & LS & 0.227\newline [0.036, 0.402] & 0.021 & 0.201\newline [0.180, 0.222] & 0.026 & 0.182 \\
+Training mean & NA & Undefined & --- & 0.169\newline [0.150, 0.190] & $-0.021$ & --- \\
+Training mean & PA & Undefined & --- & 0.170\newline [0.146, 0.192] & $-0.016$ & --- \\
+Training mean & LS & Undefined & --- & 0.205\newline [0.184, 0.225] & $-0.009$ & --- \\
+Independent HGB & NA & 0.075\newline [$-0.119$, 0.264] & 0.447 & 0.172\newline [0.150, 0.194] & $-0.056$ & 0.066 \\
+Independent HGB & PA & 0.219\newline [0.028, 0.395] & 0.025 & 0.167\newline [0.146, 0.187] & 0.018 & 0.151 \\
+Independent HGB & LS & 0.190\newline [$-0.003$, 0.369] & 0.054 & 0.204\newline [0.180, 0.227] & 0.001 & 0.199 \\
+\end{longtable}
+\tabnote{NA = negative affect; PA = positive affect; LS = life satisfaction. RF = random forest; ET = extra trees; EN = elastic net; HGB = histogram gradient boosting. $n=104$ in every row. $p$ is the unadjusted two-sided Pearson test; $\rho$ is Spearman correlation. Only the selected shared RF correlations were included in the three-test Holm family. Models are ordered by development score, not holdout correlation. RMSE retains stored units. Fisher-$z$ and 5,000-bootstrap intervals are reported.}
+\endgroup

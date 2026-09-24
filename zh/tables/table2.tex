@@ -1,0 +1,23 @@
+\begin{table}[!htbp]
+\centering
+\begingroup\singlespacing\fontsize{9.2}{11.32}\selectfont
+\setlength{\tabcolsep}{3pt}
+\caption{所选程序与基线的留出集表现}\label{tab:performance}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.19\linewidth}>{\raggedright\arraybackslash}p{0.085\linewidth}>{\raggedright\arraybackslash}p{0.245\linewidth}>{\raggedright\arraybackslash}p{0.245\linewidth}>{\raggedright\arraybackslash}p{0.095\linewidth}@{}}
+\toprule
+模型 & 结局 & $r$ [95\% CI] & RMSE [95\% CI] & $R^2$ \\
+\midrule
+共享 RF & NA & 0.247\newline [0.057, 0.419] & 0.166\newline [0.146, 0.186] & 0.020 \\
+共享 RF & PA & 0.284\newline [0.097, 0.452] & 0.165\newline [0.143, 0.187] & 0.040 \\
+共享 RF & LS & 0.152\newline [$-0.042$, 0.335] & 0.202\newline [0.181, 0.222] & 0.015 \\
+独立 RF & NA & 0.230\newline [0.039, 0.405] & 0.165\newline [0.144, 0.185] & 0.031 \\
+独立 RF & PA & 0.325\newline [0.141, 0.487] & 0.163\newline [0.141, 0.186] & 0.057 \\
+独立 RF & LS & 0.184\newline [$-0.008$, 0.364] & 0.201\newline [0.180, 0.222] & 0.025 \\
+训练均值 & NA & 未定义 & 0.169\newline [0.150, 0.190] & $-0.021$ \\
+训练均值 & PA & 未定义 & 0.170\newline [0.146, 0.192] & $-0.016$ \\
+训练均值 & LS & 未定义 & 0.205\newline [0.184, 0.225] & $-0.009$ \\
+\bottomrule
+\end{tabular}
+\tabnote{NA 为消极情绪，PA 为积极情绪，LS 为生活满意度。RF 为随机森林，ET 为极端随机树，EN 为弹性网，HGB 为直方图梯度提升。$n=104$。共享 RF 由开发集选出。相关区间采用 Fisher $z$，RMSE 区间来自 5,000 次参与者 bootstrap，保留存储分数单位。常量预测的相关未定义。$R^2$ 以留出集结局均值为参照，因此训练均值基线的 $R^2$ 可以为负。}
+\endgroup
+\end{table}

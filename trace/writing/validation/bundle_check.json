@@ -1,0 +1,1598 @@
+{
+  "scope": "Editorial bundle checks only; no model retraining, participant resampling, or full repository check.",
+  "check_count": 166,
+  "passed_count": 166,
+  "failed": [],
+  "pdf_metrics": [
+    {
+      "language": "en",
+      "document": "manuscript",
+      "pages": 15,
+      "file_bytes": 129915,
+      "underfull_warnings": 0
+    },
+    {
+      "language": "en",
+      "document": "supplement",
+      "pages": 9,
+      "file_bytes": 90422,
+      "underfull_warnings": 0
+    },
+    {
+      "language": "en",
+      "document": "title_page",
+      "pages": 2,
+      "file_bytes": 43555,
+      "underfull_warnings": 1
+    },
+    {
+      "language": "zh",
+      "document": "manuscript",
+      "pages": 13,
+      "file_bytes": 426152,
+      "underfull_warnings": 0
+    },
+    {
+      "language": "zh",
+      "document": "supplement",
+      "pages": 9,
+      "file_bytes": 285217,
+      "underfull_warnings": 0
+    },
+    {
+      "language": "zh",
+      "document": "title_page",
+      "pages": 2,
+      "file_bytes": 188256,
+      "underfull_warnings": 0
+    }
+  ],
+  "checks": [
+    {
+      "check": "frozen_sha256:primary_paired_comparisons.csv",
+      "passed": true,
+      "detail": "68c3072912f8d3aa142952465e401b38a013ed89ebf7c9da2bc8b47bd58f304b"
+    },
+    {
+      "check": "frozen_sha256:table1_descriptives.csv",
+      "passed": true,
+      "detail": "44dd154723afa6036b69f6d1c33ab188e0ffbf5382c3de2e1810c7d192a9fd26"
+    },
+    {
+      "check": "frozen_sha256:exploratory_holdout_metrics.csv",
+      "passed": true,
+      "detail": "9a755fb9772df82dd91a0538e1ef6d3d97696c6951911aa6ff53511eb3e24423"
+    },
+    {
+      "check": "frozen_sha256:exploratory_paired_comparisons.csv",
+      "passed": true,
+      "detail": "7444244571a771dc918d573b6d4c4fa8c94a2bbc324f31b3545731f151008ae8"
+    },
+    {
+      "check": "frozen_sha256:permutation_importance_summary.csv",
+      "passed": true,
+      "detail": "28f9eefa6c048eeac0885372e64bb7bb088d0d30c4de04c12901e853bc3cd921"
+    },
+    {
+      "check": "frozen_sha256:cv_model_ranking.csv",
+      "passed": true,
+      "detail": "fc20a4ebd2d9bf6ec0e8e06e9caf5a97df31fc5e54a84a388e522143b31491f1"
+    },
+    {
+      "check": "frozen_sha256:target_correlations.csv",
+      "passed": true,
+      "detail": "68076d574e418779ffb0f13226ece2af2eb32248a3f8172ed0cc430f5752924c"
+    },
+    {
+      "check": "frozen_sha256:nested_outcome_summary.csv",
+      "passed": true,
+      "detail": "902e144a414e68dfc48d2b9bf80691fc0276c64b73a14087abbfa33d08c9a2fa"
+    },
+    {
+      "check": "git_blob_sha1:sensitivity_selected.csv",
+      "passed": true,
+      "detail": "0a0f3296cda5d7527585a70b5c51f57855768f6b"
+    },
+    {
+      "check": "git_blob_sha1:shap_top10.csv",
+      "passed": true,
+      "detail": "bcef6927f188b1ac3d89f40232f2e8db20f948dc"
+    },
+    {
+      "check": "scholarly_cutoff",
+      "passed": true,
+      "detail": {
+        "count": 23,
+        "latest_year": 2023,
+        "basis": "Inherited formal publication metadata; targeted primary-source rechecks described in source_index.md."
+      }
+    },
+    {
+      "check": "en:manuscript:citation_reference_bijection",
+      "passed": true,
+      "detail": {
+        "cited": 23,
+        "references": 23,
+        "missing": [],
+        "uncited": []
+      }
+    },
+    {
+      "check": "en:supplement:citation_reference_bijection",
+      "passed": true,
+      "detail": {
+        "cited": 3,
+        "references": 3,
+        "missing": [],
+        "uncited": []
+      }
+    },
+    {
+      "check": "en:local_resources",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "en:manuscript:cross_references",
+      "passed": true,
+      "detail": {
+        "labels": 6,
+        "unresolved": []
+      }
+    },
+    {
+      "check": "en:supplement:cross_references",
+      "passed": true,
+      "detail": {
+        "labels": 10,
+        "unresolved": []
+      }
+    },
+    {
+      "check": "zh:manuscript:citation_reference_bijection",
+      "passed": true,
+      "detail": {
+        "cited": 23,
+        "references": 23,
+        "missing": [],
+        "uncited": []
+      }
+    },
+    {
+      "check": "zh:supplement:citation_reference_bijection",
+      "passed": true,
+      "detail": {
+        "cited": 3,
+        "references": 3,
+        "missing": [],
+        "uncited": []
+      }
+    },
+    {
+      "check": "zh:local_resources",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "zh:manuscript:cross_references",
+      "passed": true,
+      "detail": {
+        "labels": 6,
+        "unresolved": []
+      }
+    },
+    {
+      "check": "zh:supplement:cross_references",
+      "passed": true,
+      "detail": {
+        "labels": 10,
+        "unresolved": []
+      }
+    },
+    {
+      "check": "primary_rows",
+      "passed": true,
+      "detail": "8 model families × 3 outcomes; excerpt of the frozen full metrics file."
+    },
+    {
+      "check": "paired_delta:winner_vs_mean:SWB_nn",
+      "passed": true,
+      "detail": -0.0033854606608092
+    },
+    {
+      "check": "paired_delta:winner_vs_mean:SWB_pp",
+      "passed": true,
+      "detail": -0.004767226162353
+    },
+    {
+      "check": "paired_delta:winner_vs_mean:SWB_avg",
+      "passed": true,
+      "detail": -0.0024341200781208
+    },
+    {
+      "check": "paired_delta:shared_vs_independent:SWB_nn",
+      "passed": true,
+      "detail": 0.0009257179622811
+    },
+    {
+      "check": "paired_delta:shared_vs_independent:SWB_pp",
+      "passed": true,
+      "detail": 0.0014501034679725
+    },
+    {
+      "check": "paired_delta:shared_vs_independent:SWB_avg",
+      "passed": true,
+      "detail": 0.001084721107236
+    },
+    {
+      "check": "exploratory_relative_change",
+      "passed": true,
+      "detail": {
+        "mean": 1.0007300981343936,
+        "original_rf": 1.000139761569139,
+        "selected": 1.0005804534463538,
+        "relative_improvement_vs_original": -0.0004406302940336282
+      }
+    },
+    {
+      "check": "bilingual_table:tables/table1.tex",
+      "passed": true,
+      "detail": {
+        "rows": 3,
+        "decimal_cells": 18
+      }
+    },
+    {
+      "check": "bilingual_table:tables/table2.tex",
+      "passed": true,
+      "detail": {
+        "rows": 9,
+        "decimal_cells": 54
+      }
+    },
+    {
+      "check": "bilingual_table:tables/table3.tex",
+      "passed": true,
+      "detail": {
+        "rows": 6,
+        "decimal_cells": 30
+      }
+    },
+    {
+      "check": "bilingual_table:tables/table4.tex",
+      "passed": true,
+      "detail": {
+        "rows": 9,
+        "decimal_cells": 9
+      }
+    },
+    {
+      "check": "bilingual_table:tables/S1.tex",
+      "passed": true,
+      "detail": {
+        "rows": 24,
+        "decimal_cells": 201
+      }
+    },
+    {
+      "check": "bilingual_table:tables/S2.tex",
+      "passed": true,
+      "detail": {
+        "rows": 8,
+        "decimal_cells": 32
+      }
+    },
+    {
+      "check": "bilingual_table:tables/S3.tex",
+      "passed": true,
+      "detail": {
+        "rows": 12,
+        "decimal_cells": 84
+      }
+    },
+    {
+      "check": "bilingual_table:tables/S4.tex",
+      "passed": true,
+      "detail": {
+        "rows": 9,
+        "decimal_cells": 18
+      }
+    },
+    {
+      "check": "bilingual_table:tables/S5.tex",
+      "passed": true,
+      "detail": {
+        "rows": 10,
+        "decimal_cells": 30
+      }
+    },
+    {
+      "check": "bilingual_table:tables/S6.tex",
+      "passed": true,
+      "detail": {
+        "rows": 42,
+        "decimal_cells": 168
+      }
+    },
+    {
+      "check": "bilingual_table:tables/S7.tex",
+      "passed": true,
+      "detail": {
+        "rows": 9,
+        "decimal_cells": 18
+      }
+    },
+    {
+      "check": "bilingual_table:tables/S8.tex",
+      "passed": true,
+      "detail": {
+        "rows": 22,
+        "decimal_cells": 31
+      }
+    },
+    {
+      "check": "bilingual_table:tables/S9.tex",
+      "passed": true,
+      "detail": {
+        "rows": 3,
+        "decimal_cells": 27
+      }
+    },
+    {
+      "check": "bilingual_table:tables/S10.tex",
+      "passed": true,
+      "detail": {
+        "rows": 6,
+        "decimal_cells": 30
+      }
+    },
+    {
+      "check": "bilingual_paragraph_ids",
+      "passed": true,
+      "detail": 46
+    },
+    {
+      "check": "bilingual_citations:A01",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:A01",
+      "passed": true,
+      "detail": {
+        "exact_sequence": false,
+        "manual_review": "The order of N=1,037 and 120 features differs; the quantities agree.",
+        "en": [
+          "120",
+          "1037",
+          "104",
+          "0.247",
+          "0.284",
+          "0.152",
+          "0.166",
+          "0.165",
+          "0.202"
+        ],
+        "zh": [
+          "1037",
+          "120",
+          "104",
+          "0.247",
+          "0.284",
+          "0.152",
+          "0.166",
+          "0.165",
+          "0.202"
+        ]
+      }
+    },
+    {
+      "check": "bilingual_citations:I01",
+      "passed": true,
+      "detail": [
+        "diener1984",
+        "diener1985",
+        "diener2018",
+        "watson1988"
+      ]
+    },
+    {
+      "check": "bilingual_numeric_paragraph:I01",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [],
+        "zh": []
+      }
+    },
+    {
+      "check": "bilingual_citations:I02",
+      "passed": true,
+      "detail": [
+        "park2015"
+      ]
+    },
+    {
+      "check": "bilingual_numeric_paragraph:I02",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [],
+        "zh": []
+      }
+    },
+    {
+      "check": "bilingual_citations:I03",
+      "passed": true,
+      "detail": [
+        "tausczik2010",
+        "zhao2016"
+      ]
+    },
+    {
+      "check": "bilingual_numeric_paragraph:I03",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [],
+        "zh": []
+      }
+    },
+    {
+      "check": "bilingual_citations:I04",
+      "passed": true,
+      "detail": [
+        "eichstaedt2021",
+        "jaidka2020"
+      ]
+    },
+    {
+      "check": "bilingual_numeric_paragraph:I04",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [],
+        "zh": []
+      }
+    },
+    {
+      "check": "bilingual_citations:I05",
+      "passed": true,
+      "detail": [
+        "caruana1997",
+        "kocev2007",
+        "yarkoni2017"
+      ]
+    },
+    {
+      "check": "bilingual_numeric_paragraph:I05",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [],
+        "zh": []
+      }
+    },
+    {
+      "check": "bilingual_citations:I06",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:I06",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [],
+        "zh": []
+      }
+    },
+    {
+      "check": "bilingual_citations:M01",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:M01",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [
+          "20000",
+          "18",
+          "2012",
+          "2013"
+        ],
+        "zh": [
+          "20000",
+          "18",
+          "2012",
+          "2013"
+        ]
+      }
+    },
+    {
+      "check": "bilingual_citations:M02",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:M02",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [
+          "1427",
+          "1037",
+          "195",
+          "195",
+          "1037"
+        ],
+        "zh": [
+          "1427",
+          "1037",
+          "195",
+          "195",
+          "1037"
+        ]
+      }
+    },
+    {
+      "check": "bilingual_citations:M03",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:M03",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [],
+        "zh": []
+      }
+    },
+    {
+      "check": "bilingual_citations:M04",
+      "passed": true,
+      "detail": [
+        "diener1985",
+        "watson1988"
+      ]
+    },
+    {
+      "check": "bilingual_numeric_paragraph:M04",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [
+          "0",
+          "1"
+        ],
+        "zh": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    {
+      "check": "bilingual_citations:M05",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:M05",
+      "passed": true,
+      "detail": {
+        "exact_sequence": false,
+        "manual_review": "English “above one” corresponds to Chinese “超过 1”. C1/C10 code digits are not independent numeric observations.",
+        "en": [
+          "120",
+          "13",
+          "0",
+          "34"
+        ],
+        "zh": [
+          "120",
+          "13",
+          "0",
+          "34",
+          "1"
+        ]
+      }
+    },
+    {
+      "check": "bilingual_citations:M06",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:M06",
+      "passed": true,
+      "detail": {
+        "exact_sequence": false,
+        "manual_review": "The denominator 1,037 and count 1,027 are reordered naturally in Chinese.",
+        "en": [
+          "1027",
+          "1037"
+        ],
+        "zh": [
+          "1037",
+          "1027"
+        ]
+      }
+    },
+    {
+      "check": "bilingual_citations:M07",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:M07",
+      "passed": true,
+      "detail": {
+        "exact_sequence": false,
+        "manual_review": "The seed 20260923 precedes the two partition sizes in Chinese.",
+        "en": [
+          "933",
+          "104",
+          "20260923"
+        ],
+        "zh": [
+          "20260923",
+          "933",
+          "104"
+        ]
+      }
+    },
+    {
+      "check": "bilingual_citations:M08",
+      "passed": true,
+      "detail": [
+        "kapoor2023"
+      ]
+    },
+    {
+      "check": "bilingual_numeric_paragraph:M08",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [],
+        "zh": []
+      }
+    },
+    {
+      "check": "bilingual_citations:M09",
+      "passed": true,
+      "detail": [
+        "breiman2001",
+        "geurts2006"
+      ]
+    },
+    {
+      "check": "bilingual_numeric_paragraph:M09",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [
+          "42",
+          "210"
+        ],
+        "zh": [
+          "42",
+          "210"
+        ]
+      }
+    },
+    {
+      "check": "bilingual_citations:M10",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:M10",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [
+          "256"
+        ],
+        "zh": [
+          "256"
+        ]
+      }
+    },
+    {
+      "check": "bilingual_citations:M11",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:M11",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [
+          "95",
+          "5000",
+          "2",
+          "5000",
+          "10000"
+        ],
+        "zh": [
+          "95",
+          "5000",
+          "2",
+          "5000",
+          "10000"
+        ]
+      }
+    },
+    {
+      "check": "bilingual_citations:M12",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:M12",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [
+          "13"
+        ],
+        "zh": [
+          "13"
+        ]
+      }
+    },
+    {
+      "check": "bilingual_citations:M13",
+      "passed": true,
+      "detail": [
+        "lundberg2020"
+      ]
+    },
+    {
+      "check": "bilingual_numeric_paragraph:M13",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [
+          "933",
+          "14",
+          "20"
+        ],
+        "zh": [
+          "933",
+          "14",
+          "20"
+        ]
+      }
+    },
+    {
+      "check": "bilingual_citations:M14",
+      "passed": true,
+      "detail": [
+        "cawley2010"
+      ]
+    },
+    {
+      "check": "bilingual_numeric_paragraph:M14",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [
+          "22",
+          "1",
+          "0"
+        ],
+        "zh": [
+          "22",
+          "1",
+          "0"
+        ]
+      }
+    },
+    {
+      "check": "bilingual_citations:R01",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:R01",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [
+          "1037",
+          "933",
+          "104",
+          "0.307",
+          "0.408",
+          "0.458",
+          "0.9963",
+          "0.9965",
+          "1.0016",
+          "15"
+        ],
+        "zh": [
+          "1037",
+          "933",
+          "104",
+          "0.307",
+          "0.408",
+          "0.458",
+          "0.9963",
+          "0.9965",
+          "1.0016",
+          "15"
+        ]
+      }
+    },
+    {
+      "check": "bilingual_citations:R02",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:R02",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [
+          "0.247",
+          "95",
+          "0.057",
+          "0.419",
+          "0.284",
+          "95",
+          "0.097",
+          "0.452",
+          "0.152",
+          "95",
+          "0.042",
+          "0.335",
+          "0.023",
+          "0.010",
+          "0.124"
+        ],
+        "zh": [
+          "0.247",
+          "95",
+          "0.057",
+          "0.419",
+          "0.284",
+          "95",
+          "0.097",
+          "0.452",
+          "0.152",
+          "95",
+          "0.042",
+          "0.335",
+          "0.023",
+          "0.010",
+          "0.124"
+        ]
+      }
+    },
+    {
+      "check": "bilingual_citations:R03",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:R03",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [
+          "0.166",
+          "0.165",
+          "0.202",
+          "2",
+          "0.020",
+          "0.040",
+          "0.015",
+          "0.169",
+          "0.170",
+          "0.205",
+          "0.402",
+          "0.284",
+          "0.165"
+        ],
+        "zh": [
+          "0.166",
+          "0.165",
+          "0.202",
+          "2",
+          "0.020",
+          "0.040",
+          "0.015",
+          "0.169",
+          "0.170",
+          "0.205",
+          "0.402",
+          "0.284",
+          "0.165"
+        ]
+      }
+    },
+    {
+      "check": "bilingual_citations:R04",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:R04",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [
+          "0.0034",
+          "0.0048",
+          "0.0024",
+          "0.113",
+          "0.101",
+          "1.000"
+        ],
+        "zh": [
+          "0.0034",
+          "0.0048",
+          "0.0024",
+          "0.113",
+          "0.101",
+          "1.000"
+        ]
+      }
+    },
+    {
+      "check": "bilingual_citations:R05",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:R05",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [
+          "0.0009",
+          "0.0015",
+          "0.0011"
+        ],
+        "zh": [
+          "0.0009",
+          "0.0015",
+          "0.0011"
+        ]
+      }
+    },
+    {
+      "check": "bilingual_citations:R06",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:R06",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [
+          "0.0041",
+          "0",
+          "0.0040",
+          "0.0036",
+          "0.0045",
+          "0.0039",
+          "0.0030",
+          "0.0061",
+          "0.0056",
+          "0",
+          "0.0052"
+        ],
+        "zh": [
+          "0.0041",
+          "0",
+          "0.0040",
+          "0.0036",
+          "0.0045",
+          "0.0039",
+          "0.0030",
+          "0.0061",
+          "0.0056",
+          "0",
+          "0.0052"
+        ]
+      }
+    },
+    {
+      "check": "bilingual_citations:R07",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:R07",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [
+          "0.000002",
+          "0.000544",
+          "0.001030",
+          "0.000935"
+        ],
+        "zh": [
+          "0.000002",
+          "0.000544",
+          "0.001030",
+          "0.000935"
+        ]
+      }
+    },
+    {
+      "check": "bilingual_citations:R08",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:R08",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [
+          "0.259",
+          "0.286",
+          "0.101",
+          "85",
+          "0.303",
+          "0.301",
+          "0.173",
+          "0.301",
+          "0.268",
+          "0.125",
+          "0.165",
+          "0.165",
+          "0.203"
+        ],
+        "zh": [
+          "0.259",
+          "0.286",
+          "0.101",
+          "85",
+          "0.303",
+          "0.301",
+          "0.173",
+          "0.301",
+          "0.268",
+          "0.125",
+          "0.165",
+          "0.165",
+          "0.203"
+        ]
+      }
+    },
+    {
+      "check": "bilingual_citations:R09",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:R09",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [
+          "60",
+          "1.0006",
+          "1.0001",
+          "1.0007",
+          "0.044",
+          "1",
+          "0.245",
+          "0.332",
+          "0.164",
+          "0.1661",
+          "0.1645",
+          "0.2023",
+          "0.011",
+          "1.000",
+          "0"
+        ],
+        "zh": [
+          "60",
+          "1.0006",
+          "1.0001",
+          "1.0007",
+          "0.044",
+          "1",
+          "0.245",
+          "0.332",
+          "0.164",
+          "0.1661",
+          "0.1645",
+          "0.2023",
+          "0.011",
+          "1.000",
+          "0"
+        ]
+      }
+    },
+    {
+      "check": "bilingual_citations:D01",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:D01",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [],
+        "zh": []
+      }
+    },
+    {
+      "check": "bilingual_citations:D02",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:D02",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [],
+        "zh": []
+      }
+    },
+    {
+      "check": "bilingual_citations:D03",
+      "passed": true,
+      "detail": [
+        "diener1984",
+        "diener1985"
+      ]
+    },
+    {
+      "check": "bilingual_numeric_paragraph:D03",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [],
+        "zh": []
+      }
+    },
+    {
+      "check": "bilingual_citations:D04",
+      "passed": true,
+      "detail": [
+        "eichstaedt2021",
+        "kern2016"
+      ]
+    },
+    {
+      "check": "bilingual_numeric_paragraph:D04",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [],
+        "zh": []
+      }
+    },
+    {
+      "check": "bilingual_citations:D05",
+      "passed": true,
+      "detail": [
+        "caruana1997",
+        "kocev2007"
+      ]
+    },
+    {
+      "check": "bilingual_numeric_paragraph:D05",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [],
+        "zh": []
+      }
+    },
+    {
+      "check": "bilingual_citations:D06",
+      "passed": true,
+      "detail": [
+        "janzing2020",
+        "lundberg2020",
+        "shmueli2010"
+      ]
+    },
+    {
+      "check": "bilingual_numeric_paragraph:D06",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [],
+        "zh": []
+      }
+    },
+    {
+      "check": "bilingual_citations:D07",
+      "passed": true,
+      "detail": [
+        "zhao2016"
+      ]
+    },
+    {
+      "check": "bilingual_numeric_paragraph:D07",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [],
+        "zh": []
+      }
+    },
+    {
+      "check": "bilingual_citations:D08",
+      "passed": true,
+      "detail": [
+        "eichstaedt2018"
+      ]
+    },
+    {
+      "check": "bilingual_numeric_paragraph:D08",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [],
+        "zh": []
+      }
+    },
+    {
+      "check": "bilingual_citations:D09",
+      "passed": true,
+      "detail": [
+        "park2015",
+        "pavot1993",
+        "watson1988"
+      ]
+    },
+    {
+      "check": "bilingual_numeric_paragraph:D09",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [],
+        "zh": []
+      }
+    },
+    {
+      "check": "bilingual_citations:D10",
+      "passed": true,
+      "detail": [
+        "kapoor2023",
+        "varoquaux2018"
+      ]
+    },
+    {
+      "check": "bilingual_numeric_paragraph:D10",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [
+          "104"
+        ],
+        "zh": [
+          "104"
+        ]
+      }
+    },
+    {
+      "check": "bilingual_citations:D11",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:D11",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [],
+        "zh": []
+      }
+    },
+    {
+      "check": "bilingual_citations:D12",
+      "passed": true,
+      "detail": [
+        "eichstaedt2018"
+      ]
+    },
+    {
+      "check": "bilingual_numeric_paragraph:D12",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [],
+        "zh": []
+      }
+    },
+    {
+      "check": "bilingual_citations:C01",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:C01",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [],
+        "zh": []
+      }
+    },
+    {
+      "check": "bilingual_citations:X01",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:X01",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [],
+        "zh": []
+      }
+    },
+    {
+      "check": "bilingual_citations:X02",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:X02",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [],
+        "zh": []
+      }
+    },
+    {
+      "check": "bilingual_citations:X03",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bilingual_numeric_paragraph:X03",
+      "passed": true,
+      "detail": {
+        "exact_sequence": true,
+        "manual_review": null,
+        "en": [],
+        "zh": []
+      }
+    },
+    {
+      "check": "english_abstract_length",
+      "passed": true,
+      "detail": {
+        "words": 188,
+        "count_method": "Regex: word tokens retain internal hyphens and apostrophes; formatted thousands count as separate tokens."
+      }
+    },
+    {
+      "check": "six_keywords",
+      "passed": true,
+      "detail": [
+        "subjective well-being",
+        "psycholinguistics",
+        "Weibo",
+        "prediction error",
+        "multi-output regression",
+        "model interpretation"
+      ]
+    },
+    {
+      "check": "running_title_length",
+      "passed": true,
+      "detail": {
+        "text": "Language and subjective well-being",
+        "characters": 34
+      }
+    },
+    {
+      "check": "en:manuscript:compile_log",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "en:manuscript:pdf_author_empty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "en:manuscript:text_integrity",
+      "passed": true,
+      "detail": {
+        "pages": 15,
+        "text_characters": 45801
+      }
+    },
+    {
+      "check": "en:manuscript:page_bounds",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "en:main_identifying_placeholders",
+      "passed": true,
+      "detail": "Specific approval number and repository owner are confined to the separate title page; this is not a guarantee against identification from the retained title or public project."
+    },
+    {
+      "check": "en:supplement:compile_log",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "en:supplement:pdf_author_empty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "en:supplement:text_integrity",
+      "passed": true,
+      "detail": {
+        "pages": 9,
+        "text_characters": 23968
+      }
+    },
+    {
+      "check": "en:supplement:page_bounds",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "en:title_page:compile_log",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "en:title_page:pdf_author_empty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "en:title_page:text_integrity",
+      "passed": true,
+      "detail": {
+        "pages": 2,
+        "text_characters": 4773
+      }
+    },
+    {
+      "check": "en:title_page:page_bounds",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "zh:manuscript:compile_log",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "zh:manuscript:pdf_author_empty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "zh:manuscript:text_integrity",
+      "passed": true,
+      "detail": {
+        "pages": 13,
+        "text_characters": 19196
+      }
+    },
+    {
+      "check": "zh:manuscript:page_bounds",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "zh:main_identifying_placeholders",
+      "passed": true,
+      "detail": "Specific approval number and repository owner are confined to the separate title page; this is not a guarantee against identification from the retained title or public project."
+    },
+    {
+      "check": "zh:supplement:compile_log",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "zh:supplement:pdf_author_empty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "zh:supplement:text_integrity",
+      "passed": true,
+      "detail": {
+        "pages": 9,
+        "text_characters": 13012
+      }
+    },
+    {
+      "check": "zh:supplement:page_bounds",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "zh:title_page:compile_log",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "zh:title_page:pdf_author_empty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "zh:title_page:text_integrity",
+      "passed": true,
+      "detail": {
+        "pages": 2,
+        "text_characters": 1396
+      }
+    },
+    {
+      "check": "zh:title_page:page_bounds",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "no_bundled_font_files",
+      "passed": true,
+      "detail": null
+    }
+  ]
+}

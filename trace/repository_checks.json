@@ -1,0 +1,247 @@
+{
+  "checked_at_utc": "2026-09-24T14:52:45.027195+00:00",
+  "baseline_commit": "51e1e780111c712e43e1202e2b9f305111f3eaf3",
+  "build_input_commit": "5cf2ee7892a1e41df9e48afe37eff825f875c0d5",
+  "workflow_run_url": "https://github.com/Timisic/autopsy/actions/runs/36015773488",
+  "scope": "Publication assembly and recompilation only. No new statistical analysis, model retraining, or human author approval.",
+  "source_files_verified": 59,
+  "baseline_files_preserved_byte_for_byte": 74,
+  "frozen_results_verified": 29,
+  "frozen_result_mismatches": [],
+  "tex_dependency_check": "passed",
+  "graphics_references_verified": 2,
+  "bibliography_and_labels": [
+    {
+      "document": "en/manuscript",
+      "references": 23,
+      "citations_complete": true,
+      "labels_complete": true
+    },
+    {
+      "document": "en/supplement",
+      "references": 3,
+      "citations_complete": true,
+      "labels_complete": true
+    },
+    {
+      "document": "en/title_page",
+      "references": 0,
+      "citations_complete": true,
+      "labels_complete": true
+    },
+    {
+      "document": "zh/manuscript",
+      "references": 23,
+      "citations_complete": true,
+      "labels_complete": true
+    },
+    {
+      "document": "zh/supplement",
+      "references": 3,
+      "citations_complete": true,
+      "labels_complete": true
+    },
+    {
+      "document": "zh/title_page",
+      "references": 0,
+      "citations_complete": true,
+      "labels_complete": true
+    }
+  ],
+  "bilingual_tables": [
+    {
+      "table": "S1.tex",
+      "numeric_tokens": 221,
+      "equal": true
+    },
+    {
+      "table": "S10.tex",
+      "numeric_tokens": 46,
+      "equal": true
+    },
+    {
+      "table": "S2.tex",
+      "numeric_tokens": 95,
+      "equal": true
+    },
+    {
+      "table": "S3.tex",
+      "numeric_tokens": 114,
+      "equal": true
+    },
+    {
+      "table": "S4.tex",
+      "numeric_tokens": 29,
+      "equal": true
+    },
+    {
+      "table": "S5.tex",
+      "numeric_tokens": 58,
+      "equal": true
+    },
+    {
+      "table": "S6.tex",
+      "numeric_tokens": 184,
+      "equal": true
+    },
+    {
+      "table": "S7.tex",
+      "numeric_tokens": 29,
+      "equal": true
+    },
+    {
+      "table": "S8.tex",
+      "numeric_tokens": 56,
+      "equal": true
+    },
+    {
+      "table": "S9.tex",
+      "numeric_tokens": 47,
+      "equal": true
+    },
+    {
+      "table": "table1.tex",
+      "numeric_tokens": 31,
+      "equal": true
+    },
+    {
+      "table": "table2.tex",
+      "numeric_tokens": 70,
+      "equal": true
+    },
+    {
+      "table": "table3.tex",
+      "numeric_tokens": 45,
+      "equal": true
+    },
+    {
+      "table": "table4.tex",
+      "numeric_tokens": 28,
+      "equal": true
+    }
+  ],
+  "pdfs": [
+    {
+      "file": "en/manuscript.pdf",
+      "bytes": 129920,
+      "pages": 15,
+      "sha256": "9f231ae5ba56ffd69e466b38f2daf5c0ce8d10b4569f7ec3ba5cf5726dd08dae",
+      "normalized_text_sha256": "9beef5ae85ced6e3dd2e1787c86cf355707228067c14f469ebba4dac1a1be0fb",
+      "matches_local_pages": true,
+      "matches_local_normalized_text": true,
+      "log_issues": [],
+      "nonblocking_warnings": [
+        "LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <6.43996> not available",
+        "LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.59999> not available",
+        "LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <6.43996> not available",
+        "LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.59999> not available",
+        "LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <6.43996> not available",
+        "LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.59999> not available",
+        "LaTeX Font Warning: Size substitutions with differences"
+      ]
+    },
+    {
+      "file": "en/supplement.pdf",
+      "bytes": 90413,
+      "pages": 9,
+      "sha256": "1ae1523dee74b14621e39f5c0e30e381140ce1199ba557e33de0fd7e4542f44e",
+      "normalized_text_sha256": "47bfcc4cd988ffed11da7c7965fe6c2cea81926f4dacbc850c48cb8dc0c4a267",
+      "matches_local_pages": true,
+      "matches_local_normalized_text": true,
+      "log_issues": [],
+      "nonblocking_warnings": [
+        "LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <8.5> not available",
+        "LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.25> not available",
+        "LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <8.5> not available",
+        "LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.25> not available",
+        "LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <8.5> not available",
+        "LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.25> not available",
+        "LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.4> not available",
+        "LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.4> not available",
+        "LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.4> not available",
+        "LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.3> not available",
+        "LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.3> not available",
+        "LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.3> not available",
+        "LaTeX Font Warning: Size substitutions with differences"
+      ]
+    },
+    {
+      "file": "en/title_page.pdf",
+      "bytes": 43565,
+      "pages": 2,
+      "sha256": "5b818747513639fbb726116a9c8cce4787b928105269cd16b17088a4e71d5aec",
+      "normalized_text_sha256": "b05657f57fde856621d3995e601aba06051f542e96fb2783d86114b22eac9c57",
+      "matches_local_pages": true,
+      "matches_local_normalized_text": true,
+      "log_issues": [],
+      "nonblocking_warnings": []
+    },
+    {
+      "file": "zh/manuscript.pdf",
+      "bytes": 426150,
+      "pages": 13,
+      "sha256": "88b0aaa037508c87a98551d1c9da69a87fedaad653e7789776ac452f278a252c",
+      "normalized_text_sha256": "b64af2d11627fb22848220da57eed33ff843a43d482446cfe8075e0c58793834",
+      "matches_local_pages": true,
+      "matches_local_normalized_text": true,
+      "log_issues": [],
+      "nonblocking_warnings": [
+        "Package fontspec Warning: Font \"FandolSong-Regular\" does not contain requested",
+        "Package fontspec Warning: Font \"FandolFang-Regular\" does not contain requested"
+      ]
+    },
+    {
+      "file": "zh/supplement.pdf",
+      "bytes": 285218,
+      "pages": 9,
+      "sha256": "7caf56c5655106cf99a6755bd0a3ad507cfedc0b137ea8621abbc22fc47d16a6",
+      "normalized_text_sha256": "f12c72aa15b27f876d8ebec4491dfb41b510b6dfbc8a4be4ebbf55afd177d154",
+      "matches_local_pages": true,
+      "matches_local_normalized_text": true,
+      "log_issues": [],
+      "nonblocking_warnings": [
+        "Package fontspec Warning: Font \"FandolSong-Regular\" does not contain requested",
+        "Package fontspec Warning: Font \"FandolFang-Regular\" does not contain requested"
+      ]
+    },
+    {
+      "file": "zh/title_page.pdf",
+      "bytes": 188264,
+      "pages": 2,
+      "sha256": "5f085d2cc47fdd68747eb3f877db791e8f40e609f56122813e2b45ed88b2dcba",
+      "normalized_text_sha256": "cf514aa0cc5ee04d445ab1e944f6222f8343bc7666e933d822761aa36de3e9f1",
+      "matches_local_pages": true,
+      "matches_local_normalized_text": true,
+      "log_issues": [],
+      "nonblocking_warnings": [
+        "Package fontspec Warning: Font \"FandolSong-Regular\" does not contain requested",
+        "Package fontspec Warning: Font \"FandolFang-Regular\" does not contain requested"
+      ]
+    }
+  ],
+  "build_passes_per_document": 3,
+  "compiler_version": "XeTeX 3.141592653-2.6-0.999995 (TeX Live 2023/Debian)",
+  "visual_review": "Not newly performed on the remote renderer. The preceding delivery underwent visual review; normalized-text/page comparisons are reported separately.",
+  "not_performed": [
+    "Retraining or raw-data reproduction",
+    "New literature/full-text verification",
+    "Independent scientific peer review",
+    "Responsible human-author approval"
+  ],
+  "author_controlled_items": [
+    "Ethics and secondary-use authorization",
+    "Questionnaire scoring provenance",
+    "Authorship, funding and conflicts",
+    "Relationship to the previously published study"
+  ],
+  "history_rewritten": false,
+  "temporary_workflow": "This check runs on an isolated publication branch. Workflow removal and promotion to main are separate, subsequent Git operations.",
+  "git_index_check": {
+    "verified_files": 139,
+    "all_expected_bytes_match": true,
+    "tracked_allowlist_matches": true,
+    "temporary_workflow_pending_removal": [
+      ".github/workflows/publish-clean-manuscript.yml"
+    ]
+  }
+}

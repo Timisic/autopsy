@@ -1,0 +1,27 @@
+\begingroup\singlespacing\fontsize{9.2}{11.32}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.25\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.28\linewidth}>{\raggedright\arraybackslash}p{0.23\linewidth}@{}}
+\caption{Repeated development cross-validation under frozen settings}\label{tab:S4}\\
+\toprule
+Model & Outcome & Mean normalized RMSE & Across-fold SD \\
+\midrule
+\endfirsthead
+\multicolumn{4}{l}{Table \thetable{} (continued)}\\
+\toprule
+Model & Outcome & Mean normalized RMSE & Across-fold SD \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Shared RF & NA & 0.9993 & 0.0627 \\
+Shared RF & PA & 0.9995 & 0.0523 \\
+Shared RF & LS & 0.9923 & 0.0578 \\
+Independent RF & NA & 1.0034 & 0.0647 \\
+Independent RF & PA & 1.0003 & 0.0548 \\
+Independent RF & LS & 0.9899 & 0.0615 \\
+Training mean & NA & 1.0005 & 0.0647 \\
+Training mean & PA & 1.0011 & 0.0568 \\
+Training mean & LS & 1.0007 & 0.0570 \\
+\end{longtable}
+\tabnote{NA = negative affect; PA = positive affect; LS = life satisfaction. Three repetitions of five-fold CV; seeds 20261023, 20261024, 20261025. Values are reproduced to the precision reported in the baseline supplement. Development observations already informed tuning. SD is descriptive fold variation, not a sampling confidence interval or an independent nested estimate.}
+\endgroup

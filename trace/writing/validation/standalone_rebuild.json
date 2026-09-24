@@ -1,0 +1,62 @@
+{
+  "scope": "Language-specific source archives were extracted to empty directories with no parent-package resources; no model analysis was run.",
+  "results": [
+    {
+      "language": "en",
+      "source_zip_sha256": "9ca4d66c02f9bb712ad15d5ce3c19d4be24f463f3de45525cb5bf8ee27f120bc",
+      "exit_code": 0,
+      "fresh_directory": "isolated/en",
+      "command": "bash build.sh",
+      "original_pdfs_excluded_from_source_zip": true,
+      "documents": [
+        {
+          "document": "manuscript",
+          "pages_original": 15,
+          "pages_fresh": 15,
+          "text_identical": true
+        },
+        {
+          "document": "supplement",
+          "pages_original": 9,
+          "pages_fresh": 9,
+          "text_identical": true
+        },
+        {
+          "document": "title_page",
+          "pages_original": 2,
+          "pages_fresh": 2,
+          "text_identical": true
+        }
+      ]
+    },
+    {
+      "language": "zh",
+      "source_zip_sha256": "36c983cca42ae46c6a5047bccf337d9a66008e8365dbfb9d43abad1a74ea8a5f",
+      "exit_code": 0,
+      "fresh_directory": "isolated/zh",
+      "command": "bash build.sh",
+      "original_pdfs_excluded_from_source_zip": true,
+      "documents": [
+        {
+          "document": "manuscript",
+          "pages_original": 13,
+          "pages_fresh": 13,
+          "text_identical": true
+        },
+        {
+          "document": "supplement",
+          "pages_original": 9,
+          "pages_fresh": 9,
+          "text_identical": true
+        },
+        {
+          "document": "title_page",
+          "pages_original": 2,
+          "pages_fresh": 2,
+          "text_identical": true
+        }
+      ]
+    }
+  ],
+  "passed": true
+}

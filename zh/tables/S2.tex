@@ -1,0 +1,26 @@
+\begingroup\singlespacing\fontsize{8.8}{10.82}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.17\linewidth}>{\raggedright\arraybackslash}p{0.29\linewidth}>{\raggedright\arraybackslash}p{0.31\linewidth}>{\raggedright\arraybackslash}p{0.095\linewidth}@{}}
+\caption{主分析搜索网格与冻结模型设置}\label{tab:S2}\\
+\toprule
+模型家族 & 候选配置 & 所选设置 & CV 得分 \\
+\midrule
+\endfirsthead
+\multicolumn{4}{l}{表 \thetable{} （续）}\\
+\toprule
+模型家族 & 候选配置 & 所选设置 & CV 得分 \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+共享 RF & 6：叶节点样本数 1、5、15；特征比例 0.5、1.0 & 叶节点 = 15；特征比例 = 1.0 & 0.9963 \\
+独立 RF & 6：叶节点样本数 1、5、15；特征比例 0.5、1.0 & 叶节点 = 15 / 15 / 15；特征比例 = 1.0 / 0.5 / 1.0 & 0.9965 \\
+独立 ET & 6：叶节点样本数 1、5、15；特征比例 0.5、1.0 & 叶节点 = 15 / 15 / 15；特征比例 = 0.5 / 1.0 / 1.0 & 0.9968 \\
+岭回归 & 5：alpha = 0.1、1、10、100、1000 & alpha = 1000 / 10 / 10 & 0.9969 \\
+多任务 EN & 6：alpha = 0.001、0.01、0.1；L1 = 0.2、0.8 & alpha = 0.01；L1 = 0.8 & 0.9972 \\
+共享 ET & 6：叶节点样本数 1、5、15；特征比例 0.5、1.0 & 叶节点 = 15；特征比例 = 0.5 & 0.9977 \\
+训练均值 & 1：训练均值 & 无 & 1.0016 \\
+独立 HGB & 6：最大叶节点数 15、31；L2 = 0、1、10 & 节点数 = 15 / 31 / 31；L2 = 10 / 1 / 10 & 1.0226 \\
+\end{longtable}
+\tabnote{NA 为消极情绪，PA 为积极情绪，LS 为生活满意度。斜线分隔的设置依次对应 NA / PA / LS。网格共 42 个配置。叶节点表示最小叶节点样本数，特征比例为每次分裂考虑的输入特征比例。森林均为 256 棵树。HGB：150 次迭代，学习率 0.05，最小叶节点样本数 20，不提前停止。EN：最多 10,000 次迭代，容差 $10^{-5}$。CV 得分是宏平均归一化 RMSE，不是存储单位下的留出 RMSE。}
+\endgroup

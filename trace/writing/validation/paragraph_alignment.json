@@ -1,0 +1,687 @@
+[
+  {
+    "id": "A01",
+    "same_numbers": false,
+    "en": [
+      "120",
+      "1037",
+      "104",
+      "0.247",
+      "0.284",
+      "0.152",
+      "0.166",
+      "0.165",
+      "0.202"
+    ],
+    "zh": [
+      "1037",
+      "120",
+      "104",
+      "0.247",
+      "0.284",
+      "0.152",
+      "0.166",
+      "0.165",
+      "0.202"
+    ],
+    "en_purpose": "State the design, principal estimates, and the measurement claim supported by them.",
+    "zh_purpose": "概括设计、主要估计及其能够支持的测量主张。"
+  },
+  {
+    "id": "I01",
+    "same_numbers": true,
+    "en": [],
+    "zh": [],
+    "en_purpose": "Define the measurement problem in terms of the person's own experience and distinct components.",
+    "zh_purpose": "从个人主观体验出发界定测量问题及其不同成分。"
+  },
+  {
+    "id": "I02",
+    "same_numbers": true,
+    "en": [],
+    "zh": [],
+    "en_purpose": "Establish why language is worth studying while specifying the relevant validation gap.",
+    "zh_purpose": "说明研究语言的理由，并明确尚待回答的效度问题。"
+  },
+  {
+    "id": "I03",
+    "same_numbers": true,
+    "en": [],
+    "zh": [],
+    "en_purpose": "Make the dictionary representation a substantive choice, rather than a neutral preprocessing step.",
+    "zh_purpose": "将词典表征作为需要检验的研究选择，而非中性的预处理。"
+  },
+  {
+    "id": "I04",
+    "same_numbers": true,
+    "en": [],
+    "zh": [],
+    "en_purpose": "Locate the study's empirical contribution without equating different populations or aggregation levels.",
+    "zh_purpose": "准确定位本研究的经验贡献，不混同不同人群或聚合层级。"
+  },
+  {
+    "id": "I05",
+    "same_numbers": true,
+    "en": [],
+    "zh": [],
+    "en_purpose": "Motivate the shared-output comparison from the multidimensional outcome structure.",
+    "zh_purpose": "从结局的多维结构引出共享输出比较。"
+  },
+  {
+    "id": "I06",
+    "same_numbers": true,
+    "en": [],
+    "zh": [],
+    "en_purpose": "Specify three answerable questions and distinguish the evidential roles of their outcomes.",
+    "zh_purpose": "明确三个可回答的问题及不同结果的证据作用。"
+  },
+  {
+    "id": "M01",
+    "same_numbers": true,
+    "en": [
+      "20000",
+      "18",
+      "2012",
+      "2013"
+    ],
+    "zh": [
+      "20000",
+      "18",
+      "2012",
+      "2013"
+    ],
+    "en_purpose": "Separate the documented original recruitment from the present secondary analysis.",
+    "zh_purpose": "区分原始招募记录与本次二次分析。"
+  },
+  {
+    "id": "M02",
+    "same_numbers": true,
+    "en": [
+      "1427",
+      "1037",
+      "195",
+      "195",
+      "1037"
+    ],
+    "zh": [
+      "1427",
+      "1037",
+      "195",
+      "195",
+      "1037"
+    ],
+    "en_purpose": "Explain the participant-level unit and deterministic reconciliation of repeated records.",
+    "zh_purpose": "说明参与者层面的分析单位与确定性的重复记录处理。"
+  },
+  {
+    "id": "M03",
+    "same_numbers": true,
+    "en": [],
+    "zh": [],
+    "en_purpose": "Attribute ethical statements to their actual source and leave secondary-use authorization with authors.",
+    "zh_purpose": "将伦理陈述归于实际来源，二次使用授权留待作者确认。"
+  },
+  {
+    "id": "M04",
+    "same_numbers": true,
+    "en": [
+      "0",
+      "1"
+    ],
+    "zh": [
+      "0",
+      "1"
+    ],
+    "en_purpose": "Identify the constructs while preserving the unverified stored score units.",
+    "zh_purpose": "界定构念，并保留未经核实转换的存储分数单位。"
+  },
+  {
+    "id": "M05",
+    "same_numbers": false,
+    "en": [
+      "120",
+      "13",
+      "0",
+      "34"
+    ],
+    "zh": [
+      "120",
+      "13",
+      "0",
+      "34",
+      "1"
+    ],
+    "en_purpose": "Describe the supplied representation and the feature ambiguities actually examined.",
+    "zh_purpose": "描述给定表征及实际考察的特征定义问题。"
+  },
+  {
+    "id": "M06",
+    "same_numbers": false,
+    "en": [
+      "1027",
+      "1037"
+    ],
+    "zh": [
+      "1037",
+      "1027"
+    ],
+    "en_purpose": "Define the retrospective estimand from the available temporal evidence.",
+    "zh_purpose": "依据已有时间证据界定回溯性的目标关系。"
+  },
+  {
+    "id": "M07",
+    "same_numbers": false,
+    "en": [
+      "933",
+      "104",
+      "20260923"
+    ],
+    "zh": [
+      "20260923",
+      "933",
+      "104"
+    ],
+    "en_purpose": "Establish the prospective computational plan and holdout separation within retrospective data.",
+    "zh_purpose": "说明回溯性数据中的前置计算计划和留出划分。"
+  },
+  {
+    "id": "M08",
+    "same_numbers": true,
+    "en": [],
+    "zh": [],
+    "en_purpose": "Explain why preprocessing and target scaling are confined to training folds.",
+    "zh_purpose": "解释预处理和结局缩放为何仅在训练折拟合。"
+  },
+  {
+    "id": "M09",
+    "same_numbers": true,
+    "en": [
+      "42",
+      "210"
+    ],
+    "zh": [
+      "42",
+      "210"
+    ],
+    "en_purpose": "Identify the eight families and the actual meaning of shared versus independent learning.",
+    "zh_purpose": "介绍八类模型，以及共享和独立学习的具体含义。"
+  },
+  {
+    "id": "M10",
+    "same_numbers": true,
+    "en": [
+      "256"
+    ],
+    "zh": [
+      "256"
+    ],
+    "en_purpose": "State the selection criterion and the asymmetry in hyperparameter selection.",
+    "zh_purpose": "说明选择指标及不同程序的参数选择方式。"
+  },
+  {
+    "id": "M11",
+    "same_numbers": true,
+    "en": [
+      "95",
+      "5000",
+      "2",
+      "5000",
+      "10000"
+    ],
+    "zh": [
+      "95",
+      "5000",
+      "2",
+      "5000",
+      "10000"
+    ],
+    "en_purpose": "Define correlation and error uncertainty and the distinct multiple-testing families.",
+    "zh_purpose": "定义相关和误差的不确定性，以及不同多重检验范围。"
+  },
+  {
+    "id": "M12",
+    "same_numbers": true,
+    "en": [
+      "13"
+    ],
+    "zh": [
+      "13"
+    ],
+    "en_purpose": "Define the robustness checks without implying new independent validation.",
+    "zh_purpose": "界定稳健性检查，避免将其表述为新的独立验证。"
+  },
+  {
+    "id": "M13",
+    "same_numbers": true,
+    "en": [
+      "933",
+      "14",
+      "20"
+    ],
+    "zh": [
+      "933",
+      "14",
+      "20"
+    ],
+    "en_purpose": "Explain the complementary roles and data partitions of SHAP and permutation diagnostics.",
+    "zh_purpose": "区分 SHAP 与置换诊断的用途及各自使用的数据。"
+  },
+  {
+    "id": "M14",
+    "same_numbers": true,
+    "en": [
+      "22",
+      "1",
+      "0"
+    ],
+    "zh": [
+      "22",
+      "1",
+      "0"
+    ],
+    "en_purpose": "Preserve the chronology and limited evidential status of subsequent optimization.",
+    "zh_purpose": "保留后续优化的时间顺序及其有限证据地位。"
+  },
+  {
+    "id": "R01",
+    "same_numbers": true,
+    "en": [
+      "1037",
+      "933",
+      "104",
+      "0.307",
+      "0.408",
+      "0.458",
+      "0.9963",
+      "0.9965",
+      "1.0016",
+      "15"
+    ],
+    "zh": [
+      "1037",
+      "933",
+      "104",
+      "0.307",
+      "0.408",
+      "0.458",
+      "0.9963",
+      "0.9965",
+      "1.0016",
+      "15"
+    ],
+    "en_purpose": "Describe the observed outcome structure and the development-selected procedures.",
+    "zh_purpose": "描述结局结构及开发集选定的模型程序。"
+  },
+  {
+    "id": "R02",
+    "same_numbers": true,
+    "en": [
+      "0.247",
+      "95",
+      "0.057",
+      "0.419",
+      "0.284",
+      "95",
+      "0.097",
+      "0.452",
+      "0.152",
+      "95",
+      "0.042",
+      "0.335",
+      "0.023",
+      "0.010",
+      "0.124"
+    ],
+    "zh": [
+      "0.247",
+      "95",
+      "0.057",
+      "0.419",
+      "0.284",
+      "95",
+      "0.097",
+      "0.452",
+      "0.152",
+      "95",
+      "0.042",
+      "0.335",
+      "0.023",
+      "0.010",
+      "0.124"
+    ],
+    "en_purpose": "Report selected-model associations with uncertainty without testing outcome differences by proxy.",
+    "zh_purpose": "报告所选模型的相关及不确定性，不用显著性差异代替结局间比较。"
+  },
+  {
+    "id": "R03",
+    "same_numbers": true,
+    "en": [
+      "0.166",
+      "0.165",
+      "0.202",
+      "2",
+      "0.020",
+      "0.040",
+      "0.015",
+      "0.169",
+      "0.170",
+      "0.205",
+      "0.402",
+      "0.284",
+      "0.165"
+    ],
+    "zh": [
+      "0.166",
+      "0.165",
+      "0.202",
+      "2",
+      "0.020",
+      "0.040",
+      "0.015",
+      "0.169",
+      "0.170",
+      "0.205",
+      "0.402",
+      "0.284",
+      "0.165"
+    ],
+    "en_purpose": "Quantify numerical accuracy relative to the baseline, separate from correlation.",
+    "zh_purpose": "通过基线比较量化数值准确性，并与相关区分。"
+  },
+  {
+    "id": "R04",
+    "same_numbers": true,
+    "en": [
+      "0.0034",
+      "0.0048",
+      "0.0024",
+      "0.113",
+      "0.101",
+      "1.000"
+    ],
+    "zh": [
+      "0.0034",
+      "0.0048",
+      "0.0024",
+      "0.113",
+      "0.101",
+      "1.000"
+    ],
+    "en_purpose": "Resolve the paired-comparison evidence using its actual uncertainty procedures.",
+    "zh_purpose": "按实际不确定性程序解释配对比较。"
+  },
+  {
+    "id": "R05",
+    "same_numbers": true,
+    "en": [
+      "0.0009",
+      "0.0015",
+      "0.0011"
+    ],
+    "zh": [
+      "0.0009",
+      "0.0015",
+      "0.0011"
+    ],
+    "en_purpose": "Answer the model-sharing question through paired differences and their precision.",
+    "zh_purpose": "通过配对差值及其精度回答共享学习问题。"
+  },
+  {
+    "id": "R06",
+    "same_numbers": true,
+    "en": [
+      "0.0041",
+      "0",
+      "0.0040",
+      "0.0036",
+      "0.0045",
+      "0.0039",
+      "0.0030",
+      "0.0061",
+      "0.0056",
+      "0",
+      "0.0052"
+    ],
+    "zh": [
+      "0.0041",
+      "0",
+      "0.0040",
+      "0.0036",
+      "0.0045",
+      "0.0039",
+      "0.0030",
+      "0.0061",
+      "0.0056",
+      "0",
+      "0.0052"
+    ],
+    "en_purpose": "Identify prominent model inputs with their attribution magnitudes and semantic limits.",
+    "zh_purpose": "列出重要输入及其归因幅度，保留语义边界。"
+  },
+  {
+    "id": "R07",
+    "same_numbers": true,
+    "en": [
+      "0.000002",
+      "0.000544",
+      "0.001030",
+      "0.000935"
+    ],
+    "zh": [
+      "0.000002",
+      "0.000544",
+      "0.001030",
+      "0.000935"
+    ],
+    "en_purpose": "Show concretely why model prominence and holdout error contribution need separate interpretation.",
+    "zh_purpose": "具体展示模型内重要性与留出误差贡献需要分开解释。"
+  },
+  {
+    "id": "R08",
+    "same_numbers": true,
+    "en": [
+      "0.259",
+      "0.286",
+      "0.101",
+      "85",
+      "0.303",
+      "0.301",
+      "0.173",
+      "0.301",
+      "0.268",
+      "0.125",
+      "0.165",
+      "0.165",
+      "0.203"
+    ],
+    "zh": [
+      "0.259",
+      "0.286",
+      "0.101",
+      "85",
+      "0.303",
+      "0.301",
+      "0.173",
+      "0.301",
+      "0.268",
+      "0.125",
+      "0.165",
+      "0.165",
+      "0.203"
+    ],
+    "en_purpose": "State what the planned handling checks preserved and what changed numerically.",
+    "zh_purpose": "说明预定处理选择保留了什么，以及数值上有哪些变化。"
+  },
+  {
+    "id": "R09",
+    "same_numbers": true,
+    "en": [
+      "60",
+      "1.0006",
+      "1.0001",
+      "1.0007",
+      "0.044",
+      "1",
+      "0.245",
+      "0.332",
+      "0.164",
+      "0.1661",
+      "0.1645",
+      "0.2023",
+      "0.011",
+      "1.000",
+      "0"
+    ],
+    "zh": [
+      "60",
+      "1.0006",
+      "1.0001",
+      "1.0007",
+      "0.044",
+      "1",
+      "0.245",
+      "0.332",
+      "0.164",
+      "0.1661",
+      "0.1645",
+      "0.2023",
+      "0.011",
+      "1.000",
+      "0"
+    ],
+    "en_purpose": "Keep the exploratory search subordinate to its nested result and original chronology.",
+    "zh_purpose": "将探索性搜索结果置于嵌套表现和原有时间顺序之下。"
+  },
+  {
+    "id": "D01",
+    "same_numbers": true,
+    "en": [],
+    "zh": [],
+    "en_purpose": "Interpret the central result as the size of the bridge from association to score accuracy.",
+    "zh_purpose": "将核心发现解释为从关联到分数准确性的实际转化幅度。"
+  },
+  {
+    "id": "D02",
+    "same_numbers": true,
+    "en": [],
+    "zh": [],
+    "en_purpose": "Explain the empirical correlation/RMSE contrast without claiming a new model comparison test.",
+    "zh_purpose": "解释相关与 RMSE 的实际对照，不将其升级为新的模型差异检验。"
+  },
+  {
+    "id": "D03",
+    "same_numbers": true,
+    "en": [],
+    "zh": [],
+    "en_purpose": "Develop a component-specific hypothesis and articulate competing explanations.",
+    "zh_purpose": "提出分成分的解释假设，并展开其他可能解释。"
+  },
+  {
+    "id": "D04",
+    "same_numbers": true,
+    "en": [],
+    "zh": [],
+    "en_purpose": "Use the exploratory failure to direct the next comparison, without declaring an information ceiling.",
+    "zh_purpose": "用探索性优化结果确定下一步比较，不宣称信息上限。"
+  },
+  {
+    "id": "D05",
+    "same_numbers": true,
+    "en": [],
+    "zh": [],
+    "en_purpose": "Explain why related outcomes did not ensure a benefit from shared partitions.",
+    "zh_purpose": "说明结局相关为什么不保证共享划分的收益。"
+  },
+  {
+    "id": "D06",
+    "same_numbers": true,
+    "en": [],
+    "zh": [],
+    "en_purpose": "Interpret attributions through a concrete divergence between training prominence and holdout diagnostics.",
+    "zh_purpose": "通过开发集归因与留出诊断的分离，限定心理解释。"
+  },
+  {
+    "id": "D07",
+    "same_numbers": true,
+    "en": [],
+    "zh": [],
+    "en_purpose": "Turn category-level observations into a focused, falsifiable follow-up rather than topic-level mechanisms.",
+    "zh_purpose": "将类别观察转化为具体、可证伪的后续研究。"
+  },
+  {
+    "id": "D08",
+    "same_numbers": true,
+    "en": [],
+    "zh": [],
+    "en_purpose": "Connect temporal alignment to a feasible validation design and distinct between/within-person estimands.",
+    "zh_purpose": "将时间对齐转化为可实施设计，并区分个体间和个体内目标。"
+  },
+  {
+    "id": "D09",
+    "same_numbers": true,
+    "en": [],
+    "zh": [],
+    "en_purpose": "Relate criterion verification, temporal stability, and other validation evidence to the specific proposed score.",
+    "zh_purpose": "将效标核验、时间稳定性和其他验证证据对应到拟议分数。"
+  },
+  {
+    "id": "D10",
+    "same_numbers": true,
+    "en": [
+      "104"
+    ],
+    "zh": [
+      "104"
+    ],
+    "en_purpose": "State the sample and inferential limitations once, then identify the next evaluation unit.",
+    "zh_purpose": "集中说明样本与推断边界，再指出下一阶段评估单位。"
+  },
+  {
+    "id": "D11",
+    "same_numbers": true,
+    "en": [],
+    "zh": [],
+    "en_purpose": "Consolidate what missing source inputs prevent, without treating absent validation as negative evidence.",
+    "zh_purpose": "集中说明缺失输入妨碍哪些诊断，不将未验证视为验证失败。"
+  },
+  {
+    "id": "D12",
+    "same_numbers": true,
+    "en": [],
+    "zh": [],
+    "en_purpose": "Connect application relevance to a defined benefit and user control.",
+    "zh_purpose": "将应用价值联系到明确收益及参与者控制。"
+  },
+  {
+    "id": "C01",
+    "same_numbers": true,
+    "en": [],
+    "zh": [],
+    "en_purpose": "Give the evidence-supported answer and its concrete next implication.",
+    "zh_purpose": "给出证据支持的回答及其下一步含义。"
+  },
+  {
+    "id": "X01",
+    "same_numbers": true,
+    "en": [],
+    "zh": [],
+    "en_purpose": "Distinguish public code and aggregates from restricted participant-level inputs.",
+    "zh_purpose": "区分公开代码和聚合结果，以及受限的参与者层面输入。"
+  },
+  {
+    "id": "X02",
+    "same_numbers": true,
+    "en": [],
+    "zh": [],
+    "en_purpose": "Preserve author-controlled responsibilities without invented declarations.",
+    "zh_purpose": "保留作者应承担的责任，不虚构声明内容。"
+  },
+  {
+    "id": "X03",
+    "same_numbers": true,
+    "en": [],
+    "zh": [],
+    "en_purpose": "Distinguish prior computational assistance from this writing revision and pending human approval.",
+    "zh_purpose": "区分既往计算协助、本轮写作协助与尚待完成的人类审批。"
+  }
+]

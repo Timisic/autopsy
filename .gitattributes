@@ -1,4 +1,7 @@
-# Preserve original input and generated vector bytes; their trailing spaces are intentional.
-/docs/inputs/data_dictionary.md -whitespace
-/docs/inputs/study_context.md -whitespace
-/figures/*.svg -whitespace
+* text=auto
+*.tex text eol=lf
+*.md text eol=lf
+*.sh text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.pdf binary

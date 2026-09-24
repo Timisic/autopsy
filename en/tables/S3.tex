@@ -1,0 +1,30 @@
+\begingroup\singlespacing\fontsize{8.8}{10.82}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.19\linewidth}>{\raggedright\arraybackslash}p{0.055\linewidth}>{\raggedright\arraybackslash}p{0.075\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}>{\raggedright\arraybackslash}p{0.075\linewidth}@{}}
+\caption{Selected shared RF under planned sensitivities}\label{tab:S3}\\
+\toprule
+Scenario & $n$ & Outcome & $r$ [95\% CI] & RMSE [95\% CI] & $R^2$ \\
+\midrule
+\endfirsthead
+\multicolumn{6}{l}{Table \thetable{} (continued)}\\
+\toprule
+Scenario & $n$ & Outcome & $r$ [95\% CI] & RMSE [95\% CI] & $R^2$ \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Primary & 104 & NA & 0.247\newline [0.057, 0.419] & 0.166\newline [0.146, 0.186] & 0.020 \\
+Primary & 104 & PA & 0.284\newline [0.097, 0.452] & 0.165\newline [0.143, 0.187] & 0.040 \\
+Primary & 104 & LS & 0.152\newline [$-0.042$, 0.335] & 0.202\newline [0.181, 0.222] & 0.015 \\
+Latest record & 104 & NA & 0.259\newline [0.070, 0.431] & 0.174\newline [0.154, 0.194] & 0.024 \\
+Latest record & 104 & PA & 0.286\newline [0.099, 0.454] & 0.163\newline [0.144, 0.182] & 0.048 \\
+Latest record & 104 & LS & 0.101\newline [$-0.094$, 0.288] & 0.207\newline [0.185, 0.228] & 0.008 \\
+Singleton IDs & 85 & NA & 0.303\newline [0.097, 0.485] & 0.171\newline [0.147, 0.195] & 0.025 \\
+Singleton IDs & 85 & PA & 0.301\newline [0.094, 0.484] & 0.161\newline [0.138, 0.184] & 0.055 \\
+Singleton IDs & 85 & LS & 0.173\newline [$-0.042$, 0.372] & 0.207\newline [0.185, 0.229] & 0.027 \\
+Restricted features & 104 & NA & 0.301\newline [0.115, 0.466] & 0.165\newline [0.146, 0.185] & 0.031 \\
+Restricted features & 104 & PA & 0.268\newline [0.080, 0.438] & 0.165\newline [0.142, 0.188] & 0.035 \\
+Restricted features & 104 & LS & 0.125\newline [$-0.069$, 0.310] & 0.203\newline [0.182, 0.223] & 0.008 \\
+\end{longtable}
+\tabnote{NA = negative affect; PA = positive affect; LS = life satisfaction. Each scenario refits the frozen primary settings without retuning, retaining participant assignments. Restricted features removes ind plus A, B, C1--C10, and D, leaving 106 predictors. Values are holdout results; intervals are pointwise. Complete all-family sensitivity results remain in the frozen repository results/primary/metrics.csv.}
+\endgroup

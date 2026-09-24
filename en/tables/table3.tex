@@ -1,0 +1,20 @@
+\begin{table}[!htbp]
+\centering
+\begingroup\singlespacing\fontsize{9.2}{11.32}\selectfont
+\setlength{\tabcolsep}{3pt}
+\caption{Paired holdout differences in prediction error}\label{tab:paired}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.23\linewidth}>{\raggedright\arraybackslash}p{0.075\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.245\linewidth}>{\raggedright\arraybackslash}p{0.1\linewidth}>{\raggedright\arraybackslash}p{0.1\linewidth}@{}}
+\toprule
+Comparison & Outcome & $\Delta$RMSE & 95\% CI & $p$ (swap) & $p$ (Holm) \\
+\midrule
+Selected $-$ mean & NA & $-0.0034$ & [$-0.0064$, $-0.0006$] & 0.023 & 0.113 \\
+Selected $-$ mean & PA & $-0.0048$ & [$-0.0083$, $-0.0010$] & 0.017 & 0.101 \\
+Selected $-$ mean & LS & $-0.0024$ & [$-0.0074$, 0.0024] & 0.337 & 1.000 \\
+Shared $-$ independent & NA & 0.0009 & [$-0.0018$, 0.0039] & 0.533 & 1.000 \\
+Shared $-$ independent & PA & 0.0015 & [$-0.0007$, 0.0036] & 0.193 & 0.772 \\
+Shared $-$ independent & LS & 0.0011 & [$-0.0021$, 0.0044] & 0.502 & 1.000 \\
+\bottomrule
+\end{tabular}
+\tabnote{NA = negative affect; PA = positive affect; LS = life satisfaction. $n=104$. Differences are first minus second; negative favors the first. Selected/shared = shared RF; independent = independent RF. Intervals are pointwise percentile intervals from 5,000 paired participant bootstraps. Tests use 10,000 prediction swaps on MSE differences; Holm adjustment covers all six rows. Units are stored score units.}
+\endgroup
+\end{table}

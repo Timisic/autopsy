@@ -1,0 +1,40 @@
+\begingroup\singlespacing\fontsize{9.2}{11.32}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.29\linewidth}>{\raggedright\arraybackslash}p{0.36\linewidth}>{\raggedright\arraybackslash}p{0.24\linewidth}@{}}
+\caption{全部开发参与者上的探索性 22 配置搜索}\label{tab:S8}\\
+\toprule
+候选模型 & 设置 & CV 归一化 RMSE \\
+\midrule
+\endfirsthead
+\multicolumn{3}{l}{表 \thetable{} （续）}\\
+\toprule
+候选模型 & 设置 & CV 归一化 RMSE \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Mean & Reference & 1.0007 \\
+Original shared RF & Reference & 1.0001 \\
+Ridge, raw & alpha=10 & 1.0703 \\
+Ridge, raw & alpha=100 & 1.0298 \\
+Ridge, raw & alpha=1000 & 1.0013 \\
+Ridge, log1p & alpha=10 & 1.0709 \\
+Ridge, log1p & alpha=100 & 1.0301 \\
+Ridge, log1p & alpha=1000 & 1.0013 \\
+RBF SVR & C=0.1 & 1.0040 \\
+RBF SVR & C=1 & 1.0215 \\
+RBF SVR & C=10 & 1.1019 \\
+Shallow HGB & L2=10 & 1.0139 \\
+Shallow HGB & L2=100 & 1.0013 \\
+Elastic net & alpha=0.01; L1=0.1 & 1.0654 \\
+Elastic net & alpha=0.01; L1=0.5 & 1.0446 \\
+Elastic net & alpha=0.1; L1=0.1 & 1.0173 \\
+Elastic net & alpha=0.1; L1=0.5 & 0.9984 \\
+PLS & components=2 & 1.0056 \\
+PLS & components=5 & 1.0271 \\
+PLS & components=10 & 1.0460 \\
+Independent RF & leaf=30 & 0.9979 \\
+Independent RF & leaf=60 & 0.9969 \\
+\end{longtable}
+\tabnote{开发集 $n=933$，五折选择。所有结局共选一个候选；这些调参得分不是独立性能估计。最终选中 RF leaf=60。Raw 为折内缩放前未经变换的输入，log1p 为折内转换。L1 为弹性网混合比例。正文嵌套估计针对选择程序，而非仅针对这一最终配置。}
+\endgroup

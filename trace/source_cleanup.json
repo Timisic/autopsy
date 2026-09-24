@@ -1,0 +1,16 @@
+[
+  {
+    "file": "en/manuscript.tex",
+    "removed_paragraph_comments": 46,
+    "original_sha256": "d4bea3ac08c3e18ed41f16daa8d74b0513047b4c000f5758a3c3b90d2e49e969",
+    "clean_sha256": "6e49585273c1239ee03965822febd58d65f6bfde24db3bc8e0c63b11d273d634",
+    "visible_text_changed": false
+  },
+  {
+    "file": "zh/manuscript.tex",
+    "removed_paragraph_comments": 46,
+    "original_sha256": "0223a1e5c8b9715b188ab31cc28059caeb3f10a30e0d74c03b706a64d70cf6e5",
+    "clean_sha256": "a0e0fad722e25bdd5acc7cfbeede68c79add7e85f6943a0641ef94e426d5dbb6",
+    "visible_text_changed": false
+  }
+]

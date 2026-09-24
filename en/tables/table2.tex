@@ -1,0 +1,23 @@
+\begin{table}[!htbp]
+\centering
+\begingroup\singlespacing\fontsize{9.2}{11.32}\selectfont
+\setlength{\tabcolsep}{3pt}
+\caption{Holdout performance of the selected procedures and baseline}\label{tab:performance}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.19\linewidth}>{\raggedright\arraybackslash}p{0.085\linewidth}>{\raggedright\arraybackslash}p{0.245\linewidth}>{\raggedright\arraybackslash}p{0.245\linewidth}>{\raggedright\arraybackslash}p{0.095\linewidth}@{}}
+\toprule
+Model & Outcome & $r$ [95\% CI] & RMSE [95\% CI] & $R^2$ \\
+\midrule
+Shared RF & NA & 0.247\newline [0.057, 0.419] & 0.166\newline [0.146, 0.186] & 0.020 \\
+Shared RF & PA & 0.284\newline [0.097, 0.452] & 0.165\newline [0.143, 0.187] & 0.040 \\
+Shared RF & LS & 0.152\newline [$-0.042$, 0.335] & 0.202\newline [0.181, 0.222] & 0.015 \\
+Independent RF & NA & 0.230\newline [0.039, 0.405] & 0.165\newline [0.144, 0.185] & 0.031 \\
+Independent RF & PA & 0.325\newline [0.141, 0.487] & 0.163\newline [0.141, 0.186] & 0.057 \\
+Independent RF & LS & 0.184\newline [$-0.008$, 0.364] & 0.201\newline [0.180, 0.222] & 0.025 \\
+Training mean & NA & Undefined & 0.169\newline [0.150, 0.190] & $-0.021$ \\
+Training mean & PA & Undefined & 0.170\newline [0.146, 0.192] & $-0.016$ \\
+Training mean & LS & Undefined & 0.205\newline [0.184, 0.225] & $-0.009$ \\
+\bottomrule
+\end{tabular}
+\tabnote{NA = negative affect; PA = positive affect; LS = life satisfaction. RF = random forest; ET = extra trees; EN = elastic net; HGB = histogram gradient boosting. $n=104$. Shared RF was selected using development data. Correlation intervals use Fisher $z$; RMSE intervals use 5,000 participant bootstraps and retain stored units. A constant prediction has undefined correlation. $R^2$ uses the holdout outcome mean as its reference, so the training-mean baseline can have negative $R^2$.}
+\endgroup
+\end{table}

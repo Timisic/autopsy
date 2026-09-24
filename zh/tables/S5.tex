@@ -1,0 +1,28 @@
+\begingroup\singlespacing\fontsize{8.8}{10.82}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.06\linewidth}>{\raggedright\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}p{0.115\linewidth}>{\raggedright\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}p{0.115\linewidth}>{\raggedright\arraybackslash}p{0.15\linewidth}>{\raggedright\arraybackslash}p{0.115\linewidth}@{}}
+\caption{各结局开发集 TreeSHAP 前十特征}\label{tab:S5}\\
+\toprule
+排名 & NA 特征 & SHAP & PA 特征 & SHAP & LS 特征 & SHAP \\
+\midrule
+\endfirsthead
+\multicolumn{7}{l}{表 \thetable{} （续）}\\
+\toprule
+排名 & NA 特征 & SHAP & PA 特征 & SHAP & LS 特征 & SHAP \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+1 & Sexual & 0.0041 & Sexual & 0.0045 & Family & 0.0061 \\
+2 & C10$^{\dagger}$ & 0.0040 & We & 0.0039 & We & 0.0056 \\
+3 & C2$^{\dagger}$ & 0.0036 & Family & 0.0030 & C10$^{\dagger}$ & 0.0052 \\
+4 & D$^{\dagger}$ & 0.0027 & D$^{\dagger}$ & 0.0026 & Sexual & 0.0044 \\
+5 & Angery & 0.0025 & Angery & 0.0023 & D$^{\dagger}$ & 0.0039 \\
+6 & Period & 0.0021 & C10$^{\dagger}$ & 0.0020 & Angery & 0.0036 \\
+7 & We & 0.0020 & SheHe & 0.0019 & C2$^{\dagger}$ & 0.0032 \\
+8 & SheHe & 0.0019 & C2$^{\dagger}$ & 0.0017 & Quote & 0.0027 \\
+9 & Family & 0.0017 & Hate & 0.0016 & Period & 0.0027 \\
+10 & tFuture & 0.0016 & tNow & 0.0016 & HarmVirtue & 0.0025 \\
+\end{longtable}
+\tabnote{NA 为消极情绪，PA 为积极情绪，LS 为生活满意度。共享 RF 的平均绝对贡献，使用存储结局单位，$n=933$。$\dagger$ 表示词典映射未知。分析记录的加和重建误差为 $2.22\times10^{-16}$。绝对幅度不提供方向。}
+\endgroup

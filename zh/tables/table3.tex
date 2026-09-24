@@ -1,0 +1,20 @@
+\begin{table}[!htbp]
+\centering
+\begingroup\singlespacing\fontsize{9.2}{11.32}\selectfont
+\setlength{\tabcolsep}{3pt}
+\caption{留出集预测误差的配对差值}\label{tab:paired}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.23\linewidth}>{\raggedright\arraybackslash}p{0.075\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.245\linewidth}>{\raggedright\arraybackslash}p{0.1\linewidth}>{\raggedright\arraybackslash}p{0.1\linewidth}@{}}
+\toprule
+比较 & 结局 & $\Delta$RMSE & 95\% CI & $p$ (swap) & $p$ (Holm) \\
+\midrule
+所选模型 $-$ 均值 & NA & $-0.0034$ & [$-0.0064$, $-0.0006$] & 0.023 & 0.113 \\
+所选模型 $-$ 均值 & PA & $-0.0048$ & [$-0.0083$, $-0.0010$] & 0.017 & 0.101 \\
+所选模型 $-$ 均值 & LS & $-0.0024$ & [$-0.0074$, 0.0024] & 0.337 & 1.000 \\
+共享 $-$ 独立 & NA & 0.0009 & [$-0.0018$, 0.0039] & 0.533 & 1.000 \\
+共享 $-$ 独立 & PA & 0.0015 & [$-0.0007$, 0.0036] & 0.193 & 0.772 \\
+共享 $-$ 独立 & LS & 0.0011 & [$-0.0021$, 0.0044] & 0.502 & 1.000 \\
+\bottomrule
+\end{tabular}
+\tabnote{NA 为消极情绪，PA 为积极情绪，LS 为生活满意度。$n=104$。差值为第一模型减去第二模型，负值有利于第一模型。所选/共享模型为共享 RF，独立模型为独立 RF。区间为 5,000 次配对参与者 bootstrap 的逐点百分位区间。检验对 MSE 差值进行 10,000 次预测交换，Holm 校正覆盖全部六行。单位为存储分数单位。}
+\endgroup
+\end{table}

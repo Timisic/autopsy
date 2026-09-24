@@ -1,0 +1,27 @@
+\begingroup\singlespacing\fontsize{9.2}{11.32}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.31\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.23\linewidth}@{}}
+\caption{Exploratory outer-fold normalized prediction error}\label{tab:S7}\\
+\toprule
+Procedure & Outcome & Mean & Across-fold SD \\
+\midrule
+\endfirsthead
+\multicolumn{4}{l}{Table \thetable{} (continued)}\\
+\toprule
+Procedure & Outcome & Mean & Across-fold SD \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Mean baseline & NA & 1.0020 & 0.0463 \\
+Mean baseline & PA & 1.0002 & 0.0836 \\
+Mean baseline & LS & 1.0001 & 0.0605 \\
+Original shared RF & NA & 1.0027 & 0.0473 \\
+Original shared RF & PA & 0.9986 & 0.0857 \\
+Original shared RF & LS & 0.9991 & 0.0578 \\
+Selected procedure & NA & 1.0044 & 0.0481 \\
+Selected procedure & PA & 0.9997 & 0.0822 \\
+Selected procedure & LS & 0.9976 & 0.0572 \\
+\end{longtable}
+\tabnote{NA = negative affect; PA = positive affect; LS = life satisfaction. Five outer folds; candidate selection repeats five-fold inner CV in each. Macro means: baseline 1.0007, original RF 1.0001, selected procedure 1.0006. These are normalized errors, not holdout RMSE in stored units. The entire extension is exploratory because earlier development and holdout results were known. SD is descriptive.}
+\endgroup

@@ -1,0 +1,38 @@
+[
+  {
+    "file": "en/manuscript.pdf",
+    "pages": 15,
+    "original_text_equal": true,
+    "normalized_text_sha256": "9beef5ae85ced6e3dd2e1787c86cf355707228067c14f469ebba4dac1a1be0fb"
+  },
+  {
+    "file": "en/supplement.pdf",
+    "pages": 9,
+    "original_text_equal": true,
+    "normalized_text_sha256": "47bfcc4cd988ffed11da7c7965fe6c2cea81926f4dacbc850c48cb8dc0c4a267"
+  },
+  {
+    "file": "en/title_page.pdf",
+    "pages": 2,
+    "original_text_equal": true,
+    "normalized_text_sha256": "b05657f57fde856621d3995e601aba06051f542e96fb2783d86114b22eac9c57"
+  },
+  {
+    "file": "zh/manuscript.pdf",
+    "pages": 13,
+    "original_text_equal": true,
+    "normalized_text_sha256": "b64af2d11627fb22848220da57eed33ff843a43d482446cfe8075e0c58793834"
+  },
+  {
+    "file": "zh/supplement.pdf",
+    "pages": 9,
+    "original_text_equal": true,
+    "normalized_text_sha256": "f12c72aa15b27f876d8ebec4491dfb41b510b6dfbc8a4be4ebbf55afd177d154"
+  },
+  {
+    "file": "zh/title_page.pdf",
+    "pages": 2,
+    "original_text_equal": true,
+    "normalized_text_sha256": "cf514aa0cc5ee04d445ab1e944f6222f8343bc7666e933d822761aa36de3e9f1"
+  }
+]

@@ -1,0 +1,27 @@
+\begingroup\singlespacing\fontsize{9.2}{11.32}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.25\linewidth}>{\raggedright\arraybackslash}p{0.12\linewidth}>{\raggedright\arraybackslash}p{0.28\linewidth}>{\raggedright\arraybackslash}p{0.23\linewidth}@{}}
+\caption{冻结设置下的重复开发集交叉验证}\label{tab:S4}\\
+\toprule
+模型 & 结局 & 平均归一化 RMSE & 折间标准差 \\
+\midrule
+\endfirsthead
+\multicolumn{4}{l}{表 \thetable{} （续）}\\
+\toprule
+模型 & 结局 & 平均归一化 RMSE & 折间标准差 \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+共享 RF & NA & 0.9993 & 0.0627 \\
+共享 RF & PA & 0.9995 & 0.0523 \\
+共享 RF & LS & 0.9923 & 0.0578 \\
+独立 RF & NA & 1.0034 & 0.0647 \\
+独立 RF & PA & 1.0003 & 0.0548 \\
+独立 RF & LS & 0.9899 & 0.0615 \\
+训练均值 & NA & 1.0005 & 0.0647 \\
+训练均值 & PA & 1.0011 & 0.0568 \\
+训练均值 & LS & 1.0007 & 0.0570 \\
+\end{longtable}
+\tabnote{NA 为消极情绪，PA 为积极情绪，LS 为生活满意度。三次五折交叉验证，随机种子为 20261023、20261024、20261025。数值按基线补充材料报告的精度保留。开发观察已参与调参。标准差为描述性折间波动，不是抽样置信区间，也不是独立嵌套估计。}
+\endgroup

@@ -1,0 +1,21 @@
+\begingroup\singlespacing\fontsize{8.8}{10.82}\selectfont
+\setlength{\tabcolsep}{3pt}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.1\linewidth}>{\raggedright\arraybackslash}p{0.25\linewidth}>{\raggedright\arraybackslash}p{0.1\linewidth}>{\raggedright\arraybackslash}p{0.27\linewidth}>{\raggedright\arraybackslash}p{0.08\linewidth}>{\raggedright\arraybackslash}p{0.08\linewidth}@{}}
+\caption{Exploratory selected model on the previously seen holdout}\label{tab:S9}\\
+\toprule
+Outcome & $r$ [95\% CI] & $p$ & RMSE [95\% CI] & $R^2$ & $\rho$ \\
+\midrule
+\endfirsthead
+\multicolumn{6}{l}{Table \thetable{} (continued)}\\
+\toprule
+Outcome & $r$ [95\% CI] & $p$ & RMSE [95\% CI] & $R^2$ & $\rho$ \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+NA & 0.245\newline [0.055, 0.417] & 0.012 & 0.1661\newline [0.1461, 0.1871] & 0.020 & 0.229 \\
+PA & 0.332\newline [0.149, 0.493] & $<0.001$ & 0.1645\newline [0.1415, 0.1886] & 0.045 & 0.339 \\
+LS & 0.164\newline [$-0.029$, 0.346] & 0.095 & 0.2023\newline [0.1821, 0.2223] & 0.016 & 0.138 \\
+\end{longtable}
+\tabnote{NA = negative affect; PA = positive affect; LS = life satisfaction. $n=104$. Independent RF: 256 trees, minimum leaf size 60, max features 0.5. $p$ is unadjusted Pearson $p$; $\rho$ is Spearman correlation. RMSE retains stored units. The holdout had already been inspected during the primary analysis; these are exploratory estimates, not an independent replication.}
+\endgroup
